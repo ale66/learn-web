@@ -1,0 +1,98 @@
+---
+title: "Learn Coding"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-coding](https://github.com/ale66/learn-coding)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 5
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+
+# Welcome
+
+---
+
+## Join online resources:
+
+#### join this modules' Teams: []() 
+
+#### W3schools (TBC): []()
+
+---
+
+#### Learning objectives
+
+* learn hypertext, markup, interpretation, boilerplates, web linking, containers etc.
+
+* plan, design and implement a mock web communication project
+
+---
+
+#### Posponed gratification
+
+* working in COM today often involves joining a web/multimedia team
+
+* such teams have front-end and back-end developers
+
+* as with all technical communities, they have a jargon and unspoke assumptions
+
+* technology is often unnecessarily obscure and
+
+* it is changing continously 
+
+---
+
+##### Webcomm enables you to 
+
+* navigate
+    
+    * a complex jargon
+    
+    * new languages, new development tools, new delivery mechanisms
+
+* communicate with _techies_ effectively
+
+* articulate what you want
+
+* come up with your own concepts (mock-ups)
+
+* if Web page design is your thing, a reasonable shot at getting *junior front-end developer* positions
+
+---
+
+#### Let's look at exam essays
+
+[Refactoring the Web site of an independent library (aka _fumetteria_)](https://replit.com/@vlborriello/MondiParalleliWebCommExam)
+
+[Technical brief here](https://replit.com/@vlborriello/PresentationMondiParalleli)
+
+---
+
+[A newly-formed theatre company needs a Web site](https://replit.com/@ErikaBelvedere/Exam-Website-Erika-Belvedere#index.html)
+
+[Technical brief here](https://replit.com/@ErikaBelvedere/Exam-Presentation-Erika-Belvedere)
+
+---
+
+[Corporate web presence: restyle it](https://personal-project.flanzara.repl.co/)
+
+[Technical brief here](https://personal-project.flanzara.repl.co/presentation_lanzarafrancesco.html)
+
+---
+
+#### The self-study playground
+
+[https://www.webdesignplayground.io/](https://www.webdesignplayground.io/)
+
+
+---
+
+#### The Replit.com playground
+
+[https://replit.com/team/Webcomm-2023-24](<https://replit.com/team/Webcomm-2023-24>)

@@ -1,0 +1,94 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 5
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Installations
+
+The following presentation relates to Win 10 laptops. 
+
+For Win 11: you need to authorise installations. 
+
+For MacOS: proceed to normal software dowload+installation. 
+In the notes below substitute 
+
+*Windows Power Shell* by *terminal*
+
+*dir* by *ls -lrt*
+
+For Linux: you don't need me :-)
+  
+---
+
+## [Chocolatey](https://chocolatey.org/)
+
+<img src="./images/choco.jpg" height="120">
+
+It manages installed software as linux does: the whole platform can be updated at a stroke
+
+Intallation is of average complexity, see [here](https://chocolatey.org/install)
+
+Start a Windows __PowerShell__ in administrator mode and type:
+
+```bash
+> choco install chromium
+```
+
+---
+
+## [Chocolatey](https://chocolatey.org/)
+
+```bash
+> choco install vscode
+```
+
+---
+
+### VS Code
+
+<img src="./images/vscode.png" height="300">
+
+* Free and light
+
+* requires [lots of] extensions loaded
+
+---
+
+## VS Code Extensions
+
+<img src="./images/vscode-extensions.png" height="140">
+
+__CTRL+Shift+x__ takes you to the markeplace; get
+
+* HTML CSS Support
+
+* Intellisense for CSS names
+
+* CSS Peek
+
+* JavaScript
+
+* Markdown All-in-one / Markdown Preview Enhanced
+
+
+---
+
+## Further tips
+
+* try practicing daily, in your __zone__
+
+* try getting past frustation and *enjoy* the progress you make: you are in control now
+
+* sign up to [Stack Overflow](https://stackoverflow.com/) to find solutions
+
+* *do not,* at any rate, watch HYML/CSS/JS videos on YouTube...

@@ -1,0 +1,23 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* 
+  uncomment to see what happens, 
+  then add more definitions 
+*/
+
+
+
+h1 {
+  font-size: 36px;
+  text-align: center;
+  font-variant: all-small-caps;
+}
+
+p {
+  background-color: #DDDDDD;
+  font-size: 18px;
+  text-align: center;
+}
