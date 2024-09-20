@@ -1,9 +1,9 @@
 ---
-title: "Learn Coding"
+title: "Learn Web"
 author: "ale66"
 format: 
   revealjs:
-    footer: "[github.com/ale66/learn-coding](https://github.com/ale66/learn-coding)&nbsp;&nbsp;&nbsp;"
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
     theme: [moon]
     preview-links: auto
     chalkboard: 
@@ -20,31 +20,55 @@ execute:
 
 ## Join online resources:
 
-#### join this modules' Teams: []() 
+#### join this modules' Teams: [https://tinyurl.com/Webcomm-2024-25](https://teams.microsoft.com/l/team/19%3A-i476Xbu37XieT7UaharM7XQ8hTdMNLLeXImvBakaJE1%40thread.tacv2/conversations?groupId=b9ade7f9-67ad-4bbd-b021-fb858dd3ec46&tenantId=13b55eef-7018-4674-a3d7-cc0db06d545c) 
 
-#### W3schools (TBC): []()
 
----
-
-#### Learning objectives
-
-* learn hypertext, markup, interpretation, boilerplates, web linking, containers etc.
-
-* plan, design and implement a mock web communication project
 
 ---
 
-#### Posponed gratification
+## Code of conduct
+
+- phones in the bag, off or on mute 
+
+- laptops on, with Teams on and the rest off
+
+- a loud environment: keep your voice low at all times
+
+- VS Code for coding locally
+  
+- Firefox or Chromium (not Chrome) for testing.
+
+---
+
+## Timetable
+
+- Friday 14:30 to 17:30: lectures + labs
+  
+- Saturday 8:30-ish to 11:30-ish: lectures, labs and workshop: work on your exam project.
+
+- tomorrow: online only.
+  
+---
+
+## Learning objectives
+
+* formal learning: coding authonomy with hypertext, markup, interpretation, boilerplates, web linking, containers etc.
+
+* informal learning: plan, design and implement *a web communication project;* create a mock and present it to a technical/business committee
+
+---
+
+### Posponed gratification
 
 * working in COM today often involves joining a web/multimedia team
 
-* such teams have front-end and back-end developers
+* teams with *front-end* (UX) and *back-end* figures
 
-* as with all technical communities, they have a jargon and unspoke assumptions
+* as with all technical communities, a jargon and unspoke assumptions
 
 * technology is often unnecessarily obscure and
 
-* it is changing continously 
+* continously changing  
 
 ---
 
@@ -64,9 +88,18 @@ execute:
 
 * if Web page design is your thing, a reasonable shot at getting *junior front-end developer* positions
 
+
+# The exam
+
+- detailed instructions on the MyAriel page
+
+- exam dates are project submission dates
+  
+- [TBC] asynch assessment
+
 ---
 
-#### Let's look at exam essays
+## Let's look at past exam essays
 
 [Refactoring the Web site of an independent library (aka _fumetteria_)](https://replit.com/@vlborriello/MondiParalleliWebCommExam)
 
@@ -86,13 +119,48 @@ execute:
 
 ---
 
-#### The self-study playground
+## 2023-24 project, a selection
+
+
+[A personal portfolio](https://replit.com/@donnaashrafyous/Portfolio#index.html)
+
+[Niche musical scenes: Liberato](https://mazina30642aliberato.webcomm-2023-24.repl.co/)
+
+[Niche art markets](https://nava-roberta-page.robiiinava.repl.co/)
+
+---
+
+## Critical assessment
+
+- to go from vision to industry we need concrete *sketches* or *artifacts*
+
+- current pages are created only by the execution of complex Javascript (JS) codes: this is left for advanced training
+  
+- customer profiling/monitoring begins right at code level: let's see how
+
+- implementation autonomy relieves us from dependence on social web platforms
+
+
+
+
+# Online resources
+
+
+---
+
+## The self-study playground
 
 [https://www.webdesignplayground.io/](https://www.webdesignplayground.io/)
 
 
 ---
 
-#### The Replit.com playground
+## The Replit.com playground
 
-[https://replit.com/team/Webcomm-2023-24](<https://replit.com/team/Webcomm-2023-24>)
+[https://replit.com](https://replit.com)
+
+---
+
+## W3schools (TBC): 
+
+[www.w3schools.com/spaces/](https://www.w3schools.com/spaces/index.php)
