@@ -1,0 +1,53 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 5
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+
+# Web editing as typography
+
+---
+
+## Ch. 1 of the textbook
+
+- creating pages in the way printshop create books
+
+- can we take an arbitrary text and make it look good in print?
+  
+- boilerplates: a fixed typographic structure that is applied to provide conformity and readability
+
+---
+
+## Visual experience
+
+Please look at Ch.1 of the textbook
+
+---
+
+## try yourself
+
+- Open the [change-me.html](./change-me.html) file with a browser
+
+- Now open it with [Notepad]() or a similar editor
+
+- try out some change to the text, save the file then *reload* on the browser
+
+---
+
+## Technical points
+
+- the interpretation approach
+
+- the importance of browsers today
+
+- the need for a formal language to describe a visual experience
