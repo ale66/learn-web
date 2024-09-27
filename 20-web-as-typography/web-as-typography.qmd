@@ -1,0 +1,169 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 5
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Digital typography
+
+---
+
+## Last week
+
+- we edited a ``lorem.html`` file which, once loaded into a browser, generated a *presentation* of Cicero's immortal <i>De finibus</i> essay.
+
+- Notepad (Win) or Notes (iOS) let us edit the content, somewhat
+
+- VS Code will support us in the creativity
+  
+---
+
+## WYSIWYG
+
+*What You See Is What You Get* is the point with MS Word etc. 
+
+- one software for all: readers and writers
+
+- the file is in a proprietary format and not intended for 
+
+  -- sharing
+
+  -- automated modification, e.g., logo injection
+
+
+---
+
+## interpretation 
+
+- prepare ``myarticle.html`` with editing software
+
+- load it into a brower to see the rendered version
+
+- in effect, we are __coding for the browser__
+
+- notice: the browser wil make a private copy of our file inside its own memory segment: __reload to see changes__
+
+---
+
+- the disconnect betweek writer and reader is typical of the *printed* culture
+
+- infinite replication and delivery is digital 
+
+- the HTML/CSS/JSS language standard let us *program browsers*
+
+- we study them to achieve fluency (autonomy) but also to understand their limits
+
+
+# Your own digital publisher
+
+## Installations
+
+See the guide from last week
+
+- install VS code
+
+- inside it, install useful extensions
+
+
+## Set up
+
+- on own computer, create a new folder 
+
+- inside it create a new ``file.html`` file.
+
+- (no spaces in names, ever)
+
+- right-click and associate it to VS Code 
+  
+- double-click and let's start
+
+## Boilerplate
+
+- thanks to the [HTML boilerplate](https://marketplace.visualstudio.com/items?itemName=sidthesloth.html5-boilerplate) extension the basic setup comes in, we will study it later.
+
+- copy/paste Cicero's text to it, then try out HTML annotations to edit it
+
+- this is a creativity task
+
+## HTML editing
+
+- don't touch the boilerplate text
+
+- deploy 
+
+  - ``<b></b>``
+
+  - ``<i></i>``
+
+  - ``<em></em>``
+
+  - ``<strong></strong>``
+
+Reference: [Formatting](https://www.w3schools.com/html/html_formatting.asp) unit on W3schools.
+
+
+---
+
+## More editing
+
+- try out nesting:
+
+  - ``<b><strong></strong></b>`` vs ``<strong><br></br></strong>``
+
+  - ``<del><em></em></del>``: overblown?
+
+
+Parsers (the software that analyses our code before executing it) expect us to always close the last/closest tag available:  ``<b><strong></b></strong>`` __is wrong__
+
+# Structuring
+
+## Paragraphs
+
+- the *para.* (two or more related sentences) is a key to *readability*
+
+- use extra space/lines between paragraph to make your source code readable and easy to maintain.
+
+```html
+
+<p>I'm a para. I sit well alone.</p>
+
+<p>I'm a sibling para. 
+  I also sit well alone.</p>
+```
+
+See the [Paragraphs](https://www.w3schools.com/html/html_paragraphs.asp) section of W3schools
+
+ 
+---
+
+## Headings
+
+- Traditional HTML supports textbook structures, essentially: chapter, section etc.
+
+- linear reading + hierarchy
+
+- HTML5 better supports __articles__
+  
+See the [Headings](https://www.w3schools.com/html/html_headings.asp) section of W3schools
+
+
+# Exercise
+
+## Content inform form
+
+- deploy the Boilerplate and the Preview extensions of VS Code to work on a presentation for Cicero's Lorem.
+- Assume a target reader:
+  - historian
+  - student of Latin
+  - Philosopher
+  
+  and prepare the page for them.
