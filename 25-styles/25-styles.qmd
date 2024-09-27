@@ -1,0 +1,199 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 5
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Styles
+
+
+---
+
+## The digital page, so far
+
+- no fixed dimension
+  
+- light or no table of contents/hierarchy
+
+- basic tags control appearance
+
+- tag names and their effects are part of the HTML5 industrial standard 
+
+- minor variations on how browsers render HTML formatting.
+
+
+---
+
+## Style personalization
+
+inside each tag we can re-assign some style measures, e.g., colour:
+
+```html
+<tag style="attribute:value;">my text</tag>
+```
+
+Both ``attribute`` and ``value`` must be selected from a list of admitted names/values.
+
+Mind the syntax: ``style``, ``=``, ``""``, ``:`` and ``;`` are all indespensible.
+
+---
+
+## Examples
+
+```html
+<strong style="color: red;">Lorem Ipsum<strong>
+```
+
+- try it on your project
+
+```html
+<strong style="color: red; font-weight: bolder;">Lorem Ipsum<strong>
+```
+
+(check fonts weights on [Mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight))
+
+---
+
+but what about
+
+```html
+<b>L</b>orem ipsum <strong style="color: red;">dolor</strong> sit amet, consectetur 
+```
+
+<b>L</b>orem ipsum <strong style="color: red;">dolor</strong> sit amet, consectetur 
+
+- cacophonic visual effects
+
+- the source quickly becomes unreadable
+
+- hard to make global changes (e.g., all instances of *dolor* now become green)
+
+---
+
+## A special operation
+
+```html
+<div style=”text-indent: 16px;”>
+```
+
+
+# The CSS standard
+
+---
+
+![](https://kinsta.com/wp-content/uploads/2020/08/html-vs-css.png)
+
+
+---
+
+## Idea
+
+- redefine tags with our styles
+
+- create new tags to attach specific styles to text
+
+- __keep webpage styles separated from content__
+
+--
+
+## The engineering of styles
+
+- styles change seldom, mostly through large *facelifting* operations, graphics experts work on them
+
+- contents may change by the minute and are produced by a variety of actors (journalists)
+
+- to keep consistency across large web sites and re-use styles, two or more CSS files could be applied to one page
+
+---
+
+## Get started
+
+from VS Code create a new CSS file, e.g., ``mystyle.css`` and save it alongside your Lorem ipsum page
+
+write on it: 
+
+  ```css
+  p {
+      text-indent: 20px;
+      text-align: justify;
+      letter-spacing: 3px;
+    }
+
+  span {
+        background-color: yellow;
+      } 
+  ```
+
+Notice the different syntax
+
+Use the embedded code selector, but with *restraint*
+
+---
+
+Now, on the HTML file put at the beginning, e.g., 
+
+```html
+  <link href="mystyle.css" rel="stylesheet" type="text/css" />
+```  
+
+reload to see how the browser applies the definitions from ``mystyle.css`` to the tags in, e.g., ``lorem.html``
+
+---
+
+
+## Change the mood, all at once
+
+```css
+body {
+	font: 11px georgia, serif;
+	text-align: center;
+	color: #fff;
+	background: #748A9B;
+	margin: 0px;
+	}
+```
+
+Put this, the least-specific definition, as first in the CSS file
+
+
+---
+
+This should be the default
+
+```css
+h1, h2 {
+        text-align: center;
+        }
+```
+
+```css
+h1 {
+    color: purple;
+    }
+```
+
+
+# CSS in action
+
+---
+
+## The CSS Zen Garden
+
+A fixed HTML info page with a few links
+
+Different CSS files dress it up for different occasions and locations
+
+Visit it the [csszengarden](https://csszengarden.com/218/)
+
+
+
+Styles are on [GitHub](https://github.com/mezzoblue/csszengarden.com)

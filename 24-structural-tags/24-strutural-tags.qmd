@@ -1,0 +1,60 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 5
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Structural tags
+
+
+---
+
+## Hierarchical
+
+Titles are rendered with the simple ``<h1>`` to ``<h6>`` tags.
+
+The now-obsolete ``<hr>`` divides text without a title.
+
+
+## Lists
+
+Several styles for lists are available, try toggling ``ul`` for ``ol``
+
+```html
+<ol>
+  <li>first item</li>
+
+  <li>second item</li>
+</ol>
+```
+
+Please see again [W3schools](https://www.w3schools.com/html/html_lists.asp) for the details
+
+
+## Panels, e.g. for navigation 
+
+See p. 67 of the textbook: we use special styles and ``div`` or ``span`` to achieve eye-catching
+
+
+
+# Screen-oriented structure
+
+
+---
+
+Unless most paper pages (books, magazines etc.), web pages might have a *variable layout* with different contents and styles
+
+![](https://assets.htmlgoodies.com/uploads/2021/04/stylingblocks.png)
+
+Specific layout tags will help us style the sections independently
+
+
