@@ -117,7 +117,7 @@ Reference: [Formatting](https://www.w3schools.com/html/html_formatting.asp) unit
 
 - try out nesting:
 
-  - ``<b><strong></strong></b>`` vs ``<strong><br></br></strong>``
+  - ``<b><strong></strong></b>`` vs ``<strong><b></b></strong>``
 
   - ``<del><em></em></del>``: overblown?
 
