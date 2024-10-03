@@ -56,7 +56,7 @@ Mind the syntax: ``style``, ``=``, ``""``, ``:`` and ``;`` are all indespensible
 - try it on your project
 
 ```html
-<strong style="color: red; font-weight: bolder;">Lorem Ipsum<strong>
+<strong style="color: red; font-weight: bolder;">Lorem Ipsum</strong>
 ```
 
 (check fonts weights on [Mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight))

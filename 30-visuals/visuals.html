@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="25-styles_files/libs/clipboard/clipboard.min.js"></script>
-<script src="25-styles_files/libs/quarto-html/tabby.min.js"></script>
-<script src="25-styles_files/libs/quarto-html/popper.min.js"></script>
-<script src="25-styles_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="25-styles_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="25-styles_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="25-styles_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="25-styles_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="visuals_files/libs/clipboard/clipboard.min.js"></script>
+<script src="visuals_files/libs/quarto-html/tabby.min.js"></script>
+<script src="visuals_files/libs/quarto-html/popper.min.js"></script>
+<script src="visuals_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="visuals_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="visuals_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="visuals_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="visuals_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="ale66">
@@ -15,8 +15,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="25-styles_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="25-styles_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="visuals_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="visuals_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -95,13 +95,13 @@
     code span.vs { color: #abe338; } /* VerbatimString */
     code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="25-styles_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="25-styles_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="25-styles_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="25-styles_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="25-styles_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="25-styles_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="25-styles_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="visuals_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="visuals_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="visuals_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="visuals_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="visuals_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="visuals_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="visuals_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -405,131 +405,92 @@ ale66
 
 </section>
 <section>
-<section id="styles" class="title-slide slide level1 center">
-<h1>Styles</h1>
+<section id="visuals" class="title-slide slide level1 center">
+<h1>Visuals</h1>
 
 </section>
 <section id="the-digital-page-so-far" class="slide level2">
 <h2>The digital page, so far</h2>
 <ul>
-<li><p>no fixed dimension</p></li>
-<li><p>light or no table of contents/hierarchy</p></li>
-<li><p>basic tags control appearance</p></li>
-<li><p>tag names and their effects are part of the HTML5 industrial standard</p></li>
-<li><p>minor variations on how browsers render HTML formatting.</p></li>
+<li><p>a HTML file on our computer</p></li>
+<li><p>beside, a CSS file with custom styles</p></li>
+<li><p>the page is <em>ditigal</em> but static, unconnected</p></li>
 </ul>
 </section>
-<section id="style-personalization" class="slide level2">
-<h2>Style personalization</h2>
-<p>inside each tag we can re-assign some style measures, e.g., colour:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">tag</span><span class="ot"> style</span><span class="op">=</span><span class="st">"attribute:value;"</span><span class="dt">&gt;</span>my text<span class="dt">&lt;/</span><span class="kw">tag</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Both <code>attribute</code> and <code>value</code> must be selected from a list of admitted names/values.</p>
-<p>Mind the syntax: <code>style</code>, <code>=</code>, <code>""</code>, <code>:</code> and <code>;</code> are all indespensible.</p>
+<section id="css-styles" class="slide level2">
+<h2>CSS styles</h2>
+<p>Even though style settings can go almost anywhere in HTML pages, we keep them <em>segregated</em> in CSS files.</p>
+<p>This line must be inside the <code>&lt;head&gt;</code> section of your page:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"mystyle.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In this case <code>mystyle.css</code> must be in the same folder as the HTML file.</p>
 </section>
-<section id="examples" class="slide level2">
-<h2>Examples</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">strong</span><span class="ot"> style</span><span class="op">=</span><span class="st">"color: red;"</span><span class="dt">&gt;</span>Lorem Ipsum<span class="dt">&lt;</span><span class="kw">strong</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>try it on your project</li>
-</ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">strong</span><span class="ot"> style</span><span class="op">=</span><span class="st">"color: red; font-weight: bolder;"</span><span class="dt">&gt;</span>Lorem Ipsum<span class="dt">&lt;/</span><span class="kw">strong</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>(check fonts weights on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">Mozilla</a>)</p>
+<section id="case-the-css-file-is-in-a-different-folder" class="slide level2">
+<h2>Case: the CSS file is in a different folder</h2>
+<p>In a sub-folder:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"./css/mystyle.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In the folder above:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"../mystyle.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>in a parallel folder:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"../css/general_site_style.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section class="slide level2">
-
-<p>but what about</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">b</span><span class="dt">&gt;</span>L<span class="dt">&lt;/</span><span class="kw">b</span><span class="dt">&gt;</span>orem ipsum <span class="dt">&lt;</span><span class="kw">strong</span><span class="ot"> style</span><span class="op">=</span><span class="st">"color: red;"</span><span class="dt">&gt;</span>dolor<span class="dt">&lt;/</span><span class="kw">strong</span><span class="dt">&gt;</span> sit amet, consectetur </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><b>L</b>orem ipsum <strong style="color: red;">dolor</strong> sit amet, consectetur</p>
-<ul>
-<li><p>cacophonic visual effects</p></li>
-<li><p>the source quickly becomes unreadable</p></li>
-<li><p>hard to make global changes (e.g., all instances of <em>dolor</em> now become green)</p></li>
-</ul>
+<section id="case-there-are-several-styles" class="slide level2">
+<h2>Case: there are several styles</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"../css/general_site_style.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb5-2"><a href=""></a></span>
+<span id="cb5-3"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"./css/specific_section_style.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Overlapping, e.g., the same tag is styled twice, is an issue</p>
 </section>
-<section id="a-special-operation" class="slide level2">
-<h2>A special operation</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">”text-indent:</span><span class="ot"> </span><span class="er">16px;”</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="case-the-style-file-is-somewhere-else-in-the-file-system" class="slide level2">
+<h2>Case: the style file is somewhere else in the file system</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"c:/path/to/the/css/folder/style.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="case-the-style-file-is-online" class="slide level2">
+<h2>Case: the style file is online</h2>
+<p>We <em>borrow</em> the style from an online resource</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://csszengarden.com/examples/style.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Get styles are on <a href="https://github.com/mezzoblue/csszengarden.com">GitHub</a></p>
 </section></section>
 <section>
-<section id="the-css-standard" class="title-slide slide level1 center">
-<h1>The CSS standard</h1>
+<section id="exercise" class="title-slide slide level1 center">
+<h1>Exercise</h1>
 
 </section>
-<section class="slide level2">
-
-
-<img data-src="https://kinsta.com/wp-content/uploads/2020/08/html-vs-css.png" class="r-stretch"></section>
-<section id="idea" class="slide level2">
-<h2>Idea</h2>
+<section id="work-with-csszengarden-styles" class="slide level2">
+<h2>Work with csszengarden styles</h2>
 <ul>
-<li><p>redefine tags with our styles</p></li>
-<li><p>create new tags to attach specific styles to text</p></li>
-<li><p><strong>keep webpage styles separated from content</strong></p></li>
+<li><p>visit <a href="https://csszengarden.com/">https://csszengarden.com/</a></p></li>
+<li><p>download the HTML and the CSS files and put them in a newly-created folder</p></li>
+<li><p>double-click the HTML file, check how it looks</p></li>
+<li><p>open VS Code then open the HTML file</p></li>
+<li><p>edit the HTML so that it includes the local CSS (the ‘zen’ look)</p></li>
+<li><p>now edit it again so that it includes the online CSS for the ‘verde moderna’ look</p></li>
 </ul>
-<p>–</p>
-</section>
-<section id="the-engineering-of-styles" class="slide level2">
-<h2>The engineering of styles</h2>
-<ul>
-<li><p>styles change seldom, mostly through large <em>facelifting</em> operations, graphics experts work on them</p></li>
-<li><p>contents may change by the minute and are produced by a variety of actors (journalists)</p></li>
-<li><p>to keep consistency across large web sites and re-use styles, two or more CSS files could be applied to one page</p></li>
-</ul>
-</section>
-<section id="get-started" class="slide level2">
-<h2>Get started</h2>
-<p>from VS Code create a new CSS file, e.g., <code>mystyle.css</code> and save it alongside your Lorem ipsum page</p>
-<p>write on it:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb6-1"><a href=""></a>p {</span>
-<span id="cb6-2"><a href=""></a>    <span class="kw">text-indent</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb6-3"><a href=""></a>    <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">justify</span><span class="op">;</span></span>
-<span id="cb6-4"><a href=""></a>    <span class="kw">letter-spacing</span><span class="ch">:</span> <span class="dv">3</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb6-5"><a href=""></a>  }</span>
-<span id="cb6-6"><a href=""></a></span>
-<span id="cb6-7"><a href=""></a>span {</span>
-<span id="cb6-8"><a href=""></a>      <span class="kw">background-color</span><span class="ch">:</span> <span class="cn">yellow</span><span class="op">;</span></span>
-<span id="cb6-9"><a href=""></a>    } </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Notice the different syntax</p>
-<p>Use the embedded code selector, but with <em>restraint</em></p>
-</section>
-<section class="slide level2">
-
-<p>Now, on the HTML file put at the beginning, e.g.,</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"mystyle.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>reload to see how the browser applies the definitions from <code>mystyle.css</code> to the tags in, e.g., <code>lorem.html</code></p>
-</section>
-<section id="change-the-mood-all-at-once" class="slide level2">
-<h2>Change the mood, all at once</h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb8-1"><a href=""></a>body {</span>
-<span id="cb8-2"><a href=""></a>    <span class="kw">font</span><span class="ch">:</span> <span class="dv">11</span><span class="dt">px</span> <span class="dv">georgia</span><span class="op">,</span> <span class="dv">serif</span><span class="op">;</span></span>
-<span id="cb8-3"><a href=""></a>    <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">center</span><span class="op">;</span></span>
-<span id="cb8-4"><a href=""></a>    <span class="kw">color</span><span class="ch">:</span> <span class="cn">#fff</span><span class="op">;</span></span>
-<span id="cb8-5"><a href=""></a>    <span class="kw">background</span><span class="ch">:</span> <span class="cn">#748A9B</span><span class="op">;</span></span>
-<span id="cb8-6"><a href=""></a>    <span class="kw">margin</span><span class="ch">:</span> <span class="dv">0</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb8-7"><a href=""></a>    }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Put this, the least-specific definition, as first in the CSS file</p>
-</section>
-<section class="slide level2">
-
-<p>This should be the default</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb9-1"><a href=""></a>h1<span class="op">,</span> h2 {</span>
-<span id="cb9-2"><a href=""></a>        <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">center</span><span class="op">;</span></span>
-<span id="cb9-3"><a href=""></a>        }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb10-1"><a href=""></a>h1 {</span>
-<span id="cb10-2"><a href=""></a>    <span class="kw">color</span><span class="ch">:</span> <span class="cn">purple</span><span class="op">;</span></span>
-<span id="cb10-3"><a href=""></a>    }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section></section>
 <section>
-<section id="css-in-action" class="title-slide slide level1 center">
-<h1>CSS in action</h1>
+<section id="images" class="title-slide slide level1 center">
+<h1>Images</h1>
 
 </section>
-<section id="the-css-zen-garden" class="slide level2">
-<h2>The CSS Zen Garden</h2>
-<p>A fixed HTML info page with a few links</p>
-<p>Different CSS files dress it up for different occasions and locations</p>
-<p>Visit it the <a href="https://csszengarden.com/218/">csszengarden</a></p>
-<p>Styles are on <a href="https://github.com/mezzoblue/csszengarden.com">GitHub</a></p>
+<section id="including-images" class="slide level2">
+<h2>Including images</h2>
+
+<img data-src="./imgs/raymond-quenau-page.jpg" class="r-stretch"><p>Browsers pick up image files and incorporate them in the rendering of the page</p>
+<p>The HTML code will link those image files in the same way as it links to the CSS file</p>
+<p>The <code>img</code> tag has parameters that control the exact rendering of the image</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb8-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./imgs/quenau-page-1.jpg"</span><span class="ot"> alt</span><span class="op">=</span><span class="st">"I show when the file fails to load"</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="online-image-embedding" class="slide level2">
+<h2>Online image embedding</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb9-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Logo_Universit%C3%A0_degli_Studi_di_Milano.svg/1024px-Logo_Universit%C3%A0_degli_Studi_di_Milano.svg.png"</span><span class="ot"> alt</span><span class="op">=</span><span class="st">"The unimi Minerva"</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Logo_Universit%C3%A0_degli_Studi_di_Milano.svg/1024px-Logo_Universit%C3%A0_degli_Studi_di_Milano.svg.png" alt="The unimi Minerva" class="r-stretch"><p>Warning: we are <em>leasing</em> an area of the page to the source site</p>
+</section>
+<section id="a-brief-on-formats" class="slide level2">
+<h2>a Brief on formats</h2>
+<ul>
+<li><p>photo-oriented: they describe a <em>bitmap</em>: <code>.bmp</code>, <code>.jpg</code> and <code>.png</code></p></li>
+<li><p>rendering oriented: they contain code that creates the image in the context: <code>.svg</code></p></li>
+</ul>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p><a href="https://github.com/ale66/learn-web">github.com/ale66/learn-web</a>&nbsp;&nbsp;&nbsp;</p>
@@ -540,20 +501,20 @@ ale66
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="25-styles_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="visuals_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="25-styles_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="25-styles_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="25-styles_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="25-styles_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="25-styles_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="25-styles_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="visuals_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="visuals_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="visuals_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="visuals_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="visuals_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="visuals_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="25-styles_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="25-styles_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="25-styles_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="25-styles_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="visuals_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="visuals_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="visuals_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="visuals_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

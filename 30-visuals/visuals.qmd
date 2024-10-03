@@ -1,0 +1,157 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 5
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Visuals
+
+
+---
+
+## The digital page, so far
+
+- a HTML file on our computer
+  
+- beside, a CSS file with custom styles
+
+- the page is *ditigal* but static, unconnected
+
+
+---
+
+## CSS styles
+
+Even though style settings can go almost anywhere in HTML pages, we keep them *segregated* in CSS files.
+
+This line must be inside the ``<head>`` section of your page:
+
+
+```html
+  <link href="mystyle.css" rel="stylesheet" type="text/css" />
+```  
+
+In this case ``mystyle.css`` must be in the same folder as the HTML file.
+
+
+---
+
+## Case: the CSS file is in a different folder 
+
+In a sub-folder:
+
+```html
+  <link href="./css/mystyle.css" rel="stylesheet" type="text/css" />
+```  
+
+In the folder above:
+
+```html
+  <link href="../mystyle.css" rel="stylesheet" type="text/css" />
+```  
+
+in a parallel folder:
+
+```html
+  <link href="../css/general_site_style.css" rel="stylesheet" type="text/css" />
+```  
+
+---
+
+## Case: there are several styles
+
+```html
+  <link href="../css/general_site_style.css" rel="stylesheet" type="text/css" />
+
+  <link href="./css/specific_section_style.css" rel="stylesheet" type="text/css" />
+```  
+
+Overlapping, e.g., the same tag is styled twice, is an issue 
+
+---
+
+## Case: the style file is somewhere else in the file system
+
+```html
+  <link href="c:/path/to/the/css/folder/style.css" rel="stylesheet" type="text/css" />
+```  
+
+---
+
+
+## Case: the style file is online
+
+We *borrow* the style from an online resource
+
+```html
+  <link href="https://csszengarden.com/examples/style.css" rel="stylesheet" type="text/css" />
+```
+
+Get styles are on [GitHub](https://github.com/mezzoblue/csszengarden.com)
+
+
+# Exercise
+
+
+---
+
+## Work with csszengarden styles
+
+- visit [https://csszengarden.com/](https://csszengarden.com/)
+  
+- download the HTML and the CSS files and put them in a newly-created folder
+  
+- double-click the HTML file, check how it looks
+  
+- open VS Code then open the HTML file
+
+- edit the HTML so that it includes the local CSS (the 'zen' look)
+
+- now edit it again so that it includes the online CSS for the 'verde moderna' look
+
+
+# Images
+
+## Including images
+
+![](./imgs/raymond-quenau-page.jpg)
+
+Browsers pick up image files and incorporate them in the rendering of the page
+
+The HTML code will link those image files in the same way as it links to the CSS file
+
+The ``img`` tag has parameters that control the exact rendering of the image
+
+```html
+<img src="./imgs/quenau-page-1.jpg" alt="I show when the file fails to load">
+```
+
+---
+
+## Online image embedding
+
+```html
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Logo_Universit%C3%A0_degli_Studi_di_Milano.svg/1024px-Logo_Universit%C3%A0_degli_Studi_di_Milano.svg.png" alt="The unimi Minerva">
+```
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Logo_Universit%C3%A0_degli_Studi_di_Milano.svg/1024px-Logo_Universit%C3%A0_degli_Studi_di_Milano.svg.png" alt="The unimi Minerva">
+
+Warning: we are *leasing* an area of the page to the source site
+
+
+---
+
+## a Brief on formats
+
+- photo-oriented: they describe a *bitmap*: ``.bmp``, ``.jpg`` and ``.png``
+  
+- rendering oriented: they contain code that creates the image in the context: ``.svg``
