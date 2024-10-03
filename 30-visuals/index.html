@@ -442,12 +442,12 @@ ale66
 </section>
 <section id="case-the-style-file-is-somewhere-else-in-the-file-system" class="slide level2">
 <h2>Case: the style file is somewhere else in the file system</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"c:/path/to/the/css/folder/style.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"c:/path/to/the/css/folder/style.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="case-the-style-file-is-online" class="slide level2">
 <h2>Case: the style file is online</h2>
 <p>We <em>borrow</em> the style from an online resource</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://csszengarden.com/examples/style.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://csszengarden.com/examples/style.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Get styles are on <a href="https://github.com/mezzoblue/csszengarden.com">GitHub</a></p>
 </section></section>
 <section>
@@ -477,8 +477,12 @@ ale66
 <img data-src="./imgs/raymond-quenau-page.jpg" class="r-stretch"><p>Browsers pick up image files and incorporate them in the rendering of the page</p>
 <p>The HTML code will link those image files in the same way as it links to the CSS file</p>
 <p>The <code>img</code> tag has parameters that control the exact rendering of the image</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb8-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./imgs/quenau-page-1.jpg"</span><span class="ot"> alt</span><span class="op">=</span><span class="st">"I show when the file fails to load"</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb8-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./imgs/quenau-page-1.jpg"</span><span class="ot"> alt</span><span class="op">=</span><span class="st">"I show when the file fails to load"</span><span class="ot"> title</span><span class="op">=</span><span class="st">"show when mouse over"</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
+<section class="slide level2">
+
+
+<img data-src="./imgs/6-img-2.png" class="r-stretch"></section>
 <section id="online-image-embedding" class="slide level2">
 <h2>Online image embedding</h2>
 <div class="sourceCode" id="cb9"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb9-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Logo_Universit%C3%A0_degli_Studi_di_Milano.svg/1024px-Logo_Universit%C3%A0_degli_Studi_di_Milano.svg.png"</span><span class="ot"> alt</span><span class="op">=</span><span class="st">"The unimi Minerva"</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -489,8 +493,60 @@ ale66
 <h2>a Brief on formats</h2>
 <ul>
 <li><p>photo-oriented: they describe a <em>bitmap</em>: <code>.bmp</code>, <code>.jpg</code> and <code>.png</code></p></li>
-<li><p>rendering oriented: they contain code that creates the image in the context: <code>.svg</code></p></li>
+<li><p>animation-oriented: <code>.gif</code></p></li>
+<li><p>rendering oriented, total control: they contain code that creates the image in the context: <code>.svg</code></p></li>
 </ul>
+</section>
+<section id="figures" class="slide level2">
+<h2>Figures</h2>
+<p>Different from simple embeddings, figures may have numbering, caption and be treated uniformly with the <code>&lt;figure&gt;&lt;/figure&gt;</code> tag</p>
+
+<img data-src="./imgs/6-traditional.png" class="r-stretch"><p>Details in Ch. 6 of the textbook</p>
+</section>
+<section id="images-as-deco" class="slide level2">
+<h2>Images as deco’</h2>
+<ul>
+<li><p>an image can become the background of the page or portions thereof</p></li>
+<li><p>with <em>tiling</em> the same pattern/logo can be repeated throghout arbitrary surfaces</p></li>
+<li><p>details in Ch. 7 of the textbook</p></li>
+</ul>
+</section></section>
+<section>
+<section id="custom-styles" class="title-slide slide level1 center">
+<h1>Custom styles</h1>
+
+</section>
+<section id="motivations" class="slide level2">
+<h2>Motivations</h2>
+<p>CSS definitions can customise the standard HTML tags</p>
+<p>However, there are few of those and CSS will change all its instances at once</p>
+<p>Example</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb10-1"><a href=""></a>p {</span>
+<span id="cb10-2"><a href=""></a>  align<span class="ch">:</span> <span class="dv">right</span><span class="op">;</span></span>
+<span id="cb10-3"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>aligns the whole document to the right…</p>
+</section>
+<section id="visual-classes" class="slide level2">
+<h2>Visual classes</h2>
+<p>Create ad hoc styles via new classes</p>
+<p>Each class name needs be unique and begin by <code>.</code></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb11-1"><a href=""></a>p {</span>
+<span id="cb11-2"><a href=""></a>  indent<span class="ch">:</span> <span class="dv">12</span><span class="dt">pt</span><span class="op">;</span></span>
+<span id="cb11-3"><a href=""></a></span>
+<span id="cb11-4"><a href=""></a>  align<span class="ch">:</span> <span class="dv">left</span><span class="op">;</span></span>
+<span id="cb11-5"><a href=""></a>}</span>
+<span id="cb11-6"><a href=""></a></span>
+<span id="cb11-7"><a href=""></a><span class="fu">.latinpara</span> {</span>
+<span id="cb11-8"><a href=""></a>  indent<span class="ch">:</span> <span class="dv">12</span><span class="dt">pt</span><span class="op">;</span></span>
+<span id="cb11-9"><a href=""></a></span>
+<span id="cb11-10"><a href=""></a>  align<span class="ch">:</span> <span class="dv">right</span><span class="op">;</span></span>
+<span id="cb11-11"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb12-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>This is a presentation of an ancient text. Its author is Cicero.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb12-2"><a href=""></a></span>
+<span id="cb12-3"><a href=""></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">"latinpara"</span><span class="dt">&gt;</span>Lorem ipsum ... <span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p><a href="https://github.com/ale66/learn-web">github.com/ale66/learn-web</a>&nbsp;&nbsp;&nbsp;</p>

@@ -65,6 +65,7 @@ in a parallel folder:
   <link href="../css/general_site_style.css" rel="stylesheet" type="text/css" />
 ```  
 
+
 ---
 
 ## Case: there are several styles
@@ -77,23 +78,23 @@ in a parallel folder:
 
 Overlapping, e.g., the same tag is styled twice, is an issue 
 
+
 ---
 
 ## Case: the style file is somewhere else in the file system
 
 ```html
-  <link href="c:/path/to/the/css/folder/style.css" rel="stylesheet" type="text/css" />
+<link href="c:/path/to/the/css/folder/style.css" rel="stylesheet" type="text/css" />
 ```  
 
 ---
-
 
 ## Case: the style file is online
 
 We *borrow* the style from an online resource
 
 ```html
-  <link href="https://csszengarden.com/examples/style.css" rel="stylesheet" type="text/css" />
+<link href="https://csszengarden.com/examples/style.css" rel="stylesheet" type="text/css" />
 ```
 
 Get styles are on [GitHub](https://github.com/mezzoblue/csszengarden.com)
@@ -132,8 +133,14 @@ The HTML code will link those image files in the same way as it links to the CSS
 The ``img`` tag has parameters that control the exact rendering of the image
 
 ```html
-<img src="./imgs/quenau-page-1.jpg" alt="I show when the file fails to load">
+<img src="./imgs/quenau-page-1.jpg" alt="I show when the file fails to load" title="show when mouse over">
 ```
+
+
+---
+
+![](./imgs/6-img-2.png)
+
 
 ---
 
@@ -153,5 +160,81 @@ Warning: we are *leasing* an area of the page to the source site
 ## a Brief on formats
 
 - photo-oriented: they describe a *bitmap*: ``.bmp``, ``.jpg`` and ``.png``
+
+- animation-oriented: ``.gif``
+    
+- rendering oriented, total control: they contain code that creates the image in the context: ``.svg``
+
+
+---
+
+## Figures
+
+Different from simple embeddings, figures may have numbering, caption and be treated uniformly with the ``<figure></figure>`` tag
+
+![](./imgs/6-traditional.png)
+
+
+Details in Ch. 6 of the textbook
+
+
+---
+
+## Images as deco'
+
+- an image can become the background of the page or portions thereof
+
+- with *tiling* the same pattern/logo can be repeated throghout arbitrary surfaces
   
-- rendering oriented: they contain code that creates the image in the context: ``.svg``
+- details in Ch. 7 of the textbook
+
+# Custom styles
+
+## Motivations
+
+CSS definitions can customise the standard HTML tags
+
+However, there are few of those and CSS will change all its instances at once
+
+Example
+
+```css
+p {
+  align: right;
+}
+```
+
+aligns the whole document to the right...
+
+
+---
+
+## Visual classes
+
+Create ad hoc styles via new classes
+
+Each class name needs be unique and begin by ``.``
+
+```css
+p {
+  indent: 12pt;
+
+  align: left;
+}
+
+.latinpara {
+  indent: 12pt;
+
+  align: right;
+}
+```
+
+
+---
+
+```html
+<p>This is a presentation of an ancient text. Its author is Cicero.</p>
+
+<p class="latinpara">Lorem ipsum ... </p>
+```
+
