@@ -1,0 +1,247 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 5
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Embedding
+
+
+---
+
+## The digital page, so far
+
+- a HTML file with the structure
+  
+- a CSS file with the styles
+
+- images as files (local or online)
+
+Browsers will read the HTML, yank the needed parts and combine them to render the final page
+
+However, we are responsible for preparing the files and *linking* them up.
+
+
+## Advancements
+
+- personalised CSS styles make pages come alive and create the *visuals*
+
+- Even though embedding style into HTML is permitted, we keep them segregated on the CSS
+
+- *hero* background images (with *tiling*)
+
+- on-image titles, but need well-designed fonts
+
+---
+
+
+## In-class project
+
+Goal: an info page for MA COM that looks attractive
+
+Stage 1: hero image with title and some info text below
+
+Stage 2 (now): restyle the the info text with better fonts, colors and the unimi seal in the background
+
+---
+
+
+Stage 3 (later): add motivating images, e.g., pictures of group work, friendly students, friendly academics etc.
+
+Example: pages from R. Quenau's works to underline the visual element of reading/communicating
+
+![](./imgs/quenau-page-1.jpg){width=40%} 
+![](./imgs/quenau-page-2.jpg){width=40%}
+
+```html
+<img src="./imgs/quenau-page-2.jpg" alt="" title="">
+```
+
+
+# Linking
+
+
+## Linearity
+
+Printed material is normally for reading from start to finish
+
+The table of contents allows *skipping ahead* on some parts
+
+In textbooks, numbered definitions, figures and formulae allow mentioning them in the text and also go back to revise content.
+
+Bibliographic references *integrate* the material and support different level of reading
+
+
+---
+
+## Non-linearity
+
+Narratives might not follow the exact time sequence
+
+HTML supports the *hypertext:*
+
+- parts of the text are connected to arbitrary texts, be them parts of the same text (backward or forward) or external sources
+
+- users can follow up the links and continue reading there (or come back)
+  
+- virtually infinite reading patterns are possible
+
+
+--
+
+## The anchor
+
+```html
+ <a href="https://www.unimi.it/">Visit our uni!</a> 
+```
+
+[Visit our uni!](https://www.unimi.it/)
+
+CSS will program the graphics of the linked text
+
+By clicking we 'get there:' browsers acquire the new page, build up and serve it
+
+---
+
+## Visit vs. reference
+
+```html
+ <a href="https://www.unimi.it/" target="_blank">Visit our uni!</a> 
+```
+
+Opens in a separated tab
+
+
+---
+
+Same syntax for internal and external reference
+
+```html
+<a href="https://www.w3.org/">W3C</a>
+```
+
+Local files are searched from the local folder, as with CSS:
+
+
+```html
+<a href="./notes/october24.html">my local notes</a>
+```
+
+
+---
+
+## But were are we going, exactly?
+
+```html
+<a href="https://www.w3.org/">W3C</a>
+```
+
+- The ``https`` protocol assigns a computer (server) of reference for [www.w3.org]
+
+- on that computer, local software serves https requests and has a special folder, called *root* where it stores public files (HMTL, CSS etc.)
+
+- unless the link specifies a file, ``index.html`` will be served: ``www.w3.org/`` is equivalent to ``www.w3.org/index.html``
+
+
+---
+
+## Linked images
+
+Embed the image inside the anchor
+
+```html
+<a href="https://en.wikipedia.org/wiki/Torre_Velasca">
+  <img src="./imgs/torrevelasca.jpg" alt="a tower" height="200px">
+</a> 
+```
+
+<a href="https://en.wikipedia.org/wiki/Torre_Velasca">
+<img src="./imgs/torrevelasca.jpg" alt="link on this photo" height="200px">
+</a> 
+
+
+---
+
+## Exercise
+
+You know better than anyone what are the relevant sites/services for a perspective MA COM student
+
+Link them from the page, possibly with thumbnails (small previews)
+
+
+# Complex embeddingns
+
+Audio/Video embedding is done with a third-party software that browers *inject* in the page
+
+Maps are treated similarly
+
+## Embed Video, a
+
+```html
+<video src = "file"
+  poster   = "title image"
+  width    = "value"
+  height   = "value"
+  controls 
+  loop>
+</video>
+```
+
+Pro: we have control of what to play
+
+Con: very brittle
+
+---
+
+## Enbed video, b
+
+```html
+<iframe width="420" height="345" src="(https://youtu.be/embed/SXOPmxqShRU?si=hMqSR4PGQNuEcLNR">
+</iframe>
+```
+
+Pro: works well
+
+Con: as with online images, we lease control of some parts of our page.
+
+
+---
+
+## Embed Audio
+
+A special case of Video, today almost always disallowed
+
+```html
+<audio 
+  controls 
+  autoplay>
+    <source src="./multimedia/example-bootleg.opus" type="audio/opus">
+  Your browser does not support the audio element.
+</audio>
+```
+
+<audio 
+  controls 
+  autoplay>
+    <source src="./audio+video/example-bootleg.opus" type="audio/opus">
+  Your browser does not support the audio element.
+</audio>
+
+
+# Exercise
+
+Embed a clickable YT video of our MA COM:
+
+[![](./imgs/com-YT-thumbnail.jpg){width=30%}](https://youtu.be/SXOPmxqShRU?si=hMqSR4PGQNuEcLNR)
+
+MA COM channel: [www.youtube.com/@comunicazionepubblicaedimp4805](https://www.youtube.com/@comunicazionepubblicaedimp4805)
+

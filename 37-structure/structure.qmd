@@ -1,0 +1,131 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 5
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Structure
+
+
+---
+
+## Important properties
+
+Whereas rendered pages are normally related to a linear, left-to-right, top-down reading, browsers see pages as *trees*
+
+Biological tree: one *root* element at the bottom which splits up repeatedly in smaller and smaller branches; leaves at the top
+
+
+---
+
+HTML tree: flipped upside down
+
+a single root element at the top
+
+branching out into several smaller elements, some of which are siblings
+
+
+---
+
+## Parsing
+
+Automated reading of a formal (code) file with *recognition* of the commands
+
+HTML branch tags must be strictly contained into their *root*
+
+are mistyping can throw the automated parsing off track
+
+
+---
+
+
+```html
+<!doctype html>
+```
+
+This is not strictly HTML and it is read by the OS under the browser
+
+---
+
+```html
+<!doctype html>
+
+<html lang="en">
+</html>
+
+
+---
+
+One root, two branches
+
+```html
+<!doctype html>
+
+<html>
+  <head></head>
+  <body></body>
+</html>
+```
+
+This part is mandatory
+
+---
+
+```html
+<!doctype html>
+
+<html>
+  <head>
+    <h1>Title</h1>
+    <p>Text</p>
+  </head>
+  <body></body>
+</html>
+```
+
+One root, two branches and two leaves
+
+
+---
+
+```html
+<html>
+  <head>
+    <h1>Title</h1>
+    <p>Text</p>
+    <p>More text</p>
+    <p>Another text</p>
+    <p>Further text</p>
+    ...
+</head>
+  <body></body>
+</html>
+```
+
+Several leaves
+
+---
+
+Browsers process tags as *paths* from root to leaf:
+
+```html
+<html><head><h1>Title</h1>
+```
+
+```html
+<html><head><p>Text</p>
+```
+
+
+Each leaf, or *unit of text* will be uniquely identified
+
+Next, all the needed CSS command will be picked up from the CSS file and attached to the element

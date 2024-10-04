@@ -217,13 +217,13 @@ Each class name needs be unique and begin by ``.``
 
 ```css
 p {
-  indent: 12pt;
+  text-indent: 12pt;
 
   align: left;
 }
 
 .latinpara {
-  indent: 4pt;
+  text-indent: 4pt;
 
   align: right;
 }
@@ -274,7 +274,7 @@ The CSS file can accomodate an hero image layout by
 
 #### Web-native illustration, 2
 
-Can your replicate this type of page with this ``jpg`` file? (click to enlarge)
+Can your replicate this type of page with this ``.jpg`` file? (click to enlarge)
 
 ![](./imgs/torrevelasca.jpg){width=5in}
 
@@ -300,17 +300,17 @@ Create a page about MA COM by
 
 ---
 
-# instructions, I
+## instructions, I
 
-- get the latest version of the class notes from GitHub
+- get the latest version of the class notes from GitHub: [github.com/ale66/learn-web/tree/main/30-visuals/exercise-rename-me](https://github.com/ale66/learn-web/tree/main/30-visuals/exercise-rename-me)
 
-- into folder ``30-visuals`` find the folder ``exercise-rename-me``
+- go into folder ``30-visuals``, find the ``exercise-rename-me`` folder
   
-- rename the folder
+- rename it
 
 ---
 
-# instructions, II
+## instructions, II
 
 - go inside, open the ``index.html`` file in Vs Code 
 
