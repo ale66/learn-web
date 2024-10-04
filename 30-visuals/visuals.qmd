@@ -223,7 +223,7 @@ p {
 }
 
 .latinpara {
-  indent: 12pt;
+  indent: 4pt;
 
   align: right;
 }
@@ -238,3 +238,84 @@ p {
 <p class="latinpara">Lorem ipsum ... </p>
 ```
 
+---
+
+## Draft new styles
+
+Go to the Web Design Playground:
+
+[https://webdesignplayground.io/lessons/7-4-0/](https://webdesignplayground.io/lessons/7-4-0/)
+
+
+# The *hero image*
+
+## An inviting visuals
+
+Static pages now tend to start with a graphical upper part which is repeated for all pages: the *hero image*
+
+For hero images, and only for them, it makes sense to have a specific form of title, which is attuned to the image itself, e.g., matches its second or third color, has specific font etc.
+
+---
+
+The CSS file can accomodate an hero image layout by 
+
+- specific classes
+  
+- the ``background`` attribute to a class
+
+---
+
+#### Web-native illustration, 1
+
+![](./imgs/6-hero.png)
+
+
+---
+
+#### Web-native illustration, 2
+
+Can your replicate this type of page with this ``jpg`` file? (click to enlarge)
+
+![](./imgs/torrevelasca.jpg){width=5in}
+
+---
+
+![](./imgs/torrevelasca.jpg){.lightbox}
+
+
+# Exercise
+
+# Goal
+
+Create a page about MA COM by 
+
+- lifting text from the actual presentation page into a local HTML
+
+- Have the Torre Velasca as hero image *or anything as you see fit*
+
+- develop a CSS with special classes for title, claim and a bit else *over* the picture
+
+- discuss the page with the colleague sitting on the left if it exists, or the one sittinng behind you
+
+
+---
+
+# instructions, I
+
+- get the latest version of the class notes from GitHub
+
+- into folder ``30-visuals`` find the folder ``exercise-rename-me``
+  
+- rename the folder
+
+---
+
+# instructions, II
+
+- go inside, open the ``index.html`` file in Vs Code 
+
+- also open the ``mystyle.css`` file in VS Code 
+  
+- look for info material about MA COM, e.g., on [www.unimi.it/en/education/master-programme/public-and-corporate-communication-com](https://www.unimi.it/en/education/master-programme/public-and-corporate-communication-com)
+
+- develop a CSS class that includes the hero image and appropriate text font/color

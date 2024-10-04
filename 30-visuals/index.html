@@ -7,7 +7,10 @@
 <link href="visuals_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="visuals_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="visuals_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="visuals_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="visuals_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="visuals_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="visuals_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="visuals_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="ale66">
@@ -537,7 +540,7 @@ ale66
 <span id="cb11-5"><a href=""></a>}</span>
 <span id="cb11-6"><a href=""></a></span>
 <span id="cb11-7"><a href=""></a><span class="fu">.latinpara</span> {</span>
-<span id="cb11-8"><a href=""></a>  indent<span class="ch">:</span> <span class="dv">12</span><span class="dt">pt</span><span class="op">;</span></span>
+<span id="cb11-8"><a href=""></a>  indent<span class="ch">:</span> <span class="dv">4</span><span class="dt">pt</span><span class="op">;</span></span>
 <span id="cb11-9"><a href=""></a></span>
 <span id="cb11-10"><a href=""></a>  align<span class="ch">:</span> <span class="dv">right</span><span class="op">;</span></span>
 <span id="cb11-11"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -547,12 +550,90 @@ ale66
 <div class="sourceCode" id="cb12"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb12-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>This is a presentation of an ancient text. Its author is Cicero.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
 <span id="cb12-2"><a href=""></a></span>
 <span id="cb12-3"><a href=""></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">"latinpara"</span><span class="dt">&gt;</span>Lorem ipsum ... <span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="draft-new-styles" class="slide level2">
+<h2>Draft new styles</h2>
+<p>Go to the Web Design Playground:</p>
+<p><a href="https://webdesignplayground.io/lessons/7-4-0/">https://webdesignplayground.io/lessons/7-4-0/</a></p>
+</section></section>
+<section>
+<section id="the-hero-image" class="title-slide slide level1 center">
+<h1>The <em>hero image</em></h1>
+
+</section>
+<section id="an-inviting-visuals" class="slide level2">
+<h2>An inviting visuals</h2>
+<p>Static pages now tend to start with a graphical upper part which is repeated for all pages: the <em>hero image</em></p>
+<p>For hero images, and only for them, it makes sense to have a specific form of title, which is attuned to the image itself, e.g., matches its second or third color, has specific font etc.</p>
+</section>
+<section class="slide level2">
+
+<p>The CSS file can accomodate an hero image layout by</p>
+<ul>
+<li><p>specific classes</p></li>
+<li><p>the <code>background</code> attribute to a class</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="web-native-illustration-1">Web-native illustration, 1</h4>
+
+<img data-src="./imgs/6-hero.png" class="r-stretch"></section>
+<section class="slide level2">
+
+<h4 id="web-native-illustration-2">Web-native illustration, 2</h4>
+<p>Can your replicate this type of page with this <code>jpg</code> file? (click to enlarge)</p>
+
+<img data-src="./imgs/torrevelasca.jpg" style="width:5in" class="r-stretch"></section>
+<section class="slide level2">
+
+<p><a href="./imgs/torrevelasca.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="./imgs/torrevelasca.jpg"></a></p>
+</section></section>
+<section id="exercise-1" class="title-slide slide level1 center">
+<h1>Exercise</h1>
+
+</section>
+
+<section>
+<section id="goal" class="title-slide slide level1 center">
+<h1>Goal</h1>
+<p>Create a page about MA COM by</p>
+<ul>
+<li><p>lifting text from the actual presentation page into a local HTML</p></li>
+<li><p>Have the Torre Velasca as hero image <em>or anything as you see fit</em></p></li>
+<li><p>develop a CSS with special classes for title, claim and a bit else <em>over</em> the picture</p></li>
+<li><p>discuss the page with the colleague sitting on the left if it exists, or the one sittinng behind you</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="instructions-i" class="title-slide slide level1 center">
+<h1>instructions, I</h1>
+<ul>
+<li><p>get the latest version of the class notes from GitHub</p></li>
+<li><p>into folder <code>30-visuals</code> find the folder <code>exercise-rename-me</code></p></li>
+<li><p>rename the folder</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section id="instructions-ii" class="title-slide slide level1 center">
+<h1>instructions, II</h1>
+<ul>
+<li><p>go inside, open the <code>index.html</code> file in Vs Code</p></li>
+<li><p>also open the <code>mystyle.css</code> file in VS Code</p></li>
+<li><p>look for info material about MA COM, e.g., on <a href="https://www.unimi.it/en/education/master-programme/public-and-corporate-communication-com">www.unimi.it/en/education/master-programme/public-and-corporate-communication-com</a></p></li>
+<li><p>develop a CSS class that includes the hero image and appropriate text font/color</p></li>
+</ul>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p><a href="https://github.com/ale66/learn-web">github.com/ale66/learn-web</a>&nbsp;&nbsp;&nbsp;</p>
 </div>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
@@ -952,6 +1033,38 @@ ale66
       }
     });
     </script>
+    <script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
     
 
 </body></html>
