@@ -1,0 +1,36 @@
+p {
+    text-indent: 12pt;
+    color: darksalmon;
+    text-align-last: left;
+    font-variant: serif;
+}
+
+.myheroimage{
+    width: 100vw;
+    height: 150vh;
+    background-image: url(./imgs/torrevelasca.jpg);
+    background-position: top center;
+    background-size: cover;
+}
+
+.myherotitle{
+    text-indent: 12pt;
+    color:darksalmon;
+    font-size: 4em; /* four times as big as baseline text */
+    font-variant: serif;
+}
+
+.p-official{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Logo_Universit%C3%A0_degli_Studi_di_Milano.svg/1024px-Logo_Universit%C3%A0_degli_Studi_di_Milano.svg.png)
+    /* TODO: manage size */
+}
+
+
+/* deploy it only if you like it! */
+.myherofooter{
+    width: 100vw;
+    height:100vh;
+    background-image: url(./imgs/torrevelasca.jpg);
+    background-position: bottom center;
+    background-size: cover;
+}

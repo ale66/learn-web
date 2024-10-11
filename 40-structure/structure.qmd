@@ -198,4 +198,13 @@ the tree representation guides the writing of JavaScript (JS) programs that can 
 
 and how it looks to, e.g., classes of users
 
-We study the DOM to manipulate pages 
+__We study the DOM to manipulate pages__
+
+---
+
+## Exercise: view the DOM of your own exercise
+
+
+![DOM Visualiser from GitHub](https://codu-code.github.io/dom-visualizer/index.html)
+
+![Another one](http://bioub.github.io/dom-visualizer/)
