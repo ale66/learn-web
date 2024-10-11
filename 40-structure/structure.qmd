@@ -204,6 +204,8 @@ __We study the DOM to manipulate pages__
 
 ## Exercise: view the DOM of your own exercise
 
+Take your own HTML project for MA COM
+
 
 ![DOM Visualiser from GitHub](https://codu-code.github.io/dom-visualizer/index.html)
 
