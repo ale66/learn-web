@@ -20,6 +20,22 @@ p {
     font-variant: serif;
 }
 
+/* new, adventorous style */
+
+.hero-left{
+    text-justify: right;
+    text-indent: 12pt;
+    color:darksalmon;
+    font-size: 4em; /* four times as big as baseline text */
+    font-variant: serif;
+}
+
+
+
+
+
+
+
 .p-official{
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Logo_Universit%C3%A0_degli_Studi_di_Milano.svg/1024px-Logo_Universit%C3%A0_degli_Studi_di_Milano.svg.png)
     /* TODO: manage size */

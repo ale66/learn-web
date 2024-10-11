@@ -4,12 +4,13 @@ author: "ale66"
 format: 
   revealjs:
     footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
-    theme: [moon]
+    theme: [solarized]
     preview-links: auto
     chalkboard: 
       boardmarker-width: 5
     mermaid:
       theme: forest
+      fontSize: 12
 from: markdown+emoji
 execute:
   echo: true
@@ -93,7 +94,7 @@ flowchart LR
 
 <html>
   <head>
-    <title>Title here</title>
+    <title>My DOM page</title>
   </head>
   <body>
     <h1>Visible title</h1>
@@ -118,13 +119,12 @@ flowchart LR
 ```html
 <html>
   <head>
-    <title>Title here</title>
+    <title>My DOM page</title>
   </head>
   <body>
     <h1>Visible title</h1>
-    <p>Text</p>
+    <p>Some text</p>
     <p>More text</p>
-    <p>Another text</p>
     <p>Further text</p>
 ...
 ```
@@ -143,14 +143,14 @@ flowchart LR
 Browsers process tags as *paths* from root to leaf:
 
 ```html
-<html><head><h1>Title</h1>
+<html><head><h1>Visible title</h1>
 ```
 
 ```html
-<html><head><p>Text</p>
+<html><head><p>Some text</p>
 ```
 
-Each leaf, or *unit of text* will be uniquely identified
+Each leaf will be uniquely identified
 
 Next, all the needed CSS command will be picked up from the CSS file and attached to the element
 
@@ -165,7 +165,7 @@ Next, all the needed CSS command will be picked up from the CSS file and attache
 }
 ```
 
-Free choice of class names, but they must also be unique
+Free choice of class names but they must be unique
 
 
 ---
@@ -179,7 +179,7 @@ flowchart LR
   A[html] --> B[head] & C[body]
   B --> D[title]
   C --> E[h1] & F[p] & G[p] & H[p]
-  E-.-> I[my-hero-title]
+  E-.-> I[.my-hero-title]
 ```
 
 
@@ -200,13 +200,74 @@ and how it looks to, e.g., classes of users
 
 __We study the DOM to manipulate pages__
 
+
 ---
 
 ## Exercise: view the DOM of your own exercise
 
 Take your own HTML project for MA COM
 
+[DOM Visualiser from GitHub](https://codu-code.github.io/dom-visualizer/index.html)
 
-![DOM Visualiser from GitHub](https://codu-code.github.io/dom-visualizer/index.html)
+[Another one](http://bioub.github.io/dom-visualizer/)
 
-![Another one](http://bioub.github.io/dom-visualizer/)
+---
+
+## Represent content
+
+
+```{mermaid}
+%%| echo: false
+flowchart LR
+  A[html] --> B[head] & C[body]
+  B --> D[title]
+  C --> E[h1] & F[p] & G[p] & H[p]
+  E-.-> I[.my-hero-title]
+```
+
+inside most tags there is content to be displayed.
+
+Such content is represented as an explicit leaf of our DOM
+
+
+---
+
+##
+
+```{mermaid}
+%%| echo: false
+flowchart LR
+  A[html] --> B[head] & C[body]
+  B --> D[title]
+  C --> E[h1] & F[p] & G[p] & H[p]
+  E-.-> I[.my-hero-title]
+  D --> L[My DOM page]
+  E --> M[My visible title]
+  F --> N[some text]
+  G --> O[more text]
+  H --> P[further text]
+```
+
+for each leaf, a special ``innerHTML`` variable will contain the relative text and mark-up
+
+
+---
+
+The complete DOM
+
+```{mermaid}
+%%| echo: false
+flowchart LR
+  A[html] --> B[head] & C[body]
+  B --> D[title]
+  C --> E[h1] & F[p] & G[p] & H[p]
+  E-.-> I[.my-hero-title]
+  D --> L[My DOM page]
+  E --> M[My visible title]
+  F --> N[some text]
+  F-.-> Q[.my-p-style]
+  G --> O[more text]
+  G-.-> Q
+  H --> P[further text]
+  H-.-> Q
+```
