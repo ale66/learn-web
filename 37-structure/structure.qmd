@@ -8,6 +8,8 @@ format:
     preview-links: auto
     chalkboard: 
       boardmarker-width: 5
+    mermaid:
+      theme: forest
 from: markdown+emoji
 execute:
   echo: true
@@ -61,7 +63,7 @@ This is not strictly HTML and it is read by the OS under the browser
 
 <html lang="en">
 </html>
-
+```
 
 ---
 
@@ -78,6 +80,12 @@ One root, two branches
 
 This part is mandatory
 
+```{mermaid}
+%%| echo: false
+flowchart LR
+  A[html] --> B[head] & C[body]
+```
+
 ---
 
 ```html
@@ -85,14 +93,24 @@ This part is mandatory
 
 <html>
   <head>
-    <h1>Title</h1>
-    <p>Text</p>
+    <title>Title here</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Visible title</h1>
+    <p>Text</p>
+  </body>
 </html>
 ```
 
 One root, two branches and two leaves
+
+```{mermaid}
+%%| echo: false
+flowchart LR
+  A[html] --> B[head] & C[body]
+  B --> D[title]
+  C --> E[h1] & F[p]
+```
 
 
 ---
@@ -100,18 +118,25 @@ One root, two branches and two leaves
 ```html
 <html>
   <head>
-    <h1>Title</h1>
+    <title>Title here</title>
+  </head>
+  <body>
+    <h1>Visible title</h1>
     <p>Text</p>
     <p>More text</p>
     <p>Another text</p>
     <p>Further text</p>
-    ...
-</head>
-  <body></body>
-</html>
+...
 ```
 
-Several leaves
+```{mermaid}
+%%| echo: false
+flowchart LR
+  A[html] --> B[head] & C[body]
+  B --> D[title]
+  C --> E[h1] & F[p] & G[p] & H[p]
+```
+
 
 ---
 
@@ -125,7 +150,52 @@ Browsers process tags as *paths* from root to leaf:
 <html><head><p>Text</p>
 ```
 
-
 Each leaf, or *unit of text* will be uniquely identified
 
 Next, all the needed CSS command will be picked up from the CSS file and attached to the element
+
+```html
+<html><head><h1 class="my-hero-title">Title</h1>
+```
+
+```css
+.my-hero-title {
+  font-color: darksalmon;
+  ...
+}
+```
+
+Free choice of class names, but they must also be unique
+
+
+---
+
+## How browers actually see our page 
+
+
+```{mermaid}
+%%| echo: false
+flowchart LR
+  A[html] --> B[head] & C[body]
+  B --> D[title]
+  C --> E[h1] & F[p] & G[p] & H[p]
+  E-.-> I[my-hero-title]
+```
+
+
+
+
+# The DOM 
+
+
+---
+
+## Document Object model
+
+each HTML page has an associated *tree* representation with tags and class names
+
+the tree representation guides the writing of JavaScript (JS) programs that can manipulate the structure of the page 
+
+and how it looks to, e.g., classes of users
+
+We study the DOM to manipulate pages 
