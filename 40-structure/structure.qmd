@@ -150,7 +150,19 @@ Browsers process tags as *paths* from root to leaf:
 <html><head><p>Some text</p>
 ```
 
-Each leaf will be uniquely identified
+Each leaf may be uniquely identified; in case we use ``id``
+
+```html
+<html><head><p id="top para">Some text</p>
+```
+
+```html
+<html><head><p id="top para">More text</p>
+<html><head><p id="top para">More text</p>
+```
+
+
+---
 
 Next, all the needed CSS command will be picked up from the CSS file and attached to the element
 
