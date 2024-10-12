@@ -153,12 +153,12 @@ Browsers process tags as *paths* from root to leaf:
 Each leaf may be uniquely identified; in case we use ``id``
 
 ```html
-<html><head><p id="top para">Some text</p>
+<html><head><p id="top-para">Some text</p>
 ```
 
 ```html
-<html><head><p id="top para">More text</p>
-<html><head><p id="top para">More text</p>
+<html><head><p id="middle-para">More text</p>
+<html><head><p id="bottom-para">Further text</p>
 ```
 
 
