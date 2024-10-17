@@ -1,0 +1,143 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 5
+    mermaid:
+      theme: forest
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Page layouts
+
+---
+
+## So far
+
+we learnt how to combine `HTML5+CSS` to obtain pleasing *static* pages.
+
+However, the default HTML layout is almost never a good idea...
+
+- blocks and padding help in separating text and make it stand out, but
+  
+- the CSS style may result in displaying over two lines
+
+
+---
+
+## A modern, default layout
+
+![](./imgs/11-basic-layout.png)
+
+A review of Ch. 11 of the textbook
+
+
+---
+
+## A modern, default layout, 2
+
+:::: columns
+
+::: {.column width="70%"}
+![](./imgs/11-holy-grail.png)
+:::
+
+::: {.column width="30%"}
+![](./imgs/11-basic-layout.png)
+:::
+
+::::
+
+---
+
+## Approaches to web page layout
+
+1. do nothing
+2. floats
+3. inside blocks
+4. flexbox
+5. Twitter bootstrap
+
+---
+
+![](./imgs/11-beware.png)
+
+We are going to do just that...
+
+---
+
+## Header
+
+![](./imgs/11-header.png)
+
+
+---
+
+## Nav
+
+![](./imgs/11-nav.png)
+
+
+---
+
+## A New Concept: article
+
+![](./imgs/11-article.png)
+
+
+---
+
+## A new, contemporary layout
+
+![](./imgs/11-advanced-layout.png)
+
+
+---
+
+## a floating header
+
+![](./imgs/11-floating-header.png)
+
+---
+
+## a floating footer
+
+![](./imgs/11-footer.png)
+
+
+---
+
+## Summary
+
+![](./imgs/11-summary.png)
+
+
+---
+
+## Exercises
+
+- floats: [wdpg.io/11-1-0](https://webdesignplayground.io/lessons/11-1-0)
+
+- inline blocks: [wdpg.io/11-2-0](https://webdesignplayground.io/lessons/11-2-0)
+
+
+---
+
+## Lab
+
+Import into your info page for Com the tags needed for the *holy grail* layout
+
+Change your page accordingly, e.g., by moving the links to the `<nav>` part
+
+Put the text that we retrieved from the official COM page into an article 
+
+Make a new article by lifting text from the respective [CeS page](https://www.unimi.it/en/education/bachelor/communication-and-society-ces)
+
+combine the articles in a more general page about 'Study communications at unimi'

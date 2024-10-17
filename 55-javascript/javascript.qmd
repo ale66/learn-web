@@ -1,0 +1,127 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 5
+    mermaid:
+      theme: forest
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Javascript
+
+--- 
+
+
+## Review: the DOM representation
+
+[Document Object Model](https://en.wikipedia.org/wiki/Document_Object_Model).
+
+![](./images/html-requires-js.jpg)
+
+
+---
+
+#### Conceptual framework
+
+We see the page as a top-down, left-to-right structure
+
+Browsers represent it internally as a tree.
+
+which grows from left to right.
+
+![](https://upload.wikimedia.org/wikipedia/commons/5/5a/DOM-model.svg)
+
+
+---
+
+
+Each element of the tree is a node with a specific name
+
+Each node is an *object* with name, content, properties and *methods* for changing it
+
+---
+
+![](https://upload.wikimedia.org/wikipedia/commons/5/5a/DOM-model.svg)
+
+- *DOM methods allow programmatic access to the tree*
+
+- *with them, one can change the structure, style or content of a document*
+
+---
+
+
+# Example
+
+---
+
+An image is shown in the page, right above a button
+
+If the user presses the button, an internal Javascript code is executed
+
+The code alters the leaf of the DOM tree that contains the name of the file containing the image
+
+A different image is now shown
+
+```html
+<img id="myImage" src=".mypicture.jpg" width="200" alt="An image">
+
+<p>
+  <button type="button" onclick="myFunc('summer')">Verano</button>
+  ...
+```
+
+Button come with a *listener:* ``onclick`` is an event: 
+
+see [the complete list](https://www.w3schools.com/jsref/dom_obj_event.asp) of events.
+
+
+---
+
+## Observations
+
+* ``myImage`` should be a unique identifier
+  
+* ``mypicture.jpg`` must be linked properly wrt. the position of the HTML file
+
+* ``myFunc()`` is a function we defined in a ``<script>`` element or in a separate ``.js`` file
+
+* it is called with a parameter which is a string ``myFunc('summer')``
+
+if any of this is not set up properly then the browser won't execute the behavior we want
+
+
+---
+
+#### JS: where to put it?
+
+<https://www.w3schools.com/js/js_whereto.asp>
+
+---
+
+#### Output
+
+<https://www.w3schools.com/js/js_output.asp>
+
+---
+
+#### The browser console
+
+Firefox: [Ctrl + Shift + k](https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Opening_the_Web_Console)
+
+Chromium: [Ctrl + Shift + j](https://developers.google.com/web/tools/chrome-devtools/console)
+
+---
+
+#### For home
+
+10. Analise the [WaterCSS](https://watercss.netlify.app/) CSS generator.
+
+11. Use [Markdown](https://gist.github.com/cuonggt/9b7d08a597b167299f0d) to format your instructions.

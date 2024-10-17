@@ -1,0 +1,113 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 5
+    mermaid:
+      theme: forest
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Beyond HTML
+
+
+---
+
+## Uniform CSSs
+
+So far, each HTML page is a stand-alone, complete page
+
+The CSS files sits in the same folder on your computer
+
+However, the landing page for [unimi.it](view-source:https://www.unimi.it/it) needs 48 CSS files to create its layout and graphics
+
+Each CSS file implement some style of the page.
+
+When there is overlapping, the latest definition *'wins'* 
+
+---
+
+## Complexity
+
+With 150 study programmes x 48 CSS files we are looking at 7200 CSS inclusions!
+
+We will look for a schema CSS that will control *both* 
+
+- the style aspects, color, fonts etc., and 
+  
+- the structure of the page: images, boxes, adaption to device
+
+The CSS schema is best linked from the web so it will be available everywhere in the project
+
+
+# Exercise: mimic ``unimi.it``
+
+![](./imgs/unimi-landing.png)
+
+
+---
+
+The 48 CSS styles are on the `unimi.it` server
+
+Yet they are accessible from outside, as browsers need to donwload the CSS into our computer
+
+Look at line 20:
+
+```html
+<link rel="stylesheet" 
+      media="all" 
+      href="/core/assets/vendor/jquery.ui/themes/base/core.css?sli9ct"/>
+```
+
+but the URL really means
+
+```html
+https://www.unimi.it/core/assets/vendor/jquery.ui/themes/base/core.css?sli9ct
+```
+
+by *fixing* the initial part of the link we can in fact import available CSS, as we did with the CSS Zen Garden
+
+```html
+<base href="https://www.unimi.it/" target="_blank">
+```
+
+---
+
+- Open VS, make sure the HTML boilerplate extension is there
+
+- create a new HTML file, save it in a *working folder* that is easy for your to reach
+  
+- start typing `html5-boilerplate` to import the baseline HTML code
+
+- remove the comments (text in green)
+
+- to the `head` section, add the `base` command to import the unimi.it CSS files (which URL shall we use?)
+
+
+---
+
+- go to [https://www.unimi.it/](https://www.unimi.it/)
+
+- `CTRL+u` to see the HTML source code 
+
+- copy from the `body` of the page lines 81 to 401 an paste them in the body of your page
+
+- check the preview or the Chromium rendering to adjust
+
+- next, start moving text from your project to your 'fake unimi' page to see how it renders: your 'hero' title should go to `hero-title` and so on 
+
+---
+
+While the unimi landing page is correct, the indexing of the tags is wrong
+
+To read the page and understand what is needed, look at the [myunimi.html](./myunimi.html) which has been *beautyfied* by hand
+
+
+

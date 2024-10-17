@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <base href="https://www.unimi.it/" target="_blank">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/core.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/controlgroup.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/checkboxradio.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/resizable.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/button.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/dialog.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/modules/system/css/components/align.module.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/modules/system/css/components/fieldgroup.module.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/modules/system/css/components/container-inline.module.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/modules/system/css/components/clearfix.module.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/modules/system/css/components/details.module.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/modules/system/css/components/hidden.module.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/modules/system/css/components/item-list.module.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/modules/system/css/components/js.module.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/modules/system/css/components/nowrap.module.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/modules/system/css/components/position-container.module.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/modules/system/css/components/progress.module.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/modules/system/css/components/reset-appearance.module.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/modules/system/css/components/resize.module.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/modules/system/css/components/sticky-header.module.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-counter.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-counters.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-general-info.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/modules/system/css/components/tablesort.module.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/modules/system/css/components/tree-child.module.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/modules/contrib/bootstrap_paragraphs/css/bootstrap-paragraphs-image.min.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/modules/contrib/bootstrap_paragraphs/css/bootstrap-paragraphs.min.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/modules/contrib/bootstrap_paragraphs/css/bootstrap-paragraphs-colors.min.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/modules/contrib/blazy/css/blazy.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/modules/contrib/blazy/css/components/blazy.loading.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/modules/contrib/cookies/css/cookies.lib.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/libraries/cookiesjsr/dist/cookiesjsr.min.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/modules/custom/iberbp_ext/css/bootstrap-paragraphs-two-columns.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/modules/contrib/bootstrap_paragraphs/css/bootstrap-paragraphs-columns.min.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/modules/custom/iberbp_ext/css/bootstrap-paragraphs-ext.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/modules/views/css/views.module.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/theme.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/libraries/fontawesome/css/fontawesome.min.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/libraries/fontawesome/css/solid.min.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/libraries/fontawesome/css/regular.min.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/libraries/fontawesome/css/brands.min.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/libraries/fontawesome/css/duotone.min.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/libraries/fontawesome/css/thin.min.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/modules/custom/ugov/modules/ugov_of/css/ugov_of.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/modules/custom/ugov/modules/ugov_pl/css/ugov_pl.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/modules/custom/ugov/modules/ugov_rubrica/css/ugov_rubrica.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/core/modules/layout_discovery/layouts/onecol/onecol.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/modules/contrib/paragraphs/css/paragraphs.unpublished.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/modules/contrib/varbase_media/css/varbase_media.common.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/modules/contrib/ultimenu/css/components/ultimenu.offcanvas.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/themes/custom/unimi/css/ultimenu/unimi.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/modules/contrib/ultimenu/css/components/ultimenu.offcanvas.scalein.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/themes/custom/unimi/lib/bootstrap/dist/css/bootstrap.min.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/themes/custom/unimi/lib/bootstrap/drupal-bootstrap.min.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/themes/custom/unimi/css/cookies.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/themes/custom/unimi/css/style.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/themes/custom/unimi/fonts/roboto.css?sli9ct" />
+        <link rel="stylesheet" media="all" href="/themes/custom/unimi/lib/fontawesome/css/font-awesome.min.css?sli9ct" />        
+    </head>        
+    <body class="is-ultimenu-canvas is-ultimenu-canvas--hover path-frontpage page-node-type-special-page has-glyphicons">
+        <div role="navigation">
+            <a href="#main-content" class="visually-hidden focusable skip-link">
+              Salta al contenuto principale
+            </a>
+        </div>    
+        <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+            <header class="navbar navbar-default container" id="navbar">
+                <div class="navbar-header-top full-width">
+                    <div class="topnavbar container">
+                        <div class="region region-navigation-top">
+                            <section class="language-switcher-language-url block block-language block-language-blocklanguage-interface clearfix" id="block-languageswitcher" role="navigation">
+                                <h2 class="block-title">Language switcher</h2>
+                                <ul class="links">
+                                    <li hreflang="it" data-drupal-link-system-path="node/2" class="it is-active"><a href="/it/home" class="language-link is-active" aria-label="Lingua Italiana" title="Italiano" hreflang="it" data-drupal-link-system-path="node/2">ITA</a></li>
+                                    <li hreflang="en" data-drupal-link-system-path="node/2" class="en"><a href="/en/home" class="language-link" aria-label="English language" title="English" hreflang="en" data-drupal-link-system-path="node/2">ENG</a>
+                                    </li>
+                                </ul>
+                            </section>
+                            <nav role="navigation" aria-labelledby="block-unimi-profili-menu" id="block-unimi-profili" class="navbar-profili menu_right hidden-xs hidden-sm">   
+                                <h2 class="visually-hidden" id="block-unimi-profili-menu">Profili</h2>
+                                <ul class="menu menu--profili nav">
+                                    <li class="first">
+                                        <a href="https://unimia.unimi.it/">Unimia</a>
+                                    </li>
+                                    <li>
+                                        <a href="/it/studiare/servizi-gli-studenti/segreterie-informastudenti" data-drupal-link-system-path="node/359">Segreterie</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ariel.unimi.it/" title="Portale elearning">Ariel</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.sba.unimi.it/" title="Biblioteche">Biblioteche</a>
+                                    </li>
+                                    <li>
+                                        <a href="/it/chi-e-dove" data-drupal-link-system-path="node/7663">Chi e dove</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://mail.unimi.it/">Webmail</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://work.unimi.it">laStatale@work</a>
+                                    </li>
+                                    <li class="expanded dropdown">                                                              <a href="" class="dropdown-toggle" data-toggle="dropdown">Info per <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="first">
+                                                <a href="/it/taxonomy/term/10" data-drupal-link-system-path="taxonomy/term/10">Futuri studenti</a>
+                                            </li>
+                                            <li>
+                                                <a href="/it/taxonomy/term/11" data-drupal-link-system-path="taxonomy/term/11">Studenti iscritti</a>
+                                            </li>
+                                            <li>
+                                                <a href="/it/taxonomy/term/12" data-drupal-link-system-path="taxonomy/term/12">Laureati</a>
+                                            </li>
+                                            <li>
+                                                <a href="/it/taxonomy/term/8" data-drupal-link-system-path="taxonomy/term/8">Dottorandi</a>
+                                            </li>
+                                            <li>
+                                                <a href="/it/taxonomy/term/13" data-drupal-link-system-path="taxonomy/term/13">Studenti internazionali</a>
+                                            </li>
+                                            <li class="last">
+                                                <a href="/it/taxonomy/term/9" data-drupal-link-system-path="taxonomy/term/9">Enti e aziende</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="last">
+                                        <a href="https://lastatalenews.unimi.it/" title="statale news">LaStataleNews</a>
+                                    </li>
+                                </ul>                         
+                            </nav>
+                        </div>
+                    </div>
+                </div>                         
+                <!-- -->
+                <div class="navbar-header">
+                    <div class="region region-navigation">
+                        <a class="logo navbar-btn pull-left" href="/it" title="Home" rel="home">
+                            <img src="/themes/custom/unimi/img/unimi_logo_centenario_new.svg" alt="Home" />
+                        </a>
+                        <section id="block-imageheader" class="block block-block-content block-block-content975eee81-314a-41c0-9e02-b2af90b5b944 clearfix">
+                            <div class="block-content block-content--type-hero block-content--view-mode-full ds-1col clearfix">
+                                <div>
+                                    <div  class="full-width hero">
+                                        <div class="layout layout--onecol">
+                                            <div  class="layout__region layout__region--content">
+                                                <img src="/sites/default/files/2024-10/hero-ottobre-2.jpg" width="2105" height="1166" alt="Studenti a lezione" loading="lazy" typeof="foaf:Image" class="img-responsive" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div  class="herocontent">
+                                        <div  class="herotitle">
+                                            Studiare in Statale
+                                        </div>
+                                        <div  class="herosubtitle">
+                                            Insegnamenti, orari delle lezioni e altre attività didattiche
+                                        </div>
+                                        <div  class="calltoaction">
+                                            <a href="https://www.unimi.it/it/studiare/frequentare-un-corso-di-laurea/seguire-il-percorso-di-studi">Scopri di più</a>
+                                        </div>
+                                        <div  class="calltonews">
+                                            <a href="https://lastatalenews.unimi.it/">https://lastatalenews.unimi.it/</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>
