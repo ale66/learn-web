@@ -1,0 +1,182 @@
+---
+title: 'Learn Web'
+author: 'ale66'
+format: 
+  revealjs:
+    footer: '[github.com/ale66/learn-coding](https://github.com/ale66/learn-coding)&nbsp;&nbsp;&nbsp;'
+    theme: [moon]
+    preview-links: auto
+    slide-number: c/t
+    incremental: false
+    chalkboard: 
+      boardmarker-width: 5
+    mermaid:
+      theme: forest
+      fontSize: 12
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# More frames
+
+---
+
+#### The static landing page
+
+*The landing page's job is to explain the product or service and to induce the user to perform some action, such as buy the item, subscribe to the service, or sign up for a newsletter.*
+
+![](./images/10-spazio70.png)
+
+---
+
+## Lab experiences so far
+
+1. hero image, hero text, then some text, links and the occasional picture
+
+2. landing page, with picture-in-picture and claims, all in the upper part
+
+3. copy styles from the main page: the `unimi.it` page and its 48 CSS files
+
+
+# The design of landing pages
+
+---
+
+## Sketch ideas on paper  
+
+Work on a landing for MA COM: it deserves a dedicated one
+
+![](./images/10-sketch.png)
+
+ask a collague to go over the concept: can you explain it?
+
+
+---
+
+## Select a color scheme
+
+Apply the color scheme consistently across your site.
+
+![](./images/10-color-scheme.png)
+
+
+---
+
+## Select a color scheme, 2
+
+
+[Spazio70](https://spazio70.com/il-progetto-spazio70/): punchy but on-topic.
+
+![](./images/10-color-scheme-2.png)
+
+Idea: continue colors seen in an important picture for your thesis, one which is likely to become the *hero picture.*
+
+
+---
+
+## Living philosophers, 1
+
+Michel Onfray: materialism, hedonism, neo-paganism etc.
+
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Michel_Onfray_no_Fronteiras_do_Pensamento_Santa_Catarina_2012_%288212742449%29.jpg/440px-Michel_Onfray_no_Fronteiras_do_Pensamento_Santa_Catarina_2012_%288212742449%29.jpg){height="300"}](https://en.wikipedia.org/wiki/Michel_Onfray)
+
+black, white, pink-ish?
+
+---
+
+## Living philosophers, 2
+
+Bernard-Henry Lévy: something about democracy?
+
+[![](https://cdn.britannica.com/65/172765-050-C13C9CFC/philosopher-French-Bernard-Henri-Levy.jpg){height="300"}](https://www.britannica.com/biography/Bernard-Henri-Levy)
+
+white, grey, green?
+
+
+---
+
+## The Making of the Hero header, 1
+
+The hero needs work AND plenty of space at the top.
+
+Only captured visitors are going to scroll down if it needs to.
+
+![](./images/10-hero.png)
+
+A specific `div` puts the hero image up.
+
+
+---
+
+## The Making of the Hero header, 2
+
+![](./images/10-hero-2.png)
+
+
+---
+
+Ok, float this one left
+
+![](./images/10-hero-2b.png)
+
+
+---
+
+## The Making of the Hero header, 3
+
+![](./images/10-hero-3.png)
+
+
+---
+
+Float text right:
+
+![](./images/10-hero-3b.png)
+
+---
+
+## The Footer
+
+Links to social media are *de rigueur*
+
+Find ``.tif`` icons online
+
+![](./images/10-footer.png)
+
+
+---
+
+The uni logo may go on the footer, preferably on the left: 
+
+```html
+<a href="https://www.unimi.it/"><img source="./images/unimi-logo.png"></a>
+```
+By direct linking:
+
+```html
+<a href="https://www.unimi.it/"><img source="https://www.unimi.it/sites/default/files/2019-05/LogoFooter_a9f0c3692bf29c71609e5f204522c5d4_0.png"></a>
+```
+
+it is a signature but not as *institutional* as on the upper left
+
+
+
+
+---
+
+## A method for your projects
+
+![](./images/10-summary.png)
+
+
+---
+
+## A method, 2
+
+![](./images/10-summary.png)
+
+In summary:
+
+Landing area with heros, links, one or more text articles/sections, possibly a navigation panel on a side then a *footer* with logo and social media links
+

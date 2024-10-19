@@ -1,0 +1,33 @@
+p {
+    text-indent: 12pt;
+    color: darksalmon;
+    text-align-last: left;
+    font-variant: serif;
+}
+
+/* from the textbook: */
+.header{
+    background: url(./imgs/torrevelasca.jpg);
+    background-attachment: fixed;
+    background-position: right center;
+    background-size: cover;
+    padding-bottom: 1em;
+    width: 100vw;
+    height: 100vh;
+}
+
+.header-image{
+    float: left;
+    width: 33%;
+    margin-top: 3em;
+    padding-right: 3em;
+    text-align: right;
+}
+
+.header-info {
+    float: right;
+    width: 67%;
+    margin-top: 4em;
+    color: white;
+}
+

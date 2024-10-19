@@ -4,7 +4,7 @@ author: "ale66"
 format: 
   revealjs:
     footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
-    theme: [moon]
+    theme: [solarized]
     preview-links: auto
     chalkboard: 
       boardmarker-width: 5
@@ -42,10 +42,74 @@ which grows from left to right.
 
 ---
 
+## Nodes and how to access them
 
-Each element of the tree is a node with a specific name
+Each tag used in the HTML page is represented as a node of the tree
 
-Each node is an *object* with name, content, properties and *methods* for changing it
+Assume that tags are given individual names with the `id` parameter.
+
+```html
+<h2 id="demo" class="hero-title">My first JS experiment</h2>
+```
+
+JS can access and change each aspect of the tag
+
+```js
+document.getElementById('demo').innerHTML = 'My 2nd JS experiment'
+```
+
+
+---
+
+```js
+document.getElementById('demo').innerHTML = 'My 2nd JS experiment'
+```
+
+`document` is the page itself
+
+. . .
+
+`.` combines the names
+
+. . .
+
+`getElementById('demo')` searches for the specific element in the DOM
+
+. . .
+
+`.innerHTML` is a leaf that contains the actual text to be displayed
+
+. . .
+
+`=` read it *assign what is right to what is left, i.e., $\leftarrow$
+
+. . .
+
+`'My 2nd JS experiment'` a *string* (sequence of characters) that will be send to overwrite the existing text of the leaf
+
+
+---
+
+## Exercise
+
+Work inside the `<script>` tag to add JS instructions, separated by `;`
+
+```js
+document.getElementById("demo").style.color = "blue"
+```
+
+```js
+alert('The title has been changed!') 
+```
+
+---
+
+## With images
+
+<img id="myImage" src="./imgs/html-requires-js.jpg" width="200" alt="An image goes here">
+
+Place in page then change the file
+
 
 ---
 
@@ -55,10 +119,108 @@ Each node is an *object* with name, content, properties and *methods* for changi
 
 - *with them, one can change the structure, style or content of a document*
 
+
+# JS basics
+
 ---
 
+## Variables
 
-# Example
+A JS variable is a symbolic name for some content, the *value,* that is kept in memory
+
+In spreadsheets, cells are variables
+
+![](./imgs/quiz-data.png)
+
+`B2 = 35` is a variable with name `B2`, content `35` and type `int`
+
+
+# Functions
+
+![](./imgs/function-as-blackbox.png)
+
+
+---
+
+Functions are a key abstraction to model nature and processes
+
+a regular input/output or cause/effect behaviour is identified and *given a name*
+
+```text
+The higher the temperature the quicker pizza cooks.
+
+Cooking time is a function of the temperature in the oven.
+```
+
+
+---
+
+## Functions in coding
+
+A function is a block of code (instructions) that 
+
+- has a clear input/output definition and 
+
+- executes in a separated environment
+
+Spreadsheets: `B4 = (B2 + B3)/2` is a function
+
+
+---
+
+```js
+/* Convert Italian exam marks into percentages */
+function marks2pc(marks) {
+
+  pc = int((marks / 30) * 100);
+
+  return pc;
+} 
+```
+
+`marks` is a *parameter* of the f.
+
+`pc` is the *return value* of the f.
+
+---
+
+## Observations
+
+Functions only run when they are called ('invoked') within a code in execution
+
+```js
+/* convert and show on the page the UK version of the Webcomm marks */
+let my_marks = 27;
+
+uk_marks = marks2pc(my_marks);
+
+document.getElementById("convertedMarks").innerHTML = uk_marks;
+```
+
+
+---
+
+## Iteration (for later)
+
+
+```js
+/* convert and show on the page the UK version of the marks */
+for (let m in my_italian_exam_marks){
+  uk_marks = marks2pc(m);
+  document.getElementById("convertedMarks").innerHTML = uk_marks;
+}
+```
+
+Functions should be defined every time a block of code is required to appear more than once: 
+
+- improve readability
+
+- improve maintainance
+
+JS is probably the hardest programming language for learners :flushed:
+
+
+# Code pages with JS
 
 ---
 
@@ -85,43 +247,49 @@ see [the complete list](https://www.w3schools.com/jsref/dom_obj_event.asp) of ev
 
 ---
 
-## Observations
+```html
+<img id="myImage" src="./imgs/winter.jpg" width="200" alt="An image">
+
+<button type="button" onclick="myFunc('summer')">Verano</button>
+```
 
 * ``myImage`` should be a unique identifier
   
-* ``mypicture.jpg`` must be linked properly wrt. the position of the HTML file
+* ``./imgs/winter.jpg`` must be linked properly wrt. the position of the HTML file
 
 * ``myFunc()`` is a function we defined in a ``<script>`` element or in a separate ``.js`` file
 
 * it is called with a parameter which is a string ``myFunc('summer')``
 
-if any of this is not set up properly then the browser won't execute the behavior we want
-
+if any of this is not set up properly then the browser won't execute the code
 
 ---
 
-#### JS: where to put it?
+## JS: where to put it?
 
 <https://www.w3schools.com/js/js_whereto.asp>
 
+
 ---
 
-#### Output
+## Output
 
 <https://www.w3schools.com/js/js_output.asp>
 
+
 ---
 
-#### The browser console
+## The browser console
 
 Firefox: [Ctrl + Shift + k](https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Opening_the_Web_Console)
 
 Chromium: [Ctrl + Shift + j](https://developers.google.com/web/tools/chrome-devtools/console)
 
+
 ---
 
-#### For home
+## For home
 
-10. Analise the [WaterCSS](https://watercss.netlify.app/) CSS generator.
+Analise the [WaterCSS](https://watercss.netlify.app/) CSS generator.
 
-11. Use [Markdown](https://gist.github.com/cuonggt/9b7d08a597b167299f0d) to format your instructions.
+Use [Markdown](https://gist.github.com/cuonggt/9b7d08a597b167299f0d) to format your instructions.
