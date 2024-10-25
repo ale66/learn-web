@@ -435,6 +435,38 @@ ale66
 <div class="sourceCode" id="cb4"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href=""></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'myImage'</span>)<span class="op">.</span><span class="at">src</span> <span class="op">=</span> <span class="st">"./imgs/summer.jpg"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section></section>
 <section>
+<section id="js-controls-the-page" class="title-slide slide level1 center">
+<h1>JS controls the page</h1>
+
+</section>
+<section class="slide level2">
+
+<p>JS functions can <em>get</em> the document they’re in</p>
+<p>With JS commands of type</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href=""></a><span class="bu">document</span><span class="op">.</span><span class="fu">func</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>we apply function <code>func()</code> to the whole document</p>
+<p>The browser will run <code>func()</code> when encounters it in the process of rendering the page or of running a JS function call</p>
+</section>
+<section id="js-page-activation" class="slide level2">
+<h2>JS page activation</h2>
+<p>JS code can change a hidden parameter, common to all tags, that controls <em>visibility</em></p>
+<p>Hence, we control which parts are shown at each stage of the visit</p>
+<p>An extreme case: <code>document.write()</code> will wipe out the page and rewrite it from scratch; changes are irreversible</p>
+</section>
+<section class="slide level2">
+
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb6-1"><a href=""></a><span class="bu">window</span><span class="op">.</span><span class="fu">alert</span>(<span class="st">'A message to be seen'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>a gentle way to get users’ attention</p>
+<p>useful in <em>debugging</em> code:</p>
+<p>when the behaviour differs from expected, we can execute step-by-step and check what values are stored into variables</p>
+<p><code>window.print()</code> is for printing on paper <span class="emoji" data-emoji="smile">😄</span></p>
+<p>here <code>window</code>, <code>window.document</code> and <code>document</code> are interchangeable</p>
+</section>
+<section id="more-document-level-functions" class="slide level2">
+<h2>More document-level functions</h2>
+<p><a href="https://www.w3schools.com/jsref/dom_obj_document.asp">w3schools</a>.</p>
+</section></section>
+<section>
 <section id="starting-js" class="title-slide slide level1 center">
 <h1>Starting JS</h1>
 
@@ -495,6 +527,34 @@ ale66
 <p>Analise the <a href="https://watercss.netlify.app/">WaterCSS</a> CSS generator.</p>
 <p>Use <a href="https://gist.github.com/cuonggt/9b7d08a597b167299f0d">Markdown</a> to format your instructions.</p>
 <p>Please do not watch YouTube videos as learning suffers as a result</p>
+</section></section>
+<section>
+<section id="challenge" class="title-slide slide level1 center">
+<h1>Challenge</h1>
+
+</section>
+<section class="slide level2">
+
+<p>can you personalise the title of your page?</p>
+<p>I.e., write a JS function which changes the title of the page, e.g., inserting the date when the page has been loaded?</p>
+<p>Hint: study the <a href="https://www.w3schools.com/jsref/prop_doc_title.asp">title</a> function</p>
+<p>Thanks to the DOM we can write a 1-line function then invoke it in the <code>&lt;script&gt;</code> part at the bottom.</p>
+</section>
+<section id="exercise" class="slide level2">
+<h2>Exercise:</h2>
+<p>MA COM is outsourced to the new <em>University of San Babila</em></p>
+<p><strong>Challenge:</strong> can you change all the links in a page from the base <code>www.unimi.it</code> to <code>www.unibabila.it</code>?</p>
+</section>
+<section class="slide level2">
+
+<p>to get ready for the challenge cover the following units first:</p>
+<p><a href="https://www.w3schools.com/jsref/met_document_getelementbyid.asp">getElementById()</a></p>
+<p><a href="https://www.w3schools.com/jsref/coll_doc_links.asp">links()</a></p>
+</section>
+<section id="advanced" class="slide level2">
+<h2>Advanced:</h2>
+<p><a href="https://www.w3schools.com/jsref/met_document_getelementsbyclassname.asp">getElementsByClassName()</a></p>
+<p>requires handling a <strong>collection</strong> of HTML elements. Proceed if you are familiar with lists or arrays in any programming language.</p>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p><a href="https://github.com/ale66/learn-web">github.com/ale66/learn-web</a>&nbsp;&nbsp;&nbsp;</p>

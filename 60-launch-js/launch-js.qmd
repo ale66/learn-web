@@ -68,6 +68,61 @@ document.getElementById('myImage').src = "./imgs/summer.jpg"
 ```
 
 
+# JS controls the page
+
+
+---
+
+JS functions can *get* the document they're in
+
+With JS commands of type
+
+```js
+document.func()
+```
+
+we apply function `func()` to the whole document
+
+The browser will run `func()` when encounters it in the process of rendering the page or of running a JS function call
+
+
+
+
+
+## JS page activation
+
+
+JS code can change a hidden parameter, common to all tags, that controls *visibility* 
+
+Hence, we control which parts are shown at each stage of the visit
+
+An extreme case: `document.write()` will wipe out the page and rewrite it from scratch; changes are irreversible
+
+
+---
+
+```js
+window.alert('A message to be seen')
+```
+
+a gentle way to get users' attention 
+
+useful in *debugging* code:
+
+when the behaviour differs from expected, we can execute step-by-step and check what values are stored into variables
+
+`window.print()` is for printing on paper :smile:
+
+here `window`, `window.document` and `document` are interchangeable
+
+
+---
+
+## More document-level functions
+
+[w3schools](https://www.w3schools.com/jsref/dom_obj_document.asp).
+
+
 #  Starting JS
 
 
@@ -147,3 +202,45 @@ Use [Markdown](https://gist.github.com/cuonggt/9b7d08a597b167299f0d) to format y
 
 
 Please do not watch YouTube videos as learning suffers as a result
+
+
+# Challenge
+
+
+---
+
+can you personalise the title of your page? 
+
+I.e., write a JS function which changes the title of the page, e.g., inserting the date when the page has been loaded?
+
+Hint: study the [title](https://www.w3schools.com/jsref/prop_doc_title.asp) function
+
+Thanks to the DOM we can write a 1-line function then invoke it in the `<script>` part at the bottom.
+
+
+---
+
+## Exercise:  
+
+MA COM is outsourced to the new *University of San Babila*
+
+__Challenge:__ can you change all the links in a page from the base ``www.unimi.it`` to ``www.unibabila.it``?
+
+---
+
+to get ready for the challenge cover the following units first:
+
+[getElementById()](https://www.w3schools.com/jsref/met_document_getelementbyid.asp)
+
+[links()](https://www.w3schools.com/jsref/coll_doc_links.asp)
+
+
+---
+
+## Advanced:
+
+[getElementsByClassName()](https://www.w3schools.com/jsref/met_document_getelementsbyclassname.asp)
+
+requires handling a __collection__ of HTML elements.
+Proceed if you are familiar with lists or arrays in any programming language.
+

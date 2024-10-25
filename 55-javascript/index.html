@@ -508,10 +508,13 @@ ale66
 <div class="sourceCode" id="cb7"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb7-1"><a href=""></a><span class="co">/* Convert Italian exam marks into percentages */</span></span>
 <span id="cb7-2"><a href=""></a><span class="kw">function</span> <span class="fu">marks2pc</span>(marks) {</span>
 <span id="cb7-3"><a href=""></a></span>
-<span id="cb7-4"><a href=""></a>  pc <span class="op">=</span> <span class="fu">int</span>((marks <span class="op">/</span> <span class="dv">30</span>) <span class="op">*</span> <span class="dv">100</span>)<span class="op">;</span></span>
+<span id="cb7-4"><a href=""></a>  converted <span class="op">=</span> (marks <span class="op">/</span> <span class="dv">30</span>) <span class="op">*</span> <span class="dv">100</span></span>
 <span id="cb7-5"><a href=""></a></span>
-<span id="cb7-6"><a href=""></a>  <span class="cf">return</span> pc<span class="op">;</span></span>
-<span id="cb7-7"><a href=""></a>} </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-6"><a href=""></a>  <span class="co">// Math.round() is a 'foreign' function that rounds up 50.65 --&gt; 51 etc.</span></span>
+<span id="cb7-7"><a href=""></a>  pc <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(converted)<span class="op">;</span></span>
+<span id="cb7-8"><a href=""></a></span>
+<span id="cb7-9"><a href=""></a>  <span class="cf">return</span> pc<span class="op">;</span></span>
+<span id="cb7-10"><a href=""></a>} </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><code>marks</code> is a <em>parameter</em> of the f.</p>
 <p><code>pc</code> is the <em>return value</em> of the f.</p>
 </section>
@@ -528,10 +531,15 @@ ale66
 <section id="iteration-for-later" class="slide level2">
 <h2>Iteration (for later)</h2>
 <div class="sourceCode" id="cb9"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb9-1"><a href=""></a><span class="co">/* convert and show on the page the UK version of the marks */</span></span>
-<span id="cb9-2"><a href=""></a><span class="cf">for</span> (<span class="kw">let</span> m <span class="kw">in</span> my_italian_exam_marks){</span>
+<span id="cb9-2"><a href=""></a><span class="cf">for</span> (<span class="kw">const</span> m <span class="kw">of</span> my_italian_exam_marks){</span>
 <span id="cb9-3"><a href=""></a>  uk_marks <span class="op">=</span> <span class="fu">marks2pc</span>(m)<span class="op">;</span></span>
-<span id="cb9-4"><a href=""></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"convertedMarks"</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> uk_marks<span class="op">;</span></span>
+<span id="cb9-4"><a href=""></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(uK_marks)</span>
 <span id="cb9-5"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Copy and run it on <a href="https://pythontutor.com/">pythontutor.com</a></p>
+<p>Instructions <code>console.log()</code> and <code>alert()</code> are simple ways to print out results.</p>
+</section>
+<section id="observations-1" class="slide level2">
+<h2>Observations</h2>
 <p>Functions should be defined every time a block of code is required to appear more than once:</p>
 <ul>
 <li><p>improve readability</p></li>

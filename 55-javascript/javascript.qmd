@@ -173,7 +173,10 @@ Spreadsheets: `B4 = (B2 + B3)/2` is a function
 /* Convert Italian exam marks into percentages */
 function marks2pc(marks) {
 
-  pc = int((marks / 30) * 100);
+  converted = (marks / 30) * 100
+
+  // Math.round() is a 'foreign' function that rounds up 50.65 --> 51 etc.
+  pc = Math.round(converted);
 
   return pc;
 } 
@@ -201,16 +204,25 @@ document.getElementById("convertedMarks").innerHTML = uk_marks;
 
 ---
 
-## Iteration (for later)
 
+## Iteration (for later)
 
 ```js
 /* convert and show on the page the UK version of the marks */
-for (let m in my_italian_exam_marks){
+for (const m of my_italian_exam_marks){
   uk_marks = marks2pc(m);
-  document.getElementById("convertedMarks").innerHTML = uk_marks;
+  console.log(uK_marks)
 }
 ```
+
+Copy and run it on [pythontutor.com](https://pythontutor.com/)
+
+Instructions `console.log()` and `window.alert()` are simple ways to print out results. 
+
+
+---
+
+## Observations
 
 Functions should be defined every time a block of code is required to appear more than once: 
 
