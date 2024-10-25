@@ -1,0 +1,149 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 3
+    mermaid:
+      theme: forest
+      fontSize: 12
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Launching JS
+
+--- 
+
+## Review
+
+- JS is the programming language that runs 'inside' web pages
+  
+- it can access and change all details of the page at *rendering time*
+
+- access is through the DOM notation: `document.GetElamentById('demo').innerHtml`
+
+Let's review how JS changes the page, one element at a time
+
+---
+
+
+## Change text
+
+```js
+document.getElementById("demo").innerHTML = 'My 2nd JS experiment';
+```
+
+Element `demo` could be an `h1` or a `p` or a `div` etc.
+
+
+---
+
+## Change style
+
+```js
+document.getElementById('myPara').style = "font-size: 30px;"
+```
+
+Now text is bigger
+
+---
+
+## Change any property of the named tag
+
+```html
+<img id="myImage" src="./imgs/winter.jpg" width="200" alt="Start pic">
+```
+
+As season change, we change the images. 
+
+
+```js
+document.getElementById('myImage').src = "./imgs/summer.jpg"
+```
+
+
+#  Starting JS
+
+
+---
+
+- today, pages are often created *client-side:* 
+  - the browser gets a simple page + lots of JS code
+  - it runs the code to obtain the finished page
+ 
+- in fact, JS execution can account for *layers* of personalisation (geo, tiee and cookies) that can only be descided at rendering time
+
+. . .
+
+- JS code can be put in several places inside the page
+
+- placement may negatively affect readability of the page
+
+- it also changes what is available to JS
+
+
+---
+
+## Two ways to start
+
+JS functions execute 
+
+- automatically, when the browser loads and renders the page
+
+- in response to user's input, given through buttons, menus etc.
+
+We mostly study JS through the latter
+
+
+---
+
+## JS: where to put it?
+
+a short list of commands, separated by `;` cna be placed almost everywhere
+
+please the [w3schools.com/js/js_whereto.asp](https://www.w3schools.com/js/js_whereto.asp)
+
+We will study JS by writing functions on a `code.js` file to be place locally to the web page
+
+
+# A platform for learning
+
+
+---
+
+Learning programming languages is much like learning foreign human languages: theory and practice 
+
+Python: interpreter, VS Code with lots of extensions, code profiler, problem-solvinng challenges etc.
+
+JS: VS Code, refresh page in the browser, not much else... 
+
+JS does not have an input/output behaviour *per se* 
+
+[w3schools.com/js/js_output.asp](https://www.w3schools.com/js/js_output.asp)
+
+
+---
+
+## The browser console
+
+Firefox: [Ctrl + Shift + k](https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Opening_the_Web_Console)
+
+Chromium: [Ctrl + Shift + j](https://developers.google.com/web/tools/chrome-devtools/console)
+
+
+---
+
+## For home
+
+Analise the [WaterCSS](https://watercss.netlify.app/) CSS generator.
+
+Use [Markdown](https://gist.github.com/cuonggt/9b7d08a597b167299f0d) to format your instructions.
+
+
+Please do not watch YouTube videos as learning suffers as a result

@@ -10,6 +10,7 @@ format:
       boardmarker-width: 5
     mermaid:
       theme: forest
+      fontSize: 12
 from: markdown+emoji
 execute:
   echo: true

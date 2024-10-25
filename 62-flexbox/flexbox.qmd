@@ -1,0 +1,122 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 3
+    mermaid:
+      theme: forest
+      fontSize: 12
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Flexbox
+
+
+---
+
+## So far
+
+* with books there is almost only one format.
+
+* in web, competing sites vie for users' attention
+
+* yet the Zen garden is a proof-of-concept but very possibly *far too much.*
+
+
+---
+
+Because
+
+ ``[...] society wants to sleep.`` 
+  
+  [[Guy Debord, La société du spectacle, 1967](https://en.wikipedia.org/wiki/The_Society_of_the_Spectacle)]
+
+
+- __users want to sleep__
+
+- we need some standard style that best deliver the values underlying the content.
+
+
+---
+
+## The Flexbox
+
+* a set of CSS styles that create a new standard page organization.
+
+* to summarise: a landing page, with semantic tages but also *responsive*
+
+
+---
+
+## The Flexbox, basics
+
+Focus on the specific type of container:
+
+![](./imgs/12-containers.png)
+
+
+---
+
+## The Flexbox is intuitive
+
+![](./imgs/12-basic-centering.png)
+
+
+---
+
+## The Flexbox, alignments
+
+We can fine-tune text inside its container:
+
+![](./imgs/12-alignments.png)
+
+
+---
+
+## Grow/Shrink to cover the space
+
+Default: 1
+
+a number greater than 1 increases pro quota participation in growth/shrinkage.
+
+![](./imgs/12-flex-growth.png)
+
+
+---
+
+## Recap: a Flexbox page title
+
+![](./imgs/12-site-title.png)
+
+
+---
+
+## Recap: a Flexbox page title
+
+![](./imgs/12-site-title.png)
+
+![](./imgs/12-site-title-css.png)
+
+
+---
+
+## Learn the 'Flex'
+
+Go over the only exercises:
+
+- [wdpg.io/12-1-0](https://webdesignplayground.io/lessons/12-1-0/)
+
+- [wdpg.io/12-2-0](https://webdesignplayground.io/lessons/12-1-0/)
+
+- [wdpg.io/12-3-0](https://webdesignplayground.io/lessons/12-1-0/)
+
+The latter shows a basic *plumbing* of a flex Web page: see the boilerplate in this section
+
+For reference: read Ch. 12 of the textbook
