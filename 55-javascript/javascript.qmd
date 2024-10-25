@@ -173,10 +173,10 @@ Spreadsheets: `B4 = (B2 + B3)/2` is a function
 /* Convert Italian exam marks into percentages */
 function marks2pc(marks) {
 
-  converted = (marks / 30) * 100
+  let converted = (marks / 30) * 100
 
   // Math.round() is a 'foreign' function that rounds up 50.65 --> 51 etc.
-  pc = Math.round(converted);
+  let pc = Math.round(converted);
 
   return pc;
 } 
@@ -196,7 +196,7 @@ Functions only run when they are called ('invoked') within a code in execution
 /* convert and show on the page the UK version of the Webcomm marks */
 let my_marks = 27;
 
-uk_marks = marks2pc(my_marks);
+let uk_marks = marks2pc(my_marks);
 
 document.getElementById("convertedMarks").innerHTML = uk_marks;
 ```
@@ -210,7 +210,7 @@ document.getElementById("convertedMarks").innerHTML = uk_marks;
 ```js
 /* convert and show on the page the UK version of the marks */
 for (const m of my_italian_exam_marks){
-  uk_marks = marks2pc(m);
+  let uk_marks = marks2pc(m);
   console.log(uK_marks)
 }
 ```
