@@ -1,0 +1,231 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 3
+    mermaid:
+      theme: dark
+      fontSize: 12
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# More JS
+
+--- 
+
+## Further topics in HTML/CSS/JS
+
+- how we include the *rendering* of external pages?
+
+- copy and paste their HTML *source code* may not work 
+
+- solution: the `<iframe>`
+
+
+---
+
+
+- how to talk about HTML in a Web page?
+
+- we need an area where the mark-up language is not interpreted but reported *as is*
+
+- solution:  the `<pre>` 
+  
+- the [encoder](https://www.freewebtoolkit.com/html-encode) makes HTML ready for citation
+
+
+# DOM methods in JS
+
+---
+
+So far we have used `getElementbyId` to 
+
+- copy parts of the page into JS variables
+
+```js
+let current_image = document.getElementById("myImage").src;
+```
+
+. . .
+
+- change the page by overwriting  DOM leaves
+
+```js
+let mynewtext = 'A picture describing' + ' Winter';
+
+document.getElementById("myImage").alt = mynewtext;
+```
+
+
+---
+
+## momenclature
+
+```js
+document.getElementById("myImage").src;
+```
+
+- `getElementById()` is a *method:* a function that comes with the `document` variable
+
+- `src` is an *attribute:* a leaf of the DOM that comes with the `<img id="myImage">` tag  
+
+
+---
+
+## compendium of the DOM methods
+
+dozens of methods and attributes exist
+
+we are unlikely to need them all, but is important to see what is available
+
+[w3schools.com/jsref/dom_obj_all.asp](https://www.w3schools.com/jsref/dom_obj_all.asp)
+
+Check out 
+
+- getAttribute
+
+- tagName
+  
+- textContent
+
+
+---
+
+notice how
+
+```js
+document.getElementById("demo").innerHTML = "";
+```
+
+removes the element from view
+
+
+# Conditional execution
+
+
+---
+
+JS instructions are executed one after the other
+
+function invocation causes the execution the instructions *inside* the function, 
+
+. . .
+
+execution can be made *data-driven:* input values determine what JS does
+
+what instruction will be executed will be decided by evaluating an *expression:* a yes/no test on the values stored inside the variables
+
+
+---
+
+```js
+function myFunction('input value(s)') {
+  // a private memory space
+
+  let variable = 'some text/number, may change later';
+
+  const another = 'some text/number, immutable';
+
+  if ('a true/false test') {
+  
+    // do something
+  
+  } else {
+    
+    // do alternative
+  }
+
+  return 'the result of our work';
+}
+```
+
+
+---
+
+## Example
+
+When the page is rendered inside the browser, it can access the computer clock to check the time
+
+```js
+const d = new Date();
+```
+
+Date format is a bit complex, see the [w3schools.com/jsref/jsref_obj_date.asp](https://www.w3schools.com/jsref/jsref_obj_date.asp) reference
+
+. . .
+
+Write the date on the page:
+
+```js
+const d = new Date();
+
+document.getElementById("demo").innerHTML = d;
+```
+
+
+---
+
+## Exercise
+
+Rename `rename-me.html` :wink:
+
+write a JS function that shows `winter.jpg` from October to February and `summer.jpg` otherwise
+
+
+---
+
+## Simple dates
+
+
+```js
+const d = new Date();
+let month = d.getMonth();
+```
+
+[getMonth()](https://www.w3schools.com/jsref/jsref_getmonth.asp) returns 0 for January, 1 for February and so on
+
+
+---
+
+
+```js
+if (month > 2) {
+  ...
+}  else {
+  ...
+}
+```
+
+for a more familiar condition we can use `month + 1 > 3`
+
+
+. . .
+
+```js
+if ((month > 2) and (month < 9)) {
+  ...
+}  else {
+  ...
+}
+```
+
+
+---
+
+## Learning JS on w3schools
+
+The first five units are now covered:
+
+[Introduction, Where To, Output, Statements]() and [Syntax]()
+
+Subsequent units are for personal study up to [Const]()
+
+We resume in-class presentation from [JS Operators](https://www.w3schools.com/js/js_operators.asp).
+

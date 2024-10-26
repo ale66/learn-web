@@ -2,7 +2,7 @@
 /* Convert Italian exam marks into percentages */
 function pc2marks(marks) {
 
-    let converted = (marks / 100) * 30
+    let converted = (marks / 30) * 100
   
     // Math.round() is a 'foreign' function that rounds up 50.65 --> 51 etc.
     let pc = Math.round(converted);
@@ -25,3 +25,10 @@ for (const m of my_uk_exam_marks){
     console.log(it_marks)
   }
 */
+
+
+var it_marks = document.getElementById("pull_down_marks").value;
+
+conv = pc2marks(it_marks);
+
+document.getElementById("output_area").innerHTML = conv; 

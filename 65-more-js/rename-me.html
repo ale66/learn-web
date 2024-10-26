@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Bulb+JS example</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <h1>Conditional execution in JavaScript</h1>
+
+    <p>Complete the page by showing a season-related picture</p>
+
+    
+    <script>
+        // for learning purpouses we place the function inside HTML
+        function updateImageToSeason() {
+            // no input, no output but the page will be changed 
+
+            const d = new Date();
+            
+            let month = d.getMonth();
+
+            window.alert(month)
+            /* continue here
+            if () {
+
+                document.getElementById('myImage').src = "./imgs/summer.jpg";
+
+            } else {
+
+                document.getElementById('myImage').src = "./imgs/winter.jpg";
+            };
+            */
+        };
+    </script>
+
+    <img id="myImage" src="./imgs/html-requires-js.jpg" width="200" alt="An image goes here">
+
+    <p>
+        <button type="button" onclick="updateImageToSeason()">Update photo</button>
+
+        <button type="button" onclick="updateSytleToSeason()">Update Style</button>
+    </p>
+
+    <p>Click on the buttons to check your code.</p>
+
+</body>
+
+</html>

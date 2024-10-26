@@ -1,0 +1,45 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 3
+    mermaid:
+      theme: forest
+      fontSize: 12
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Liquid: beyong flexbox
+
+
+---
+
+## For reference
+
+Today there are more page requests from smartphones than from PCs
+
+Web design now starts from the smartphone case
+
+Sophisticated CSS files can actually change the way tags show on the basis of the actual screen, here called the *viewport*
+
+The details are in Ch. 13 of the textbook and are left for reference, as we will adopt *Bootstrap* to address the topic of *responsive page*
+
+
+---
+
+[Why Fixed-Width Layouts Are the Enemy](https://webdesignplayground.io/lessons/13-1-0)
+
+[Creating a Liquid Layout](https://webdesignplayground.io/lessons/13-2-0)
+
+[Creating a Flexible Layout](https://webdesignplayground.io/lessons/13-3-0)
+
+[Creating an Adaptive layout](https://webdesignplayground.io/lessons/13-4-0)
+
+[Creating a Mobile-first layout](https://webdesignplayground.io/lessons/13-5-0)

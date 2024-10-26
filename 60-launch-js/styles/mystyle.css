@@ -1,0 +1,44 @@
+p {
+    text-indent: 12pt;
+    color: darksalmon;
+    text-align-last: left;
+    font-variant: serif;
+}
+
+.myheroimage{
+    width: 100vw;
+    height: 150vh;
+    background-image: url(./imgs/torrevelasca.jpg);
+    background-position: top center;
+    background-size: cover;
+}
+
+.myherotitle{
+    text-indent: 12pt;
+    color:darksalmon;
+    font-size: 4em; /* four times as big as baseline text */
+    font-variant: serif;
+}
+
+/* new, adventorous style */
+
+.fixed_part p {
+    text-indent: 12pt;
+    color: black;
+    font-size: 1em; 
+    font-variant: serif;
+}
+
+.experimental p {
+    text-indent: 12pt;
+    color: gray;
+    font-size: 2em; 
+    font-variant: serif;
+}
+
+.isolated p {
+    text-indent: 12pt;
+    color: greenyellow;
+    font-size: 2em; 
+    font-variant: serif;
+}

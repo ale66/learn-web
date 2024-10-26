@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./styles/mystyle.css">
+    </head>
+    <!-- --------------------------------------------------------------- -->
+    <body>
+        <div id="fixed_part">
+            <h3>This page is a vessel for experimenting JS functions that alter page</h3>
+
+            <h5>Please put your JS functions into file <a href="./js/myscripts.js">./js/myscripts.js</a></h5>
+        </div>
+
+        <!-- off we go! -->
+        <div id="experimental">
+            <p>
+                <h3 id="demo" class="myherotitle">A h3 of <i>id = "demo"</i> and </i> class <i>myherotitle</i></h3>
+
+                <h4 id="h4-a" class="smalltitle">A title of class <i>smalltitle</i></h4>
+
+                <h4 id="h4-b" class="smalltitle">Another title of class <i>smalltitle</i></h4>
+
+                <label for="marks">What's your UK marks in Webcomm?</label>
+                <select name="marks" id="pull_down_marks">
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                </select>
+            </p>
+            <!-- Continue here with a framed box -->
+            <div class="isolated"> 
+                <p id="output_area"></p>
+            </div>
+        </div>
+
+        <script src="./js/marks_converter.js"></script>
+
+    </body>
+</html>
