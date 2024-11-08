@@ -1,3 +1,15 @@
+/* The 'change title' exercise here */
+
+let big_title = document.getElementById("demo").textContent;
+
+// remove when finished
+alert(big_title);
+// alternatively
+console.log(big_title);
+
+// now put that content to the new title
+document.title = big_title;
+
 
 /* Convert Italian exam marks into percentages */
 function pc2marks(marks) {

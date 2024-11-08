@@ -1,0 +1,314 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 3
+    mermaid:
+      theme: dark
+      fontSize: 12
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Responsive
+
+
+---
+
+## So far
+
+A page is *responsive* when it adapts to the device (viewport) it runs on to offer a specific experience which is adequate to the context.
+
+---
+
+We might forfeit some content for the sake of a clean appearance
+
+The current trend in design is *mobile first.*
+
+The simple `flexbox` option in the CSS make boxes *responsive*
+
+
+---
+
+## The basic setup
+
+in the CSS:
+
+```css
+* {
+  box-sizing: border-box;
+}
+```
+
+in the HTML  `<head>`:
+
+```html
+<meta name="viewport" 
+      content="width=device-width, initial-scale = 1.0">
+```
+
+Thanks to these we can set dimensions as percentages.
+
+Fix max (or min) dimension and let the browser adjust the rest.
+
+
+---
+
+## Media queries, 1
+
+```css
+/* don't normally show quotations */
+.quotation {
+    display: none;
+    padding-right: 1.67%;
+}
+```
+
+
+---
+
+## Media queries, 2
+
+Don't normally show the element:
+
+```css
+/* don't normally show quotations */
+.quotation {
+    display: none;
+    padding-right: 1.67%;
+}
+```
+
+
+---
+
+On wide screens start showing it:
+
+```css
+@media (min-width: 750px) {
+    /* ok, it's a big screen: 
+       show quotations */
+    .quotation {
+        display: block;
+    }
+}
+```
+
+Try it out on the [wdpg/13-5-1](https://webdesignplayground.io/lessons/13-5-1)
+
+
+---
+
+## Definitions
+
+::::{.columns}
+
+:::{.column width="70%"}
+the __size__ of an image is
+
+<no. of pix. rows> x <no. of pix. cols>
+
+Example: look at `./imgs/webcomm-cover.jpg`
+
+The __aspect ratio:__ 
+
+no. of pixel colums : no. of pixel rows
+:::
+
+:::{.column width="30%"}
+![](./imgs/webcomm-cover.jpg)
+:::
+::::
+
+
+---
+
+## Activity: image preparation
+
+Resize images
+
+Win: right-click on `wdp-cover.png` to open with `Photos`
+
+- click on ``...`` then ``Resize``
+
+- what is the effect of increasing pixelage?
+
+- and of altering aspect ratio?
+
+
+---
+
+## Issues with images
+
+scaling an image beyond its original size reveals pixelation and ugly edges
+
+Scaling must be capped and not follow browser resizing.
+
+---
+
+## Making images *fluid*
+
+```css
+img {
+    max-width: 100%;
+    height: auto;
+}
+```
+
+Expansion is capped to the original dimensions
+
+*shrinkage* not so
+
+---
+
+![](./imgs/14-fluid-a.png)
+
+---
+
+![](./imgs/14-fluid-b.png)
+
+Try it on the WDPG playground!
+
+---
+
+## Exercise 14-1
+
+Take 10 minutes to work on [exercise 14-1](https://webdesignplayground.io/lessons/14-1-0)
+
+As soon as you're done think how you can transfer this to your in-class project: is it worth?
+
+
+---
+
+## Having multiple sizes, 1
+
+May create professional-looking, responsive pages
+
+![](./imgs/14-multiple.png)
+
+
+---
+
+## Having multiple sizes, 2
+
+![](./imgs/14-multiple.png)
+
+Best for corporate sites with images in a database etc.
+
+Implementation is well-known to be flaky.
+
+
+---
+
+## Exercise 14-2
+
+work on [exercise 14-2](https://webdesignplayground.io/lessons/14-2-0)
+
+
+# Typography
+
+
+---
+
+## Typography: static
+
+![](./imgs/14-fonts-a.png)
+
+What if font sizes change to adapt to viewport size?
+
+
+---
+
+## Typography: dynamic
+
+![](./imgs/14-fonts-b.png)
+
+`rem:` *relative* units of measure
+
+---
+
+## Issues, 1
+
+![](./imgs/14-fonts-c.png)
+
+the `header` container is fixed at 64px!
+
+`rem` alone won't do
+
+
+---
+
+![](./imgs/14-fonts-c.png)
+
+
+---
+
+![](./imgs/14-fonts-d.png)
+
+
+---
+
+## Solution
+
+![](./imgs/14-fonts-e.png)
+
+
+---
+
+## Exercise 14-3
+
+Take 5/8 minutes to work on [exercise 14-3](https://webdesignplayground.io/lessons/14-3-0)
+
+
+---
+
+## A cheatsheet
+
+![](./imgs/14-typography-cheatsheet.png)
+
+
+---
+
+![](./imgs/14-typography-cheatsheet.png)
+
+work on your `mystyle.css` from the COM page to include all setups
+
+bring it with you across projects
+
+
+---
+
+## Exercise 14-4
+
+A bit labour-intensive
+Take 10 minutes to work on 
+
+[exercise 14-4](https://webdesignplayground.io/lessons/14-4-0)
+
+
+---
+
+## Gallery of responsive sites
+
+try stressing them, turning the phone, etc.
+
+[hicksdesign.co.uk](https://hicksdesign.co.uk)
+
+[www.anderssonwise.com](https://www.anderssonwise.com/)
+
+[www.bostonglobe.com](https://www.bostonglobe.com)
+
+[authenticjobs.com](https://authenticjobs.com)
+
+
+---
+
+## Conclusions
+
+![](./imgs/14-summary.png)
