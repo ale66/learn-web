@@ -1,0 +1,291 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 3
+    mermaid:
+      theme: dark
+      fontSize: 12
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Strings and iterations in JS
+
+---
+
+## User input
+
+HTML forms let users make choices (radio buttons, drop down etc.) or enter text:
+
+```html
+<input type="text" id="myInputForm" >
+```
+
+Next, a JS function can operate on the text, which is available via the id of the form
+
+
+---
+
+## handlings strings with JS
+
+```js
+let salutation = "Hello, World!";
+
+document.getElementById("myParagraph").innerHTML =
+salutation; 
+```
+
+---
+
+## Strings
+
+a string is a sequence of characters (not just letters) from the keyboard
+
+they are delimited by quotes
+
+```js
+let mystring = "Hello, World!";
+```
+
+. . .
+
+`lenght` is automatically defined for any string variable
+prints 13 as spaces and punctuation count
+
+```js
+console.log(mystring.lenght);
+```
+
+
+---
+
+```js
+let mystring = "Hello, World!";
+```
+
+strings are indexed: the i-th character of a string is accessed with the square brackets notation
+
+we count from 0
+
+```js
+console.log(mystring[0]); //prints 'H'
+console.log(mystring[7]); //prints 'W'
+```
+
+---
+
+## String concatenation
+
+easy to assemble longer strings from pieces
+
+
+```js
+salutation_fr = 'Bonjour ' + 'tout le monde!'
+
+
+salutation_ca = salutation + ' But also ' + salutation_fr
+```
+
+
+# iteration
+
+
+---
+
+a block of code can be repeated for a certain number of times
+
+main case: apply the same operation to all elements of a sequence
+
+example: take che characters of a string and make them uppercase (wow -> WOW)
+
+the `for` instruction iterates an arbitrary block of code
+
+
+---
+
+```js
+for (let i = 0; i < n; i++) {
+    // block of code that uses a different value of i each time
+} 
+```
+
+assign *i* to 0 
+
+execute the block 
+
+check whether the condition (*i<n*) is still true
+
+if yes, increment *i* by 1 (*i++*) and go back to executing the block 
+
+
+---
+
+## Printing char by char
+
+```js
+// let's count how many characters are in the string
+let length = salutation.length;
+
+for (let i = 0; i < length; i++) {
+    console.log(salutation[i]);
+}
+```
+
+Let's unroll it
+
+---
+
+```js
+i = 0;
+length = 13;
+i < length? // Yes.
+console.log(salutation[0]); //prints 'H'
+```
+
+```js
+i = 1;
+length = 13;
+i < length? // Yes.
+console.log(salutation[1]); //prints 'e'
+```
+
+---
+
+```js
+i = 12;
+length = 13;
+i < length? // Yes.
+console.log(salutation[12]); //prints '!'
+```
+
+```js
+i = 13;
+length = 13;
+i < length? // no.
+```
+
+The JS interpreter moves on to the next instruction below
+
+---
+
+## Methods
+
+a method is a function that is associated to a JS object, e.g., variables
+
+a method is called with the dot notation
+
+```js
+stringvariable.method();
+```
+
+prefer methods to writing our own functions
+
+most activities are already implemented in methods
+
+
+---
+
+## String slicing
+
+with `charAt()` an individual character of a string can be copied or changed
+
+```js
+let mystring = "Hello, World!";
+
+let theFirst = mystring.charAt(0)
+```
+
+
+---
+
+with `slice()` a *substring* can be copied 
+
+
+```js
+let mystring = "Hello, World!";
+
+let theFirst = mystring.charAt(0)
+
+let theRest = mystring.slice(1)
+```
+
+
+---
+
+## Capitalization
+
+```js
+let mystring = "Hello, World!";
+
+let theFirst = mystring.charAt(0)
+
+let theRest = mystring.slice(1)
+
+let lowercasefirst = theFirst.toLowerCase()
+
+const mynewstring = lowecasefirst + theRest
+
+// prints HELLO, WORLD!
+console.log(mynewstring)
+```
+
+
+---
+
+## chaining methods
+
+```js
+let lowercasefirst = word.charAt(0).toUpperCase()
+```
+
+
+# arrays
+
+
+---
+
+A variable that contains more than value, thanks to indexing
+
+Corresponds to spreadsheet columns or rows
+
+normally, values are homogenous
+
+```js
+let ages = [19, 24, 22, 22]
+
+let names = ['Alice', 'Bob', 'Charlie', 'Diana']
+```
+
+. . .
+
+indexing is done as with strings
+
+```js
+console.log(names[0] + ' is now ' + String(ages[0]))
+```
+
+*Alice is now 19*
+
+
+---
+
+## Splitting strings
+
+Very useful to go from a long string of text to an array of words: later we will iterate it with a `for` cycle
+
+```js
+const str = 'The quick brown fox jumps over the lazy dog.';
+
+const words = str.split(' ');
+
+console.log(words[3]);
+```
+
+What is the expected output?

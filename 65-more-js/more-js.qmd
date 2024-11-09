@@ -209,12 +209,16 @@ for a more familiar condition we can use `month + 1 > 3`
 . . .
 
 ```js
-if ((month > 2) and (month < 9)) {
+if ((month > 2) && (month < 9)) {
   ...
 }  else {
   ...
 }
 ```
+
+`&&` stands for *and:* both conditions must be true
+
+`||` stands for *or:* one or both true
 
 
 ---
@@ -229,3 +233,27 @@ Subsequent units are for personal study up to [Const]()
 
 We resume in-class presentation from [JS Operators](https://www.w3schools.com/js/js_operators.asp).
 
+
+---
+
+## Subtle differences
+
+```js
+filename = document.getElementById('myImage').src;
+```
+
+there is (should be) only one `myImage` element
+
+. . .
+
+```js
+list_of_colors = document.getElementsByTagName("div").style.backgroundColor;
+```
+
+In principle there could be several elements of type tags, so a list is returned
+
+```js
+list_of_colors[0]
+```
+
+is the background color of the first `div` found in the page

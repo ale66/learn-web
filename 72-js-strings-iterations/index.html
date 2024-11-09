@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="more-js_files/libs/clipboard/clipboard.min.js"></script>
-<script src="more-js_files/libs/quarto-html/tabby.min.js"></script>
-<script src="more-js_files/libs/quarto-html/popper.min.js"></script>
-<script src="more-js_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="more-js_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="more-js_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="more-js_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="more-js_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="js-strings-iterations_files/libs/clipboard/clipboard.min.js"></script>
+<script src="js-strings-iterations_files/libs/quarto-html/tabby.min.js"></script>
+<script src="js-strings-iterations_files/libs/quarto-html/popper.min.js"></script>
+<script src="js-strings-iterations_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="js-strings-iterations_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="js-strings-iterations_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="js-strings-iterations_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="js-strings-iterations_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="ale66">
@@ -15,8 +15,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="more-js_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="more-js_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="js-strings-iterations_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="js-strings-iterations_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -95,13 +95,13 @@
     code span.vs { color: #abe338; } /* VerbatimString */
     code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="more-js_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="more-js_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="more-js_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="more-js_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="more-js_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="more-js_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="more-js_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="js-strings-iterations_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="js-strings-iterations_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="js-strings-iterations_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="js-strings-iterations_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="js-strings-iterations_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="js-strings-iterations_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="js-strings-iterations_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -405,170 +405,177 @@ ale66
 
 </section>
 <section>
-<section id="more-js" class="title-slide slide level1 center">
-<h1>More JS</h1>
+<section id="strings-and-iterations-in-js" class="title-slide slide level1 center">
+<h1>Strings and iterations in JS</h1>
 
 </section>
-<section id="further-topics-in-htmlcssjs" class="slide level2">
-<h2>Further topics in HTML/CSS/JS</h2>
-<ul>
-<li><p>how we include the <em>rendering</em> of external pages?</p></li>
-<li><p>copy and paste their HTML <em>source code</em> may not work</p></li>
-<li><p>solution: the <code>&lt;iframe&gt;</code></p></li>
-</ul>
+<section id="user-input" class="slide level2">
+<h2>User input</h2>
+<p>HTML forms let users make choices (radio buttons, drop down etc.) or enter text:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text"</span><span class="ot"> id</span><span class="op">=</span><span class="st">"myInputForm"</span><span class="ot"> </span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Next, a JS function can operate on the text, which is available via the id of the form</p>
 </section>
-<section class="slide level2">
-
-<ul>
-<li><p>how to talk about HTML in a Web page?</p></li>
-<li><p>we need an area where the mark-up language is not interpreted but reported <em>as is</em></p></li>
-<li><p>solution: the <code>&lt;pre&gt;</code></p></li>
-<li><p>the <a href="https://www.freewebtoolkit.com/html-encode">encoder</a> makes HTML ready for citation</p></li>
-</ul>
-</section></section>
-<section>
-<section id="dom-methods-in-js" class="title-slide slide level1 center">
-<h1>DOM methods in JS</h1>
-
-</section>
-<section class="slide level2">
-
-<p>So far we have used <code>getElementbyId</code> to</p>
-<ul>
-<li>copy parts of the page into JS variables</li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href=""></a><span class="kw">let</span> current_image <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"myImage"</span>)<span class="op">.</span><span class="at">src</span><span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<ul>
-<li>change the page by overwriting DOM leaves</li>
-</ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href=""></a><span class="kw">let</span> mynewtext <span class="op">=</span> <span class="st">'A picture describing'</span> <span class="op">+</span> <span class="st">' Winter'</span><span class="op">;</span></span>
+<section id="handlings-strings-with-js" class="slide level2">
+<h2>handlings strings with JS</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href=""></a><span class="kw">let</span> salutation <span class="op">=</span> <span class="st">"Hello, World!"</span><span class="op">;</span></span>
 <span id="cb2-2"><a href=""></a></span>
-<span id="cb2-3"><a href=""></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"myImage"</span>)<span class="op">.</span><span class="at">alt</span> <span class="op">=</span> mynewtext<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-3"><a href=""></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"myParagraph"</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span></span>
+<span id="cb2-4"><a href=""></a>salutation<span class="op">;</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="strings" class="slide level2">
+<h2>Strings</h2>
+<p>a string is a sequence of characters (not just letters) from the keyboard</p>
+<p>they are delimited by quotes</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href=""></a><span class="kw">let</span> mystring <span class="op">=</span> <span class="st">"Hello, World!"</span><span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<p><code>lenght</code> is automatically defined for any string variable prints 13 as spaces and punctuation count</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href=""></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(mystring<span class="op">.</span><span class="at">lenght</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="momenclature" class="slide level2">
-<h2>momenclature</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href=""></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"myImage"</span>)<span class="op">.</span><span class="at">src</span><span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li><p><code>getElementById()</code> is a <em>method:</em> a function that comes with the <code>document</code> variable</p></li>
-<li><p><code>src</code> is an <em>attribute:</em> a leaf of the DOM that comes with the <code>&lt;img id="myImage"&gt;</code> tag</p></li>
-</ul>
-</section>
-<section id="compendium-of-the-dom-methods" class="slide level2">
-<h2>compendium of the DOM methods</h2>
-<p>dozens of methods and attributes exist</p>
-<p>we are unlikely to need them all, but is important to see what is available</p>
-<p><a href="https://www.w3schools.com/jsref/dom_obj_all.asp">w3schools.com/jsref/dom_obj_all.asp</a></p>
-<p>Check out</p>
-<ul>
-<li><p>getAttribute</p></li>
-<li><p>tagName</p></li>
-<li><p>textContent</p></li>
-</ul>
 </section>
 <section class="slide level2">
 
-<p>notice how</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href=""></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"demo"</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>removes the element from view</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href=""></a><span class="kw">let</span> mystring <span class="op">=</span> <span class="st">"Hello, World!"</span><span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>strings are indexed: the i-th character of a string is accessed with the square brackets notation</p>
+<p>we count from 0</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb6-1"><a href=""></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(mystring[<span class="dv">0</span>])<span class="op">;</span> <span class="co">//prints 'H'</span></span>
+<span id="cb6-2"><a href=""></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(mystring[<span class="dv">7</span>])<span class="op">;</span> <span class="co">//prints 'W'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="string-concatenation" class="slide level2">
+<h2>String concatenation</h2>
+<p>easy to assemble longer strings from pieces</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb7-1"><a href=""></a>salutation_fr <span class="op">=</span> <span class="st">'Bonjour '</span> <span class="op">+</span> <span class="st">'tout le monde!'</span></span>
+<span id="cb7-2"><a href=""></a></span>
+<span id="cb7-3"><a href=""></a></span>
+<span id="cb7-4"><a href=""></a>salutation_ca <span class="op">=</span> salutation <span class="op">+</span> <span class="st">' But also '</span> <span class="op">+</span> salutation_fr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section></section>
 <section>
-<section id="conditional-execution" class="title-slide slide level1 center">
-<h1>Conditional execution</h1>
+<section id="iteration" class="title-slide slide level1 center">
+<h1>iteration</h1>
 
 </section>
 <section class="slide level2">
 
-<p>JS instructions are executed one after the other</p>
-<p>function invocation causes the execution the instructions <em>inside</em> the function,</p>
-<div class="fragment">
-<p>execution can be made <em>data-driven:</em> input values determine what JS does</p>
-<p>what instruction will be executed will be decided by evaluating an <em>expression:</em> a yes/no test on the values stored inside the variables</p>
-</div>
+<p>a block of code can be repeated for a certain number of times</p>
+<p>main case: apply the same operation to all elements of a sequence</p>
+<p>example: take che characters of a string and make them uppercase (wow -&gt; WOW)</p>
+<p>the <code>for</code> instruction iterates an arbitrary block of code</p>
 </section>
 <section class="slide level2">
 
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href=""></a><span class="kw">function</span> <span class="fu">myFunction</span>(<span class="st">'input value(s)'</span>) {</span>
-<span id="cb5-2"><a href=""></a>  <span class="co">// a private memory space</span></span>
-<span id="cb5-3"><a href=""></a></span>
-<span id="cb5-4"><a href=""></a>  <span class="kw">let</span> variable <span class="op">=</span> <span class="st">'some text/number, may change later'</span><span class="op">;</span></span>
-<span id="cb5-5"><a href=""></a></span>
-<span id="cb5-6"><a href=""></a>  <span class="kw">const</span> another <span class="op">=</span> <span class="st">'some text/number, immutable'</span><span class="op">;</span></span>
-<span id="cb5-7"><a href=""></a></span>
-<span id="cb5-8"><a href=""></a>  <span class="cf">if</span> (<span class="st">'a true/false test'</span>) {</span>
-<span id="cb5-9"><a href=""></a>  </span>
-<span id="cb5-10"><a href=""></a>    <span class="co">// do something</span></span>
-<span id="cb5-11"><a href=""></a>  </span>
-<span id="cb5-12"><a href=""></a>  } <span class="cf">else</span> {</span>
-<span id="cb5-13"><a href=""></a>    </span>
-<span id="cb5-14"><a href=""></a>    <span class="co">// do alternative</span></span>
-<span id="cb5-15"><a href=""></a>  }</span>
-<span id="cb5-16"><a href=""></a></span>
-<span id="cb5-17"><a href=""></a>  <span class="cf">return</span> <span class="st">'the result of our work'</span><span class="op">;</span></span>
-<span id="cb5-18"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><a href=""></a><span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> n<span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb8-2"><a href=""></a>    <span class="co">// block of code that uses a different value of i each time</span></span>
+<span id="cb8-3"><a href=""></a>} </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>assign <em>i</em> to 0</p>
+<p>execute the block</p>
+<p>check whether the condition (<em>i&lt;n</em>) is still true</p>
+<p>if yes, increment <em>i</em> by 1 (<em>i++</em>) and go back to executing the block</p>
 </section>
-<section id="example" class="slide level2">
-<h2>Example</h2>
-<p>When the page is rendered inside the browser, it can access the computer clock to check the time</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb6-1"><a href=""></a><span class="kw">const</span> d <span class="op">=</span> <span class="kw">new</span> <span class="bu">Date</span>()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Date format is a bit complex, see the <a href="https://www.w3schools.com/jsref/jsref_obj_date.asp">w3schools.com/jsref/jsref_obj_date.asp</a> reference</p>
-<div class="fragment">
-<p>Write the date on the page:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb7-1"><a href=""></a><span class="kw">const</span> d <span class="op">=</span> <span class="kw">new</span> <span class="bu">Date</span>()<span class="op">;</span></span>
-<span id="cb7-2"><a href=""></a></span>
-<span id="cb7-3"><a href=""></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"demo"</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> d<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="exercise" class="slide level2">
-<h2>Exercise</h2>
-<p>Rename <code>rename-me.html</code> <span class="emoji" data-emoji="wink">😉</span></p>
-<p>write a JS function that shows <code>winter.jpg</code> from October to February and <code>summer.jpg</code> otherwise</p>
-</section>
-<section id="simple-dates" class="slide level2">
-<h2>Simple dates</h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><a href=""></a><span class="kw">const</span> d <span class="op">=</span> <span class="kw">new</span> <span class="bu">Date</span>()<span class="op">;</span></span>
-<span id="cb8-2"><a href=""></a><span class="kw">let</span> month <span class="op">=</span> d<span class="op">.</span><span class="fu">getMonth</span>()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><a href="https://www.w3schools.com/jsref/jsref_getmonth.asp">getMonth()</a> returns 0 for January, 1 for February and so on</p>
+<section id="printing-char-by-char" class="slide level2">
+<h2>Printing char by char</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb9-1"><a href=""></a><span class="co">// let's count how many characters are in the string</span></span>
+<span id="cb9-2"><a href=""></a><span class="kw">let</span> length <span class="op">=</span> salutation<span class="op">.</span><span class="at">length</span><span class="op">;</span></span>
+<span id="cb9-3"><a href=""></a></span>
+<span id="cb9-4"><a href=""></a><span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> length<span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb9-5"><a href=""></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(salutation[i])<span class="op">;</span></span>
+<span id="cb9-6"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Let’s unroll it</p>
 </section>
 <section class="slide level2">
 
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb9-1"><a href=""></a><span class="cf">if</span> (month <span class="op">&gt;</span> <span class="dv">2</span>) {</span>
-<span id="cb9-2"><a href=""></a>  <span class="op">...</span></span>
-<span id="cb9-3"><a href=""></a>}  <span class="cf">else</span> {</span>
-<span id="cb9-4"><a href=""></a>  <span class="op">...</span></span>
-<span id="cb9-5"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>for a more familiar condition we can use <code>month + 1 &gt; 3</code></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb10-1"><a href=""></a>i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb10-2"><a href=""></a>length <span class="op">=</span> <span class="dv">13</span><span class="op">;</span></span>
+<span id="cb10-3"><a href=""></a>i <span class="op">&lt;</span> length<span class="op">?</span> <span class="co">// Yes.</span></span>
+<span id="cb10-4"><a href=""></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(salutation[<span class="dv">0</span>])<span class="op">;</span> <span class="co">//prints 'H'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb11-1"><a href=""></a>i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb11-2"><a href=""></a>length <span class="op">=</span> <span class="dv">13</span><span class="op">;</span></span>
+<span id="cb11-3"><a href=""></a>i <span class="op">&lt;</span> length<span class="op">?</span> <span class="co">// Yes.</span></span>
+<span id="cb11-4"><a href=""></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(salutation[<span class="dv">1</span>])<span class="op">;</span> <span class="co">//prints 'e'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb12-1"><a href=""></a>i <span class="op">=</span> <span class="dv">12</span><span class="op">;</span></span>
+<span id="cb12-2"><a href=""></a>length <span class="op">=</span> <span class="dv">13</span><span class="op">;</span></span>
+<span id="cb12-3"><a href=""></a>i <span class="op">&lt;</span> length<span class="op">?</span> <span class="co">// Yes.</span></span>
+<span id="cb12-4"><a href=""></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(salutation[<span class="dv">12</span>])<span class="op">;</span> <span class="co">//prints '!'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb13-1"><a href=""></a>i <span class="op">=</span> <span class="dv">13</span><span class="op">;</span></span>
+<span id="cb13-2"><a href=""></a>length <span class="op">=</span> <span class="dv">13</span><span class="op">;</span></span>
+<span id="cb13-3"><a href=""></a>i <span class="op">&lt;</span> length<span class="op">?</span> <span class="co">// no.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The JS interpreter moves on to the next instruction below</p>
+</section>
+<section id="methods" class="slide level2">
+<h2>Methods</h2>
+<p>a method is a function that is associated to a JS object, e.g., variables</p>
+<p>a method is called with the dot notation</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb14-1"><a href=""></a>stringvariable<span class="op">.</span><span class="fu">method</span>()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>prefer methods to writing our own functions</p>
+<p>most activities are already implemented in methods</p>
+</section>
+<section id="string-slicing" class="slide level2">
+<h2>String slicing</h2>
+<p>with <code>charAt()</code> an individual character of a string can be copied or changed</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb15-1"><a href=""></a><span class="kw">let</span> mystring <span class="op">=</span> <span class="st">"Hello, World!"</span><span class="op">;</span></span>
+<span id="cb15-2"><a href=""></a></span>
+<span id="cb15-3"><a href=""></a><span class="kw">let</span> theFirst <span class="op">=</span> mystring<span class="op">.</span><span class="fu">charAt</span>(<span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<p>with <code>slice()</code> a <em>substring</em> can be copied</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb16-1"><a href=""></a><span class="kw">let</span> mystring <span class="op">=</span> <span class="st">"Hello, World!"</span><span class="op">;</span></span>
+<span id="cb16-2"><a href=""></a></span>
+<span id="cb16-3"><a href=""></a><span class="kw">let</span> theFirst <span class="op">=</span> mystring<span class="op">.</span><span class="fu">charAt</span>(<span class="dv">0</span>)</span>
+<span id="cb16-4"><a href=""></a></span>
+<span id="cb16-5"><a href=""></a><span class="kw">let</span> theRest <span class="op">=</span> mystring<span class="op">.</span><span class="fu">slice</span>(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="capitalization" class="slide level2">
+<h2>Capitalization</h2>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb17-1"><a href=""></a><span class="kw">let</span> mystring <span class="op">=</span> <span class="st">"Hello, World!"</span><span class="op">;</span></span>
+<span id="cb17-2"><a href=""></a></span>
+<span id="cb17-3"><a href=""></a><span class="kw">let</span> theFirst <span class="op">=</span> mystring<span class="op">.</span><span class="fu">charAt</span>(<span class="dv">0</span>)</span>
+<span id="cb17-4"><a href=""></a></span>
+<span id="cb17-5"><a href=""></a><span class="kw">let</span> theRest <span class="op">=</span> mystring<span class="op">.</span><span class="fu">slice</span>(<span class="dv">1</span>)</span>
+<span id="cb17-6"><a href=""></a></span>
+<span id="cb17-7"><a href=""></a><span class="kw">let</span> lowercasefirst <span class="op">=</span> theFirst<span class="op">.</span><span class="fu">toLowerCase</span>()</span>
+<span id="cb17-8"><a href=""></a></span>
+<span id="cb17-9"><a href=""></a><span class="kw">const</span> mynewstring <span class="op">=</span> lowecasefirst <span class="op">+</span> theRest</span>
+<span id="cb17-10"><a href=""></a></span>
+<span id="cb17-11"><a href=""></a><span class="co">// prints HELLO, WORLD!</span></span>
+<span id="cb17-12"><a href=""></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(mynewstring)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="chaining-methods" class="slide level2">
+<h2>chaining methods</h2>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb18-1"><a href=""></a><span class="kw">let</span> lowercasefirst <span class="op">=</span> word<span class="op">.</span><span class="fu">charAt</span>(<span class="dv">0</span>)<span class="op">.</span><span class="fu">toUpperCase</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section></section>
+<section>
+<section id="arrays" class="title-slide slide level1 center">
+<h1>arrays</h1>
+
+</section>
+<section class="slide level2">
+
+<p>A variable that contains more than value, thanks to indexing</p>
+<p>Corresponds to spreadsheet columns or rows</p>
+<p>normally, values are homogenous</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb19-1"><a href=""></a><span class="kw">let</span> ages <span class="op">=</span> [<span class="dv">19</span><span class="op">,</span> <span class="dv">24</span><span class="op">,</span> <span class="dv">22</span><span class="op">,</span> <span class="dv">22</span>]</span>
+<span id="cb19-2"><a href=""></a></span>
+<span id="cb19-3"><a href=""></a><span class="kw">let</span> names <span class="op">=</span> [<span class="st">'Alice'</span><span class="op">,</span> <span class="st">'Bob'</span><span class="op">,</span> <span class="st">'Charlie'</span><span class="op">,</span> <span class="st">'Diana'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb10-1"><a href=""></a><span class="cf">if</span> ((month <span class="op">&gt;</span> <span class="dv">2</span>) <span class="op">&amp;&amp;</span> (month <span class="op">&lt;</span> <span class="dv">9</span>)) {</span>
-<span id="cb10-2"><a href=""></a>  <span class="op">...</span></span>
-<span id="cb10-3"><a href=""></a>}  <span class="cf">else</span> {</span>
-<span id="cb10-4"><a href=""></a>  <span class="op">...</span></span>
-<span id="cb10-5"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><code>&amp;&amp;</code> stands for <em>and:</em> both conditions must be true</p>
-<p><code>||</code> stands for <em>or:</em> one or both true</p>
+<p>indexing is done as with strings</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb20-1"><a href=""></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(names[<span class="dv">0</span>] <span class="op">+</span> <span class="st">' is now '</span> <span class="op">+</span> <span class="bu">String</span>(ages[<span class="dv">0</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Alice is now 19</em></p>
 </div>
 </section>
-<section id="learning-js-on-w3schools" class="slide level2">
-<h2>Learning JS on w3schools</h2>
-<p>The first five units are now covered:</p>
-<p><a href="">Introduction, Where To, Output, Statements</a> and <a href="">Syntax</a></p>
-<p>Subsequent units are for personal study up to <a href="">Const</a></p>
-<p>We resume in-class presentation from <a href="https://www.w3schools.com/js/js_operators.asp">JS Operators</a>.</p>
-</section>
-<section id="subtle-differences" class="slide level2">
-<h2>Subtle differences</h2>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb11-1"><a href=""></a>filename <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'myImage'</span>)<span class="op">.</span><span class="at">src</span><span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>there is (should be) only one <code>myImage</code> element</p>
-<div class="fragment">
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb12-1"><a href=""></a>list_of_colors <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementsByTagName</span>(<span class="st">"div"</span>)<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">backgroundColor</span><span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>In principle there could be several elements of type tags, so a list is returned</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb13-1"><a href=""></a>list_of_colors[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>is the background color of the first <code>div</code> found in the page</p>
+<section id="splitting-strings" class="slide level2">
+<h2>Splitting strings</h2>
+<p>Very useful to go from a long string of text to an array of words: later we will iterate it with a <code>for</code> cycle</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb21-1"><a href=""></a><span class="kw">const</span> str <span class="op">=</span> <span class="st">'The quick brown fox jumps over the lazy dog.'</span><span class="op">;</span></span>
+<span id="cb21-2"><a href=""></a></span>
+<span id="cb21-3"><a href=""></a><span class="kw">const</span> words <span class="op">=</span> str<span class="op">.</span><span class="fu">split</span>(<span class="st">' '</span>)<span class="op">;</span></span>
+<span id="cb21-4"><a href=""></a></span>
+<span id="cb21-5"><a href=""></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(words[<span class="dv">3</span>])<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>What is the expected output?</p>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p><a href="https://github.com/ale66/learn-web">github.com/ale66/learn-web</a>&nbsp;&nbsp;&nbsp;</p>
-</div>
 </div>
 </div>
 </section></section>
@@ -576,20 +583,20 @@ ale66
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="more-js_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="js-strings-iterations_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="more-js_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="more-js_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="more-js_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="more-js_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="more-js_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="more-js_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="js-strings-iterations_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="js-strings-iterations_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="js-strings-iterations_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="js-strings-iterations_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="js-strings-iterations_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="js-strings-iterations_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="more-js_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="more-js_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="more-js_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="more-js_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="js-strings-iterations_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="js-strings-iterations_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="js-strings-iterations_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="js-strings-iterations_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

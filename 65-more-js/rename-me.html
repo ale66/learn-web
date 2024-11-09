@@ -3,20 +3,24 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+
     <title>Bulb+JS example</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    
+    <meta name="viewport" 
+      content="width=device-width, initial-scale = 1.0">
+
+    <link href="mystyle.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
 
     <h1>Conditional execution in JavaScript</h1>
 
-    <p>Complete the page by showing a season-related picture</p>
+    <p>Complete the page by showing a season-related picture and matching style</p>
 
     
     <script>
-        // for learning purpouses we place the function inside HTML
+        // for learning purposes we place the function inside HTML
         function updateImageToSeason() {
             // no input, no output but the page will be changed 
 
@@ -24,30 +28,48 @@
             
             let month = d.getMonth();
 
-            window.alert(month)
-            /* continue here
-            if () {
+            /* for verification, remove later */
+            window.alert('We are in month ' + month)
+
+            // true in April-September
+            if (month> 2 && month < 9) {
 
                 document.getElementById('myImage').src = "./imgs/summer.jpg";
 
             } else {
 
                 document.getElementById('myImage').src = "./imgs/winter.jpg";
-            };
+            }
+        }
+        /* change the style to season, 
+           OK to copy+paste from above 
+           but we must change the style  
+        */
+        function updateStyleToSeason() {
+            // write here
+
+            /* for verification, remove later */
+            window.alert('Current background is ' + document.getElementById('myDiv').style);
+
+            /* how about something like
+            document.getElementsByTagName("body")[0].style.backgroundColor = "beige";
             */
-        };
+
+        }
     </script>
 
-    <img id="myImage" src="./imgs/html-requires-js.jpg" width="200" alt="An image goes here">
+    <div id="myDiv">
 
-    <p>
-        <button type="button" onclick="updateImageToSeason()">Update photo</button>
+        <img id="myImage" src="./imgs/html-requires-js.jpg" width="200" alt="An image goes here">
 
-        <button type="button" onclick="updateSytleToSeason()">Update Style</button>
-    </p>
+        <p>
+            <button type="button" onclick="updateImageToSeason()">Update photo</button>
 
-    <p>Click on the buttons to check your code.</p>
+            <button type="button" onclick="updateStyleToSeason()">Update Style</button>
+        </p>
 
+        <p>Click on the buttons to test your code.</p>
+    </div>
 </body>
 
 </html>
