@@ -1,0 +1,101 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 2
+    mermaid:
+      theme: dark
+      fontSize: 12
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Cookies
+
+
+---
+
+## Forms: we collect data
+
+Users can assign values to variables thanks to [forms](https://www.w3schools.com/html/html_forms.asp).
+
+Forms require attention as there are many [form attributes](https://www.w3schools.com/html/html_forms_attributes.asp) and details.
+
+Please complete the subsequent units on a *need for project* basis.
+
+
+---
+
+## collect emails?
+
+To create a user base or a *community* around a web presence
+use forms to collect emails (not indentities) to manage a simple circular email system, weekly or monthly.
+
+GDPR regulation restricts *consent, safe storage* etc.
+
+See the [Mailchimp](https://mailchimp.com/en-gb/) software.
+
+
+---
+
+## Cookie definition
+
+A small text file which is saved in a *secret* location managed by the browser
+
+JS running from the page can create/read/amend the cookie file
+
+C. keep record of previous visits and help in *customising* pages
+
+---
+
+Let's visualise cookies.
+
+Please add [SQLite Manager (by Lunu)](https://add0n.com/sqlite-manager.html) to your Brower!
+
+---
+
+## Instructions
+
+@firefox: [https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager-webext/](https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager-webext/)
+
+try
+
+```html
+about:support
+```
+
+on your browser, or follow instruction on [http://mzl.la/1BAQULj](http://mzl.la/1BAQULj)
+
+---
+
+Open file *cookies.sqlite* with the browser extension
+
+search for our cookie, e.g. with
+
+```sql
+select * 
+from "moz_cookies" 
+where name = "likejavascript"
+```
+
+---
+
+## For other browsers
+
+The same process can be done by opening the cookies file directly from the file systems, as described [here (for Win 10)](https://www.digitalcitizen.life/cookies-location-windows-10/).
+
+---
+
+### In-class work
+
+Design user profiling for your graduation project info web page:
+
+- ask one or more questions using buttons
+
+- record choices/preferences in cookies.

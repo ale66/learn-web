@@ -1,0 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-variant: serif;
+}
+
+.fakeimg {
+  height: 200px;
+  background: #aaa;
+}

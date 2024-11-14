@@ -1,0 +1,98 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 2
+    mermaid:
+      theme: dark
+      fontSize: 12
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# A/B testing
+
+
+---
+
+A/B testing, also called *clinical trial,* is a canonical procedure 
+
+it can *reject* the null hypotheses thus corroborating a causality hypothesis
+
+We will collect opinions on the basis of the interaction given by the page itself.
+
+
+---
+
+## The Method
+
+1. Classically: divide the sample into two. On the Web: random-assign visitors to groups A and B.
+
+2. To group A give a *stimulus* such as an announcement, or a discount or a new color schema.
+
+3. Collect a *feedback* such as the clicking of a button.
+
+4. compare the stats about group A and group B: which one reacted most?
+
+---
+
+#### Example
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/68/A-B_testing_simple_example.png">
+
+
+---
+
+## Stats background, 1
+
+What if the imbalance in reaction is accidental?
+
+To answer we need to deploy *Statistical Hypothesis testing* to evaluate the impact a different interaction makes.
+
+---
+
+## Stats background, 2
+
+If the recorded imbalance had probability to occur below 5pc
+
+then we reject the *null hypothesis* the imbalance ain't just a fluctuation:
+
+Hence, we may approve the *stimulus* as effective
+
+---
+
+## Implementing A/B testing
+
+As the current Replit is not linking files, we rely on a version from last year.
+
+[https://replit.com/@ale66/webcomm-6-b-testing#script.js](https://replit.com/@ale66/webcomm-6-b-testing#script.js)
+
+---
+
+## Randomised display
+
+Cover the w3school lecture on [display](https://www.w3schools.com/cssref/pr_class_display.php)
+
+__Challenge:__ can you think of an A/B test that uses diplay to get the differential feedback about a new feature which is shown (or not)
+
+---
+
+## Idea for a solution
+
+* use the abTest function to select some visitor
+
+* for group A, write a JS function which 'switches' the ``display`` of some part of the text, i.e., from
+
+```js
+p.classA {display: none;}
+
+p.classB {display: block;}
+```
+
+Reference: [JavaScript HTML DOM - Changing CSS](https://www.w3schools.com/js/js_htmldom_css.asp)
