@@ -1,0 +1,149 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 2
+    mermaid:
+      theme: dark
+      fontSize: 12
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Markdown
+
+---
+
+## Mark-up, a recap
+
+Enrich the text with annotations that may describe 
+
+- its structure: `<body>`, `<header>`, `<p>` ...
+
+- how it should be rendered: `<h1>`, `<b>` ... 
+
+- the meaning of its parts: `<title>`, `<quote>` `<article>` ...  
+
+. . .
+
+Residual cases:
+
+- tags inside `<head>` for indexing etc., in particular `<meta>`
+
+- tages inside `<body>`: `<div>` and `<span>`
+
+
+---
+
+## Currently
+
+- we are editing HTML documents to provide a bit of all this
+  
+- the text is irremediably mixed with the mark-up
+
+- the mark-up is not very readable and often repetitive
+
+
+---
+
+## MD as HTML injection
+
+Prepare a text with minimal annotations and no CSS: the Markdown file `myfile.md`
+
+. . .
+
+Feed it to a *parser* software that *renders* it in the `myfile.html` version:
+
+- fixed parts, e.g., `<body>...</body>` are automatically incorporated
+
+- annotations are interpreted and incorporated:
+
+    - `# Big title` --> `<h1>Big title</h1>`
+  
+    - `__boldface__` --> `<b>boldface</b>` and so on
+
+
+---
+
+`[liked text](https://www.unimi.it)` --> 
+
+. . .
+
+`<a href='https://www.unimi.it'>linked text</a>`
+
+. . .
+
+`![](./imgs/image.png)` --> 
+
+. . .
+
+`<img src='./imgs/image.png'`
+
+
+---
+
+Since MD files are essentially parsed and rendered one by one
+
+it is possible to put HTML tags into a MD file and to see them in the rendering.
+
+```html
+### this is an h3 title in MD
+
+<img src='./imgs/image.png' width="50%" alt='Merry Xmas'>
+
+__this is a boldface caption to the image__
+```
+
+---
+
+## MD interpreters
+
+- download the MD extension for VS Code
+
+- use online interpreters from GitHub
+  
+![](./imgs/online-html-to-markdown.png)
+
+
+# Learn MD
+
+
+---
+
+## Get started 
+
+Study the simplified language on [GitHub](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) where interpretation is automated
+
+GitHub interprets Markdown automatically
+
+Example: [collapsed sections](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections)
+
+
+---
+
+## Mardown in VS Code
+
+VS code supplies a preview of the rendering of `.md` files
+
+install the [Markdown-all-in-one](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) extension by Yu Zhang
+
+The page explains how to code MD quickly
+
+
+![](./imgs/md-all-in-one.png)
+
+
+
+
+
+## Coda: the HTML injection attack
+
+
+![](./imgs/html-injection-attack.png)
+

@@ -16,9 +16,8 @@
 
     <h1>Conditional execution in JavaScript</h1>
 
-    <p>Complete the page by showing a season-related picture and matching style</p>
+    <p id="claim">Complete the page by showing a season-related picture and matching style</p>
 
-    
     <script>
         // for learning purposes we place the function inside HTML
         function updateImageToSeason() {
@@ -27,9 +26,11 @@
             const d = new Date();
             
             let month = d.getMonth();
+            // let's see what happens in April:
+            // month = 3
 
             /* for verification, remove later */
-            window.alert('We are in month ' + month)
+            console.log('We are in month ' + month)
 
             // true in April-September
             if (month> 2 && month < 9) {
@@ -47,18 +48,37 @@
         */
         function updateStyleToSeason() {
             // write here
+            // no input, no output but the page will be changed 
+
+            const d = new Date();
+            
+            let month = d.getMonth();
+            // let's see what happens in April:
+            // month = 3
 
             /* for verification, remove later */
-            window.alert('Current background is ' + document.getElementById('myDiv').style);
+            console.log('We are in month ' + month)
+
+            // true in April-September
+            if (month> 2 && month < 9) {
+
+                document.getElementById('claim').innerHTML = "Welcome to our SS collection!";
+
+            } else {
+
+                document.getElementById('claim').innerHTML = "Welcome to our AW collection!";
+            }
+
+            /* for verification, remove later */
+            console.log('Current background is ' + document.getElementById('myDiv').style);
 
             /* how about something like
             document.getElementsByTagName("body")[0].style.backgroundColor = "beige";
             */
-
         }
     </script>
 
-    <div id="myDiv">
+    <div class="myDiv" id="myDiv">
 
         <img id="myImage" src="./imgs/html-requires-js.jpg" width="200" alt="An image goes here">
 
