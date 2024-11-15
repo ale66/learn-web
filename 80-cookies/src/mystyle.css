@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-variant: serif;
+    background-color: lightgoldenrodyellow;
+  }
+
+.salutation{
+  background-color: lightgoldenrodyellow;
+  color: blue;
+  font-size: larger;
+}
+
+.fakeimg {
+  height: 200px;
+  background: #aaa;
+}

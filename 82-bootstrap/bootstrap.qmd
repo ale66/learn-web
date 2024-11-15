@@ -79,11 +79,11 @@ Follow the step-by-step copy-paste described on [getbootstrap.com](https://getbo
 
 ## My second Bootstrap
 
-Hands-on intro: study the [Bootstrap 5.2 template](https://www.w3schools.com/bootstrap5/trybs_template1.htm)
+Hands-on intro: study the [Bootstrap 5.3 template](https://www.w3schools.com/bootstrap5/trybs_template1.htm)
 
 responsiveness is sorted, mobile is first: think how to deploy BS5 containers to your MA COM project.
 
-The file is available in folder `./src/bs5-template.html`
+The file is available in folder `./rename-me/rename-me.html`
 
 insert your personal `mystyle.css` as an auxiliary style file: link it *below* the BS5 link
 

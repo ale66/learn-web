@@ -445,7 +445,7 @@ ale66
 <p>A small text file which is saved in a <em>secret</em> local folder which is managed by the browser</p>
 <p>keep record of previous visits and help in <em>customising</em> pages</p>
 <p>inside, there’s a tiny database organised in atribute/value pairs:</p>
-<p><code>"name":"ale"; "last_visit":"15-11-24"; "hour":14; ...</code></p>
+<p><code>"name"="ale"; "last_visit"="15-11-24"; "hour"=14; ...</code></p>
 <p>JS functions create/read/amend cookie files</p>
 <p>In principle, it’s public information, and local</p>
 </section>
@@ -460,7 +460,7 @@ ale66
 <p>try</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href=""></a>about:support</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>on your browser, or follow instruction on <a href="http://mzl.la/1BAQULj">http://mzl.la/1BAQULj</a></p>
-<p>My cookies are here:</p>
+<p>Example: Firefox 132 on Win11:</p>
 <p><code>C:\Users\aless\AppData\Roaming\Mozilla\Firefox\Profiles\kqgptv3l.default-release\cookies.sqlite</code></p>
 </section>
 <section class="slide level2">
@@ -474,6 +474,8 @@ ale66
 <section id="for-other-browsers" class="slide level2">
 <h2>For other browsers</h2>
 <p>The same process can be done by opening the cookies file directly from the file systems, as described <a href="https://www.digitalcitizen.life/cookies-location-windows-10/">here (for Win 10)</a>.</p>
+<p>Example: Crome on Win10:</p>
+<p><code>C:\Users\aless\AppData\Local\Google\Chrome\User Data\Default\Network</code></p>
 </section>
 <section class="slide level2">
 
@@ -502,6 +504,33 @@ ale66
 <p>Idea: use forms to collect emails (not indentities) to manage a simple circular email system, weekly or monthly.</p>
 <p>GDPR regulation restricts <em>consent, safe storage</em> etc.</p>
 <p>See the <a href="https://mailchimp.com/en-gb/">Mailchimp</a> software.</p>
+</section></section>
+<section>
+<section id="cookies-lab" class="title-slide slide level1 center">
+<h1>Cookies lab</h1>
+
+</section>
+<section id="the-baseline" class="slide level2">
+<h2>the baseline</h2>
+<p>inside folder <code>src</code> see files <code>rename-me.html</code>, <code>mystyle.css</code> and <code>script.js</code></p>
+<p>open them all in VS Code, read the HTML and the CSS</p>
+<p>Notice how <code>checkCookie()</code> is executed every time the browser (re)loads <code>&lt;body&gt;</code></p>
+<p>next, load the page on Firefox etc and open the console (CTRL+SHIFT+k)</p>
+<p>check the cookie then refresh to check second-time behaviour</p>
+</section>
+<section class="slide level2">
+
+<p>read the script.js file line by line, don’t move on until you understood</p>
+<p>Look up on W3Schools parts that are new, e.g., <code>while</code></p>
+<p>place a <code>console.log()</code> or an <code>window.alert()</code> at each step to visualise the content of the variables</p>
+<p>example:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href=""></a>user <span class="op">=</span> <span class="fu">prompt</span>(<span class="st">"Thanks for visiting! Please enter your name:"</span><span class="op">,</span> <span class="st">""</span>)<span class="op">;</span></span>
+<span id="cb3-2"><a href=""></a></span>
+<span id="cb3-3"><a href=""></a><span class="cf">if</span> (user <span class="op">!=</span> <span class="st">""</span> <span class="op">&amp;&amp;</span> user <span class="op">!=</span> <span class="kw">null</span>) {</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>becomes</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href=""></a>user <span class="op">=</span> <span class="fu">prompt</span>(<span class="st">"Thanks for visiting! Please enter your name:"</span><span class="op">,</span> <span class="st">""</span>)<span class="op">;</span></span>
+<span id="cb4-2"><a href=""></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">'User has entered '</span><span class="op">+</span> user)</span>
+<span id="cb4-3"><a href=""></a><span class="cf">if</span> (user <span class="op">!=</span> <span class="st">""</span> <span class="op">&amp;&amp;</span> user <span class="op">!=</span> <span class="kw">null</span>) {</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p><a href="https://github.com/ale66/learn-web">github.com/ale66/learn-web</a>&nbsp;&nbsp;&nbsp;</p>

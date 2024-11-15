@@ -76,7 +76,7 @@ keep record of previous visits and help in *customising* pages
 
 inside, there's a tiny database organised in atribute/value pairs: 
 
-`"name":"ale"; "last_visit":"15-11-24"; "hour":14; ...`
+`"name"="ale"; "last_visit"="15-11-24"; "hour"=14; ...`
 
 JS functions create/read/amend cookie files
 
@@ -104,8 +104,7 @@ about:support
 
 on your browser, or follow instruction on [http://mzl.la/1BAQULj](http://mzl.la/1BAQULj)
 
-
-My cookies are here:
+Example: Firefox 132 on Win11:
 
 `C:\Users\aless\AppData\Roaming\Mozilla\Firefox\Profiles\kqgptv3l.default-release\cookies.sqlite`
 
@@ -126,6 +125,12 @@ where name = "likejavascript"
 ## For other browsers
 
 The same process can be done by opening the cookies file directly from the file systems, as described [here (for Win 10)](https://www.digitalcitizen.life/cookies-location-windows-10/).
+
+
+Example: Crome on Win10:
+
+`C:\Users\aless\AppData\Local\Google\Chrome\User Data\Default\Network`
+
 
 ---
 
@@ -163,3 +168,47 @@ Idea: use forms to collect emails (not indentities) to manage a simple circular 
 GDPR regulation restricts *consent, safe storage* etc.
 
 See the [Mailchimp](https://mailchimp.com/en-gb/) software.
+
+
+# Cookies lab
+
+
+---
+
+## the baseline
+
+inside folder `src` see files `rename-me.html`, `mystyle.css` and `script.js`
+
+open them all in VS Code, read the HTML and the CSS
+
+Notice how `checkCookie()` is executed every time the browser (re)loads `<body>`
+
+next, load the page on Firefox etc and open the console (CTRL+SHIFT+k) 
+
+check the cookie then refresh to check second-time behaviour
+
+
+---
+
+read the script.js file line by line, don't move on until you understood 
+
+Look up on W3Schools parts that are new, e.g., `while`
+
+place a `console.log()` or an `window.alert()` at each step to visualise the content of the variables
+
+
+example:
+
+```js
+user = prompt("Thanks for visiting! Please enter your name:", "");
+
+if (user != "" && user != null) {
+```
+
+becomes
+
+```js
+user = prompt("Thanks for visiting! Please enter your name:", "");
+console.log('User has entered '+ user)
+if (user != "" && user != null) {
+```
