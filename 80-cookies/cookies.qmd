@@ -104,6 +104,11 @@ about:support
 
 on your browser, or follow instruction on [http://mzl.la/1BAQULj](http://mzl.la/1BAQULj)
 
+
+My cookies are here:
+
+`C:\Users\aless\AppData\Roaming\Mozilla\Firefox\Profiles\kqgptv3l.default-release\cookies.sqlite`
+
 ---
 
 Open file *cookies.sqlite* with the browser extension
