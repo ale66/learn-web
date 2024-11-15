@@ -42,40 +42,49 @@ We will collect opinions on the basis of the interaction given by the page itsel
 
 ---
 
-#### Example
+## Example
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/68/A-B_testing_simple_example.png">
+
+![](./imgs/A-B_testing_simple_example.png)
 
 
 ---
 
-## Stats background, 1
+## Rough Stats, 1
 
-What if the imbalance in reaction is accidental?
+What if the imbalance in the reaction is accidental?
 
 To answer we need to deploy *Statistical Hypothesis testing* to evaluate the impact a different interaction makes.
 
+The expected outcome/most probable outcome is assumed to be the central value of a Gaussian distribution
+
+
 ---
 
-## Stats background, 2
+__the expected outcome for A (treatment) is assumed to be the same as B (no treatment)__
 
-If the recorded imbalance had probability to occur below 5pc
+![](./imgs/AB-Testing.png)
 
-then we reject the *null hypothesis* the imbalance ain't just a fluctuation:
+Next, we compute the probability of the observed score wrt. the Gaussian prob. distribution centered on the expected value: 
+
+If 38% is expected, what's the prob. of obtaining 21%?
+
+*the more distant it is, the least likely it is to have occured by chance*
+
+
+---
+
+## Rough Stats, 2
+
+__If__ the recorded imbalance had prob. to occur below 5%
+
+__then__ we reject the *null hypothesis:* the imbalance ain't just a fluctuation
 
 Hence, we may approve the *stimulus* as effective
 
 ---
 
 ## Implementing A/B testing
-
-As the current Replit is not linking files, we rely on a version from last year.
-
-[https://replit.com/@ale66/webcomm-6-b-testing#script.js](https://replit.com/@ale66/webcomm-6-b-testing#script.js)
-
----
-
-## Randomised display
 
 Cover the w3school lecture on [display](https://www.w3schools.com/cssref/pr_class_display.php)
 
@@ -96,3 +105,15 @@ p.classB {display: block;}
 ```
 
 Reference: [JavaScript HTML DOM - Changing CSS](https://www.w3schools.com/js/js_htmldom_css.asp)
+
+---
+
+## Lab work
+
+- in `test-platform` find a JS boilerplate for A/B testing new HTML features
+
+- random assignment of users to A/B
+
+- features appear/disappear
+
+- we record A/B into cookies but *we need to report effects back to the server* 

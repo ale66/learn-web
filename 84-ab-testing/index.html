@@ -424,29 +424,32 @@ ale66
 <li><p>compare the stats about group A and group B: which one reacted most?</p></li>
 </ol>
 </section>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+
+<img data-src="./imgs/A-B_testing_simple_example.png" class="r-stretch"></section>
+<section id="rough-stats-1" class="slide level2">
+<h2>Rough Stats, 1</h2>
+<p>What if the imbalance in the reaction is accidental?</p>
+<p>To answer we need to deploy <em>Statistical Hypothesis testing</em> to evaluate the impact a different interaction makes.</p>
+<p>The expected outcome/most probable outcome is assumed to be the central value of a Gaussian distribution</p>
+</section>
 <section class="slide level2">
 
-<h4 id="example">Example</h4>
+<p><strong>the expected outcome for A (treatment) is assumed to be the same as B (no treatment)</strong></p>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/68/A-B_testing_simple_example.png" class="r-stretch"></section>
-<section id="stats-background-1" class="slide level2">
-<h2>Stats background, 1</h2>
-<p>What if the imbalance in reaction is accidental?</p>
-<p>To answer we need to deploy <em>Statistical Hypothesis testing</em> to evaluate the impact a different interaction makes.</p>
+<img data-src="./imgs/AB-Testing.png" class="r-stretch"><p>Next, we compute the probability of the observed score wrt. the Gaussian prob. distribution centered on the expected value:</p>
+<p>If 38% is expected, what’s the prob. of obtaining 21%?</p>
+<p><em>the more distant it is, the least likely it is to have occured by chance</em></p>
 </section>
-<section id="stats-background-2" class="slide level2">
-<h2>Stats background, 2</h2>
-<p>If the recorded imbalance had probability to occur below 5pc</p>
-<p>then we reject the <em>null hypothesis</em> the imbalance ain’t just a fluctuation:</p>
+<section id="rough-stats-2" class="slide level2">
+<h2>Rough Stats, 2</h2>
+<p><strong>If</strong> the recorded imbalance had prob. to occur below 5%</p>
+<p><strong>then</strong> we reject the <em>null hypothesis:</em> the imbalance ain’t just a fluctuation</p>
 <p>Hence, we may approve the <em>stimulus</em> as effective</p>
 </section>
 <section id="implementing-ab-testing" class="slide level2">
 <h2>Implementing A/B testing</h2>
-<p>As the current Replit is not linking files, we rely on a version from last year.</p>
-<p><a href="https://replit.com/@ale66/webcomm-6-b-testing#script.js">https://replit.com/<span class="citation" data-cites="ale66/webcomm-6-b-testing#script.js">@ale66/webcomm-6-b-testing#script.js</span></a></p>
-</section>
-<section id="randomised-display" class="slide level2">
-<h2>Randomised display</h2>
 <p>Cover the w3school lecture on <a href="https://www.w3schools.com/cssref/pr_class_display.php">display</a></p>
 <p><strong>Challenge:</strong> can you think of an A/B test that uses diplay to get the differential feedback about a new feature which is shown (or not)</p>
 </section>
@@ -460,6 +463,15 @@ ale66
 <span id="cb1-2"><a href=""></a></span>
 <span id="cb1-3"><a href=""></a>p<span class="op">.</span><span class="at">classB</span> {<span class="dt">display</span><span class="op">:</span> block<span class="op">;</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Reference: <a href="https://www.w3schools.com/js/js_htmldom_css.asp">JavaScript HTML DOM - Changing CSS</a></p>
+</section>
+<section id="lab-work" class="slide level2">
+<h2>Lab work</h2>
+<ul>
+<li><p>in <code>test-platform</code> find a JS boilerplate for A/B testing new HTML features</p></li>
+<li><p>random assignment of users to A/B</p></li>
+<li><p>features appear/disappear</p></li>
+<li><p>we record A/B into cookies but <em>we need to report effects back to the server</em></p></li>
+</ul>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p><a href="https://github.com/ale66/learn-web">github.com/ale66/learn-web</a>&nbsp;&nbsp;&nbsp;</p>
