@@ -409,28 +409,50 @@ ale66
 <h1>Cookies</h1>
 
 </section>
-<section id="forms-we-collect-data" class="slide level2">
-<h2>Forms: we collect data</h2>
-<p>Users can assign values to variables thanks to <a href="https://www.w3schools.com/html/html_forms.asp">forms</a>.</p>
-<p>Forms require attention as there are many <a href="https://www.w3schools.com/html/html_forms_attributes.asp">form attributes</a> and details.</p>
-<p>Please complete the subsequent units on a <em>need for project</em> basis.</p>
+<section id="the-https-protocol" class="slide level2">
+<h2>The HTTP(S) protocol</h2>
+<p>HTML files become <em>web pages</em> when they become accessible online, not just locally</p>
+<p>This is possible thanks to a <em>stack</em> of communication protocols: WiFi/TCP/IP/HTTP/HTTPS</p>
+
+<img data-src="./imgs/data-sending.jpg" class="r-stretch"></section>
+<section id="pages-feel-local" class="slide level2">
+<h2>pages feel <em>local</em></h2>
+<p>in fact, a copy of the HTML+CSS+JS files is saved in a <em>secret</em> local folder which is managed by the browser</p>
+<p>HTTPS is designed to make browsers follow up links or download needed files <em>transparently</em></p>
+<ul>
+<li><p>clicking on <code>&lt;a&gt;</code>s sends us to a new page, local or web</p></li>
+<li><p>online images, style files etc. are fetched and redered</p></li>
+</ul>
+<div class="fragment">
+<p>we realise that this is all networked <em>only when it stops working</em></p>
+</div>
 </section>
-<section id="collect-emails" class="slide level2">
-<h2>collect emails?</h2>
-<p>To create a user base or a <em>community</em> around a web presence use forms to collect emails (not indentities) to manage a simple circular email system, weekly or monthly.</p>
-<p>GDPR regulation restricts <em>consent, safe storage</em> etc.</p>
-<p>See the <a href="https://mailchimp.com/en-gb/">Mailchimp</a> software.</p>
+<section id="https-is-stateless" class="slide level2">
+<h2>HTTPS is <em>stateless</em></h2>
+<p>each page request is dealt the same</p>
+<p>there is no history of a visit to a site, only our browser may remember</p>
+<p>Yet,</p>
+<div class="fragment">
+<ul>
+<li><p>we feel <em>progress</em> through stages of the visit, e.g., in e-commerce</p></li>
+<li><p>pages are customised for country, language etc.</p></li>
+<li><p>they remember us returning</p></li>
+</ul>
+</div>
 </section>
-<section id="cookie-definition" class="slide level2">
-<h2>Cookie definition</h2>
-<p>A small text file which is saved in a <em>secret</em> location managed by the browser</p>
-<p>JS running from the page can create/read/amend the cookie file</p>
-<p>C. keep record of previous visits and help in <em>customising</em> pages</p>
+<section id="cookies-1" class="slide level2">
+<h2>Cookies</h2>
+<p>A small text file which is saved in a <em>secret</em> local folder which is managed by the browser</p>
+<p>keep record of previous visits and help in <em>customising</em> pages</p>
+<p>inside, there’s a tiny database organised in atribute/value pairs:</p>
+<p><code>"name":"ale"; "last_visit":"15-11-24"; "hour":14; ...</code></p>
+<p>JS functions create/read/amend cookie files</p>
+<p>In principle, it’s public information, and local</p>
 </section>
 <section class="slide level2">
 
 <p>Let’s visualise cookies.</p>
-<p>Please add <a href="https://add0n.com/sqlite-manager.html">SQLite Manager (by Lunu)</a> to your Brower!</p>
+<p>Please add <a href="https://add0n.com/sqlite-manager.html">SQLite Manager (by Lunu)</a> to your Browser!</p>
 </section>
 <section id="instructions" class="slide level2">
 <h2>Instructions</h2>
@@ -459,6 +481,25 @@ ale66
 <li><p>ask one or more questions using buttons</p></li>
 <li><p>record choices/preferences in cookies.</p></li>
 </ul>
+</section></section>
+<section>
+<section id="case-study" class="title-slide slide level1 center">
+<h1>Case study</h1>
+
+</section>
+<section id="forms-we-collect-data" class="slide level2">
+<h2>Forms: we collect data</h2>
+<p>Users can assign values to variables thanks to <a href="https://www.w3schools.com/html/html_forms.asp">forms</a>.</p>
+<p>Forms require attention as there are many <a href="https://www.w3schools.com/html/html_forms_attributes.asp">form attributes</a> and details.</p>
+<p>Please complete the subsequent units <em>a la carte:</em> look at the forms you deem useful for your work on a COM landing page.</p>
+</section>
+<section id="collect-emails" class="slide level2">
+<h2>Collect emails?</h2>
+<p>Today, browsers collect lots of user behaviours, e.g., scroll speed in Facebook-like pages.</p>
+<p>Independent web sites may create a user base or a <em>community</em> around a web presence</p>
+<p>Idea: use forms to collect emails (not indentities) to manage a simple circular email system, weekly or monthly.</p>
+<p>GDPR regulation restricts <em>consent, safe storage</em> etc.</p>
+<p>See the <a href="https://mailchimp.com/en-gb/">Mailchimp</a> software.</p>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p><a href="https://github.com/ale66/learn-web">github.com/ale66/learn-web</a>&nbsp;&nbsp;&nbsp;</p>

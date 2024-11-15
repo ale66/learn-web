@@ -21,42 +21,74 @@ execute:
 
 ---
 
-## Forms: we collect data
+## The HTTP(S) protocol
 
-Users can assign values to variables thanks to [forms](https://www.w3schools.com/html/html_forms.asp).
+HTML files become *web pages* when they become accessible online, not just locally
 
-Forms require attention as there are many [form attributes](https://www.w3schools.com/html/html_forms_attributes.asp) and details.
+This is possible thanks to a *stack* of communication protocols: WiFi/TCP/IP/HTTP/HTTPS
 
-Please complete the subsequent units on a *need for project* basis.
-
-
----
-
-## collect emails?
-
-To create a user base or a *community* around a web presence
-use forms to collect emails (not indentities) to manage a simple circular email system, weekly or monthly.
-
-GDPR regulation restricts *consent, safe storage* etc.
-
-See the [Mailchimp](https://mailchimp.com/en-gb/) software.
+![](./imgs/data-sending.jpg)
 
 
 ---
 
-## Cookie definition
+## pages feel *local*
 
-A small text file which is saved in a *secret* location managed by the browser
+in fact, a copy of the HTML+CSS+JS files is saved in a *secret* local folder 
+which is managed by the browser
 
-JS running from the page can create/read/amend the cookie file
+HTTPS is designed to make browsers follow up links or download needed files *transparently*
 
-C. keep record of previous visits and help in *customising* pages
+- clicking on `<a>`s sends us to a new page, local or web
+
+- online images, style files etc. are fetched and redered
+
+. . .
+
+we realise that this is all networked *only when it stops working*
+
+
+---
+
+## HTTPS is *stateless*
+
+each page request is dealt the same
+
+there is no history of a visit to a site, only our browser may remember
+
+Yet, 
+
+. . .
+
+- we feel *progress* through stages of the visit, e.g., in e-commerce
+
+- pages are customised for country, language etc.
+
+- they remember us returning
+
+---
+
+## Cookies
+
+A small text file which is saved in a *secret* local folder which is managed by the browser
+
+keep record of previous visits and help in *customising* pages
+
+inside, there's a tiny database organised in atribute/value pairs: 
+
+`"name":"ale"; "last_visit":"15-11-24"; "hour":14; ...`
+
+JS functions create/read/amend cookie files
+
+In principle, it's public information, and local
+
 
 ---
 
 Let's visualise cookies.
 
-Please add [SQLite Manager (by Lunu)](https://add0n.com/sqlite-manager.html) to your Brower!
+Please add [SQLite Manager (by Lunu)](https://add0n.com/sqlite-manager.html) to your Browser!
+
 
 ---
 
@@ -99,3 +131,30 @@ Design user profiling for your graduation project info web page:
 - ask one or more questions using buttons
 
 - record choices/preferences in cookies.
+
+
+# Case study
+
+
+## Forms: we collect data
+
+Users can assign values to variables thanks to [forms](https://www.w3schools.com/html/html_forms.asp).
+
+Forms require attention as there are many [form attributes](https://www.w3schools.com/html/html_forms_attributes.asp) and details.
+
+Please complete the subsequent units *a la carte:* look at the forms you deem useful for your work on a COM landing page.
+
+
+---
+
+## Collect emails?
+
+Today, browsers collect lots of user behaviours, e.g., scroll speed in Facebook-like pages. 
+
+Independent web sites may create a user base or a *community* around a web presence
+
+Idea: use forms to collect emails (not indentities) to manage a simple circular email system, weekly or monthly.
+
+GDPR regulation restricts *consent, safe storage* etc.
+
+See the [Mailchimp](https://mailchimp.com/en-gb/) software.
