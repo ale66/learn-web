@@ -5,27 +5,38 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title></title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="style-extended.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <h1 style="color: purple;">A playground for learning JS operations and differential displays</h1>
-
-  <h1>A playground for learning JS operations and differential displays</h1>
-
-
-  <!--- I sit here doing nothing, printing nothing -->
-  <p id="blankPara"></p>
-
-  <script>
-  document.getElementById('blankPara').innerHTML = 'Hello, you have assigned to group ' + randAssign()
+  <!-- load A/B testing functions -->
+  <script src="scriptABtesting.js">
   </script>
 
   <!-- load baseline -->
   <script src="script.js"></script>
 
-  <!-- load A/B testing functions -->
-  <script src="scriptABtesting.js"></script>
+  <h1 id="myHeroTitle" style="color: purple;">A playground for learning JS operations and differential displays</h1>
+
+  <!--- I sit here doing nothing, printing nothing -->
+  <p id="blankPara"></p>
+
+  <script>
+  let my_group = randAssign();
+  document.getElementById('blankPara').innerHTML = 'Hello, you have been assigned to group ' + my_group;
+  
+  // let's make an 'A' page:
+  if (my_group == 'A') {
+    // new background
+    changebg('antiquewhite');
+
+    // Writing in Spanish
+    changeHeroTitle('es')
+  }
+  else {
+    // it's B, the page stays the same.
+  }
+  </script>
 
 </body>
 </html>

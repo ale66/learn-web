@@ -1,3 +1,4 @@
+// model call: changeHeroTitle('it')
 function changeHeroTitle(choice) {
     // this code is only executed when invoked 
     // by some HTML event such as onclick 
@@ -17,6 +18,7 @@ function changeHeroTitle(choice) {
     }
 } // end of changeHeroTitle function
 
+// model call from the HTML file: changebg('antiqueWhite')
 function changebg(choice) {
     /* Check out the details here:
     https://www.w3schools.com/jsref/prop_style_backgroundcolor.asp
