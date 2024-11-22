@@ -1,0 +1,236 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 2
+    mermaid:
+      theme: dark
+      fontSize: 12
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+
+# Advanced CSS
+
+
+---
+
+## Basic organisation
+
+![](./imgs/19-selector.png)
+
+![](./imgs/19-id.png)
+
+
+---
+
+## Too much?
+
+![](./imgs/19-too-much.png)
+
+
+---
+
+## Class vs. id
+
+![](./imgs/19-class-vs-id.png)
+
+
+---
+
+## CSS with DOM inheritance
+
+CSS works mostly by
+
+* inheritance (from anchestor elements)
+  
+* exception / refinement
+
+* cascading (from layers of styles)
+
+
+---
+
+## Remember DOM?
+
+![](./imgs/19-dom-example.png)
+
+
+---
+
+## Class vs. id: guidelines
+
+![](./imgs/19-dom-example-2.png)
+
+
+---
+
+## Subtree styles
+
+![](./imgs/19-x-y-selector.png)
+
+
+---
+
+## Subtree styles, 2
+
+![](./imgs/19-x-y-selector-2.png)
+
+An inverted/perverse logic applies...
+
+
+---
+
+## The child-only selector
+
+![](./imgs/19-child.png)
+
+
+---
+
+## The siblings selector
+
+![](./imgs/19-sibling.png)
+
+
+---
+
+## The siblings selector
+
+![](./imgs/19-sibling-2.png)
+
+
+---
+
+## Exercises
+
+* Visit the [wdpg.io](www.wdpg.io) playground
+  
+* [fri] solve the first three exercises for Ch. 19.
+
+* [sat] solve the last two
+  
+
+---
+
+## Combining, I
+
+__Challenge:__ can you tell what is going to happen when we use these complex conditions?
+
+![](./imgs/19-combining-a.png)
+
+
+---
+
+## Combining, II
+
+![](./imgs/19-combining-b.png)
+
+
+---
+
+## After/before by example
+
+the `before` and `after` condition rewrite the page to change the HTML around the element that is being styled:
+
+![](./imgs/19-after.png)
+
+Good for styling, bad for readability!
+
+
+---
+
+## Simple top-down inheritance, I
+
+![](./imgs/19-inheritance.png)
+
+
+---
+
+## Simple top-down inheritance, II
+
+![](./imgs/19-inheritance.png)
+
+continue..
+
+---
+
+
+![](./imgs/19-inheritance-b.png)
+
+
+---
+
+## The cascade
+
+![](./imgs/19-cascade.png)
+
+
+---
+
+## Specificity, I
+
+The in-line setting is applied last...
+
+![](./imgs/19-specificity-a.png)
+
+
+---
+
+## Specificity, II
+
+This is harder to determine
+
+![](./imgs/19-specificity-c.png)
+
+
+---
+
+## Specificity, III
+
+![](./imgs/19-specificity-b.png)
+
+
+---
+
+## Specificity, IV
+
+`p.colored-text` is the most specific (higher points)
+
+![](./imgs/19-specificity-c.png)
+
+
+---
+
+## Summary, I
+
+![](./imgs/19-summary-a.png)
+
+
+---
+
+## Summary, II
+
+![](./imgs/19-summary-b.png)
+
+
+---
+
+## Exercises
+
+* [Fun ::before and ::after selectors](https://webdesignplayground.io/lessons/19-5-0)
+
+* [Understanding inheritance](https://webdesignplayground.io/lessons/19-6-0)
+
+* [Learning about the cascade](https://webdesignplayground.io/lessons/19-7-0)
+
+(mind the ``!important`` selector)
+
+* [Introducing specificity](https://webdesignplayground.io/lessons/19-8-0)

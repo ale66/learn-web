@@ -71,7 +71,10 @@ Feed it to a *parser* software that *renders* it in the `myfile.html` version:
 
 ---
 
-`[liked text](https://www.unimi.it)` --> 
+## two meanings for `[]()`
+
+
+`[linked text](https://www.unimi.it)` --> 
 
 . . .
 
@@ -83,12 +86,12 @@ Feed it to a *parser* software that *renders* it in the `myfile.html` version:
 
 . . .
 
-`<img src='./imgs/image.png'`
+`<img src='./imgs/image.png'>`
 
 
 ---
 
-Since MD files are essentially parsed and rendered one by one
+MD files are essentially parsed and rendered row by row
 
 it is possible to put HTML tags into a MD file and to see them in the rendering.
 
@@ -109,6 +112,34 @@ __this is a boldface caption to the image__
 - use online interpreters from GitHub
   
 ![](./imgs/online-html-to-markdown.png)
+
+
+---
+
+## The limits of MD
+
+There is no internation/industrial standard:
+
+ambiguity ensues
+
+`![My text](./imgs/image.png)` --> 
+
+::::{.columns}
+::: {.column width="50%"}
+```html
+<img src='./imgs/image.png' alt="My text">
+```
+:::
+::: {.column width="50%"}
+```html
+<img src='./imgs/image.png'>
+
+<h6>My text</h6>
+```
+:::
+::::
+
+Use Pandoc/Quarto Markdown
 
 
 # Learn MD
@@ -135,12 +166,10 @@ install the [Markdown-all-in-one](https://marketplace.visualstudio.com/items?ite
 
 The page explains how to code MD quickly
 
-
 ![](./imgs/md-all-in-one.png)
 
 
-
-
+---
 
 ## Coda: the HTML injection attack
 

@@ -448,9 +448,9 @@ ale66
 </ul>
 </div>
 </section>
-<section class="slide level2">
-
-<p><code>[liked text](https://www.unimi.it)</code> –&gt;</p>
+<section id="two-meanings-for" class="slide level2">
+<h2>two meanings for <code>[]()</code></h2>
+<p><code>[linked text](https://www.unimi.it)</code> –&gt;</p>
 <div class="fragment">
 <p><code>&lt;a href='https://www.unimi.it'&gt;linked text&lt;/a&gt;</code></p>
 </div>
@@ -458,12 +458,12 @@ ale66
 <p><code>![](./imgs/image.png)</code> –&gt;</p>
 </div>
 <div class="fragment">
-<p><code>&lt;img src='./imgs/image.png'</code></p>
+<p><code>&lt;img src='./imgs/image.png'&gt;</code></p>
 </div>
 </section>
 <section class="slide level2">
 
-<p>Since MD files are essentially parsed and rendered one by one</p>
+<p>MD files are essentially parsed and rendered row by row</p>
 <p>it is possible to put HTML tags into a MD file and to see them in the rendering.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href=""></a>### this is an h3 title in MD</span>
 <span id="cb1-2"><a href=""></a></span>
@@ -478,7 +478,22 @@ ale66
 <li><p>use online interpreters from GitHub</p></li>
 </ul>
 
-<img data-src="./imgs/online-html-to-markdown.png" class="r-stretch"></section></section>
+<img data-src="./imgs/online-html-to-markdown.png" class="r-stretch"></section>
+<section id="the-limits-of-md" class="slide level2">
+<h2>The limits of MD</h2>
+<p>There is no internation/industrial standard:</p>
+<p>ambiguity ensues</p>
+<p><code>![My text](./imgs/image.png)</code> –&gt;</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">'./imgs/image.png'</span><span class="ot"> alt</span><span class="op">=</span><span class="st">"My text"</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">'./imgs/image.png'</span><span class="dt">&gt;</span></span>
+<span id="cb3-2"><a href=""></a></span>
+<span id="cb3-3"><a href=""></a><span class="dt">&lt;</span><span class="kw">h6</span><span class="dt">&gt;</span>My text<span class="dt">&lt;/</span><span class="kw">h6</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+<p>Use Pandoc/Quarto Markdown</p>
+</section></section>
 <section>
 <section id="learn-md" class="title-slide slide level1 center">
 <h1>Learn MD</h1>

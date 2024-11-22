@@ -84,6 +84,20 @@ Hence, we may approve the *stimulus* as effective
 
 ---
 
+
+## Rough Stats, 3
+
+a group is biased if it represents a distribution that is different from that of the general population
+
+But how do we know the general population?
+
+Main Stats result: random samples tend to be unbiased: they can represent the whole population
+
+__Note:__ population here is *users visiting our web site:* its open nature guarantees against bias
+
+
+---
+
 ## Implementing A/B testing
 
 Cover the w3school lecture on [display](https://www.w3schools.com/cssref/pr_class_display.php)
@@ -96,15 +110,44 @@ __Challenge:__ can you think of an A/B test that uses diplay to get the differen
 
 * use the abTest function to select some visitor
 
-* for group A, write a JS function which 'switches' the ``display`` of some part of the text, i.e., from
+* for group A, write a JS function which 'switches' the `display` of some part of the text, i.e., from
 
-```js
-p.classA {display: none;}
+```css
+p.classA {
+  display: none;
+}
 
-p.classB {display: block;}
+p.classB {
+  display: block;
+}
 ```
 
 Reference: [JavaScript HTML DOM - Changing CSS](https://www.w3schools.com/js/js_htmldom_css.asp)
+
+---
+
+## Local assignment
+
+Each user has the same probability of getting into group A
+
+We don't control the process but we can relay on (almost) half of our visitors going to A
+
+
+```javascript
+function randAssign() {
+  // Import pre-made functions in the Math library
+  // guess a random number (of type 'float') in [0, 1)
+    myrand = Math.random();
+
+  // half of the times (more or less) the 
+  // guessed number will be below 0.5:
+  if (myrand >= 0.5) {
+      return 'A'
+  } else {
+      return 'B'
+  }
+}
+```
 
 ---
 
@@ -116,4 +159,6 @@ Reference: [JavaScript HTML DOM - Changing CSS](https://www.w3schools.com/js/js_
 
 - features appear/disappear
 
-- we record A/B into cookies but *we need to report effects back to the server* 
+- we record A/B into cookies for subsequent visits
+  
+-  but we still need to report effects back to the server

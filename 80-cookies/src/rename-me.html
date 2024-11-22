@@ -8,12 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./mystyle.css">
   </head>
-  
+
+  <!-- this JS function executes as soon as the browser reads line 13
+      i.e., when the page is still not rendered, which happens at the end
+      of reading the body (line 24)
+  -->
   <body onload="checkCookie()">
 
     <!-- JS will assign innerHTML content depending on the visit -->
     <div id="salutation" class = "salutation">
-      <p>You will never read this writing!</p>
+      <p>You will never read this writing. Almost.</p>
     </div>
 
     <script src="./script.js"></script>

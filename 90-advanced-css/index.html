@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="ab-testing_files/libs/clipboard/clipboard.min.js"></script>
-<script src="ab-testing_files/libs/quarto-html/tabby.min.js"></script>
-<script src="ab-testing_files/libs/quarto-html/popper.min.js"></script>
-<script src="ab-testing_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="ab-testing_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="ab-testing_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="ab-testing_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="ab-testing_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="advanced-CSS_files/libs/clipboard/clipboard.min.js"></script>
+<script src="advanced-CSS_files/libs/quarto-html/tabby.min.js"></script>
+<script src="advanced-CSS_files/libs/quarto-html/popper.min.js"></script>
+<script src="advanced-CSS_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="advanced-CSS_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="advanced-CSS_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="advanced-CSS_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="advanced-CSS_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="ale66">
@@ -15,8 +15,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="ab-testing_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="ab-testing_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="advanced-CSS_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="advanced-CSS_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -29,79 +29,14 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-      }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-    div.sourceCode
-      { color: #f8f8f2;  }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #f8f8f2; } /* Normal */
-    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
-    code span.an { color: #d4d0ab; } /* Annotation */
-    code span.at { color: #00e0e0; } /* Attribute */
-    code span.bn { color: #d4d0ab; } /* BaseN */
-    code span.bu { color: #abe338; } /* BuiltIn */
-    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #abe338; } /* Char */
-    code span.cn { color: #ffd700; } /* Constant */
-    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
-    code span.cv { color: #ffd700; } /* CommentVar */
-    code span.do { color: #f8f8f2; } /* Documentation */
-    code span.dt { color: #ffa07a; } /* DataType */
-    code span.dv { color: #d4d0ab; } /* DecVal */
-    code span.er { color: #f07178; text-decoration: underline; } /* Error */
-    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
-    code span.fl { color: #d4d0ab; } /* Float */
-    code span.fu { color: #ffa07a; } /* Function */
-    code span.im { color: #abe338; } /* Import */
-    code span.in { color: #d4d0ab; } /* Information */
-    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
-    code span.op { color: #ffa07a; } /* Operator */
-    code span.ot { color: #00e0e0; } /* Other */
-    code span.pp { color: #dcc6e0; } /* Preprocessor */
-    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
-    code span.sc { color: #abe338; } /* SpecialChar */
-    code span.ss { color: #abe338; } /* SpecialString */
-    code span.st { color: #abe338; } /* String */
-    code span.va { color: #00e0e0; } /* Variable */
-    code span.vs { color: #abe338; } /* VerbatimString */
-    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="ab-testing_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="ab-testing_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="ab-testing_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="ab-testing_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="ab-testing_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="ab-testing_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="ab-testing_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="advanced-CSS_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="advanced-CSS_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="advanced-CSS_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="advanced-CSS_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="advanced-CSS_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="advanced-CSS_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="advanced-CSS_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -405,102 +340,138 @@ ale66
 
 </section>
 <section>
-<section id="ab-testing" class="title-slide slide level1 center">
-<h1>A/B testing</h1>
+<section id="advanced-css" class="title-slide slide level1 center">
+<h1>Advanced CSS</h1>
 
 </section>
-<section class="slide level2">
+<section id="basic-organisation" class="slide level2">
+<h2>Basic organisation</h2>
+<p><img data-src="./imgs/19-selector.png"></p>
+<p><img data-src="./imgs/19-id.png"></p>
+</section>
+<section id="too-much" class="slide level2">
+<h2>Too much?</h2>
 
-<p>A/B testing, also called <em>clinical trial,</em> is a canonical procedure</p>
-<p>it can <em>reject</em> the null hypotheses thus corroborating a causality hypothesis</p>
-<p>We will collect opinions on the basis of the interaction given by the page itself.</p>
-</section>
-<section id="the-method" class="slide level2">
-<h2>The Method</h2>
-<ol type="1">
-<li><p>Classically: divide the sample into two. On the Web: random-assign visitors to groups A and B.</p></li>
-<li><p>To group A give a <em>stimulus</em> such as an announcement, or a discount or a new color schema.</p></li>
-<li><p>Collect a <em>feedback</em> such as the clicking of a button.</p></li>
-<li><p>compare the stats about group A and group B: which one reacted most?</p></li>
-</ol>
-</section>
-<section id="example" class="slide level2">
-<h2>Example</h2>
+<img data-src="./imgs/19-too-much.png" class="r-stretch"></section>
+<section id="class-vs.-id" class="slide level2">
+<h2>Class vs.&nbsp;id</h2>
 
-<img data-src="./imgs/A-B_testing_simple_example.png" class="r-stretch"></section>
-<section id="rough-stats-1" class="slide level2">
-<h2>Rough Stats, 1</h2>
-<p>What if the imbalance in the reaction is accidental?</p>
-<p>To answer we need to deploy <em>Statistical Hypothesis testing</em> to evaluate the impact a different interaction makes.</p>
-<p>The expected outcome/most probable outcome is assumed to be the central value of a Gaussian distribution</p>
-</section>
-<section class="slide level2">
-
-<p><strong>the expected outcome for A (treatment) is assumed to be the same as B (no treatment)</strong></p>
-
-<img data-src="./imgs/AB-Testing.png" class="r-stretch"><p>Next, we compute the probability of the observed score wrt. the Gaussian prob. distribution centered on the expected value:</p>
-<p>If 38% is expected, what’s the prob. of obtaining 21%?</p>
-<p><em>the more distant it is, the least likely it is to have occured by chance</em></p>
-</section>
-<section id="rough-stats-2" class="slide level2">
-<h2>Rough Stats, 2</h2>
-<p><strong>If</strong> the recorded imbalance had prob. to occur below 5%</p>
-<p><strong>then</strong> we reject the <em>null hypothesis:</em> the imbalance ain’t just a fluctuation</p>
-<p>Hence, we may approve the <em>stimulus</em> as effective</p>
-</section>
-<section id="rough-stats-3" class="slide level2">
-<h2>Rough Stats, 3</h2>
-<p>a group is biased if it represents a distribution that is different from that of the general population</p>
-<p>But how do we know the general population?</p>
-<p>Main Stats result: random samples tend to be unbiased: they can represent the whole population</p>
-<p><strong>Note:</strong> population here is <em>users visiting our web site:</em> its open nature guarantees against bias</p>
-</section>
-<section id="implementing-ab-testing" class="slide level2">
-<h2>Implementing A/B testing</h2>
-<p>Cover the w3school lecture on <a href="https://www.w3schools.com/cssref/pr_class_display.php">display</a></p>
-<p><strong>Challenge:</strong> can you think of an A/B test that uses diplay to get the differential feedback about a new feature which is shown (or not)</p>
-</section>
-<section id="idea-for-a-solution" class="slide level2">
-<h2>Idea for a solution</h2>
+<img data-src="./imgs/19-class-vs-id.png" class="r-stretch"></section>
+<section id="css-with-dom-inheritance" class="slide level2">
+<h2>CSS with DOM inheritance</h2>
+<p>CSS works mostly by</p>
 <ul>
-<li><p>use the abTest function to select some visitor</p></li>
-<li><p>for group A, write a JS function which ‘switches’ the <code>display</code> of some part of the text, i.e., from</p></li>
+<li><p>inheritance (from anchestor elements)</p></li>
+<li><p>exception / refinement</p></li>
+<li><p>cascading (from layers of styles)</p></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb1-1"><a href=""></a>p<span class="fu">.classA</span> {</span>
-<span id="cb1-2"><a href=""></a>  <span class="kw">display</span><span class="ch">:</span> <span class="dv">none</span><span class="op">;</span></span>
-<span id="cb1-3"><a href=""></a>}</span>
-<span id="cb1-4"><a href=""></a></span>
-<span id="cb1-5"><a href=""></a>p<span class="fu">.classB</span> {</span>
-<span id="cb1-6"><a href=""></a>  <span class="kw">display</span><span class="ch">:</span> <span class="dv">block</span><span class="op">;</span></span>
-<span id="cb1-7"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Reference: <a href="https://www.w3schools.com/js/js_htmldom_css.asp">JavaScript HTML DOM - Changing CSS</a></p>
 </section>
-<section id="local-assignment" class="slide level2">
-<h2>Local assignment</h2>
-<p>Each user has the same probability of getting into group A</p>
-<p>We don’t control the process but we can relay on (almost) half of our visitors going to A</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource javascript number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href=""></a><span class="kw">function</span> <span class="fu">randAssign</span>() {</span>
-<span id="cb2-2"><a href=""></a>  <span class="co">// Import pre-made functions in the Math library</span></span>
-<span id="cb2-3"><a href=""></a>  <span class="co">// guess a random number (of type 'float') in [0, 1)</span></span>
-<span id="cb2-4"><a href=""></a>    myrand <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">random</span>()<span class="op">;</span></span>
-<span id="cb2-5"><a href=""></a></span>
-<span id="cb2-6"><a href=""></a>  <span class="co">// half of the times (more or less) the </span></span>
-<span id="cb2-7"><a href=""></a>  <span class="co">// guessed number will be below 0.5:</span></span>
-<span id="cb2-8"><a href=""></a>  <span class="cf">if</span> (myrand <span class="op">&gt;=</span> <span class="fl">0.5</span>) {</span>
-<span id="cb2-9"><a href=""></a>      <span class="cf">return</span> <span class="st">'A'</span></span>
-<span id="cb2-10"><a href=""></a>  } <span class="cf">else</span> {</span>
-<span id="cb2-11"><a href=""></a>      <span class="cf">return</span> <span class="st">'B'</span></span>
-<span id="cb2-12"><a href=""></a>  }</span>
-<span id="cb2-13"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="remember-dom" class="slide level2">
+<h2>Remember DOM?</h2>
+
+<img data-src="./imgs/19-dom-example.png" class="r-stretch"></section>
+<section id="class-vs.-id-guidelines" class="slide level2">
+<h2>Class vs.&nbsp;id: guidelines</h2>
+
+<img data-src="./imgs/19-dom-example-2.png" class="r-stretch"></section>
+<section id="subtree-styles" class="slide level2">
+<h2>Subtree styles</h2>
+
+<img data-src="./imgs/19-x-y-selector.png" class="r-stretch"></section>
+<section id="subtree-styles-2" class="slide level2">
+<h2>Subtree styles, 2</h2>
+
+<img data-src="./imgs/19-x-y-selector-2.png" class="r-stretch"><p>An inverted/perverse logic applies…</p>
 </section>
-<section id="lab-work" class="slide level2">
-<h2>Lab work</h2>
+<section id="the-child-only-selector" class="slide level2">
+<h2>The child-only selector</h2>
+
+<img data-src="./imgs/19-child.png" class="r-stretch"></section>
+<section id="the-siblings-selector" class="slide level2">
+<h2>The siblings selector</h2>
+
+<img data-src="./imgs/19-sibling.png" class="r-stretch"></section>
+<section id="the-siblings-selector-1" class="slide level2">
+<h2>The siblings selector</h2>
+
+<img data-src="./imgs/19-sibling-2.png" class="r-stretch"></section>
+<section id="exercises" class="slide level2">
+<h2>Exercises</h2>
 <ul>
-<li><p>in <code>test-platform</code> find a JS boilerplate for A/B testing new HTML features</p></li>
-<li><p>random assignment of users to A/B</p></li>
-<li><p>features appear/disappear</p></li>
-<li><p>we record A/B into cookies for subsequent visits</p></li>
-<li><p>but we still need to report effects back to the server</p></li>
+<li><p>Visit the <a href="www.wdpg.io">wdpg.io</a> playground</p></li>
+<li><p>[fri] solve the first three exercises for Ch. 19.</p></li>
+<li><p>[sat] solve the last two</p></li>
+</ul>
+</section>
+<section id="combining-i" class="slide level2">
+<h2>Combining, I</h2>
+<p><strong>Challenge:</strong> can you tell what is going to happen when we use these complex conditions?</p>
+
+<img data-src="./imgs/19-combining-a.png" class="r-stretch"></section>
+<section id="combining-ii" class="slide level2">
+<h2>Combining, II</h2>
+
+<img data-src="./imgs/19-combining-b.png" class="r-stretch"></section>
+<section id="afterbefore-by-example" class="slide level2">
+<h2>After/before by example</h2>
+<p>the <code>before</code> and <code>after</code> condition rewrite the page to change the HTML around the element that is being styled:</p>
+
+<img data-src="./imgs/19-after.png" class="r-stretch"><p>Good for styling, bad for readability!</p>
+</section>
+<section id="simple-top-down-inheritance-i" class="slide level2">
+<h2>Simple top-down inheritance, I</h2>
+
+<img data-src="./imgs/19-inheritance.png" class="r-stretch"></section>
+<section id="simple-top-down-inheritance-ii" class="slide level2">
+<h2>Simple top-down inheritance, II</h2>
+
+<img data-src="./imgs/19-inheritance.png" class="r-stretch"><p>continue..</p>
+</section>
+<section class="slide level2">
+
+
+<img data-src="./imgs/19-inheritance-b.png" class="r-stretch"></section>
+<section id="the-cascade" class="slide level2">
+<h2>The cascade</h2>
+
+<img data-src="./imgs/19-cascade.png" class="r-stretch"></section>
+<section id="specificity-i" class="slide level2">
+<h2>Specificity, I</h2>
+<p>The in-line setting is applied last…</p>
+
+<img data-src="./imgs/19-specificity-a.png" class="r-stretch"></section>
+<section id="specificity-ii" class="slide level2">
+<h2>Specificity, II</h2>
+<p>This is harder to determine</p>
+
+<img data-src="./imgs/19-specificity-c.png" class="r-stretch"></section>
+<section id="specificity-iii" class="slide level2">
+<h2>Specificity, III</h2>
+
+<img data-src="./imgs/19-specificity-b.png" class="r-stretch"></section>
+<section id="specificity-iv" class="slide level2">
+<h2>Specificity, IV</h2>
+<p><code>p.colored-text</code> is the most specific (higher points)</p>
+
+<img data-src="./imgs/19-specificity-c.png" class="r-stretch"></section>
+<section id="summary-i" class="slide level2">
+<h2>Summary, I</h2>
+
+<img data-src="./imgs/19-summary-a.png" class="r-stretch"></section>
+<section id="summary-ii" class="slide level2">
+<h2>Summary, II</h2>
+
+<img data-src="./imgs/19-summary-b.png" class="r-stretch"></section>
+<section id="exercises-1" class="slide level2">
+<h2>Exercises</h2>
+<ul>
+<li><p><a href="https://webdesignplayground.io/lessons/19-5-0">Fun ::before and ::after selectors</a></p></li>
+<li><p><a href="https://webdesignplayground.io/lessons/19-6-0">Understanding inheritance</a></p></li>
+<li><p><a href="https://webdesignplayground.io/lessons/19-7-0">Learning about the cascade</a></p></li>
+</ul>
+<p>(mind the <code>!important</code> selector)</p>
+<ul>
+<li><a href="https://webdesignplayground.io/lessons/19-8-0">Introducing specificity</a></li>
 </ul>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -512,20 +483,20 @@ ale66
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="ab-testing_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="advanced-CSS_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="ab-testing_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="ab-testing_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="ab-testing_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="ab-testing_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="ab-testing_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="ab-testing_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="advanced-CSS_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="advanced-CSS_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="advanced-CSS_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="advanced-CSS_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="advanced-CSS_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="advanced-CSS_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="ab-testing_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="ab-testing_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="ab-testing_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="ab-testing_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="advanced-CSS_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="advanced-CSS_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="advanced-CSS_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="advanced-CSS_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
