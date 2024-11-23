@@ -1,0 +1,288 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 2
+    mermaid:
+      theme: dark
+      fontSize: 12
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+
+# Beyond HTML
+
+---
+
+## Web pages, today
+
+Writing direct HTML today could actually make you look strange, at least:
+
+![](https://www.aprogrammerlife.com/images/pictuers/i_saw_a_guy_building_a_website_today.jpg)
+
+---
+
+There are increasing levels of adoption of standard *platforms:*
+
+sets of ancillary ``.css`` and ``.js`` files which are included in the page and determine the overall visuals and how the page interacts.
+
+Bootstrap 5 is a platform.
+
+
+---
+
+1. make your own files, include CSS and javascript
+
+Total creative control
+
+need to learn and practice HTML, CSS and JS.
+
+---
+
+2. Include a Bootstrap 5 template.
+
+Can you follow the [Bootstrap 5 Cheatsheet](https://getbootstrap.com/docs/5.0/examples/cheatsheet/)?
+
+---
+
+3. include a [Wordpress](https://wordpress.com/) theme.
+
+Less control but a uniform, smooth appearence.
+
+---
+
+4. include a Javascript *framework*
+
+pages are created by JS functions which  parse cookies and users' moves and select the appropriate elements.
+
+Examples: [Angular (Google)](https://angular.io/), [Webix](https://webix.com/)...
+
+able to collect and send back for analysis the telemetry of user movements, e.g., how long time is dedicated to reading each post.
+
+---
+
+5. work in a programming language to create HTML files dynamically.
+
+Example: the [Flask](https://flask.palletsprojects.com/en/3.0.x/) module for Python
+
+Create HTML files dynamically, by writing Python functions which return HTML code.
+
+Take module ``C4CSS: Coding for the Computational Social Sciences`` to learn Python.
+
+---
+
+Mixing HTML and Python code in the same file:
+
+```html
+<!doctype html>
+<title>Hello from Flask</title>
+{% if name %}
+  <h1>Hello {{ name }}!</h1>
+{% else %}
+  <h1>Hello, World!</h1>
+{% endif %}
+```
+
+
+# Advanced mark-up
+
+
+---
+
+## Decoration and Injection
+
+Marking-up your text to program its visualisation is *decoration*
+
+Examples: MS Word, HTML5
+
+Whereas HTML5 can be inspected and modified, in MS Word your text is *embedded* into the file
+
+
+---
+
+## Injection
+
+Adding mark-up commands to your text with software is *injection*
+
+An HTML5 with a side `script.js` is an example of injection.
+
+As G. Orwell would put it: decoration good, injection better!
+
+Today injection is often carried out via [pandoc](https://pandoc.org/installing.html).
+
+
+---
+
+## The Pandoc software
+
+[Pandoc](https://pandoc.org/) = all documents.
+
+Peels the decorations out, gives the content to the needed __injector__
+
+On Win, install it via [Chocolatey](https://community.chocolatey.org/packages/pandoc):
+
+```bash
+choco install pandoc
+```
+
+On Apple, use [Homebrew](https://brew.sh/):
+
+```bash
+brew install pandoc
+```
+
+
+---
+
+## Work with Pandoc
+
+Magic commands to transform files:
+
+```bash
+pandoc --from=txt mytext.txt -t html -o mypage.html 
+```
+
+```bash
+pandoc --standalone --from markdown --to html5 myfile.md -o myoutputfile.hmtl
+```
+
+---
+
+more examples [here](https://pandoc.org/demos.html).
+
+Try it into the [online sandbox](https://pandoc.org/try/)!
+
+Example
+
+```bash
+> pandoc -t markdown -o out.md .\grantPPA_PaccanaroRuediger-textonlyexample.txt
+```
+
+
+---
+
+## Presentation vs. Web page
+
+Today this distinction is blurring thanks to Javascript-based presentations that become web pages.
+
+* presentation: synchronous, restricted
+
+* Web page: asynch., universal.
+
+Yet, we see the rise of [manifold pages.](https://pantar.com/the-first/)
+
+
+# Remarkjs
+
+
+---
+
+[MD cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+Familiarise with the Remarkjs FrameworK
+
+<https://remarkjs.com/#1>
+
+The '#1' is the page/slide number:
+
+<https://my-schematic-remark-presentation.andreamariadt.repl.co/#1>
+
+
+---
+
+See the source of the [intro slides to Remarkjs](https://remarkjs.com/#1)
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    ...
+  </head>
+  <body>
+    <textarea id="source">
+      name: inverse
+      layout: true
+      class: center, middle, inverse
+      
+      ---
+
+      # remark
+
+      [ri-mahrk]
+
+      .footnote[Go directly to [project site](https://github.com/gnab/remark)]
+---
+```
+
+Notice non-MD directives, e.g., `class: center, middle`
+
+
+---
+
+## From MD to slides
+
+Pandoc can generate a HTML file with slides
+
+Use MD annotations with two extra conventions
+
+By default, `#` for section title and `##` for slide title
+
+a slide separator is needed: it redefines the meaning of `---` in MD
+
+Sometimes `-----` is used.
+
+Idea: keep the Markdown in a separated file, keep the HTML and Javascript boilerplate in a general `index.html` file
+
+
+# Revealjs
+
+
+---
+
+A project now available as a stand-alone [slides.com](slides.com)
+
+A refined set of Javascript embeddings is available from [the main site](revealjs.com)
+
+Let's focus on [MD embeddings](https://revealjs.com/markdown/)
+
+
+---
+
+## What about Powerpoint?
+
+The first release was in 1987 [source: Wikipedia], i.e., well before the *internet revolution.*
+
+For reference, this was fashion in 1987
+
+::::{.columns}
+
+:::{.column width="50%"}
+![](./imgs/1987-mens.jpg)
+:::
+
+::: {.column width="50%"}
+![](./imgs/1987-womens.jpg)
+:::
+::::
+
+
+---
+
+Today,
+
+1. everything is hyper-linked and hardly any document is self-contained
+
+2. Cross-publishing invariably means changing styles
+
+3. yet, content is often ambivalent synch/asynch
+
+JS-based presentations have the concept of *linking* (and re-processing) at the core.
+
+Powerpoint can only hope to import it in...
