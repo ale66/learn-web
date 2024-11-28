@@ -15,7 +15,9 @@ body {
 
 h1 {
     text-align: center;
-    color: purple;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;
+    color: blueviolet;
 }
 
 span {

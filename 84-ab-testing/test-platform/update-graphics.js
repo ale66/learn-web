@@ -1,3 +1,7 @@
+// update-graphics.js
+// creates a preview of the new page
+// these functions are invoked for group A (treatment) only
+
 // model call: changeHeroTitle('it')
 function changeHeroTitle(choice) {
     // this code is only executed when invoked 

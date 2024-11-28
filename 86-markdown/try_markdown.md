@@ -1,6 +1,11 @@
-# Big title
 
-### Small title
+<center>
+# Big title
+</center>
+
+### medium title
+
+###### small title
 
 __bold__
 
