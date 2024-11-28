@@ -26,13 +26,12 @@ Leave Ethical considerations aside to examine what can be technically collected 
 
 Currently, it is believed that Google et al. collect
 
-- geographical location
-- IP address
+- device information
+- IP address -> geolocation
 - usage of Google services: YT, Gmail, Gmaps...
 - which ads one clicks and their location on the page
-- device information
-- Server information
-- more identifying info. from "partner" services
+- more identifying info. from *partner* services
+
 
 ---
 
@@ -43,6 +42,7 @@ Data can be purchased by third-parties via
 - [Google Analytics](https://analytics.google.com/analytics/web/provision/#/provision).
 
 - [FB for business/CrowdTangle](https://www.crowdtangle.com/)
+
 
 ---
 
@@ -61,23 +61,27 @@ According to the [EFF foundation](https://www.eff.org/):
 
 ---
 
-## `I don't have anything to hide`
+## Logical fallacies
+
+Saying *'I don't have anything to hide'*
 
 customer profiling and tracking is never neutral and hardly positive
 
 While it promises to customise advertisement so that it's relevant to the user, the fact that such data exists is dangerous in itself and invites abuse
 
-Recommended approach: use photos of [AI-generated non-persons](https://thispersondoesnotexist.com/)
+Alt. approach: use photos of [AI-generated non-persons](https://thispersondoesnotexist.com/)
+
 
 ---
 
 ## End-to-end encryption
 
-Becoming a standard today, it purports to eliminate *eavesdropping* and *impersonation.*
+Becoming a standard today, it purports to eliminate *eavesdropping* and *impersonation*
 
 In principle, it prevents potential eavesdroppers – including telecom providers, Internet providers, and even the provider of the communication service – from being able to access the cryptographic keys needed to decrypt the conversation
 
 [Wikipedia](https://en.wikipedia.org/wiki/End-to-end_encryption)
+
 
 ---
 
@@ -89,6 +93,7 @@ It is based on notions of Number theory (requires finding the prime factors of l
 
 decryption takes practically forever
 
+
 ---
 
 ## no exchange of secrets
@@ -99,6 +104,7 @@ Its development provides the basis of crypto-currencies
 
 While probably based on a *paranoid* vision of liberal societies, E2E encryption helps in many instances
 
+
 ---
 
 ## Incognito pages
@@ -106,6 +112,7 @@ While probably based on a *paranoid* vision of liberal societies, E2E encryption
 browsers will allow navigation without saving any cookies or history
 
 Only good to avoid parental/corporate control: today most web services track the IP number of the device
+
 
 ---
 
@@ -141,21 +148,42 @@ A recommended solution is [multi-account containers](https://addons.mozilla.org/
 
 Chrome is built around an excellent *page rendering software*
 
-The extra is basically tracking your navigation to see where you goo when you __jump out__ of site:
+However, it is basically tracking your navigation to see where you go when you __jump out__ of site:
 
 this is the only part of navigation that the server-side cannot see
 
+Moreover, Chrome converts the action of *typing* a URL into *searching* a URL
+
 Google releases (at least for now) the [Chromium](https://www.chromium.org/) version of Chrome, which is lighter and less tracking
 
-*Use Chromium*
+Use [DuckDuckGo](https://duckduckgo.com/app)
+
+DuckDuckGo collects search requests and passes them over to Google in batches
+
+![](./imgs/batches.jpg)
 
 ---
 
-## Example research on Web
+## non-Google search
 
-The [Potential Gain model](https://dl.acm.org/doi/abs/10.1145/3350546.3352559) rates  the most central, (i.e., influential) pages when accounting for the "jumps" in human web navigation
+Don't log into Google services unless you have to (I have to)
+
+Use the [DuckDuckGo](https://duckduckgo.com/settings) aggregator for your searches
+
+
+# Academic research
+
+
+---
+
+## A model of web navigation
+
+
+The [Potential Gain model](https://dl.acm.org/doi/abs/10.1145/3350546.3352559) rates  the most central, (i.e., influential) pages when accounting for the 'jumps' in human web navigation
 
 *We say that a network N is navigable when an agent is able to efficiently reach any target node in N by means of local routing decisions*
+
+. . .
 
 *In a social network navigability translates to the ability of reaching an individual through personal contacts*
 
@@ -191,22 +219,17 @@ The [Potential Gain model](https://dl.acm.org/doi/abs/10.1145/3350546.3352559) r
 </object>
 ```
 
----
 
-## non-Google search
-
-Don't log into Google services unless you have to. (I have to)
-
-Use the [Duck Duck Go](https://duckduckgo.com/settings) aggregator for your searches
-
-[Ad blocker is subsumed by Privacy badger]
+# Three privacy tools
 
 
 ---
 
 ## Privacy Badger
 
-Probably the best overall solution now available, the [Privacy Badger](https://privacybadger.org/) browser extension disable tracking cookies, supercookies etc.
+A browser extension, the [Privacy Badger](https://privacybadger.org/) disables tracking cookies, supercookies etc.
+
+Probably the best overall solution now available
 
 "If an advertiser seems to be tracking you across multiple websites without your permission, Privacy Badger automatically blocks that advertiser from loading any more content in your browser.
 To the advertiser, it’s like you suddenly disappeared."
@@ -214,21 +237,32 @@ To the advertiser, it’s like you suddenly disappeared."
 
 ---
 
-## The Ad Observer
+## Ad Observer
 
-An academic [project](https://adobserver.org/) developed by the [NYU Cybersecurity fo Democracy project](https://cybersecurityfordemocracy.org/) which is now under heavy legal fire from Facebook etc.: the ultimate endorsement in terms of creating web privacy.
+A brower extension: get it for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/facebook-ad-collector/)
 
-The idea: collect and make public what information and what advertisements are served up by FB, Google etc. and to which (broad) audience.
+An academic [project](https://adobserver.org/) developed by the [NYU Cybersecurity fo Democracy project](https://cybersecurityfordemocracy.org/) 
 
-Currently focussed on [US politics ads on FB](https://addons.mozilla.org/en-US/firefox/addon/facebook-ad-collector/)
+Currently focussed on US politics ads on FB
+
+It collects and make public what information and what advertisements are served up by FB, Google etc. and to which audience.
+
+under heavy *legal fire* from Meta etc.: the ultimate endorsement in terms of creating web privacy.
 
 
 ---
 
-## The [Ad nauseam](https://adnauseam.io/)
+## Ad nauseam
 
-*Another browser add-on that addresses profiling, but in a *starkly different way*:
+Another [browser add-on](https://adnauseam.io/)
 
-instead of denying access to the cliks and likes, they __spoil__ the signal coming from our web activity to the __[maximum entropy](https://en.wikipedia.org/wiki/Entropy_(information_theory))__ (minimum information content).
+it fights profiling in a *starkly different way*:
 
-[![Ad Nauseam](./images/ad-nauseam-vimeo.png)](https://vimeo.com/111943439 "Ad Nauseam  - Click to Watch!")
+instead of denying access to the clicks and likes, 
+
+![](./imgs/ad-nauseam-vimeo.png)
+
+[see video here](https://vimeo.com/111943439)
+
+it __spoil__ the signal coming from our web activity to the __[maximum entropy](https://en.wikipedia.org/wiki/Entropy_(information_theory))__ (minimum information content).
+
