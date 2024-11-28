@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="beyond-html_files/libs/clipboard/clipboard.min.js"></script>
-<script src="beyond-html_files/libs/quarto-html/tabby.min.js"></script>
-<script src="beyond-html_files/libs/quarto-html/popper.min.js"></script>
-<script src="beyond-html_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="beyond-html_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="beyond-html_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="beyond-html_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="beyond-html_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="revealjs_files/libs/clipboard/clipboard.min.js"></script>
+<script src="revealjs_files/libs/quarto-html/tabby.min.js"></script>
+<script src="revealjs_files/libs/quarto-html/popper.min.js"></script>
+<script src="revealjs_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="revealjs_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="revealjs_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="revealjs_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="revealjs_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="ale66">
@@ -15,8 +15,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="beyond-html_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="beyond-html_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="revealjs_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="revealjs_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -95,13 +95,13 @@
     code span.vs { color: #abe338; } /* VerbatimString */
     code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="beyond-html_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="beyond-html_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="beyond-html_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="beyond-html_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="beyond-html_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="beyond-html_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="beyond-html_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="revealjs_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="revealjs_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="revealjs_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="revealjs_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="revealjs_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="revealjs_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="revealjs_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -405,199 +405,76 @@ ale66
 
 </section>
 <section>
-<section id="beyond-html" class="title-slide slide level1 center">
-<h1>Beyond HTML</h1>
-
-</section>
-<section id="web-pages-today" class="slide level2">
-<h2>Web pages, today</h2>
-<p>Writing direct HTML today could actually make you look strange, at least:</p>
-
-<img data-src="https://www.aprogrammerlife.com/images/pictuers/i_saw_a_guy_building_a_website_today.jpg" class="r-stretch"></section>
-<section class="slide level2">
-
-<p>There are increasing levels of adoption of standard <em>platforms:</em></p>
-<p>sets of ancillary <code>.css</code> and <code>.js</code> files which are included in the page and determine the overall visuals and how the page interacts.</p>
-<p>Bootstrap 5 is a platform.</p>
-</section>
-<section class="slide level2">
-
-<ol type="1">
-<li>make your own files, include CSS and javascript</li>
-</ol>
-<p>Total creative control</p>
-<p>need to learn and practice HTML, CSS and JS.</p>
-</section>
-<section class="slide level2">
-
-<ol start="2" type="1">
-<li>Include a Bootstrap 5 template.</li>
-</ol>
-<p>Can you follow the <a href="https://getbootstrap.com/docs/5.0/examples/cheatsheet/">Bootstrap 5 Cheatsheet</a>?</p>
-</section>
-<section class="slide level2">
-
-<ol start="3" type="1">
-<li>include a <a href="https://wordpress.com/">Wordpress</a> theme.</li>
-</ol>
-<p>Less control but a uniform, smooth appearence.</p>
-</section>
-<section class="slide level2">
-
-<ol start="4" type="1">
-<li>include a Javascript <em>framework</em></li>
-</ol>
-<p>pages are created by JS functions which parse cookies and users’ moves and select the appropriate elements.</p>
-<p>Examples: <a href="https://angular.io/">Angular (Google)</a>, <a href="https://webix.com/">Webix</a>…</p>
-<p>able to collect and send back for analysis the telemetry of user movements, e.g., how long time is dedicated to reading each post.</p>
-</section>
-<section class="slide level2">
-
-<ol start="5" type="1">
-<li>work in a programming language to create HTML files dynamically.</li>
-</ol>
-<p>Example: the <a href="https://flask.palletsprojects.com/en/3.0.x/">Flask</a> module for Python</p>
-<p>Create HTML files dynamically, by writing Python functions which return HTML code</p>
-<p>Take module <code>C4CSS: Coding for the Computational Social Sciences (6CFU)</code> to learn Python.</p>
-</section>
-<section class="slide level2">
-
-<p>Mixing HTML and Python code in the same file:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href=""></a><span class="dt">&lt;!doctype</span> html<span class="dt">&gt;</span></span>
-<span id="cb1-2"><a href=""></a><span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>Hello from Flask<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
-<span id="cb1-3"><a href=""></a>{% if name %}</span>
-<span id="cb1-4"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Hello {{ name }}!<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
-<span id="cb1-5"><a href=""></a>{% else %}</span>
-<span id="cb1-6"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Hello, World!<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
-<span id="cb1-7"><a href=""></a>{% endif %}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section></section>
-<section>
-<section id="advanced-mark-up" class="title-slide slide level1 center">
-<h1>Advanced mark-up</h1>
-
-</section>
-<section id="decoration-and-injection" class="slide level2">
-<h2>Decoration and Injection</h2>
-<p>Marking-up your text to program its visualisation is <em>decoration</em></p>
-<p>Examples: MS Word, HTML5</p>
-<p>Whereas HTML5 can be inspected and modified, in MS Word your text is <em>embedded</em> into the file</p>
-</section>
-<section id="injection" class="slide level2">
-<h2>Injection</h2>
-<p>Adding mark-up commands to your text with software is <em>injection</em></p>
-<p>An HTML5 with a side <code>script.js</code> is an example of injection.</p>
-<p>As G. Orwell would put it: decoration good, injection better!</p>
-<p>Today injection is often carried out via <a href="https://pandoc.org/installing.html">pandoc</a>.</p>
-</section>
-<section id="the-pandoc-software" class="slide level2">
-<h2>The Pandoc software</h2>
-<p><a href="https://pandoc.org/">Pandoc</a> = all documents.</p>
-<p>Peels the decorations out, gives the content to the needed <strong>injector</strong></p>
-<p>On Win, install it via <a href="https://community.chocolatey.org/packages/pandoc">Chocolatey</a>:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href=""></a><span class="ex">choco</span> install pandoc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>On Apple, use <a href="https://brew.sh/">Homebrew</a>:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href=""></a><span class="ex">brew</span> install pandoc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="work-with-pandoc" class="slide level2">
-<h2>Work with Pandoc</h2>
-<p>Magic commands to transform files:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href=""></a><span class="ex">pandoc</span> <span class="at">--from</span><span class="op">=</span>txt mytext.txt <span class="at">-t</span> html <span class="at">-o</span> mypage.html </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href=""></a><span class="ex">pandoc</span> <span class="at">--standalone</span> <span class="at">--from</span> markdown <span class="at">--to</span> html5 myfile.md <span class="at">-o</span> myoutputfile.hmtl</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2">
-
-<p>more examples <a href="https://pandoc.org/demos.html">here</a>.</p>
-<p>Try it into the <a href="https://pandoc.org/try/">online sandbox</a>!</p>
-<p>Example</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href=""></a><span class="op">&gt;</span> pandoc <span class="ex">-t</span> markdown <span class="at">-o</span> out.md .<span class="dt">\g</span>rantPPA_PaccanaroRuediger-textonlyexample.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="presentation-vs.-web-page" class="slide level2">
-<h2>Presentation vs.&nbsp;Web page</h2>
-<p>Today this distinction is blurring thanks to Javascript-based presentations that become web pages.</p>
-<ul>
-<li><p>presentation: synchronous, restricted</p></li>
-<li><p>Web page: asynch., universal.</p></li>
-</ul>
-<p>Yet, we see the rise of <a href="https://pantar.com/the-first/">manifold pages.</a></p>
-</section></section>
-<section>
-<section id="remarkjs" class="title-slide slide level1 center">
-<h1>Remarkjs</h1>
-
-</section>
-<section class="slide level2">
-
-<p><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">MD cheatsheet</a></p>
-<p>Familiarise with the Remarkjs FrameworK</p>
-<p><a href="https://remarkjs.com/#1" class="uri">https://remarkjs.com/#1</a></p>
-<p>The ‘#1’ is the page/slide number:</p>
-<p><a href="https://my-schematic-remark-presentation.andreamariadt.repl.co/#1" class="uri">https://my-schematic-remark-presentation.andreamariadt.repl.co/#1</a></p>
-</section>
-<section class="slide level2">
-
-<p>See the source of the <a href="https://remarkjs.com/#1">intro slides to Remarkjs</a></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href=""></a><span class="dt">&lt;!DOCTYPE</span> html<span class="dt">&gt;</span></span>
-<span id="cb7-2"><a href=""></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
-<span id="cb7-3"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
-<span id="cb7-4"><a href=""></a>    ...</span>
-<span id="cb7-5"><a href=""></a>  <span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
-<span id="cb7-6"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
-<span id="cb7-7"><a href=""></a>    <span class="dt">&lt;</span><span class="kw">textarea</span><span class="ot"> id</span><span class="op">=</span><span class="st">"source"</span><span class="dt">&gt;</span></span>
-<span id="cb7-8"><a href=""></a>      name: inverse</span>
-<span id="cb7-9"><a href=""></a>      layout: true</span>
-<span id="cb7-10"><a href=""></a>      class: center, middle, inverse</span>
-<span id="cb7-11"><a href=""></a>      </span>
-<span id="cb7-12"><a href=""></a>      ---</span>
-<span id="cb7-13"><a href=""></a></span>
-<span id="cb7-14"><a href=""></a>      # remark</span>
-<span id="cb7-15"><a href=""></a></span>
-<span id="cb7-16"><a href=""></a>      [ri-mahrk]</span>
-<span id="cb7-17"><a href=""></a></span>
-<span id="cb7-18"><a href=""></a>      .footnote[Go directly to [project site](https://github.com/gnab/remark)]</span>
-<span id="cb7-19"><a href=""></a>---</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Notice non-MD directives, e.g., <code>class: center, middle</code></p>
-</section>
-<section id="from-md-to-slides" class="slide level2">
-<h2>From MD to slides</h2>
-<p>Pandoc can generate a HTML file with slides</p>
-<p>Use MD annotations with two extra conventions</p>
-<p>By default, <code>#</code> for section title and <code>##</code> for slide title</p>
-<p>a slide separator is needed: it redefines the meaning of <code>---</code> in MD</p>
-<p>Sometimes <code>-----</code> is used.</p>
-<p>Idea: keep the Markdown in a separated file, keep the HTML and Javascript boilerplate in a general <code>index.html</code> file</p>
-</section></section>
-<section>
 <section id="revealjs" class="title-slide slide level1 center">
 <h1>Revealjs</h1>
 
 </section>
 <section class="slide level2">
 
-<p>A project now available as a stand-alone <a href="slides.com">slides.com</a></p>
-<p>A refined set of Javascript embeddings is available from <a href="revealjs.com">the main site</a></p>
-<p>Let’s focus on <a href="https://revealjs.com/markdown/">MD embeddings</a></p>
-</section>
-<section id="what-about-powerpoint" class="slide level2">
-<h2>What about Powerpoint?</h2>
-<p>The first release was in 1987 [source: Wikipedia], i.e., well before the <em>internet revolution.</em></p>
-<p>For reference, this was fashion in 1987</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="./imgs/1987-mens.jpg"></p>
-</div><div class="column" style="width:50%;">
-<p><img data-src="./imgs/1987-womens.jpg"></p>
-</div></div>
-</section>
-<section class="slide level2">
 
-<p>Today,</p>
+<img data-src="https://camo.githubusercontent.com/5327c3e6d8349607bc84c60102bee78e7ee32d2b1861f28445560df9eeb79492/68747470733a2f2f68616b696d2d7374617469632e73332e616d617a6f6e6177732e636f6d2f72657665616c2d6a732f6c6f676f2f76312f72657665616c2d626c61636b2d746578742d737469636b65722e706e67.png" class="r-stretch quarto-figure-center"><p class="caption">https://github.com/hakimel/reveal.js#markdown</p></section>
+<section id="programme" class="slide level2">
+<h2>Programme:</h2>
+<ul>
+<li><p>put down a quick Markdown presentation</p></li>
+<li><p>insert links and images</p></li>
+<li><p>create slides with pandoc</p></li>
+<li><p>publish on accessible web page (e.g., W3schools spaces)</p></li>
+<li><p>go to the meeting and present it</p></li>
+<li><p>let others catch up by reading on the web site</p></li>
+</ul>
+</section>
+<section id="commands" class="slide level2">
+<h2>Commands</h2>
+<p>Pandoc is <strong>a professional tool</strong> and needs Powershell (Win) or Terminal (MacOs) to be launched</p>
+<p>The following instructions for Win can be applied almost verbatim to MacOs</p>
+</section>
+<section id="commands-win11" class="slide level2">
+<h2>Commands: Win11</h2>
 <ol type="1">
-<li><p>everything is hyper-linked and hardly any document is self-contained</p></li>
-<li><p>Cross-publishing invariably means changing styles</p></li>
-<li><p>yet, content is often ambivalent synch/asynch</p></li>
+<li><p>open the folder where the Markdown presentation file is, or where you want it to be.</p></li>
+<li><p>right-click and start a <code>Terminal</code> or a <code>Powershell</code></p></li>
+<li><p>notice: you can also start a terminal/powershell from the ‘Start’ menu, but in such case you need the terminal to be ‘pointed’ to the working folder</p></li>
 </ol>
-<p>JS-based presentations have the concept of <em>linking</em> (and re-processing) at the core.</p>
-<p>Powerpoint can only hope to import it in…</p>
+<p>If not we need to <code>cd</code> to the right directory, e.g.,</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href=""></a><span class="bu">cd</span> C:<span class="dt">\U</span>sers<span class="dt">\a</span>less<span class="dt">\g</span>it<span class="dt">\9</span>6-revealjs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>where the <em>path</em> is obviously personal</p>
+</section></section>
+<section>
+<section id="from-md-to-web-presentation" class="title-slide slide level1 center">
+<h1>From MD to Web presentation</h1>
+
+</section>
+<section id="run-pandoc" class="slide level2">
+<h2>Run pandoc</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href=""></a><span class="ex">pandoc</span> <span class="at">--standalone</span> <span class="at">--from</span> markdown <span class="at">--to</span> revealjs my_pres.md <span class="at">-o</span> my_pres.html</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Pandoc reads <code>my_pres.md</code> and creates a <em>standalone</em> (no auxiliary files) HTML page:</p>
+<p><code>my_pres.html</code> will contain [lots of] JS code that is <em>injected</em> to create navigation, focus, pens etc.</p>
+</section>
+<section id="themes-and-animations" class="slide level2">
+<h2>Themes and animations</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href=""></a><span class="ex">pandoc</span> <span class="at">--standalone</span> <span class="at">--from</span> markdown <span class="at">--to</span> revealjs my_pre.md <span class="at">-o</span> my_pres.html <span class="at">-V</span> transition=convex <span class="at">-V</span> theme=solarized <span class="at">--verbose</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Check the available options on <a href="www.slides.com">slides.com</a></p>
+<h4 id="with-css">with CSS</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href=""></a><span class="ex">pandoc</span> <span class="at">--standalone</span> <span class="at">--from</span> markdown <span class="at">--to</span> revealjs my_pre.md <span class="at">-o</span> my_pres.html </span>
+<span id="cb4-2"><a href=""></a><span class="ex">--css</span> my_revealjs_style.css <span class="at">-V</span> transition=convex <span class="at">-V</span> theme=solarized <span class="at">--verbose</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="exercise" class="slide level2">
+<h2>Exercise</h2>
+<p>For page numbers, open your HTML presentation and add, towards the bottom:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href=""></a>Reveal<span class="op">.</span><span class="fu">initialize</span>({</span>
+<span id="cb5-2"><a href=""></a>    <span class="dt">slideNumber</span><span class="op">:</span> <span class="st">'c/t'</span></span>
+<span id="cb5-3"><a href=""></a>    })<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Save and reload in a browser: voilà!</p>
+</section>
+<section id="post-activities" class="slide level2">
+<h2>Post activities</h2>
+<ol type="1">
+<li><p>study the produced HTML file: what does it link to? Can we edit it?</p></li>
+<li><p>Visit the project <a href="https://github.com/hakimel/reveal.js#markdown">GitHub page</a> for updates.</p></li>
+<li><p>Look at image embeddings such as the Revealjs logo in this presentation</p></li>
+<li><p>can you use pandoc to create a PDF of your presentation? (could you write your MA thesis in Markdown?)</p></li>
+</ol>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p><a href="https://github.com/ale66/learn-web">github.com/ale66/learn-web</a>&nbsp;&nbsp;&nbsp;</p>
@@ -608,20 +485,20 @@ ale66
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="beyond-html_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="revealjs_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="beyond-html_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="beyond-html_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="beyond-html_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="beyond-html_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="beyond-html_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="beyond-html_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="revealjs_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="revealjs_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="revealjs_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="revealjs_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="revealjs_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="revealjs_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="beyond-html_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="beyond-html_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="beyond-html_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="beyond-html_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="revealjs_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="revealjs_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="revealjs_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="revealjs_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

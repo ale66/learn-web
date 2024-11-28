@@ -72,9 +72,10 @@ able to collect and send back for analysis the telemetry of user movements, e.g.
 
 Example: the [Flask](https://flask.palletsprojects.com/en/3.0.x/) module for Python
 
-Create HTML files dynamically, by writing Python functions which return HTML code.
+Create HTML files dynamically, by writing Python functions which return HTML code
 
-Take module ``C4CSS: Coding for the Computational Social Sciences`` to learn Python.
+Take module `C4CSS: Coding for the Computational Social Sciences (6CFU)` to learn Python.
+
 
 ---
 

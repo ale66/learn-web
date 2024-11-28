@@ -1,0 +1,135 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 2
+    mermaid:
+      theme: dark
+      fontSize: 12
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Revealjs 
+
+---
+
+![https://github.com/hakimel/reveal.js#markdown](https://camo.githubusercontent.com/5327c3e6d8349607bc84c60102bee78e7ee32d2b1861f28445560df9eeb79492/68747470733a2f2f68616b696d2d7374617469632e73332e616d617a6f6e6177732e636f6d2f72657665616c2d6a732f6c6f676f2f76312f72657665616c2d626c61636b2d746578742d737469636b65722e706e67)
+
+
+---
+
+## Programme: 
+
+* put down a quick Markdown presentation
+
+* insert links and images
+
+* create slides with pandoc
+
+* publish on accessible web page (e.g., W3schools spaces)
+
+* go to the meeting and present it
+
+* let others catch up by reading on the web site
+
+
+---
+
+##  Commands
+
+Pandoc is __a professional tool__ and needs Powershell (Win) or Terminal (MacOs) to be launched
+
+The following instructions for Win can be applied almost verbatim to MacOs
+
+
+---
+
+## Commands: Win11
+
+1. open the folder where the Markdown presentation file is, or where you want it to be.
+
+2. right-click and start a `Terminal` or a `Powershell`
+
+3. notice: you can also start a terminal/powershell from the 'Start' menu, but in such case you need the terminal to be 'pointed' to the working folder
+
+If not we need to `cd` to the right directory, e.g.,
+
+```bash
+cd C:\Users\aless\git\96-revealjs
+```
+
+where the *path* is obviously personal
+
+
+# From MD to Web presentation
+
+
+---
+
+## Run pandoc
+
+```bash
+pandoc --standalone --from markdown --to revealjs my_pres.md -o my_pres.html
+```
+
+Pandoc reads `my_pres.md` and creates a *standalone* (no auxiliary files) HTML page: 
+
+`my_pres.html` will contain [lots of] JS code that is *injected* to create navigation, focus, pens etc. 
+
+
+---
+
+## Themes and animations
+
+```bash
+pandoc --standalone --from markdown --to revealjs my_pre.md -o my_pres.html -V transition=convex -V theme=solarized --verbose
+```
+
+Check the available options on [slides.com](www.slides.com) 
+
+#### with CSS
+
+```bash
+pandoc --standalone --from markdown --to revealjs my_pre.md -o my_pres.html 
+--css my_revealjs_style.css -V transition=convex -V theme=solarized --verbose
+```
+
+
+
+---
+
+## Exercise
+
+For page numbers, open your HTML presentation and add, towards the bottom:
+
+```js
+Reveal.initialize({
+	slideNumber: 'c/t'
+	});
+```
+
+Save and reload in a browser: voil&agrave;!
+
+
+
+
+
+---
+
+## Post activities
+
+1. study the produced HTML file: what does it link to? Can we edit it?
+
+2. Visit the project [GitHub page](https://github.com/hakimel/reveal.js#markdown) for updates.
+
+3. Look at image embeddings such as the Revealjs logo in this presentation
+
+4. can you use pandoc to create a PDF of your presentation? 
+(could you write your MA thesis in Markdown?)
