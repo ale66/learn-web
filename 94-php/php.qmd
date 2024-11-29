@@ -1,0 +1,45 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 2
+    mermaid:
+      theme: dark
+      fontSize: 12
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# 5. Bootstrap 5 Carousels
+
+---
+
+[HTML5 carousels](https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp)
+
+[Bootstrap 5 carousels](https://getbootstrap.com/docs/5.0/components/carousel/)
+
+---
+
+## A Carousel with variable number of slides
+
+Boilerplate JS; change the HTML as needed; check your work with the [w3c validator](https://validator.w3.org/)
+
+---
+
+#### Last exercise
+
+* work on folder `94-php/boilerplate`
+
+* in folder `imgs` store *some* images (example, Euro capitals)
+
+* update the TXT file server-side to selection
+
+* for each image, add a bit of caption text with links to the 'welcome/accueil' page of the location
+
+* advanced: make the images clickable (same targets)
