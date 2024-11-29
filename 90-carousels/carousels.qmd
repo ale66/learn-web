@@ -1,0 +1,113 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 2
+    mermaid:
+      theme: dark
+      fontSize: 12
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# 5. Bootstrap 5 Carousels
+
+---
+
+## Carousels
+
+The best way to have a visual presentation that is beyond static.
+
+For academic or critical text, side-by-side images are key so carousel is not recommended
+ 
+recommended for commercial and in general where there is *choice*
+
+Example: [campari.com](https://www.campari.com/our-products/campari-negroni/)
+
+
+---
+
+## HTML
+
+For reference: 
+
+[HTML5 carousels](https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp)
+
+---
+
+## Bootstrap 5
+
+[Bootstrap 5 carousels](https://getbootstrap.com/docs/5.0/components/carousel/)
+
+[Read the manual and copy/paste the source into the boilerplate page up to section `With indicators`]
+
+
+---
+
+## Key aspects
+
+One item must be `active` for the BS5 Carousel to show
+
+```html        
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      ...
+    </div>
+    <div class="carousel-item">
+      <!-- an image -->
+  </div>
+  <div class="carousel-item">
+    <!-- another image -->
+  </div>
+  <!-- as many carousel-item elements as pictures
+</div>
+```
+
+---
+
+## Exercise
+
+- Open the boilerplate
+
+- Connect the images inside `imgs` to the carousel, at least four
+
+  - may require converting the format and/or resizing
+
+- from the [BS5 tutorial](https://getbootstrap.com/docs/5.0/components/carousel/) copy+paste the source examples into the boilerplate page up to section `With indicators` included
+  
+
+# Advanced lab: drop-in carousels
+
+---
+
+## A Carousel with variable number of slides
+
+Idea: there is a *gallery* hosted in a folder, typically called `imgs` or `images` 
+
+The gallery changes in size and composition as we add/drop files inside the folder
+
+At runtime, a JS function queries the operating system, picks up the file names and organises the carousel with what is available in the folder
+
+Boilerplate JS; change the HTML as needed; check your work with the [w3c validator](https://validator.w3.org/)
+
+
+---
+
+#### Last exercise
+
+* work on folder `94-php/boilerplate`
+
+* in folder `imgs` store *some* images (e.g, Euro capitals)
+
+* update the TXT file server-side to selection
+
+* for each image, add a bit of caption text with links to the 'welcome/accueil' page of the location
+
+* advanced: make the images clickable (same targets)
