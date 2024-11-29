@@ -16,7 +16,7 @@ execute:
   echo: true
 ---
 
-# 5. Bootstrap 5 Carousels
+# BS5 Carousels
 
 ---
 
