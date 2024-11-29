@@ -21,6 +21,24 @@ execute:
 
 ---
 
+## Saturday special arrangements
+
+Around 10:00:  
+
+* end-of-class coffee at the *Babila Hostel-Bistro*
+  ![](https://lh5.googleusercontent.com/p/AF1QipP1Wuto-Oz-ww46cr3QKr8jMCIcxvBxG35KreOY=w408-h272-k-no)
+
+Around 10:30:
+
+* TBC: presentation of [milanoalguinzaglio](https://milanoalguinzaglio.it) by Alessia M. Marino
+
+---
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.279171126722!2d9.200763676019859!3d45.46417993344038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6a3408cf573%3A0xa8d61b598dc3c668!2sBabila%20Hostel%20%26%20Bistrot!5e0!3m2!1sen!2sit!4v1701471672468!5m2!1sen!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+---
+
 ## Web pages, today
 
 Writing direct HTML today could actually make you look strange, at least:
