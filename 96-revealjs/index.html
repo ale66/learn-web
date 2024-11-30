@@ -409,25 +409,32 @@ ale66
 <h1>Revealjs</h1>
 
 </section>
-<section class="slide level2">
-
-
-<img data-src="https://camo.githubusercontent.com/5327c3e6d8349607bc84c60102bee78e7ee32d2b1861f28445560df9eeb79492/68747470733a2f2f68616b696d2d7374617469632e73332e616d617a6f6e6177732e636f6d2f72657665616c2d6a732f6c6f676f2f76312f72657665616c2d626c61636b2d746578742d737469636b65722e706e67.png" class="r-stretch quarto-figure-center"><p class="caption">https://github.com/hakimel/reveal.js#markdown</p></section>
+<section id="revealjs-1" class="slide level2">
+<h2>Revealjs</h2>
+<p>A personal <a href="https://github.com/hakimel/reveal.js/">GitHub project</a> on making presentations that are in fact HTML pages (with lots of JS inside)</p>
+<p>goes above and beyond Powerpoint</p>
+<p>The HTML page is self-contained and can be sent/loaded/published anywhere</p>
+<p>In case, we can always edit the HTML page to tweak or add settings</p>
+<p>Tutorial: <a href="https://revealjs.com/">revealjs.com/</a></p>
+<p>Online editor: <a href="https://slides.com/">slides.com/</a></p>
+</section>
 <section id="programme" class="slide level2">
 <h2>Programme:</h2>
 <ul>
-<li><p>put down a quick Markdown presentation</p></li>
+<li><p>put down quick Markdown notes</p></li>
 <li><p>insert links and images</p></li>
-<li><p>create slides with pandoc</p></li>
+<li><p>create slides with <code>Pandoc --to revealjs</code></p></li>
 <li><p>publish on accessible web page (e.g., W3schools spaces)</p></li>
-<li><p>go to the meeting and present it</p></li>
+<li><p>go to the meeting (or exam) and present it</p></li>
 <li><p>let others catch up by reading on the web site</p></li>
+<li><p>see the demos: presentations can go <em>inside</em> web pages</p></li>
 </ul>
 </section>
 <section id="commands" class="slide level2">
 <h2>Commands</h2>
 <p>Pandoc is <strong>a professional tool</strong> and needs Powershell (Win) or Terminal (MacOs) to be launched</p>
 <p>The following instructions for Win can be applied almost verbatim to MacOs</p>
+<p>For step-by-step instructions open <code>exercise/README.md</code> in VS code and read it with the preview</p>
 </section>
 <section id="commands-win11" class="slide level2">
 <h2>Commands: Win11</h2>
@@ -437,7 +444,7 @@ ale66
 <li><p>notice: you can also start a terminal/powershell from the ‘Start’ menu, but in such case you need the terminal to be ‘pointed’ to the working folder</p></li>
 </ol>
 <p>If not we need to <code>cd</code> to the right directory, e.g.,</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href=""></a><span class="bu">cd</span> C:<span class="dt">\U</span>sers<span class="dt">\a</span>less<span class="dt">\g</span>it<span class="dt">\9</span>6-revealjs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href=""></a><span class="bu">cd</span> C:/Users/aless/git/96-revealjs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>where the <em>path</em> is obviously personal</p>
 </section></section>
 <section>
@@ -447,17 +454,26 @@ ale66
 </section>
 <section id="run-pandoc" class="slide level2">
 <h2>Run pandoc</h2>
+<p>open a terminal from inside your work folder</p>
+<p>if, e.g., <code>my_pres.md</code> is your presentation, give command</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href=""></a><span class="ex">pandoc</span> <span class="at">--standalone</span> <span class="at">--from</span> markdown <span class="at">--to</span> revealjs my_pres.md <span class="at">-o</span> my_pres.html</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Pandoc reads <code>my_pres.md</code> and creates a <em>standalone</em> (no auxiliary files) HTML page:</p>
 <p><code>my_pres.html</code> will contain [lots of] JS code that is <em>injected</em> to create navigation, focus, pens etc.</p>
+<p>open it with Firefox to run the presentation.</p>
+<p>use arrows to move, <code>o</code> for overview</p>
 </section>
 <section id="themes-and-animations" class="slide level2">
 <h2>Themes and animations</h2>
 <div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href=""></a><span class="ex">pandoc</span> <span class="at">--standalone</span> <span class="at">--from</span> markdown <span class="at">--to</span> revealjs my_pre.md <span class="at">-o</span> my_pres.html <span class="at">-V</span> transition=convex <span class="at">-V</span> theme=solarized <span class="at">--verbose</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Check the available options on <a href="www.slides.com">slides.com</a></p>
 <h4 id="with-css">with CSS</h4>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href=""></a><span class="ex">pandoc</span> <span class="at">--standalone</span> <span class="at">--from</span> markdown <span class="at">--to</span> revealjs my_pre.md <span class="at">-o</span> my_pres.html </span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href=""></a><span class="ex">pandoc</span> <span class="at">--standalone</span> <span class="at">--from</span> markdown <span class="at">--to</span> revealjs my_pres.md <span class="at">-o</span> my_pres.html </span>
 <span id="cb4-2"><a href=""></a><span class="ex">--css</span> my_revealjs_style.css <span class="at">-V</span> transition=convex <span class="at">-V</span> theme=solarized <span class="at">--verbose</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Check out <a href="https://revealjs.com/transitions/">transition effects</a></p>
+<p>Check out <a href="https://revealjs.com/themes/">themes</a></p>
+<p>Test combinations to find one you like</p>
+<p>This theme is <code>moon</code> with transition <code>none</code></p>
+<p>Try, e.g., <code>dracula</code> with <code>zoom</code></p>
 </section>
 <section id="exercise" class="slide level2">
 <h2>Exercise</h2>
@@ -475,6 +491,20 @@ ale66
 <li><p>Look at image embeddings such as the Revealjs logo in this presentation</p></li>
 <li><p>can you use pandoc to create a PDF of your presentation? (could you write your MA thesis in Markdown?)</p></li>
 </ol>
+</section></section>
+<section>
+<section id="extensions" class="title-slide slide level1 center">
+<h1>Extensions</h1>
+
+</section>
+<section id="quarto" class="slide level2">
+<h2>Quarto</h2>
+<p>an extension of Markdown that supports publishing</p>
+<p><code>mypres.qmd</code> –&gt;</p>
+<p><code>mypres.html</code>, <code>mypres-revealjs.html</code>, <code>mypres.pdf</code> …</p>
+<p>it sets up Pandoc to produce more complex documents</p>
+<p>all we’ve seen about Markdown to Revealjs is valid in Quarto</p>
+<p>See the presentation of <a href="https://github.com/martinomagnifico/quarto-appearance">Quarto-appearance</a></p>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p><a href="https://github.com/ale66/learn-web">github.com/ale66/learn-web</a>&nbsp;&nbsp;&nbsp;</p>

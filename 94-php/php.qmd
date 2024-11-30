@@ -16,30 +16,147 @@ execute:
   echo: true
 ---
 
-# 5. Bootstrap 5 Carousels
+# PHP
 
 ---
 
-[HTML5 carousels](https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp)
+## Recap
 
-[Bootstrap 5 carousels](https://getbootstrap.com/docs/5.0/components/carousel/)
+HTML is presentation only
+
+CSS is style with some ability to change the page (remember `display: none;`)
+
+. . .
+
+JS 
+
+- can alter all aspects of the page (inc. style)
+
+- is a full programming language: it handles strings, files (images) and can iterate
+
+- can save local cookies to build a profile and a long-term interaction
+
 
 ---
 
-## A Carousel with variable number of slides
+## Limits of the approach
 
-Boilerplate JS; change the HTML as needed; check your work with the [w3c validator](https://validator.w3.org/)
+HTML+CSS+JS 
+
+Traditional web pages can keep local variables, pull files from the server (e.g., download the needed JS files, the images etc.) and from the pages that are linked
+
+the `GET()` function pulls from a link (URL)
+
+. . .
+
+However, they cannot *send* data to their server or anywhere
+
+the `POST()` function only works for servers
+
 
 ---
 
-#### Last exercise
+## PHP
 
-* work on folder `94-php/boilerplate`
+A *dynamic* approach
 
-* in folder `imgs` store *some* images (example, Euro capitals)
+the page is not saved on the server
 
-* update the TXT file server-side to selection
+when a `GET()` request arrives, PHP code runs and builds a page that is made up of fixed elements *as well as* variable elements that are selected/created in response to the specific `GET` query.
 
-* for each image, add a bit of caption text with links to the 'welcome/accueil' page of the location
+Often the variable elements are created *on the spot* by query a database that contains the actual data.
 
-* advanced: make the images clickable (same targets)
+This is the basis of e-commerce
+
+
+---
+
+## PHP in e-commerce 
+
+e-commerce data is never inside an HTML page
+
+PHP, running server side, 
+- examines our query, 
+- goes and retrieves the data from the database (the 'catalog')
+- creates the right HTML page to contain the data
+- sends the resulting page to the client
+  
+this must be done for each `GET()`, even though several solutions exist to avoid sending the same HTML twice.
+
+---
+
+## What happens? Client-side
+
+By creating a *stub* PHP page, `index.php` we enable server->client communication
+
+our JS functions, running client-side, will collect interesting informations and *post* them to some 'secret' PHP pages (check `boilerplate/php`)
+
+
+---
+
+## What happens? Server-side
+
+when queried, a secret (or stub) PHP page will in fact do nothing but write down the received information into local files, aka. *logs*
+
+log files are kept inside `boilerplate/stats` is simple `.txt` format
+
+Later we can read the log files and compute a statistics of user actions 
+
+we may find *quantitative* insights on how to improve our communication
+
+
+---
+
+This is `boilerplate/index.html`
+
+```php
+<html>
+  <head>
+    <link href= "index.html">
+    <link rel="icon" href="imgs/logo.jpg" type="image/png">
+    <title></title>
+  </head>
+  
+  <body>
+    <!-- Connect index.php with index-html -->
+    <?php include 'index.html';?>
+  </body>
+</html>
+```
+
+---
+
+## Data Collection
+
+Explore the functions in `boilerplate/js`
+
+They access stub pages inside `boilerplate/php'
+
+PHP stub pages write on files inside `boilerplate/stats`
+
+every time we (re)load the page and do some action, stats files are updated
+
+don't alter those `.txt` files nor leave them open
+
+Later we can export them to a Spreadsheet and do some stats
+
+on to the lab...
+
+
+# Ideas for project
+
+
+---
+
+- run the A/B lottery and set a cookie
+
+- run a `window.alert` to ask users whether they want to join our mailing list 
+
+- include a [BS5 text form](https://getbootstrap.com/docs/5.3/forms/form-control/) to let them type the email
+  
+- copy+paste `js/ratings.js` or `js/visits.js` to create a function that calls another secret PHP page, let's say `js/emails.js`; invoke it from the HTML
+
+- copy+paste `php/visits.php` to create your `php/emails.php` stub page
+
+- make the new page write the received email at the bottom of a new stats file, e.g., `stats/emails.txt`
+  

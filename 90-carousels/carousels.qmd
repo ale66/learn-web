@@ -6,6 +6,7 @@ format:
     footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
     theme: [moon]
     preview-links: auto
+    code-line-numbers: true
     chalkboard: 
       boardmarker-width: 2
     mermaid:
@@ -54,7 +55,9 @@ For reference:
 
 One item must be `active` for the BS5 Carousel to show
 
-```html        
+try re-assigning it (see `90-carousels/boilerplate/`)
+
+```html       
 <div id="carouselExample" class="carousel slide">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -72,18 +75,43 @@ One item must be `active` for the BS5 Carousel to show
 
 ---
 
+## Sizing in BS5
+
+```html
+<div class="carousel-inner">
+  <div class="carousel-item active">
+    <img src="./imgs/carousel/campari-cannes.webp" class="d-block w-100" alt="">
+  </div>
+```
+
+class `d-block` make sure that the carousel will be *displayed* on all screens (details [here](https://getbootstrap.com/docs/5.3/utilities/display/))
+
+class `w-100` ensures maximum width (details [here](https://getbootstrap.com/docs/5.3/utilities/sizing/))
+
+Try 
+
+  - `w-75`, more elegant?
+  - `mh-100` maximum height
+  - `mw-100` maximum width 
+
+
+---
+
 ## Exercise
 
-- Open the boilerplate
+- visit `90-carousels/boilerplate`
 
-- Connect the images inside `imgs` to the carousel, at least four
+-  read `bs5-carousel.html` line by line
 
-  - may require converting the format and/or resizing
+- extend the carousel by 
+  - moving a file `imgs/` -> `imgs/carousel/` 
+  - adding the relative code to `index.html`
 
 - from the [BS5 tutorial](https://getbootstrap.com/docs/5.0/components/carousel/) copy+paste the source examples into the boilerplate page up to section `With indicators` included
   
 
 # Advanced lab: drop-in carousels
+
 
 ---
 

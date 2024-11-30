@@ -1,11 +1,11 @@
+<?php
 // this file is executed upon a page sending a POST back
 // please only change the name of the file were each visit is recorded
 // in line 8
 
-<?php
 session_start();
 
-$file = '../stats/visits.txt';
+$file = '/tmpreport/visits.txt';
 
 // Check if the visitor has a session
 if (!isset($_SESSION['visit_counter'])) {

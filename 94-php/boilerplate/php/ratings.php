@@ -1,13 +1,13 @@
+<?php
 // this file is executed upon a page sending a POST back
 // please only change the name of the file were each rating is recorded
 // in line 10
 
-<?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $rating = $_POST['rating'];
 
     // Save the rating and timestamp to a text file.
-    $file = '../stats/ratings.txt';
+    $file = '/tmpreport/ratings.txt';
 
     $timestamp = date('d-m-Y H:i:s', strtotime('+1 hour'));
     

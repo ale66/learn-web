@@ -1,7 +1,11 @@
-<!-- Webcomm boilerplate for exam projects -A
+<!-- Webcomm boilerplate for exam projects
+    Extracted from Andrej Grycz's Webcomm project of December 2023:
+    https://replit.com/@andrejgrycz/AllGoalsEurope-exam-project#index.php
     this page is launched by index.php to allow for 
     data collection server-side
 -->
+
+<!-- do not alter the line below -->
 <?php include 'php/init.php'; ?>
 
 <!doctype html>
@@ -37,14 +41,14 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">                
                 <div class="dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Campionati </a>
-                  <!-- Dropdown items Campionati -->
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> European Football </a>
+                  <!-- Dropdown items Leagues -->
                   <div class="dropdown-menu dropdown-menu-light">
-                    <a class="dropdown-item" href="#A" onclick="closeNavbar()"><img src="img/logo img/Serie A logo.png" alt="Serie A logo"> Serie A </a>
-                    <a class="dropdown-item" href="#B" onclick="closeNavbar()"><img src="img/logo img/PL logo.png" alt="Premier logo"> Premier </a>
-                    <a class="dropdown-item" href="#C" onclick="closeNavbar()"><img src="img/logo img/La Liga logo.png" alt="La liga logo"> La Liga </a>
-                    <a class="dropdown-item" href="#D" onclick="closeNavbar()"><img src="img/logo img/Bundesliga logo.png" alt="Bundesliga logo"> Bundesliga </a>
-                    <a class="dropdown-item" href="#E" onclick="closeNavbar()"><img src="img/logo img/Ligue 1 logo.png" alt="Ligue 1 logo"> Ligue 1 </a>
+                    <a class="dropdown-item" href="#A" onclick="closeNavbar()"><img src="imgs/logo/Serie_A_logo.png" alt="Serie A logo"> Serie A </a>
+                    <a class="dropdown-item" href="#B" onclick="closeNavbar()"><img src="imgs/logo/Premier_league_logo.png" alt="Premier logo"> Premier </a>
+                    <a class="dropdown-item" href="#C" onclick="closeNavbar()"><img src="imgs/logo/La_liga_logo.png" alt="La liga logo"> La Liga </a>
+                    <a class="dropdown-item" href="#D" onclick="closeNavbar()"><img src="imgs/logo/Bundesliga_logo.png" alt="Bundesliga logo"> Bundesliga </a>
+                    <a class="dropdown-item" href="#E" onclick="closeNavbar()"><img src="imgs/logo/Ligue_1_logo.png" alt="Ligue 1 logo"> Ligue 1 </a>
                   </div>
                 </div>
               </li>
@@ -59,7 +63,10 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#Footer" onclick="closeNavbar()"> Contatti </a>
+                <a class="nav-link" href="#Footer" onclick="closeNavbar()"> Contacts </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Footer" onclick="clearCookies()"> Clear Cookies </a>
               </li>
             </ul>
           </div>
@@ -79,38 +86,38 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="./imgs/0.jpg" class="d-block w-100" alt="">
+            <img src="./imgs/carousel/Serie_A_winner.webp" class="d-block w-100" alt="">
             <div class="carousel-caption d-block">
-              <h5> Title </h5>
-              <p> Placeholdes </p>
+              <h5> Serie A </h5>
+              <p> Over the top! </p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="./imgs/1.jpg" class="d-block w-100" alt="">
+            <img src="./imgs/carousel/Premier_league_winner.jpg" class="d-block w-100" alt="">
             <div class="carousel-caption d-block">
-              <h5> <Title></Title> </h5>
-              <p> Placeholder </p>
+              <h5> Premier League </h5>
+              <p> The best! </p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="./imgs/2" class="d-block w-100" alt="">
+            <img src="./imgs/carousel/La_liga_winner.webp" class="d-block w-100" alt="">
             <div class="carousel-caption d-block">
-              <h5> Title </h5>
-              <p> Placeholder </p>
+              <h5> La liga </h5>
+              <p> Ole! </p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="./imgs/3.jpg" class="d-block w-100" alt="">
+            <img src="./imgs/carousel/Bundesliga_winner.webp" class="d-block w-100" alt="">
             <div class="carousel-caption d-block">
-              <h5> Title </h5>
-              <p> Placeholder </p>
+              <h5> Bundesliga </h5>
+              <p> The rock! </p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="./imgs/4.jpg" class="d-block w-100" alt="">
+            <img src="./imgs/carousel/Ligue_1_winner.jpg" class="d-block w-100" alt="">
             <div class="carousel-caption d-block">
-              <h5> Title </h5>
-              <p> Placeholder </p>
+              <h5> Ligue 1 </h5>
+              <p> Sky is the limit! </p>
             </div>
           </div>
         </div>
@@ -143,21 +150,26 @@
               <span class="star" data-rating="4">&#9733;</span>
               <span class="star" data-rating="5">&#9733;</span>
             </div>                
-          <div id="thank-you-message">Placeholder</div> 
-                  <p id="selected-rating"></p>
-                </div>
+            <div id="thank-you-message">Placeholder</div> 
+            <p id="selected-rating"></p>
+          </div>
         </div>
       </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
+   
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+ 
     <!-- cookies -->
-    <script src="js/cookies.js"></script>
+    <!-- script src="js/cookies.js"></script -->
 
     <!-- A/B testing -->
-    <script src="js/ab-testing.js"></script>
+    <!-- script src="js/ab-testing.js"></script -->
+
+		<!-- service functions -->
+		<script src="js/services.js"></script>
 
     <!-- count visits -->
     <script src="js/visits.js"></script>

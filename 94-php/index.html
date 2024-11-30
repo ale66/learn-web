@@ -29,6 +29,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="php_files/libs/revealjs/dist/theme/quarto.css">
   <link href="php_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -340,28 +405,99 @@ ale66
 
 </section>
 <section>
-<section id="bootstrap-5-carousels" class="title-slide slide level1 center">
-<h1>5. Bootstrap 5 Carousels</h1>
+<section id="php" class="title-slide slide level1 center">
+<h1>PHP</h1>
 
 </section>
-<section class="slide level2">
-
-<p><a href="https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp">HTML5 carousels</a></p>
-<p><a href="https://getbootstrap.com/docs/5.0/components/carousel/">Bootstrap 5 carousels</a></p>
-</section>
-<section id="a-carousel-with-variable-number-of-slides" class="slide level2">
-<h2>A Carousel with variable number of slides</h2>
-<p>Boilerplate JS; change the HTML as needed; check your work with the <a href="https://validator.w3.org/">w3c validator</a></p>
-</section>
-<section class="slide level2">
-
-<h4 id="last-exercise">Last exercise</h4>
+<section id="recap" class="slide level2">
+<h2>Recap</h2>
+<p>HTML is presentation only</p>
+<p>CSS is style with some ability to change the page (remember <code>display: none;</code>)</p>
+<div class="fragment">
+<p>JS</p>
 <ul>
-<li><p>work on folder <code>94-php/boilerplate</code></p></li>
-<li><p>in folder <code>imgs</code> store <em>some</em> images (example, Euro capitals)</p></li>
-<li><p>update the TXT file server-side to selection</p></li>
-<li><p>for each image, add a bit of caption text with links to the ‘welcome/accueil’ page of the location</p></li>
-<li><p>advanced: make the images clickable (same targets)</p></li>
+<li><p>can alter all aspects of the page (inc. style)</p></li>
+<li><p>is a full programming language: it handles strings, files (images) and can iterate</p></li>
+<li><p>can save local cookies to build a profile and a long-term interaction</p></li>
+</ul>
+</div>
+</section>
+<section id="limits-of-the-approach" class="slide level2">
+<h2>Limits of the approach</h2>
+<p>HTML+CSS+JS</p>
+<p>Traditional web pages can keep local variables, pull files from the server (e.g., download the needed JS files, the images etc.) and from the pages that are linked</p>
+<p>the <code>GET()</code> function pulls from a link (URL)</p>
+<div class="fragment">
+<p>However, they cannot <em>send</em> data to their server or anywhere</p>
+<p>the <code>POST()</code> function only works for servers</p>
+</div>
+</section>
+<section id="php-1" class="slide level2">
+<h2>PHP</h2>
+<p>A <em>dynamic</em> approach</p>
+<p>the page is not saved on the server</p>
+<p>when a <code>GET()</code> request arrives, PHP code runs and builds a page that is made up of fixed elements <em>as well as</em> variable elements that are selected/created in response to the specific <code>GET</code> query.</p>
+<p>Often the variable elements are created <em>on the spot</em> by query a database that contains the actual data.</p>
+<p>This is the basis of e-commerce</p>
+</section>
+<section id="php-in-e-commerce" class="slide level2">
+<h2>PHP in e-commerce</h2>
+<p>e-commerce data is never inside an HTML page</p>
+<p>PHP, running server side, - examines our query, - goes and retrieves the data from the database (the ‘catalog’) - creates the right HTML page to contain the data - sends the resulting page to the client</p>
+<p>this must be done for each <code>GET()</code>, even though several solutions exist to avoid sending the same HTML twice.</p>
+</section>
+<section id="what-happens-client-side" class="slide level2">
+<h2>What happens? Client-side</h2>
+<p>By creating a <em>stub</em> PHP page, <code>index.php</code> we enable server-&gt;client communication</p>
+<p>our JS functions, running client-side, will collect interesting informations and <em>post</em> them to some ‘secret’ PHP pages (check <code>boilerplate/php</code>)</p>
+</section>
+<section id="what-happens-server-side" class="slide level2">
+<h2>What happens? Server-side</h2>
+<p>when queried, a secret (or stub) PHP page will in fact do nothing but write down the received information into local files, aka. <em>logs</em></p>
+<p>log files are kept inside <code>boilerplate/stats</code> is simple <code>.txt</code> format</p>
+<p>Later we can read the log files and compute a statistics of user actions</p>
+<p>we may find <em>quantitative</em> insights on how to improve our communication</p>
+</section>
+<section class="slide level2">
+
+<p>This is <code>boilerplate/index.html</code></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource php number-lines code-with-copy"><code class="sourceCode php"><span id="cb1-1"><a href=""></a><span class="op">&lt;</span>html<span class="op">&gt;</span></span>
+<span id="cb1-2"><a href=""></a>  <span class="op">&lt;</span>head<span class="op">&gt;</span></span>
+<span id="cb1-3"><a href=""></a>    <span class="op">&lt;</span><span class="fu">link</span> href<span class="op">=</span> <span class="st">"index.html"</span><span class="op">&gt;</span></span>
+<span id="cb1-4"><a href=""></a>    <span class="op">&lt;</span><span class="fu">link</span> rel<span class="op">=</span><span class="st">"icon"</span> href<span class="op">=</span><span class="st">"imgs/logo.jpg"</span> type<span class="op">=</span><span class="st">"image/png"</span><span class="op">&gt;</span></span>
+<span id="cb1-5"><a href=""></a>    <span class="op">&lt;</span>title<span class="op">&gt;&lt;/</span>title<span class="op">&gt;</span></span>
+<span id="cb1-6"><a href=""></a>  <span class="op">&lt;/</span>head<span class="op">&gt;</span></span>
+<span id="cb1-7"><a href=""></a>  </span>
+<span id="cb1-8"><a href=""></a>  <span class="op">&lt;</span>body<span class="op">&gt;</span></span>
+<span id="cb1-9"><a href=""></a>    <span class="op">&lt;!--</span> Connect index<span class="op">.</span>php with index<span class="op">-</span>html <span class="op">-</span>-&gt;</span>
+<span id="cb1-10"><a href=""></a>    <span class="op">&lt;</span><span class="ot">?</span>php <span class="kw">include</span> <span class="st">'index.html'</span><span class="ot">;</span><span class="kw">?&gt;</span></span>
+<span id="cb1-11"><a href=""></a>  <span class="op">&lt;/</span>body<span class="op">&gt;</span></span>
+<span id="cb1-12"><a href=""></a><span class="op">&lt;/</span>html<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="data-collection" class="slide level2">
+<h2>Data Collection</h2>
+<p>Explore the functions in <code>boilerplate/js</code></p>
+<p>They access stub pages inside `boilerplate/php’</p>
+<p>PHP stub pages write on files inside <code>boilerplate/stats</code></p>
+<p>every time we (re)load the page and do some action, stats files are updated</p>
+<p>don’t alter those <code>.txt</code> files nor leave them open</p>
+<p>Later we can export them to a Spreadsheet and do some stats</p>
+<p>on to the lab…</p>
+</section></section>
+<section>
+<section id="ideas-for-project" class="title-slide slide level1 center">
+<h1>Ideas for project</h1>
+
+</section>
+<section class="slide level2">
+
+<ul>
+<li><p>run the A/B lottery and set a cookie</p></li>
+<li><p>run a <code>window.alert</code> to ask users whether they want to join our mailing list</p></li>
+<li><p>include a <a href="https://getbootstrap.com/docs/5.3/forms/form-control/">BS5 text form</a> to let them type the email</p></li>
+<li><p>copy+paste <code>js/ratings.js</code> or <code>js/visits.js</code> to create a function that calls another secret PHP page, let’s say <code>js/emails.js</code>; invoke it from the HTML</p></li>
+<li><p>copy+paste <code>php/visits.php</code> to create your <code>php/emails.php</code> stub page</p></li>
+<li><p>make the new page write the received email at the bottom of a new stats file, e.g., <code>stats/emails.txt</code></p></li>
 </ul>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">

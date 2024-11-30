@@ -429,6 +429,7 @@ ale66
 <section id="key-aspects" class="slide level2">
 <h2>Key aspects</h2>
 <p>One item must be <code>active</code> for the BS5 Carousel to show</p>
+<p>try re-assigning it (see <code>90-carousels/boilerplate/</code>)</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> id</span><span class="op">=</span><span class="st">"carouselExample"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"carousel slide"</span><span class="dt">&gt;</span></span>
 <span id="cb1-2"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"carousel-inner"</span><span class="dt">&gt;</span></span>
 <span id="cb1-3"><a href=""></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"carousel-item active"</span><span class="dt">&gt;</span></span>
@@ -443,13 +444,30 @@ ale66
 <span id="cb1-12"><a href=""></a>  <span class="co">&lt;!-- as many carousel-item elements as pictures</span></span>
 <span id="cb1-13"><a href=""></a><span class="co">&lt;/div&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
+<section id="sizing-in-bs5" class="slide level2">
+<h2>Sizing in BS5</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"carousel-inner"</span><span class="dt">&gt;</span></span>
+<span id="cb2-2"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"carousel-item active"</span><span class="dt">&gt;</span></span>
+<span id="cb2-3"><a href=""></a>    <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./imgs/carousel/campari-cannes.webp"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"d-block w-100"</span><span class="ot"> alt</span><span class="op">=</span><span class="st">""</span><span class="dt">&gt;</span></span>
+<span id="cb2-4"><a href=""></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>class <code>d-block</code> make sure that the carousel will be <em>displayed</em> on all screens (details <a href="https://getbootstrap.com/docs/5.3/utilities/display/">here</a>)</p>
+<p>class <code>w-100</code> ensures maximum width (details <a href="https://getbootstrap.com/docs/5.3/utilities/sizing/">here</a>)</p>
+<p>Try</p>
+<ul>
+<li><code>w-75</code>, more elegant?</li>
+<li><code>mh-100</code> maximum height</li>
+<li><code>mw-100</code> maximum width</li>
+</ul>
+</section>
 <section id="exercise" class="slide level2">
 <h2>Exercise</h2>
 <ul>
-<li><p>Open the boilerplate</p></li>
-<li><p>Connect the images inside <code>imgs</code> to the carousel, at least four</p>
+<li><p>visit <code>90-carousels/boilerplate</code></p></li>
+<li><p>read <code>bs5-carousel.html</code> line by line</p></li>
+<li><p>extend the carousel by</p>
 <ul>
-<li>may require converting the format and/or resizing</li>
+<li>moving a file <code>imgs/</code> -&gt; <code>imgs/carousel/</code></li>
+<li>adding the relative code to <code>index.html</code></li>
 </ul></li>
 <li><p>from the <a href="https://getbootstrap.com/docs/5.0/components/carousel/">BS5 tutorial</a> copy+paste the source examples into the boilerplate page up to section <code>With indicators</code> included</p></li>
 </ul>

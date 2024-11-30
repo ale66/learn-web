@@ -20,24 +20,38 @@ execute:
 
 ---
 
-![https://github.com/hakimel/reveal.js#markdown](https://camo.githubusercontent.com/5327c3e6d8349607bc84c60102bee78e7ee32d2b1861f28445560df9eeb79492/68747470733a2f2f68616b696d2d7374617469632e73332e616d617a6f6e6177732e636f6d2f72657665616c2d6a732f6c6f676f2f76312f72657665616c2d626c61636b2d746578742d737469636b65722e706e67)
+## Revealjs
+
+A personal [GitHub project](https://github.com/hakimel/reveal.js/) on making presentations that are in fact HTML pages (with lots of JS inside)
+
+goes above and beyond Powerpoint
+
+The HTML page is self-contained and can be sent/loaded/published anywhere
+
+In case, we can always edit the HTML page to tweak or add settings
+
+Tutorial: [revealjs.com/](https://revealjs.com/)
+
+Online editor: [slides.com/](https://slides.com/)
 
 
 ---
 
 ## Programme: 
 
-* put down a quick Markdown presentation
+* put down quick Markdown notes
 
 * insert links and images
 
-* create slides with pandoc
+* create slides with `Pandoc --to revealjs`
 
 * publish on accessible web page (e.g., W3schools spaces)
 
-* go to the meeting and present it
+* go to the meeting (or exam) and present it
 
 * let others catch up by reading on the web site
+
+* see the demos: presentations can go *inside* web pages
 
 
 ---
@@ -48,6 +62,7 @@ Pandoc is __a professional tool__ and needs Powershell (Win) or Terminal (MacOs)
 
 The following instructions for Win can be applied almost verbatim to MacOs
 
+For step-by-step instructions open `exercise/README.md` in VS code and read it with the preview
 
 ---
 
@@ -62,7 +77,7 @@ The following instructions for Win can be applied almost verbatim to MacOs
 If not we need to `cd` to the right directory, e.g.,
 
 ```bash
-cd C:\Users\aless\git\96-revealjs
+cd C:/Users/aless/git/96-revealjs
 ```
 
 where the *path* is obviously personal
@@ -75,6 +90,10 @@ where the *path* is obviously personal
 
 ## Run pandoc
 
+open a terminal from inside your work folder 
+
+if, e.g., `my_pres.md` is your presentation, give command
+
 ```bash
 pandoc --standalone --from markdown --to revealjs my_pres.md -o my_pres.html
 ```
@@ -82,6 +101,10 @@ pandoc --standalone --from markdown --to revealjs my_pres.md -o my_pres.html
 Pandoc reads `my_pres.md` and creates a *standalone* (no auxiliary files) HTML page: 
 
 `my_pres.html` will contain [lots of] JS code that is *injected* to create navigation, focus, pens etc. 
+
+open it with Firefox to run the presentation. 
+
+use arrows to move, `o` for overview
 
 
 ---
@@ -97,11 +120,19 @@ Check the available options on [slides.com](www.slides.com)
 #### with CSS
 
 ```bash
-pandoc --standalone --from markdown --to revealjs my_pre.md -o my_pres.html 
+pandoc --standalone --from markdown --to revealjs my_pres.md -o my_pres.html 
 --css my_revealjs_style.css -V transition=convex -V theme=solarized --verbose
 ```
 
+Check out [transition effects](https://revealjs.com/transitions/)
 
+Check out [themes](https://revealjs.com/themes/)
+
+Test combinations to find one you like
+
+This theme is `moon` with transition `none`
+
+Try, e.g., `dracula` with `zoom`
 
 ---
 
@@ -118,9 +149,6 @@ Reveal.initialize({
 Save and reload in a browser: voil&agrave;!
 
 
-
-
-
 ---
 
 ## Post activities
@@ -133,3 +161,24 @@ Save and reload in a browser: voil&agrave;!
 
 4. can you use pandoc to create a PDF of your presentation? 
 (could you write your MA thesis in Markdown?)
+
+
+# Extensions
+
+
+---
+
+## Quarto 
+
+an extension of Markdown that supports publishing
+
+`mypres.qmd` --> 
+
+`mypres.html`, `mypres-revealjs.html`, `mypres.pdf` ...
+
+it sets up Pandoc to produce more complex documents
+
+all we've seen about Markdown to Revealjs is valid in Quarto
+
+See the presentation of [Quarto-appearance](https://github.com/martinomagnifico/quarto-appearance)
+

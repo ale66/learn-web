@@ -31,7 +31,16 @@ $(document).ready(function(){
       document.cookie = 'sessionExpiry=' + expirationDate.toUTCString() + '; expires=' + expirationDate.toUTCString() + '; path=/';
   
       // Send the rating to the PHP file using fetch for saving.
-      fetch('../php/ratings.php', {
+      
+			//eval root path for this site
+			console.log("window.location.protocol:",window.location.protocol);
+			console.log("window.location.host:",window.location.host);
+			console.log("window.location.pathname:",window.location.pathname);
+			let rooturl=window.location.protocol+"//"+window.location.host+window.location.pathname;
+			rooturl=rooturl.replace(/[^/]*$/, "");
+			console.log(rooturl);
+
+      fetch(rooturl+'/php/ratings.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -53,16 +62,5 @@ $(document).ready(function(){
       $('#thank-you-message').text('Thanks for rating us!');
     }
   
-    // Function to retrieve the value of a cookie
-    function getCookie(name) {
-      const cookies = document.cookie.split(';');
-      for (let i = 0; i < cookies.length; i++) {
-        const cookie = cookies[i].trim();
-        if (cookie.startsWith(name + '=')) {
-          return cookie.substring(name.length + 1);
-        }
-      }
-      return null;
-    }
   });
   

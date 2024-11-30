@@ -1,0 +1,244 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding, 50px); /* Prevents navbar from covering the hero image */
+  overflow-x: hidden;
+}
+
+body {
+  padding-top: 56px; /* Prevents navbar from covering the carousel */
+}
+
+.main-nav {
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+
+#site-brand {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+
+.site-brand {
+  font-family: 'Cinzel Decorative', serif;
+}
+
+.container {
+  max-width: 960px;
+}
+
+.nav-link {
+  font-family: 'Josefin Sans', serif;
+  font-size: 18px;
+}
+
+.dropdown-menu {
+  background: linear-gradient(to top, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+}
+
+.dropdown-item {
+  font-family: 'Josefin Sans', serif;
+}
+
+.dropdown-item:focus {
+  background: linear-gradient(to top, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.8); /* Gives transparency to the carousel caption */
+  border-radius: 10px;
+}
+
+h3, h5, p, marquee, ul {
+  font-family: 'Josefin Sans', serif;
+}
+
+.leagueboxes-text {
+  font-family: 'Josefin Sans',serif;
+  background: linear-gradient(to top, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+  background-size: cover;
+  box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 20px;
+}
+
+.custom-card {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to top, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+}
+
+ /* All this keeps the cards square on every viewport */
+.custom-card img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%); 
+  height: auto;
+  object-fit: cover;
+}
+
+.custom-card::before {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.card-text-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay background */
+  color: white;
+  font-family: 'Josefin Sans', serif;
+  padding: 10px;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+.custom-card:hover .card-text-overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.news-string {
+  background: linear-gradient(to top, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+  font-family: 'Josefin Sans', serif;
+}
+
+.standings-auto-flow {
+  top: 3rem; /* Enough to see the standings when scrolling down */
+}
+
+.navbar {
+  background: linear-gradient(to top, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+}
+
+.navbar-teams {
+  font-family: 'Josefin Sans', serif;
+}
+
+.navbar-teams:hover {
+  cursor: default;
+}
+
+/* Media queries for responive Teams-navbar on larger screens */
+@media (max-width: 1199.98px) {
+  .navbar img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .navbar img {
+    width: 30px;
+    height: 30px;
+    margin-left: 5.5px;
+    margin-right: 5.5px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .navbar-nav img {
+    width: 30px;
+    height: 30px;
+    margin-left: 9.5px;
+    margin-right: 9.5px; 
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .navbar .small-league {
+    width: 30px;
+    heigh: 30px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .navbar .small-league {
+    width: 30px;
+    heigh: 30px;
+    margin-left: 8.5px;
+    margin-right: 8.5px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .navbar-nav .small-league {
+    width: 30px;
+    heigh: 30px;
+    margin-left: 13px; 
+    margin-right: 13px; 
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav-link:hover {
+    background: linear-gradient(to top, #ada996, #f2f2f2, #dbdbdb, #eaeaea);border-radius: 10px;
+    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.2);
+    border: 0.1px solid #000;
+  }
+}
+
+/* Media queries for responive Teams-navbar on smaller screens */
+@media (max-width: 575.98px) {
+  .navbar-nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .navbar-nav .nav-item {
+    margin: 0 3px 3px 0;
+    flex-basis: calc(20% - 5px); 
+    max-width: calc(20% - 5px); /* Display 5 cards per row */
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .navbar-nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .navbar-nav .nav-item {
+    margin: 0 5px 5px 0;
+    flex-basis: calc(15% - 10px);
+    max-width: calc(15% - 10px); /* Display 7 cards per row */
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1198.98px) {
+  .navbar-nav .nav-item {
+    margin: 0 15px 15px 0;
+    flex-basis: calc(25% - 15px);
+    max-width: calc(25% - 15px); /* Display all cards in one row */
+  }
+}
+
+.contact-list {
+  list-style-type: none;
+}
+
+.contacts {
+  text-decoration: none;
+  color: #00458B;
+}
+
+.contacts:hover {
+  color: rgba(41, 78, 134, 0.5)
+}
+
+#Rating-title {
+  margin-bottom: 0;
+}
+
+.star {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+#thank-you-message {
+  font-family: 'Josefin Sans', serif;
+}
