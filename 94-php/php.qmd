@@ -107,7 +107,7 @@ we may find *quantitative* insights on how to improve our communication
 
 ---
 
-This is `boilerplate/index.html`
+This is `boilerplate/php.html`
 
 ```php
 <html>
@@ -124,15 +124,17 @@ This is `boilerplate/index.html`
 </html>
 ```
 
+file `index.html` is the *normal* page
+
 ---
 
 ## Data Collection
 
 Explore the functions in `boilerplate/js`
 
-They access stub pages inside `boilerplate/php'
+They access *stub* pages inside `boilerplate/php'
 
-PHP stub pages write on files inside `boilerplate/stats`
+PHP stub pages when prepared on the server do nothing but write on files inside `boilerplate/stats`
 
 every time we (re)load the page and do some action, stats files are updated
 
