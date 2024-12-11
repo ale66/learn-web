@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $rating = $_POST['rating'];
 
     // Save the rating and timestamp to a text file.
-    $file = '/tmpreport/ratings.txt';
+    $file = '../stats/ratings.txt';
 
     $timestamp = date('d-m-Y H:i:s', strtotime('+1 hour'));
     

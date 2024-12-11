@@ -1,5 +1,5 @@
-function setCookie(cname, cvalue, exdays) {
-  /* sets the 'expires' value to exdays from now
+function setCookie(cookie_name, cookie_value, cookie_validity_in_days) {
+  /* sets the 'expires' value to the value of cookie_validity_in_days from now
     it is done in milliseconds
   */
 
@@ -7,11 +7,11 @@ function setCookie(cname, cvalue, exdays) {
     
   let now = d.getTime()
 
-  d.setTime(now + (exdays * 24 * 60 * 60 * 1000));
+  d.setTime(now + (cookie_validity_in_days * 24 * 60 * 60 * 1000));
     
   let expires = "expires=" + d.toUTCString();
     
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  document.cookie = cookie_name + "=" + cookie_value + ";" + expires + ";path=/";
 }
   
 function getCookie(cname) {

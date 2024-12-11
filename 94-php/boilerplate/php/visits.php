@@ -5,7 +5,7 @@
 
 session_start();
 
-$file = '/tmpreport/visits.txt';
+$file = '../stats/visits.txt';
 
 // Check if the visitor has a session
 if (!isset($_SESSION['visit_counter'])) {

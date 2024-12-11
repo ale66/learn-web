@@ -18,8 +18,7 @@ These are Win11 instructions
 9. go back to Firefox and refresh to see the effect of your changes
 
 ```bash
-pandoc --standalone --from markdown --to revealjs my_pres.md -o my_pres.html 
---css my_revealjs_style.css -V transition=convex -V theme=solarized --verbose
+pandoc --standalone --from markdown --to revealjs my_pres.md -o my_pres.html  --css my_revealjs_style.css -V transition=convex -V theme=solarized --verbose
 ```
 
 <button type="button" onclick="navigator.clipboard.writeText('Text to copy')">
