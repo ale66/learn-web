@@ -30,17 +30,41 @@ execute:
 
 ## Visual experience
 
-Please look at Ch.1 of the textbook
+Please look at Ch.1 of the textbook and the first set of exercises on [wdpg.io](https://wdpg.io)
+
+- HTML contains both visible parts for the reader and invisible parts for the browser
+- the [`<head>`]() part is all invisible but for the page title
+- the [`<body>`]() part is mixed
+- the CSS is good for assigning a style to each part of the text, title, subtitles, emphasised text etc.
+
+---
+
+## Early observations
+
+- HTML is verbose: each page must declare its documentstyle, head, body etc.
+  
+- the discipline of nesting tags one into the other is __strict__
+
+- similarly, [:](), [{}]() and [;]() *must be right* in CSS
+
+- browsers may ignore some errors, but trouble looms
+
+- at this stage, *pedantry beats creativity*
+
+- copy+paste almost never works...
 
 ---
 
 ## try yourself
 
-- Open the [change-me.html](./change-me.html) file with a browser
+- Rename [change-me.html](./change-me.html) then open it with a browser
 
-- Now open it with [Notepad]() or a similar editor
+- Now open it with [VS Code], installed on your computer or online, or [Notepad]() or a similar editor
 
 - try out some change to the text, save the file then *reload* on the browser
+
+- with extensions that support *page preview*  VS Code can do it all...
+
 
 ---
 
