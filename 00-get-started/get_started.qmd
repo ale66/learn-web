@@ -20,9 +20,11 @@ execute:
 
 ## Join online resources:
 
-#### join this modules' Teams: [https://tinyurl.com/Webcomm-2024-25](https://teams.microsoft.com/l/team/19%3A-i476Xbu37XieT7UaharM7XQ8hTdMNLLeXImvBakaJE1%40thread.tacv2/conversations?groupId=b9ade7f9-67ad-4bbd-b021-fb858dd3ec46&tenantId=13b55eef-7018-4674-a3d7-cc0db06d545c) 
+- __MS Teams__: there is a class team for instant sharing files and updates. It will also record classes.  
 
+- __MyAriel__: a traditional educational web page with materials for download, links and quizzes.
 
+- __Github__: a de facto standard repository for code and for collaboration. If time allows, a Github classroom will be created
 
 ---
 
@@ -45,8 +47,6 @@ execute:
 - Friday 14:30 to 17:30: lectures + labs
   
 - Saturday 8:30-ish to 11:30-ish: lectures, labs and workshop: work on your exam project.
-
-- tomorrow: online only.
   
 ---
 
@@ -101,32 +101,26 @@ execute:
 
 ## Let's look at past exam essays
 
-[Refactoring the Web site of an independent library (aka _fumetteria_)](https://replit.com/@vlborriello/MondiParalleliWebCommExam)
+Refactoring of existing web sites:
+
+[Milan Dog shelter](https://canilimilano.w3spaces.com/)
+
+[4T Mechanical toolmaker near Bologna](https://www.4tsrl.it/)
+
+
+some projects may have been taken offline by their creators
+
+[Refactoring the Web site of an indy comics store](https://replit.com/@vlborriello/MondiParalleliWebCommExam)
 
 [Technical brief here](https://replit.com/@vlborriello/PresentationMondiParalleli)
-
----
 
 [A newly-formed theatre company needs a Web site](https://replit.com/@ErikaBelvedere/Exam-Website-Erika-Belvedere#index.html)
 
 [Technical brief here](https://replit.com/@ErikaBelvedere/Exam-Presentation-Erika-Belvedere)
 
----
-
-[Corporate web presence: restyle it](https://personal-project.flanzara.repl.co/)
-
-[Technical brief here](https://personal-project.flanzara.repl.co/presentation_lanzarafrancesco.html)
-
----
-
-## 2023-24 project, a selection
-
 
 [A personal portfolio](https://replit.com/@donnaashrafyous/Portfolio#index.html)
 
-[Niche musical scenes: Liberato](https://mazina30642aliberato.webcomm-2023-24.repl.co/)
-
-[Niche art markets](https://nava-roberta-page.robiiinava.repl.co/)
 
 ---
 
@@ -155,12 +149,21 @@ execute:
 
 ---
 
-## The Replit.com playground
+## Githib and GH workspace: 
 
-[https://replit.com](https://replit.com)
+[www.github.com](https://www.github.com)
+
+[A tutorial](https://github.blog/developer-skills/github/beginners-guide-to-github-repositories-how-to-create-your-first-repo/)
+
 
 ---
 
-## W3schools (TBC): 
+## W3schools: 
 
 [www.w3schools.com/spaces/](https://www.w3schools.com/spaces/index.php)
+
+---
+
+## The Replit.com playground
+
+[https://replit.com](https://replit.com)
