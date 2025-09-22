@@ -18,13 +18,13 @@ execute:
 
 ---
 
-## Ch. 1 of the textbook
+## Ch. 1 & 2 of the textbook
 
 - creating pages in the way printshop create books
 
 - can we take an arbitrary text and make it look good in print?
   
-- boilerplates: a fixed typographic structure that is applied to provide conformity and readability
+- boilerplates: a fixed structure with nexted tags that is applied to provide conformity and readability
 
 ---
 
@@ -75,3 +75,306 @@ Please look at Ch.1 of the textbook and the first set of exercises on [wdpg.io](
 - the importance of browsers today
 
 - the need for a formal language to describe a visual experience
+
+---
+
+## Test yoursel, HTML
+
+Do you understand, line by line, this boilerplate?
+
+```html
+<!doctype  html>
+
+<html>
+
+<head>
+</head>
+
+<body>
+</body>
+
+</html>
+```
+
+This is the smallest Web page that respects all requirement of the HTML language
+
+It won't show anything on the screen...
+
+---
+
+tags beginning by 'bang,' [!](), are special *directives* to the browser, they describe preliminary ativities
+
+
+. . .
+
+Example: comments
+
+```html
+...
+
+<body>
+  <!-- this text is a comment, it will be dropped before the brower starts rendering -->
+</body>
+
+...
+```
+
+---
+
+## 
+
+Apart from doctype everything must go inside the html mega-tag
+
+```html
+<!doctype  html>
+  <!-- nothing here -->
+<html>
+  <!-- everything here -->
+</html>
+  <!-- nothing here -->
+```
+
+---
+
+## Head and body must always be there
+
+Head: invisible part, important setups
+
+Body: the actual page
+
+```html
+<!doctype  html>
+<html>
+<head>
+  <!-- invisible part: setup and meta information, e.g., for SEO -->
+</head>
+<body>
+  <!-- visible part: text, images with their tags -->
+</body>
+</html>
+```
+
+---
+
+## Anatomy of the Head
+
+```html
+<!doctype  html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Title of the window or tab</title>
+  <link href="./mystyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+ ...
+</body>
+</html>
+```
+
+---
+
+This part is discretionary 
+
+Yet is says something about the page:
+
+
+```html
+...
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  ...
+</head>
+...
+```
+
+---
+
+the page may contain characters from UTF-8: 
+
+it extends the traditional English ASCII charset to include accents, special characters etc.
+
+
+```html
+...
+<head>
+  <meta charset="utf-8">
+  ...
+</head>
+...
+```
+
+It's standard today: include it in the boilerplate
+
+---
+
+Whathever the device (PC, laptop, tablet or smartphone) the page should take up the whole screenwidth 
+
+
+```html
+...
+<head>
+  ...
+  <meta name="viewport" content="width=device-width">
+  ...
+</head>
+...
+```
+
+It's relatively standard today: include it in the boilerplate
+
+---
+
+Set the title that appears on the colored ribbon on top of the browser (or the tab)
+
+```html
+...
+<head>
+  ...
+  <title>Title of the window or tab</title>
+  ...
+</head>
+...
+```
+
+Essentially moot today, keep it for historical reasons...
+
+---
+
+## Linking style to the page
+
+file `mystyle.css` will be read and the respective styles will be applied. 
+
+This file sits on the same folder (directory) as the web page: `./` means *here*
+
+```html
+<!doctype  html>
+<html>
+<head>
+  ...
+  <link href="./mystyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+ ...
+</body>
+</html>
+```
+
+Notice: the folder also contains file `style.ccs` but it's not in use.
+
+
+---
+
+## Where is the style?
+
+in the same folder as the page:
+
+```html
+  ...
+  <link href="./mystyle.css" ... />
+```
+
+. . . 
+
+in the folder above that of the page:
+
+```html
+  ...
+  <link href="../mystyle.css" ... />
+```
+
+---
+
+
+two folders above:
+
+. . .
+
+
+```html
+  ...
+  <link href="../../mystyle.css" ... />
+```
+
+. . .
+
+inside a parallel folder called `webcomm-styles`
+
+
+```html
+  ...
+  <link href="../webcomm-styles/mystyle.css" ... />
+```
+
+Can you picture how my folders look like?
+
+---
+
+There's no style to speak, we'll just use the uni's default style
+
+```html
+  ...
+  <link href="https://www.unimi.it/style.css" ... />
+```
+
+
+---
+
+## Test yoursel, CSS
+
+```css
+p {
+    text-indent: 20px;
+    text-align: right;
+    letter-spacing: 3px;
+  }
+```
+
+`p` is a HTML tag for which we are re-defining the style
+
+leave a space then apply braces `{}` to give the definition of the new style
+
+no settings outside braces
+
+---
+
+`text-indent` is a property of tages that can be redefined
+
+`:` is mandatory
+
+`20px`is our choice, more details about `px` later
+
+`;` is mandatory
+
+```css
+... {
+    text-indent: 20px;
+  ...
+   }
+```
+
+use command completion to explore what can be set up by ourselves:
+
+type the initial part of command the press `tab`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
