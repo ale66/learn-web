@@ -276,7 +276,7 @@ ale66
 </section>
 <section class="slide level2">
 
-<p>tags beginning by ‘bang,’ <a href="">!</a>, are special <em>directives</em> to the browser, they describe preliminary ativities</p>
+<p>tags beginning by ‘bang,’ <a href="">!</a>, are special <em>directives</em> to the browser, they describe <em>preliminary work</em></p>
 <div class="fragment">
 <p>Example: comments</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href=""></a>...</span>
@@ -298,8 +298,8 @@ ale66
 <span id="cb3-5"><a href=""></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span>
 <span id="cb3-6"><a href=""></a>  <span class="co">&lt;!-- nothing here --&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="head-and-body-must-always-be-there" class="slide level2">
-<h2>Head and body must always be there</h2>
+<section id="head-and-body-must-be-there" class="slide level2">
+<h2>Head and body must be there</h2>
 <p>Head: invisible part, important setups</p>
 <p>Body: the actual page</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href=""></a><span class="dt">&lt;!doctype</span>  html<span class="dt">&gt;</span></span>
@@ -329,6 +329,8 @@ ale66
 </section>
 <section class="slide level2">
 
+<p><a href=""><code>&lt;meta&gt;</code></a> tags are discretionary</p>
+<p>yet useful in describing the page and SEO (search engine optimisation)</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href=""></a>...</span>
 <span id="cb6-2"><a href=""></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
 <span id="cb6-3"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> charset</span><span class="op">=</span><span class="st">"utf-8"</span><span class="dt">&gt;</span></span>
@@ -339,16 +341,171 @@ ale66
 </section>
 <section class="slide level2">
 
+<p>the page may contain characters from UTF-8:</p>
+<p>it extends the traditional English ASCII charset to include accents, special characters etc.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href=""></a>...</span>
 <span id="cb7-2"><a href=""></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
-<span id="cb7-3"><a href=""></a>  ...</span>
-<span id="cb7-4"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>Title of the window or tab<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
-<span id="cb7-5"><a href=""></a>  ...</span>
-<span id="cb7-6"><a href=""></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
-<span id="cb7-7"><a href=""></a>...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-3"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> charset</span><span class="op">=</span><span class="st">"utf-8"</span><span class="dt">&gt;</span></span>
+<span id="cb7-4"><a href=""></a>  ...</span>
+<span id="cb7-5"><a href=""></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb7-6"><a href=""></a>...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>It’s standard today: include it in the boilerplate</p>
 </section>
-<section id="test-yoursel-css" class="slide level2">
-<h2>Test yoursel, CSS</h2>
+<section class="slide level2">
+
+<p>Whathever the device (PC, laptop, tablet or smartphone) the page should take up the whole screenwidth</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb8-1"><a href=""></a>...</span>
+<span id="cb8-2"><a href=""></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb8-3"><a href=""></a>  ...</span>
+<span id="cb8-4"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> name</span><span class="op">=</span><span class="st">"viewport"</span><span class="ot"> content</span><span class="op">=</span><span class="st">"width=device-width"</span><span class="dt">&gt;</span></span>
+<span id="cb8-5"><a href=""></a>  ...</span>
+<span id="cb8-6"><a href=""></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb8-7"><a href=""></a>...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>It’s relatively standard today: include it in the boilerplate</p>
+</section>
+<section class="slide level2">
+
+<p>Set the title that appears on the colored ribbon on top of the browser (or the tab)</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb9-1"><a href=""></a>...</span>
+<span id="cb9-2"><a href=""></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb9-3"><a href=""></a>  ...</span>
+<span id="cb9-4"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>Title of the window or tab<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb9-5"><a href=""></a>  ...</span>
+<span id="cb9-6"><a href=""></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb9-7"><a href=""></a>...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Essentially moot today, keep it for historical reasons…</p>
+</section>
+<section id="linking-style-to-the-page" class="slide level2">
+<h2>Linking style to the page</h2>
+<p>file <code>mystyle.css</code> will be read and the respective styles will be applied</p>
+<p>This file sits on the same folder (directory) as the web page: <code>./</code> means <em>here, in the same folder</em></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb10-1"><a href=""></a><span class="dt">&lt;!doctype</span>  html<span class="dt">&gt;</span></span>
+<span id="cb10-2"><a href=""></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
+<span id="cb10-3"><a href=""></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb10-4"><a href=""></a>  ...</span>
+<span id="cb10-5"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"./mystyle.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb10-6"><a href=""></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb10-7"><a href=""></a><span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb10-8"><a href=""></a> ...</span>
+<span id="cb10-9"><a href=""></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb10-10"><a href=""></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>N. B. the folder also contains <code>style.ccs</code> but it’s not in use</p>
+</section>
+<section id="where-is-the-style" class="slide level2">
+<h2>Where is the style?</h2>
+<p>in the same folder as the page:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb11-1"><a href=""></a>  ...</span>
+<span id="cb11-2"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"./mystyle.css"</span><span class="ot"> </span><span class="er">...</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="fragment">
+<p>in the folder above that of the page:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb12-1"><a href=""></a>  ...</span>
+<span id="cb12-2"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"../mystyle.css"</span><span class="ot"> </span><span class="er">...</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section class="slide level2">
+
+<p>two folders above:</p>
+<div class="fragment">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb13-1"><a href=""></a>  ...</span>
+<span id="cb13-2"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"../../mystyle.css"</span><span class="ot"> </span><span class="er">...</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="fragment">
+<p>inside a parallel folder called <code>webcomm-styles</code></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb14-1"><a href=""></a>  ...</span>
+<span id="cb14-2"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"../webcomm-styles/mystyle.css"</span><span class="ot"> </span><span class="er">...</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Can you picture how my folders look like?</p>
+</div>
+</section>
+<section class="slide level2">
+
+<p>There’s no style to speak of: we’ll just use the uni’s default style</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb15-1"><a href=""></a>  ...</span>
+<span id="cb15-2"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://www.unimi.it/themes/custom/unimi/css/style.css"</span><span class="ot"> </span><span class="er">...</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section class="slide level2">
+
+<p>We are now ready to start work on the page</p>
+<p>Work inside the <a href=""><code>&lt;body&gt;</code></a> part, where most tags have visible effects</p>
+</section></section>
+<section>
+<section id="the-css-file" class="title-slide slide level1 center">
+<h1>The CSS file</h1>
+
+</section>
+<section id="get-started-with-styles" class="slide level2">
+<h2>Get started with styles</h2>
+<p>CSS: Cascading Style Sheet</p>
+<p>Cascading means that style definitions can be combined and overwritten via files.</p>
+<p>Example: my page looks good on my computer but once I upload and publish it in the <a href="https//www.unimi.it/">www.unimi.it</a> domain the uni styles take over and now it looks boring</p>
+<p>Cascading is <em>a complex topic</em> that will be explored during the module</p>
+</section>
+<section class="slide level2">
+
+<p>In CSS we may redefine all aspects of style tags: <a href=""><code>p</code></a>, <a href=""><code>b</code></a>, <a href=""><code>i</code></a>, <a href=""><code>em</code></a> etc.</p>
+<p>Let’s see how.</p>
+</section>
+<section class="slide level2">
+
+<p><a href=""><code>p</code></a> is a tag delimiting stand-alone paragraphs.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb16-1"><a href=""></a>...</span>
+<span id="cb16-2"><a href=""></a><span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb16-3"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>No man is an island,</span>
+<span id="cb16-4"><a href=""></a></span>
+<span id="cb16-5"><a href=""></a>    <span class="dt">&lt;</span><span class="kw">br</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb16-6"><a href=""></a>    entire of itself.</span>
+<span id="cb16-7"><a href=""></a>  <span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb16-8"><a href=""></a></span>
+<span id="cb16-9"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>This page is dedicated to English poet John Donne, ... <span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb16-10"><a href=""></a></span>
+<span id="cb16-11"><a href=""></a>  ...</span>
+<span id="cb16-12"><a href=""></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb16-13"><a href=""></a>...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section class="slide level2">
+
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb17-1"><a href=""></a>p {</span>
+<span id="cb17-2"><a href=""></a>    <span class="kw">text-indent</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb17-3"><a href=""></a>    <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">right</span><span class="op">;</span></span>
+<span id="cb17-4"><a href=""></a>    <span class="kw">letter-spacing</span><span class="ch">:</span> <span class="dv">3</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb17-5"><a href=""></a>  }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>p</code> is the HTML tag being re-defined</p>
+<p>leave a space then apply braces <code>{}</code> to give the definition of the new style</p>
+<p>braces are not nested</p>
+<p>comments can go either inside or outside braces</p>
+</section>
+<section class="slide level2">
+
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb18-1"><a href=""></a>p {</span>
+<span id="cb18-2"><a href=""></a>    <span class="kw">text-indent</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb18-3"><a href=""></a>    ...</span>
+<span id="cb18-4"><a href=""></a>  }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>text-indent</code> is a property of tag <code>p</code> that can be redefined</p>
+<p>use VS Code command-completion facility to explore what can be set up by ourselves:</p>
+<p>type the initial part of command, e.g., <code>text-</code> then press <code>tab</code> to see what settings are available</p>
+<p>There are about 200 CSS attributes to choose from!</p>
+<p><a href="https://www.w3schools.com/cssref/index.php">W3Schools CSS reference table</a></p>
+</section>
+<section class="slide level2">
+
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb19-1"><a href=""></a>... {</span>
+<span id="cb19-2"><a href=""></a>    <span class="kw">text-indent</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb19-3"><a href=""></a>  ...</span>
+<span id="cb19-4"><a href=""></a>   }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>:</code> is mandatory</p>
+<p><code>20px</code>is our choice, more details about <code>px</code> later</p>
+<p><code>;</code> is mandatory</p>
+<p>indentation and one-command-per-line are not mandatory but improve readability much.</p>
+</section>
+<section id="comments-in-css" class="slide level2">
+<h2>Comments in CSS</h2>
+<p>Document, explain and keep track of your work with comments:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb20-1"><a href=""></a><span class="co">/* we re-define paragraph to improve readability */</span></span>
+<span id="cb20-2"><a href=""></a>p {</span>
+<span id="cb20-3"><a href=""></a>    <span class="co">/* some indentation at the beginning to attract the eye */</span></span>
+<span id="cb20-4"><a href=""></a>    <span class="kw">text-indent</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb20-5"><a href=""></a>    <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">right</span><span class="op">;</span></span>
+<span id="cb20-6"><a href=""></a>    <span class="kw">letter-spacing</span><span class="ch">:</span> <span class="dv">3</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb20-7"><a href=""></a>  }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </section></section>
     </div>
