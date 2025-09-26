@@ -1,0 +1,99 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 5
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Recap
+
+---
+
+## Concepts, a
+
+We began to study the formal languages by which Web pages are created
+
+- HTML: text + settings (invisible) + *mark up* tags
+  
+- CSS: the style associated to tags
+
+Open the HTML file into a browser to see the final effect
+
+---
+
+## Concepts, b
+
+Creativity is mediated by *strict rules* of the languages: apart from spaces, all characters and punctation matter!
+
+we must learn the basics of HTML and CSS
+
+Browsers interpret our commands and serve a *rendering* of the page
+
+---
+
+## Skills, a
+
+- work with the *file system* of our computer: positioning of files inside folders matter
+
+- get code/software projects from Github
+
+- install *softare installers:* Chocolatey or HomeBrew 
+  
+- use them to install further software:
+
+  - *VS Code,* and its extensions, for editing files
+
+  - *Git,* to synchronise the class materials from Github
+
+Not stricly needed but they help *local* learning
+
+---
+
+## Skills, b
+
+On [https://wdpg.io](https://wdpg.io) we did
+
+- 1.1 and 1.2 to get started with HTML+CSS and rendering
+
+- 2.1 to 2.8 to learn the basic mark-up tags, e.g., `p`, `b`, `em`... 
+
+
+![](./wdpg-ch2.png)
+
+---
+
+## The Lorem exercise
+
+- take the boilerplate project inside `learn-web/15-lorem-boilerplate`
+
+- select file `rename-then-edit-me.html`, right-click then rename it. E.g., `ale-lorem.html` 
+
+- select file `mystyle.css`, right-click then rename it. E.g., `ale-style.css` 
+
+Alternatively, you can copy the two files and put them into any folder, e.g., `Downloads`, that sits outside  `learn-web `
+
+---
+
+Think of an intended reader of your page. E.g. 
+
+- High-school students of Latin 
+
+- teachers who are looking for classroom examples
+
+- turists of Rome who get curious about great Latin literature 
+
+- adults who are reading Cicero for the pleasure of his Latin prose
+
+write HTML/CSS to create a suitable style
+
+it should deploy all concepts learnt in WDPG 2.1--2.8
+
+Later, include concepts from WDPG 2.9 & 2.10

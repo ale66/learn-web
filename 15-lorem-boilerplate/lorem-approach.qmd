@@ -57,11 +57,13 @@ Please look at Ch.1 of the textbook and the first set of exercises on [wdpg.io](
 
 ## try yourself
 
-- Rename [change-me.html](./change-me.html) then open it with a browser
+- Rename [rename-then-edit-me.html](./rename-then-edit-me.html) then open it with a browser
 
-- Now open it with [VS Code], installed on your computer or online, or [Notepad]() or a similar editor
+- Now open it with [VS Code], installed on your computer or online ([https://vscode.dev/](https://vscode.dev/)), or [Notepad++]() or a similar editor
 
 - try out some change to the text, save the file then *reload* on the browser
+
+- do the same with file [mystyle.css](./rename-then-edit-me.html)
 
 - with extensions that support *page preview*  VS Code can do it all...
 
