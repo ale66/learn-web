@@ -57,11 +57,13 @@ Please look at Ch.1 of the textbook and the first set of exercises on [wdpg.io](
 
 ## try yourself
 
-- Rename [change-me.html](./change-me.html) then open it with a browser
+- Rename [rename-then-edit-me.html](./rename-then-edit-me.html) then open it with a browser
 
-- Now open it with [VS Code], installed on your computer or online, or [Notepad]() or a similar editor
+- Now open it with [VS Code], installed on your computer or online ([https://vscode.dev/](https://vscode.dev/)), or [Notepad++]() or a similar editor
 
 - try out some change to the text, save the file then *reload* on the browser
+
+- do the same with file [mystyle.css](./rename-then-edit-me.html)
 
 - with extensions that support *page preview*  VS Code can do it all...
 
@@ -102,7 +104,7 @@ It won't show anything on the screen...
 
 ---
 
-tags beginning by 'bang,' [!](), are special *directives* to the browser, they describe preliminary ativities
+tags beginning by 'bang,' [!](), are special *directives* to the browser, they describe *preliminary work*
 
 
 . . .
@@ -136,7 +138,7 @@ Apart from doctype everything must go inside the html mega-tag
 
 ---
 
-## Head and body must always be there
+## Head and body must be there
 
 Head: invisible part, important setups
 
@@ -175,9 +177,9 @@ Body: the actual page
 
 ---
 
-This part is discretionary 
+[`<meta>`]() tags are discretionary 
 
-Yet is says something about the page:
+yet useful in describing the page and SEO (search engine optimisation)
 
 
 ```html
@@ -245,9 +247,9 @@ Essentially moot today, keep it for historical reasons...
 
 ## Linking style to the page
 
-file `mystyle.css` will be read and the respective styles will be applied. 
+file `mystyle.css` will be read and the respective styles will be applied 
 
-This file sits on the same folder (directory) as the web page: `./` means *here*
+This file sits on the same folder (directory) as the web page: `./` means *here, in the same folder*
 
 ```html
 <!doctype  html>
@@ -262,7 +264,7 @@ This file sits on the same folder (directory) as the web page: `./` means *here*
 </html>
 ```
 
-Notice: the folder also contains file `style.ccs` but it's not in use.
+N. B. the folder also contains `style.ccs` but it's not in use
 
 
 ---
@@ -312,17 +314,60 @@ Can you picture how my folders look like?
 
 ---
 
-There's no style to speak, we'll just use the uni's default style
+There's no style to speak of: we'll just use the uni's default style
 
 ```html
   ...
-  <link href="https://www.unimi.it/style.css" ... />
+  <link href="https://www.unimi.it/themes/custom/unimi/css/style.css" ... />
 ```
-
 
 ---
 
-## Test yoursel, CSS
+We are now ready to start work on the page
+
+Work inside the [`<body>`]() part, where most tags have visible effects
+
+# The CSS file
+
+---
+
+## Get started with styles
+
+CSS: Cascading Style Sheet
+
+Cascading means that style definitions can be combined and overwritten via files. 
+
+Example: my page looks good on my computer but once I upload and publish it in the [www.unimi.it](https//www.unimi.it/) domain the uni styles take over and now it looks boring
+
+Cascading is *a complex topic* that will be explored during the module
+
+---
+
+In CSS we may redefine all aspects of style tags: [`p`](), [`b`](), [`i`](), [`em`]() etc.
+
+Let's see how.
+
+---
+
+[`p`]() is a tag delimiting stand-alone paragraphs.
+
+```html
+...
+<body>
+  <p>No man is an island,
+
+    <br />
+    entire of itself.
+  </p>
+
+  <p>This page is dedicated to English poet John Donne, ... </p>
+
+  ...
+</body>
+...
+```
+
+---
 
 ```css
 p {
@@ -332,21 +377,34 @@ p {
   }
 ```
 
-`p` is a HTML tag for which we are re-defining the style
+`p` is the HTML tag being re-defined
 
 leave a space then apply braces `{}` to give the definition of the new style
 
-no settings outside braces
+braces are not nested
+
+comments can go either inside or outside braces
 
 ---
 
-`text-indent` is a property of tages that can be redefined
+```css
+p {
+    text-indent: 20px;
+    ...
+  }
+```
 
-`:` is mandatory
+`text-indent` is a property of tag `p` that can be redefined
 
-`20px`is our choice, more details about `px` later
+use VS Code command-completion facility to explore what can be set up by ourselves:
 
-`;` is mandatory
+type the initial part of command, e.g., `text-` then press `tab` to see what settings are available
+
+There are about 200 CSS attributes to choose from!
+
+[W3Schools CSS reference table](https://www.w3schools.com/cssref/index.php)
+
+---
 
 ```css
 ... {
@@ -355,19 +413,29 @@ no settings outside braces
    }
 ```
 
-use command completion to explore what can be set up by ourselves:
+`:` is mandatory
 
-type the initial part of command the press `tab`
+`20px`is our choice, more details about `px` later
 
+`;` is mandatory
 
+indentation and one-command-per-line are not mandatory but improve readability much.
 
+---
 
+## Comments in CSS
 
+Document, explain and keep track of your work with comments:
 
-
-
-
-
+```css
+/* we re-define paragraph to improve readability */
+p {
+    /* some indentation at the beginning to attract the eye */
+    text-indent: 20px;
+    text-align: right;
+    letter-spacing: 3px;
+  }
+```
 
 
 

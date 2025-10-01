@@ -206,15 +206,59 @@ ale66
 </div>
 
 </section>
+<section id="installations" class="slide level2">
+<h2>Installations</h2>
+<p>For a quick start, use the online VS Code tool <a href="https://vscode.dev/">https://vscode.dev/</a></p>
+<p>For better learning setup your computer to work on a local folder with HTML, CSS and other files</p>
+<p>Several new softwares and settings mush be applied to your laptop</p>
+<p>This presentation relates to Win 10 laptops.</p>
+<p>For Win 11: authorise installations.</p>
+</section>
+<section id="installation-with-admin" class="slide level2">
+<h2>Installation with <code>admin</code></h2>
+<p>Installations typically require <em>admin</em> access.</p>
+<p>Win: start the <code>Windows PowerShell</code> app by finding it with the magnifyng lens then right-clik and select ‘Run as admin’</p>
+<p>donloading+installing may require time.</p>
+</section>
+<section id="chocolatey" class="slide level2">
+<h2><a href="https://chocolatey.org/">Chocolatey</a></h2>
+<p><img src="./images/choco.jpg" height="120"></p>
+<p>It manages installed software as linux does: the whole platform can be updated at a stroke</p>
+<p>Intallation is slightly complex, see <a href="https://chocolatey.org/install">here</a></p>
+</section>
+<section id="chocolatey-1" class="slide level2">
+<h2><a href="https://chocolatey.org/">Chocolatey</a></h2>
+<p>it simplifies installing/upgrading apps</p>
+<p>Example: I want the Chromium browser, which is less nosy than Chrome</p>
+<ol type="1">
+<li><p>Start a Windows <strong>PowerShell</strong> in administrator mode</p></li>
+<li><p>type:</p></li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href=""></a><span class="op">&gt;</span> choco <span class="fu">install</span> chromium</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="vs-code" class="slide level2">
+<h2>VS Code</h2>
+<p><img src="./images/vscode.png" height="300"></p>
+<p>Free and light, it supports coding in many ways</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href=""></a><span class="op">&gt;</span> choco <span class="fu">install</span> vscode</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>However, it requires [lots of] extensions, to be loaded in-app</p>
+</section>
+<section id="vs-code-extensions" class="slide level2">
+<h2>VS Code Extensions</h2>
+<p><img src="./images/vscode-extensions.png" height="140"></p>
+<p><strong>CTRL+Shift+x</strong> takes you to the markeplace; get</p>
+<ul>
+<li><p>HTML CSS Support <em>and</em> HTML preview</p></li>
+<li><p>Intellisense for CSS names</p></li>
+<li><p>CSS Peek</p></li>
+<li><p>JavaScript</p></li>
+<li><p>Markdown All-in-one / Markdown Preview Enhanced</p></li>
+</ul>
+</section>
 <section>
-<section id="installations" class="title-slide slide level1 center">
-<h1>Installations</h1>
-<p>The following presentation relates to Win 10 laptops.</p>
-<p>For Win 11: you need to authorise installations.</p>
-<p>For MacOS: proceed to normal software dowload+installation. In the notes below substitute</p>
-<p><em>Windows Power Shell</em> by <em>terminal</em></p>
-<p><em>dir</em> by <em>ls -lrt</em></p>
-<p>For Linux: you don’t need me :-)</p>
+<section id="installing-git" class="title-slide slide level1 center">
+<h1>Installing Git</h1>
+
 </section>
 <section class="slide level2">
 
@@ -233,6 +277,7 @@ ale66
 <p><a href="https://git-scm.com/downloads">download the Git app</a></p>
 <p>to maintain your copy of the GH repo <a href="https://github.com/ale66/learn-web">github.com/ale66/learn-web</a> up-to-date</p>
 <p>General tendence: code is public but data is very private</p>
+<<<<<<< HEAD
 </section>
 <section class="slide level2">
 
@@ -263,22 +308,27 @@ ale66
 
 <h3 id="vs-code">VS Code</h3>
 <p><img src="./images/vscode.png" height="300"></p>
+=======
+</section></section>
+<section>
+<section id="macos" class="title-slide slide level1 center">
+<h1>MacOs</h1>
+<p>Thanks to the underlying <code>unix</code>, it supports developers well</p>
+<p>See instructions for Win and</p>
+>>>>>>> 103141406c8962dbbe966dc113237fe8f59b65ef
 <ul>
-<li><p>Free and light</p></li>
-<li><p>requires [lots of] extensions loaded</p></li>
+<li><p>use the <em>Terminal</em> app instead of <em>PowerShell</em></p></li>
+<li><p>to run admin commands inside Terminal type <code>&gt; sudo su</code></p></li>
 </ul>
+<p>then enter the computer’s password (not your own). End the admin session with <code>&gt; exit</code></p>
+<p>Some commands differ: to see the local files Win uses <code>&gt;dir</code> while MacOs uses <code>&gt;ls -lrt</code></p>
 </section>
-<section id="vs-code-extensions" class="slide level2">
-<h2>VS Code Extensions</h2>
-<p><img src="./images/vscode-extensions.png" height="140"></p>
-<p><strong>CTRL+Shift+x</strong> takes you to the markeplace; get</p>
-<ul>
-<li><p>HTML CSS Support</p></li>
-<li><p>Intellisense for CSS names</p></li>
-<li><p>CSS Peek</p></li>
-<li><p>JavaScript</p></li>
-<li><p>Markdown All-in-one / Markdown Preview Enhanced</p></li>
-</ul>
+<section id="home-brew" class="slide level2">
+<h2><a href="https://brew.sh/">Home Brew</a></h2>
+<p><img src="./images/homebrew.png" height="180"></p>
+<p>Essentially the same as Chocolatey, but for MacOS.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href=""></a><span class="op">&gt;</span> brew <span class="ex">--cask</span> install visual-studio-code</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>N.B. on MacOs use Brew to install Git</p>
 </section>
 <section id="further-tips" class="slide level2">
 <h2>Further tips</h2>
