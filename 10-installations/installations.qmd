@@ -55,6 +55,24 @@ General tendence: code is public but data is very private
 
 ---
 
+Git implements incremental/differential synchronisation
+
+it's easy to synchronise your local copy of a repo with the Github version
+
+- first time: clone existing repository into a suitable folder
+
+```bash
+>git clone https://github.com/ale66/learn-coding.git
+```
+
+- updating: from a terminal working on the repository folder (or below)
+
+```bash
+>git pull
+```
+
+---
+
 ## [Chocolatey](https://chocolatey.org/)
 
 <img src="./images/choco.jpg" height="120">
@@ -104,7 +122,6 @@ __CTRL+Shift+x__ takes you to the markeplace; get
 * JavaScript
 
 * Markdown All-in-one / Markdown Preview Enhanced
-
 
 ---
 
