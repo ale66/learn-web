@@ -1,9 +1,9 @@
 ---
-title: "Learn Coding"
+title: "Learn Web"
 author: "ale66"
 format: 
   revealjs:
-    footer: "[github.com/ale66/learn-coding](https://github.com/ale66/learn-coding)&nbsp;&nbsp;&nbsp;"
+    footer: "[github.com/ale66/learn-coding](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
     theme: [moon]
     transition: slide
     preview-links: auto
@@ -16,53 +16,91 @@ execute:
 
 # From Web pages to the Web of pages
 
+
 ---
 
-## The HTTP protocol
+## How does it work?
 
-local HTML+CSS pages could be useful to present textual materials
+- browsers lets us navigate across domains, countries etc.
 
-Their key advantage is `<a>` links and how browsers implement them
+- local pages are *rendered* in the same fashion
 
-The HTTP protocol describes a simple way to transfer HTML/CSS files and render them
+---
+
+## What is Rendering?
+
+A browser *renders* a local page by combining the HTML mark-up code with the CSS styles and showing the resulting *page*  
+
+Links on the page are served so each click sends the browser to render a new page and the process starts again
+
+Browsers secretly download the linked page to a local 'secret' folder, normally called *cache* 
+
+they also download the needed CSS files, then combine them locally and *render* 
+
+---
+
+## observations
+
+- rendering is all local, same as our exercise pages
+
+- lots of files need to be downloaded all the times
+
+- the computer network is transparent: we realise it's there only when it malfunctions
+
+- donwloading and rendering *foreign* files requires an agreement (protocol) on syntax and meaning of HTML and CSS
+
+
+# The HTTP protocol
+ 
+---
+
+## Motivations
+
+local HTML+CSS pages could be useful to present textual materials, but not much
+
+HTTP posits a simple way to transfer HTML/CSS files and render them
+
+participating computers, called *servers,* will have a dedicated folder, e.g., `public_html` that is publicly accessible via HTTP
+
+interoperability: pages and styles are treated uniformly everywhere on *internet*
+
+
+---
+
+## Key features
+
+- `<a>` links create the *web* locally
 
 - an industrial standard: interoperability across platforms and networks
 
+
+- the rendered page is often the combination of styles, images etc. from disparate online sources
+
+---
+
+![](./images/Client-server-model.svg.png){width=95%}
+
 - no need to know the underlying computer network, which is abstracted away
 
-- the rendered web page is often the combination of styles, images etc. from disparate online sources
+- Client-server: requests are initiated by the recipient (usually a browser)
 
 ---
 
-## **H**yper**T**ext **T**ransfer **P**rotocol
+## An evolving industrial agreement
 
-- a protocol for distributed, collaborative hypermedia information systems
-- Foundation of data communication for the World Wide Web
-- Client-server protocol: requests are initiated by the recipient (usually a web browser)
-
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Client-server-model.svg/500px-Client-server-model.svg.png){width=50%}
-
----
-
-## Evolution of the protocol
-
-::: {.incremental}
 - **HTTP/0.9** (1991): The one-line protocol
+
 - **HTTP/1.0** (1996): Building extensibility
+
 - **HTTP/1.1** (1997): The standardized protocol
+
 - **HTTP/2** (2015): A protocol for greater performance
+
 - **HTTP/3** (2022): HTTP over QUIC
-:::
 
 ---
 
-## The Internet Protocol Suite
-
-![The TCP/IP model showing where HTTP sits](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/UDP_encapsulation.svg/700px-UDP_encapsulation.svg.png){width=60%}
-
-HTTP operates at the application layer, typically over TCP/IP.
-
-## How HTTP Works
+## HTTP at work
 
 ```{mermaid}
 sequenceDiagram
@@ -72,31 +110,44 @@ sequenceDiagram
     Server->>Client: HTTP Response
 ```
 
-The client sends a request, the server processes it and sends back a response.
+The client (our computer) sends a request: a short file containing our requests
 
-Initially, each requested was *an episode:* if 10 files are needed then 10 HTTP sessions follow
+the server (the computer hosting the web page) processes it and sends back a response.
+
+*statelessness:* each time a file is needed a new HTTP session is initiated
 
 ---
+
+## HTTP Session Example
+
+client starts the session
+
+server *may* return the requested page or an error message 
+
+![from blog.logrocket.com/using-next-js-security-headers/](./images/example_session.png){width=65%}
+
+
+# For reference: inside HTTP
 
 ## HTTP Request Structure
 
 A typical HTTP request contains:
 
 1. **Request Line**: Method, URI, HTTP version
+
 2. **Headers**: Metadata about the request
+
 3. **Body**: Optional data (for POST, PUT, etc.)
-
-![HTTP request structure](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/HTTP_Request.png/600px-HTTP_Request.png){width=50%}
-
-## Example HTTP Request
 
 ```http
 GET /index.html HTTP/1.1
-Host: www.example.com
+Host: www.unimi.it
 User-Agent: Mozilla/5.0
 Accept: text/html
-Accept-Language: en-US
+Accept-Language: en-UK
 ```
+
+---
 
 ## HTTP Methods {.smaller}
 
@@ -110,6 +161,8 @@ Accept-Language: en-US
 | HEAD | Like GET, but without response body | Yes |
 | OPTIONS | Describe communication options | Yes |
 
+---
+
 ## HTTP Response Structure
 
 A typical HTTP response contains:
@@ -118,7 +171,9 @@ A typical HTTP response contains:
 2. **Headers**: Metadata about the response
 3. **Body**: The actual content (HTML, JSON, etc.)
 
-![HTTP response structure](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/HTTP_Response.png/600px-HTTP_Response.png){width=50%}
+![HTTP response structure](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/HTTP_Response.png/600px-HTTP_Response.png){width=80%}
+
+---
 
 ## Example HTTP Response
 
@@ -132,6 +187,10 @@ Content-Length: 138
   
     Hello World!
 ```
+
+Our browser takes the bottom part of this file and renders it
+
+---
 
 ## HTTP Status Codes
 
@@ -165,81 +224,107 @@ Content-Length: 138
 :::
 :::
 
+---
+
 ## The Famous 404 Error
 
-![HTTP 404 error page example](https://en.wikipedia.org/wiki/HTTP_404#/media/File:Wikimedia_error_404.png/2){width=50%}
+![HTTP 404 error page example](./images/Wikimedia_error_404.png){width=50%}
 
-## HTTP Headers
+We clicked on an `<a>` that was wrong or outdated
 
-Headers provide essential information about the request or response:
+the page could now be deleted or elsewhere inside `public_html` or on another server altogether
 
-- **General**: Connection, Date, Cache-Control
-- **Request**: Host, User-Agent, Accept, Authorization
-- **Response**: Server, Set-Cookie, Content-Type
-- **Entity**: Content-Length, Content-Encoding, Last-Modified
 
-## HTTP Session Example
+# Discussion: the limits of HTTP today
 
-![Complete HTTP session flow](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/HTTP_Request_Headers.png/800px-HTTP_Request_Headers.png){width=65%}
+## Issue 1: data confidentiality
 
-## HTTPS: Secure HTTP
+- HTML/CSS are text files that HTTP downloads on computers 
 
-**HTTP + TLS/SSL = HTTPS**
+- they travel across internet *in the clear:* any intermediate computer can read them
 
-::: {.columns}
-::: {.column width="50%"}
+- today only Wikipedia-style pages are safe for HTTP transmission
+
+- HTTPS: HTTP + *Secure*
+
+---
+
+## Issue 2: statelessness
+
+We often experience the visit to a web site as a conversation
+
+via login systems we are used to find our data again, every time
+
+---
+
+## Issue 3: continuity
+
+Audio-video requires a continous connection
+
+Downloading the whole file up front is not always suitable
+
+for live shows/reels *there is no file*
+
+Servers and browsers implement sophisticated *caching* algorithms to create the TV/Radio effect :grinning
+
+
+# Issue 1: security
+
+## **HTTP + TLS/SSL = HTTPS**
+
 - Encrypts data in transit
-- Authenticates the server
+- Authenticates the server with external certification
 - Ensures data integrity
 - Uses port 443
-:::
 
-::: {.column width="50%"}
-![HTTPS lock icon](https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/HTTPS_icon.svg/240px-HTTPS_icon.svg.png){width=40%}
-:::
-:::
 
-## TLS Handshake Process
+# Issue 2: statelessness
 
-![TLS handshake diagram](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Full_TLS_1.3_Handshake.svg/600px-Full_TLS_1.3_Handshake.svg.png){width=50%}
-
-Establishes a secure connection before HTTP communication begins.
-
-## HTTP/1.1 vs HTTP/2
-
-![Connection multiplexing in HTTP/2](https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/HTTP-1.1_vs._HTTP-2_Protocol_Stack.svg/800px-HTTP-1.1_vs._HTTP-2_Protocol_Stack.svg.png){width=60%}
+---
 
 ## HTTP/2 Improvements
 
-::: {.incremental}
 - **Binary Protocol**: More efficient parsing
 - **Multiplexing**: Multiple requests over single connection
 - **Header Compression**: Reduces overhead
 - **Server Push**: Server can send resources proactively
 - **Stream Prioritization**: Optimize resource delivery
-:::
 
-## HTTP/2 Multiplexing
-
-![HTTP/2 stream multiplexing](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/HTTP-1.1_vs._HTTP-2_with_Multiplexing.svg/800px-HTTP-1.1_vs._HTTP-2_with_Multiplexing.svg.png){width=70%}
-
-Multiple streams over a single connection eliminate head-of-line blocking.
+---
 
 ## HTTP/3 and QUIC
 
-::: {.columns}
-::: {.column width="50%"}
-- Built on **QUIC** protocol
+- Built on the new **QUIC** protocol
 - Uses **UDP** instead of TCP
 - Reduces connection time
-- Better unreliable network performance
-- True multiplexing without HOL blocking
-:::
+- works better on unreliable networks
+- implements multiplexing: severl downloads at once
+  
 
-::: {.column width="50%"}
-![HTTP version evolution](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/HTTP-1.1_vs._HTTP-2_vs._HTTP-3_Protocol_Stack.svg/600px-HTTP-1.1_vs._HTTP-2_vs._HTTP-3_Protocol_Stack.svg.png)
-:::
-:::
+# Cookies
+
+---
+
+## Motivations
+
+To create *sessions*, i.e., a *stateful* session, browser can save some details on the local client:
+
+a small file called *cookie*
+
+As a result, servers could read the cookie when we try to connect again and *remember* our details
+
+```http
+# Server sets cookie
+Set-Cookie: session_id=abc123; Secure; HttpOnly
+
+# Browser includes cookie in subsequent requests
+Cookie: session_id=abc123
+```
+
+![](./images/HTTP_cookie_exchange.svg.png){width=50%}
+
+
+## Issue 3: continuity
 
 ## RESTful APIs and HTTP
 
@@ -257,47 +342,18 @@ Accept: application/json
 
 ## HTTP Caching
 
-![Browser caching diagram](https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Cache_operation_diagram.svg/700px-Cache_operation_diagram.svg.png){width=60%}
+![](./images/Cache_operation_diagram.svg.png){width=60%}
 
 Caching reduces server load and improves response times.
 
-## Common HTTP Headers in Practice
 
-**Authentication**
-```http
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
-```
+# Browsers
 
-**Caching**
-```http
-Cache-Control: max-age=3600, must-revalidate
-ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
-```
+---
 
-**CORS**
-```http
-Access-Control-Allow-Origin: https://example.com
-```
+Browsers are key to HTTP success
 
-## Web Browser Architecture
-
-![How browsers process HTTP](https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Webpageload.svg/700px-Webpageload.svg.png){width=65%}
-
-## Best Practices
-
-::: {.incremental}
-1. Use appropriate HTTP methods
-2. Implement proper status codes
-3. Use HTTPS for sensitive data
-4. Leverage caching mechanisms
-5. Implement compression (gzip, brotli)
-6. Use HTTP/2 or HTTP/3 when possible
-7. Handle errors gracefully
-:::
-
-## How Browsers Implement HTTP
-
-Browsers are HTTP clients that:
+They are HTTP clients that:
 
 1. Parse HTML and discover resources
 2. Generate HTTP requests for resources
@@ -307,17 +363,12 @@ Browsers are HTTP clients that:
 
 ## Following HTML Links
 
-When you click a link, the browser:
+When we click a link:
 
-```html
-Click me
-```
-
-1. **User clicks** the link
-2. Browser **parses the URL**
-3. Browser **sends GET request** to the server
-4. Server **responds** with HTML content
-5. Browser **renders** the new page
+- the browser **parses the URL** (is it internal? External?)
+- it **sends GET request** to the server
+- the server **responds** with HTML content
+- the browser **renders** the new page
 
 ## Navigation HTTP Flow
 
@@ -335,26 +386,32 @@ sequenceDiagram
     Browser->>User: Renders page
 ```
 
-## Loading Resources in HTML
 
-The browser automatically makes HTTP requests for embedded resources:
+# Resources in HTML
 
-```html
+---
 
+In HTML, CSS and JS files are *resources*
 
-```
+Also embedded images and videos (and sounds) are *resources*
 
-Each resource triggers a separate HTTP request!
+Browser automatically make HTTP requests for embedded resources:
+
+Each resource triggers a separate HTTP request
+
+---
 
 ## Resource Loading Process
 
-When the browser encounters an HTML page:
+The complete procedure for HTML page:
 
-1. **Parses HTML** sequentially from top to bottom
-2. **Discovers resource references** (CSS, JS, images, etc.)
-3. **Prioritizes requests** based on resource type
-4. **Downloads resources** (often in parallel)
-5. **Renders progressively** as resources arrive
+1. **Parse HTML** sequentially from top to bottom
+2. **find resource references** (CSS, JS, images, etc.)
+3. **Prioritize requests** based on resource type
+4. **Download resources** (often in parallel)
+5. **Render progressively** as resources arrive
+
+---
 
 ## Resource Priority Levels
 
@@ -368,41 +425,41 @@ Different resources have different loading priorities:
 | **Low** | Images below fold | Not immediately visible |
 | **Lowest** | Prefetch resources | For future navigation |
 
+---
+
 ## CSS Loading and Rendering
 
-```html
-```
-
 - CSS files **block rendering** (render-blocking)
+
 - Browser won't display page until CSS is downloaded
+
 - Prevents Flash of Unstyled Content (FOUC)
 
 ```http
 GET /critical.css HTTP/1.1
-Host: example.com
+Host: unimi.it
 ```
 
-## JavaScript Loading Behavior
+---
 
-```html
-```
+## Loading JS files
 
-::: {.incremental}
+when the browser discovers a JS file, it 
+
 - **Default**: Blocks HTML parsing until downloaded & executed
 - **defer**: Downloads in parallel, executes after DOM is ready
 - **async**: Downloads in parallel, executes immediately when ready
-:::
+
 
 ## Script Loading Timeline
 
-![Script loading with defer and async](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Asyncdefer.svg/800px-Asyncdefer.svg.png){width=75%}
+![from GH](https://raw.githubusercontent.com/w3c/html/2ef7a579bcfd2693b98df35f20e51dff60e3fbef/images/asyncdefer.svg){width=75%}
 
 Different loading strategies affect page performance differently.
 
-## Image Loading
+---
 
-```html
-```
+## Image Loading
 
 - Images load **asynchronously** (don't block rendering)
 - `loading="lazy"` defers loading until near viewport
@@ -414,23 +471,7 @@ Host: example.com
 Accept: image/webp,image/jpeg
 ```
 
-## Resource HTTP Headers
-
-**Request headers for images:**
-```http
-GET /photo.jpg HTTP/1.1
-Accept: image/webp,image/apng,image/*
-Accept-Encoding: gzip, deflate, br
-Cache-Control: max-age=0
-```
-
-**Response with caching:**
-```http
-HTTP/1.1 200 OK
-Content-Type: image/jpeg
-Cache-Control: public, max-age=31536000
-ETag: "abc123"
-```
+---
 
 ## Loading Fonts via CSS
 
@@ -451,64 +492,19 @@ GET /fonts/custom.woff2 HTTP/1.1
 Host: example.com
 ```
 
-## Resource Hints
+# Forms
 
-Help the browser optimize loading:
+---
 
-```html
+Forms are almost the only way we have to program a second access to the server and obtain new HTML to display
 
-```
+By clicking on, e.g., the *Search* button
 
-## Content Security Policy
-
-Control which resources can be loaded:
-
-```http
-Content-Security-Policy: 
-  default-src 'self'; 
-  script-src 'self' https://cdn.example.com;
-  img-src 'self' data: https:;
-  style-src 'self' 'unsafe-inline'
-```
-
-Browsers will **block HTTP requests** that violate CSP rules.
-
-## Subresource Integrity (SRI)
-
-Verify resource integrity when loading from CDNs:
-
-```html
-
-
-```
-
-Browser verifies the hash before executing the resource.
-
-## The Browser Request Waterfall
-
-![Chrome DevTools Network waterfall](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Chrome_DevTools_Network_Panel.png/800px-Chrome_DevTools_Network_Panel.png){width=70%}
-
-Shows timing and dependencies of HTTP requests.
-
-## Form Submissions via HTTP
-
-**GET Method** (data in URL):
-```html
-
-  
-  Search
-
-```
 Generates: `GET /search?q=HTTP+protocol HTTP/1.1`
 
-**POST Method** (data in body):
-```html
+# Advanced topics
 
-  
-  
-  Login
-
-```
+---
 
 ## AJAX and Fetch API
 
@@ -527,6 +523,8 @@ const user = await response.json();
 
 This enables dynamic, single-page applications.
 
+---
+
 ## Browser HTTP Request Example
 
 ```javascript
@@ -543,54 +541,4 @@ fetch('https://api.example.com/users', {
   })
 });
 ```
-
-## Browser Developer Tools
-
-![Firefox Developer Tools Network Tab](https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Firefox_Network_Monitor.png/800px-Firefox_Network_Monitor.png){width=70%}
-
-Essential for debugging HTTP requests and responses.
-
-## HTTP Redirects in Browsers
-
-When a server responds with 301 or 302:
-
-```http
-HTTP/1.1 301 Moved Permanently
-Location: https://www.example.com/new-page
-```
-
-The browser **automatically** follows the redirect and makes a new request to the Location URL.
-
-## Browser Connection Management
-
-Modern browsers:
-
-- Maintain **connection pools** for reuse
-- Open **multiple parallel connections** (typically 6-8 per domain)
-- Implement **HTTP/2 multiplexing** for single connection efficiency
-- Use **DNS prefetching** and **connection preloading**
-- Apply **cookie management** across requests
-
-## Cookies and HTTP State
-
-```http
-# Server sets cookie
-Set-Cookie: session_id=abc123; Secure; HttpOnly
-
-# Browser includes cookie in subsequent requests
-Cookie: session_id=abc123
-```
-
-![Cookie flow diagram](https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/HTTP_cookie_exchange.svg/700px-HTTP_cookie_exchange.svg.png){width=50%}
-
-
-![Cookie flow diagram](https://en.m.wikipedia.org/wiki/HTTP_cookie#/media/File%3AHTTP_cookie_exchange.svg
-)
-
-## Resources
-
-- [MDN Web Docs: HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP)
-- [RFC 7230-7235: HTTP/1.1](https://tools.ietf.org/html/rfc7230)
-- [RFC 7540: HTTP/2](https://tools.ietf.org/html/rfc7540)
-- [RFC 9114: HTTP/3](https://www.rfc-editor.org/rfc/rfc9114.html)
 
