@@ -26,22 +26,20 @@ execute:
 
 - the page is *ditigal* but static, unconnected
 
-
 ---
 
 ## CSS styles
 
 Even though style settings can go almost anywhere in HTML pages, we keep them *segregated* in CSS files.
 
-This line must be inside the ``<head>`` section of your page:
+This line must be inside the `<head>` part:
 
 
 ```html
   <link href="mystyle.css" rel="stylesheet" type="text/css" />
 ```  
 
-In this case ``mystyle.css`` must be in the same folder as the HTML file.
-
+In this case `mystyle.css` must be in the same folder as the HTML file.
 
 ---
 
@@ -65,7 +63,6 @@ in a parallel folder:
   <link href="../css/general_site_style.css" rel="stylesheet" type="text/css" />
 ```  
 
-
 ---
 
 ## Case: there are several styles
@@ -76,7 +73,9 @@ in a parallel folder:
   <link href="./css/specific_section_style.css" rel="stylesheet" type="text/css" />
 ```  
 
-Overlapping, e.g., the same tag is styled twice, is an issue 
+Cascading effect: 
+
+if both define an element of style, e.g. `font-color`, then the setup in the latter *wins* 
 
 
 ---
@@ -102,22 +101,41 @@ Get styles are on [GitHub](https://github.com/mezzoblue/csszengarden.com)
 
 # Exercise
 
-
 ---
 
 ## Work with csszengarden styles
 
-- visit [https://csszengarden.com/](https://csszengarden.com/)
-  
-- download the HTML and the CSS files and put them in a newly-created folder
-  
-- double-click the HTML file, check how it looks
-  
-- open VS Code then open the HTML file
+Can we import sophisticated styles into our pages?
 
-- edit the HTML so that it includes the local CSS (the 'zen' look)
+Try out a version of your Lorem Lipsum page with Zengarden looks
 
-- now edit it again so that it includes the online CSS for the 'verde moderna' look
+Study the CSS to see what's available then use the styleLet's try simple styles, e.g. *Verde Moderna* or *Tranquille*
+
+---
+
+- visit [https://csszengarden.com/pages/alldesigns/](https://csszengarden.com/pages/alldesigns/)
+
+- select a simple style
+  
+- look at the HTML source then at the CSS file to understand how it works 
+  
+- now link the style into your Lorem page to see the transformations
+
+  - download the CSS, put it local to your Lipsum page the from the `head` section link the new style
+
+  - from the HTML link the style on the Web (e.g., Github)
+
+
+---
+
+Get all the styles at once from [github.com/mezzoblue/csszengarden.com
+](https://github.com/mezzoblue/csszengarden.com)
+
+```bash
+>git clone https://github.com/mezzoblue/csszengarden.com.git
+```
+
+Challenge: you can clone directly from VS Code, thanks to the Git extension
 
 
 # Images
@@ -128,14 +146,15 @@ Get styles are on [GitHub](https://github.com/mezzoblue/csszengarden.com)
 
 Browsers pick up image files and incorporate them in the rendering of the page
 
-The HTML code will link those image files in the same way as it links to the CSS file
+The HTML code will link image files in the same way as it links to the CSS file
 
-The ``img`` tag has parameters that control the exact rendering of the image
+The `<img>` tag has parameters that control the exact rendering of the image
 
 ```html
 <img src="./imgs/quenau-page-1.jpg" alt="I show when the file fails to load" title="show when mouse over">
 ```
 
+Notice: there is no `</img>`
 
 ---
 
@@ -152,25 +171,26 @@ The ``img`` tag has parameters that control the exact rendering of the image
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Logo_Universit%C3%A0_degli_Studi_di_Milano.svg/1024px-Logo_Universit%C3%A0_degli_Studi_di_Milano.svg.png" alt="The unimi Minerva">
 
-Warning: we are *leasing* an area of the page to the source site
+Try embedding the Uni logo in your Lorem page
 
+Warning: we are *leasing* an area of the page to the source site
 
 ---
 
 ## a Brief on formats
 
-- photo-oriented: they describe a *bitmap*: ``.bmp``, ``.jpg`` and ``.png``
+- photo-oriented: they describe a *bitmap*: `.bmp`, `.jpg` and `.png`
 
-- animation-oriented: ``.gif``
+- animation-oriented: `.gif`
     
-- rendering oriented, total control: they contain code that creates the image in the context: ``.svg``
+- rendering oriented, total control: they contain code that creates the image in the context: `.svg`
 
 
 ---
 
 ## Figures
 
-Different from simple embeddings, figures may have numbering, caption and be treated uniformly with the ``<figure></figure>`` tag
+Different from simple embeddings, figures may have numbering, caption and be treated uniformly with the `<figure></figure>` tag
 
 ![](./imgs/6-traditional.png)
 
@@ -180,13 +200,14 @@ Details in Ch. 6 of the textbook
 
 ---
 
-## Images as deco'
+## Images as decor
 
 - an image can become the background of the page or portions thereof
 
 - with *tiling* the same pattern/logo can be repeated throghout arbitrary surfaces
   
 - details in Ch. 7 of the textbook
+
 
 # Custom styles
 
@@ -213,7 +234,7 @@ aligns the whole document to the right...
 
 Create ad hoc styles via new classes
 
-Each class name needs be unique and begin by ``.``
+Each class name needs be unique and begin by `.`
 
 ```css
 p {
@@ -253,7 +274,15 @@ Go to the Web Design Playground:
 
 Static pages now tend to start with a graphical upper part which is repeated for all pages: the *hero image*
 
+---
+
+![](./imgs/6-hero.png)
+
+---
+
 For hero images, and only for them, it makes sense to have a specific form of title, which is attuned to the image itself, e.g., matches its second or third color, has specific font etc.
+
+![](./imgs/6-hero.png)
 
 ---
 
@@ -261,11 +290,10 @@ The CSS file can accomodate an hero image layout by
 
 - specific classes
   
-- the ``background`` attribute to a class
+- the `background` attribute to a class
 
 ---
 
-#### Web-native illustration, 1
 
 ![](./imgs/6-hero.png)
 
@@ -274,7 +302,7 @@ The CSS file can accomodate an hero image layout by
 
 #### Web-native illustration, 2
 
-Can your replicate this type of page with this ``.jpg`` file? (click to enlarge)
+Can your replicate this type of page with this `.jpg` file? (click to enlarge)
 
 ![](./imgs/torrevelasca.jpg){width=5in}
 
@@ -285,37 +313,29 @@ Can your replicate this type of page with this ``.jpg`` file? (click to enlarge)
 
 # Exercise
 
-# Goal
+:::: {.columns}
 
-Create a page about MA COM by 
+::: {.column width="75%"}
+Create a hero image for your Lorem 
 
-- lifting text from the actual presentation page into a local HTML
+be creative, try to go beyond the bust of Cicero
 
-- Have the Torre Velasca as hero image *or anything as you see fit*
+or at least use it in some new way, or *deface* it
+:::
 
-- develop a CSS with special classes for title, claim and a bit else *over* the picture
+::: {.column width="5%"}
+<!-- empty column to create gap -->
+:::
 
-- discuss the page with the colleague sitting on the left if it exists, or the one sittinng behind you
+::: {.column width="20%"}
+[![](./imgs/cicero.png)](https://www.sothebys.com/en/buy/auction/2019/old-master-sculpture-works-of-art/italian-circa-1800-after-the-antique-bust-of)
+:::
 
+::::
 
----
+develop a new CSS file with special classes for title, claim etc. *over* the picture
 
-## instructions, I
+the colors in the picture drive the choice of the "on top" style
 
-- get the latest version of the class notes from GitHub: [github.com/ale66/learn-web/tree/main/30-visuals/exercise-rename-me](https://github.com/ale66/learn-web/tree/main/30-visuals/exercise-rename-me)
+discuss the page with a colleague 
 
-- go into folder ``30-visuals``, find the ``exercise-rename-me`` folder
-  
-- rename it
-
----
-
-## instructions, II
-
-- go inside, open the ``index.html`` file in Vs Code 
-
-- also open the ``mystyle.css`` file in VS Code 
-  
-- look for info material about MA COM, e.g., on [www.unimi.it/en/education/master-programme/public-and-corporate-communication-com](https://www.unimi.it/en/education/master-programme/public-and-corporate-communication-com)
-
-- develop a CSS class that includes the hero image and appropriate text font/color
