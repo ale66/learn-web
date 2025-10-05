@@ -4,6 +4,15 @@ p {
     letter-spacing: 3px;
   }
 
+.latinpara {
+  text-indent: 4pt;
+  text-align: right;
+}
+
+
+
+
+
 span {
       background-color: yellow;
     } 

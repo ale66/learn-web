@@ -206,7 +206,7 @@ Details in Ch. 6 of the textbook
 
 - with *tiling* the same pattern/logo can be repeated throghout arbitrary surfaces
   
-- details in Ch. 7 of the textbook
+- details in Ch. 6 of the textbook
 
 
 # Custom styles
