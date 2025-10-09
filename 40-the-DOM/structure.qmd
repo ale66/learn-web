@@ -4,13 +4,11 @@ author: "ale66"
 format: 
   revealjs:
     footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
-    theme: [solarized]
+    theme: [moon]
+    transition: slide
     preview-links: auto
     chalkboard: 
       boardmarker-width: 5
-    mermaid:
-      theme: forest
-      fontSize: 12
 from: markdown+emoji
 execute:
   echo: true
@@ -55,40 +53,51 @@ are mistyping can throw the automated parsing off track
 <!doctype html>
 ```
 
-This is not strictly HTML and it is read by the OS under the browser
+This is not HTML but a directive (via the `!`) 
+
+the browser (and the operating system and the network services running below it) will know how to handle it.
+
+. . . 
+
+```html
+<!doctype html>
+<html lang="en">
+  ...
+</html>
+```
 
 ---
 
+Mandatory: one root with two branches
+
+::::::: {.columns}
+::: {.column}
 ```html
 <!doctype html>
 
 <html lang="en">
-</html>
-```
-
----
-
-One root, two branches
-
-```html
-<!doctype html>
-
-<html>
   <head></head>
   <body></body>
 </html>
 ```
-
-This part is mandatory
-
+:::
+::: {.column}
 ```{mermaid}
 %%| echo: false
-flowchart LR
-  A[html] --> B[head] & C[body]
+flowchart TD
+  A[html] --> B[head]
+  A[html] --> C[body]
+
 ```
+:::
+:::::::
 
 ---
 
+One root, two branches and two leaves
+
+::::::: {.columns}
+::: {.column}
 ```html
 <!doctype html>
 
@@ -98,13 +107,12 @@ flowchart LR
   </head>
   <body>
     <h1>Visible title</h1>
-    <p>Text</p>
+    <p>First para</p>
   </body>
 </html>
 ```
-
-One root, two branches and two leaves
-
+:::
+::: {.column}
 ```{mermaid}
 %%| echo: false
 flowchart LR
@@ -112,10 +120,13 @@ flowchart LR
   B --> D[title]
   C --> E[h1] & F[p]
 ```
-
+:::
+:::::::
 
 ---
 
+::::::: {.columns}
+::: {.column}
 ```html
 <html>
   <head>
@@ -123,12 +134,13 @@ flowchart LR
   </head>
   <body>
     <h1>Visible title</h1>
-    <p>Some text</p>
-    <p>More text</p>
-    <p>Further text</p>
+    <p>First para.</p>
+    <p>More text.</p>
+    <p>Further text.</p>
 ...
 ```
-
+:::
+::: {.column}
 ```{mermaid}
 %%| echo: false
 flowchart LR
@@ -136,42 +148,47 @@ flowchart LR
   B --> D[title]
   C --> E[h1] & F[p] & G[p] & H[p]
 ```
-
+:::
+:::::::
 
 ---
 
-Browsers process tags as *paths* from root to leaf:
+Browsers process each tag as a *path* from root to the respective leaf:
 
 ```html
-<html><head><h1>Visible title</h1>
+<html><body><h1>Visible title</h1>
 ```
 
 ```html
-<html><head><p>Some text</p>
+<html><Body><p>First para</p>
 ```
 
-Each leaf may be uniquely identified; in case we use ``id``
+Additionally, leaves may be assigned an `id` name:
 
 ```html
-<html><head><p id="top-para">Some text</p>
+<html><body><p id="top-para">First para.</p>
 ```
+
+And so on:
 
 ```html
-<html><head><p id="middle-para">More text</p>
-<html><head><p id="bottom-para">Further text</p>
-```
+<html><body><p id="middle-para">More text</p>
 
+<html><body><p id="bottom-para">Further text.</p>
+```
 
 ---
 
 Next, all the needed CSS command will be picked up from the CSS file and attached to the element
 
 ```html
-<html><head><h1 class="my-hero-title">Title</h1>
+<html><body><h1 class="my_hero_title">My big, fat title</h1>
 ```
 
+Where the CSS contains:
+
 ```css
-.my-hero-title {
+.my_hero_title {
   font-color: darksalmon;
   ...
 }
@@ -179,11 +196,9 @@ Next, all the needed CSS command will be picked up from the CSS file and attache
 
 Free choice of class names but they must be unique
 
-
 ---
 
 ## How browers actually see our page 
-
 
 ```{mermaid}
 %%| echo: false
@@ -195,10 +210,7 @@ flowchart LR
 ```
 
 
-
-
 # The DOM 
-
 
 ---
 
@@ -210,18 +222,21 @@ the tree representation guides the writing of JavaScript (JS) programs that can 
 
 and how it looks to, e.g., classes of users
 
-__We study the DOM to manipulate pages__
+__We study the DOM to make pages come alive__
 
+Try the *red background* example on Sec. 1.1 of [dom.spec.whatwg.org/](https://dom.spec.whatwg.org/) 
 
 ---
 
-## Exercise: view the DOM of your own exercise
+## Exercise: view the DOM of your own pages
 
-Take your own HTML project for MA COM
+Take your own Lorem project and feed it to DOM visualisers on GH:
 
-[DOM Visualiser from GitHub](https://codu-code.github.io/dom-visualizer/index.html)
+[codu-code.github.io/dom-visualizer/](https://codu-code.github.io/dom-visualizer/index.html)
 
-[Another one](http://bioub.github.io/dom-visualizer/)
+[bioub.github.io/dom-visualizer/](http://bioub.github.io/dom-visualizer/)
+
+Try again with your favourite CSSengarden project
 
 ---
 
@@ -239,8 +254,7 @@ flowchart LR
 
 inside most tags there is content to be displayed.
 
-Such content is represented as an explicit leaf of our DOM
-
+Such content is represented as an explicit DOM leaf
 
 ---
 
@@ -260,16 +274,15 @@ flowchart LR
   H --> P[further text]
 ```
 
-for each leaf, a special ``innerHTML`` variable will contain the relative text and mark-up
-
+for each leaf, a special `innerHTML` variable will contain the relative text and mark-up
 
 ---
 
-The complete DOM
+A complete DOM
 
 ```{mermaid}
 %%| echo: false
-flowchart LR
+flowchart TD
   A[html] --> B[head] & C[body]
   B --> D[title]
   C --> E[h1] & F[p] & G[p] & H[p]
@@ -283,3 +296,5 @@ flowchart LR
   H --> P[further text]
   H-.-> Q
 ```
+
+Javascript code takes this representation and change it as the bruwser *runs* the page
