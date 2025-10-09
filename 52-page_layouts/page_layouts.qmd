@@ -21,7 +21,7 @@ execute:
 
 ## So far
 
-we learnt how to combine `HTML5+CSS` to obtain pleasing *static* pages.
+learned how to combine `HTML5+CSS` to obtain pleasing *static* pages.
 
 However, the default HTML layout is almost never a good idea...
 
@@ -132,12 +132,4 @@ We are going to do just that...
 
 ## Lab
 
-Import into your info page for Com the tags needed for the *holy grail* layout
-
-Change your page accordingly, e.g., by moving the links to the `<nav>` part
-
-Put the text that we retrieved from the official COM page into an article 
-
-Make a new article by lifting text from the respective [CeS page](https://www.unimi.it/en/education/bachelor/communication-and-society-ces)
-
-combine the articles in a more general page about 'Study communications at unimi'
+Participate to the in-class project by developing content and styling one or more *articles* 

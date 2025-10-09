@@ -317,7 +317,9 @@ Can your replicate this type of page with this `.jpg` file? (click to enlarge)
 ::: {.column width="75%"}
 Create a hero image for your Lorem 
 
-be creative deploy classic images in some new way
+be creative around classic images
+
+develop a CSS with special classes for title, claim etc. *over* the picture
 :::
 
 ::: {.column width="5%"}
@@ -339,8 +341,6 @@ be creative deploy classic images in some new way
 <!-- empty column to create gap -->
 :::
 ::: {.column width="75%"}
-develop a new CSS file with special classes for title, claim etc. *over* the picture
-
 the colors in the picture drive the choice of the "on top" style
 
 discuss the page with a colleague 
