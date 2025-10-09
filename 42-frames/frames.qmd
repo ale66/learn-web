@@ -119,6 +119,31 @@ Try *pair coding* with the [Live Share](https://marketplace.visualstudio.com/ite
 - make a menu of navigation links and float it (details in past presentations) 
 
 
+
+# Landing pages
+
+---
+
+Hero page: 
+
+- seeks an emotional response
+
+- graphics takes over from text
+
+Landing page
+
+- extends hero
+
+- the page that search engines point
+
+- seeks to entice and guide a deeper visit
+
+---
+
+## Example landing page
+
+![](./imgs/unimi-landing.png)
+
 ---
 
 ## Make a landing page
@@ -129,13 +154,11 @@ Try *pair coding* with the [Live Share](https://marketplace.visualstudio.com/ite
 
 ![](./imgs/hero-3.png)
 
-
 ---
 
 Fixed *landing:*
 
 ![](./imgs/10-hero.png)
-
 
 ---
 
@@ -145,14 +168,12 @@ Left picture is the *what*, background picture is the *where* or *how*
 
 *lab* on *Velasca?* the other way around? Keep *lab* and choose an aspirational picture that works for you and your friends
 
-
 ---
 
 ## The in-picture
 
 
 ![](./imgs/hero-2b.png)
-
 
 ---
 
@@ -162,7 +183,6 @@ Left picture is the *what*, background picture is the *where* or *how*
 ![](./imgs/hero-3b.png)
 
 Check the final effect with the [Live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) VS Code extension
-
 
 ---
 
@@ -175,8 +195,7 @@ sense the device and apply the appropriate styles
 Example: section with links collapses into the *hamburger* menu
 
 
-#  ``before::`` and ``after::``
-
+#  For refrence: `before::` and `after::`
 
 ---
 
@@ -217,7 +236,11 @@ See [reference](https://www.w3schools.com/cssref/css_selectors.php)
 
 ## Styling tables and other structured texts
 
-See the relevant self-learning material at [w3chools](https://www.w3schools.com/bootstrap5/bootstrap_tables.php) and [bootstrap](https://getbootstrap.com/docs/5.0/content/tables/)
+See the relevant self-learning material at 
+
+[w3chools](https://www.w3schools.com/bootstrap5/bootstrap_tables.php) and 
+
+[bootstrap](https://getbootstrap.com/docs/5.0/content/tables/)
 
 
 
