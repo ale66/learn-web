@@ -19,111 +19,47 @@ execute:
 
 ## Concepts, a
 
-The HTML baseline code (aka boilerplate) read out and commented line-by-line
+HTTP is the industrial protocol that underpins *the Web* as we know it 
 
-Still curious about `<head>`
+client-server architecture: server is idle until client starts requests
+
+browsers serve `<a>` tags and follow all linked resources (CSS files, images etc.)
+
+files are copied locally
+
+stateless: no *conversation* (introduced later)
 
 ---
 
 ## Concepts, b
 
-Some default tags support styling text.
+Pages with multiple, external CSSs
 
-While HTML is built for *pages* we are now focuse on documents that are digital-only: no (or not necessarily) left-to-right top-down
+Exercise: apply a fav CSS from *the garden* to your Lorem page 
+
+To see effects, we need to use the same tags as their original HTML
+
+Syntax and order of the links in `<head>` are crucial
 
 ---
 
 ## Concepts, c
 
-Style: all in a separate file please
+Graphics/AV sources are *embeddable*
 
-Styling is a separated activity, CSS files are often re-used
+via `<img>` tags any source file, anywhere, can be embedded
+
+Also, embeddable code for Google Maps and YouTube etc.
 
 ---
 
 ## Concepts, d
 
+The *Hero Image* concept and its execution:
 
-The `<a>` tag:
+Embedding via specific CSS set ups that *fix* the hero 
 
-```html
-<a href="#label">go down on this page</a>
-...
-<div id="label">...
-```
+Text-on-image special fonts and colours
 
-. . .
-
-```html
-<a href="./another_page.html">go to another page of the same site</a>
-```
-
-. . .
-
-```html
-<a href="https://unimi.it/ma/com/">go to a web site</a>
-```
-
-. . .
-
-```html
-<a href="https://unimi.it/ma/com/exams.html">go to a page on a web site</a>
-```
-
-. . . 
-
-```html
-<a href="https://unimi.it/ma/com/index.html#label">go to a specifi position of an external page</a>
-```
-
----
-
-## Concepts, e
-
-The `<div>` tag:
-
-divides text or areas of the page
-
-it's a semantic tag: what it does will be coded by us
-
-Example: style the first para. differently
-
-```html
-<div id="first">...</div>
-<div id="regular">...</div>
-```
-
----
-
-## Skills, a
-
-- VS Code and extensions running on computer to edit HTML/CSS files
-  
----
-
-## Skills, b
-
-- git to synchronise with the class Github repository:
-
-Get started, get a local copy:
-
-```bash
->git clone https://github.com/ale66/learn-coding.git
-```
-
-Synch the material daily (or weekly)
-
-```bash
->git pull
-```
-
-this is all for the moment!
-
----
-
-## skills: c
-
-The basic HTML typography mark-up
-
-A small, bookish project on a fixed literaly text (Lorem ipsum)
+Exercise: embed Cicero's images on your Lorem page
 
