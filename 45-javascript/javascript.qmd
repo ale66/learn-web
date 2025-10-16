@@ -7,10 +7,9 @@ format:
     theme: [solarized]
     preview-links: auto
     chalkboard: 
-      boardmarker-width: 5
-    mermaid:
-      theme: forest
-      fontSize: 12
+      boardmarker-width: 2
+    mermaid: 
+      echo: false
 from: markdown+emoji
 execute:
   echo: true
@@ -18,110 +17,147 @@ execute:
 
 # Javascript
 
---- 
+---
 
+# JS
 
-## Review: the DOM representation
+- animates web pages
+- taylors pages to users and let them *act*
+- the only programming language that *runs in the browser* (now also on the server)
 
-[Document Object Model](https://en.wikipedia.org/wiki/Document_Object_Model).
+. . .
 
-![](./images/html-requires-js.jpg)
-
+- extremely hard and unforgiving for learners
+- a core technology of the web is a mistake, essentially
 
 ---
 
-#### Conceptual framework
+## The JS *ecosystem* today
 
-We see the page as a top-down, left-to-right structure
-
-Browsers represent it internally as a tree.
-
-which grows from left to right.
-
-![](https://upload.wikimedia.org/wikipedia/commons/5/5a/DOM-model.svg)
-
+```{mermaid}
+%%| echo: false
+graph LR
+    A[JavaScript] --> B[Client-Side]
+    A --> C[Server-Side]
+    
+    B --> D[Web Browsers]
+    B --> E[Mobile Apps]
+    B --> F[Desktop Apps]
+    
+    C --> G[Node.js]
+    C --> H[Deno]
+    C --> I[Bun]
+    
+    style A fill:#f7df1e
+    style B fill:#61dafb
+    style C fill:#68a063
+```
 
 ---
 
-## Nodes and how to access them
+## JS between users and their pages
 
-Each tag used in the HTML page is represented as a node of the tree
+```{mermaid}
+%%| echo: false
+sequenceDiagram
+    participant User
+    participant Browser
+    participant JS Engine
+    participant DOM
+    
+    User->>Browser: Loads webpage
+    Browser->>JS Engine: Executes JS code
+    JS Engine->>DOM: Manipulates elements
+    DOM->>Browser: Updates display
+    Browser->>User: Shows changes
+```
 
-Assume that tags are given individual names with the `id` parameter.
+---
+
+## JS examples
+
+```javascript
+// Variables
+let name = "Alice";
+const age = 25;
+
+// Functions
+function greet(person) {
+  return "Hello, " + person + "!";
+}
+
+// Calling a function
+console.log(greet(name));
+```
+
+notice `;` as line terminator
+
+---
+
+## Hello World! in JS
 
 ```html
-<h2 id="demo" class="hero-title">My first JS experiment</h2>
+<html>
+<head></head>
+<body>
+  <h1 id="greeting">Welcome</h1>
+
+  <button onclick="changeGreeting()">Click Me</button>
+
+  <script>
+    function changeGreeting() {
+      document.getElementById('greeting').textContent = 
+        'Hello, JavaScript!';
+    }
+  </script>
+</body>
+</html>
 ```
 
-JS can access and change each aspect of the tag
-
-```js
-document.getElementById('demo').innerHTML = 'My 2nd JS experiment'
-```
-
+**Result:** Button click changes the heading text
 
 ---
 
-```js
-document.getElementById('demo').innerHTML = 'My 2nd JS experiment'
-```
+## Example 2: Interactive Counter
 
-`document` is the page itself
+```html
+<html>
+<head></head>
+<body>
+  <h1>Count: <span id="count">0</span></h1>
+  <button onclick="increment()">Increment</button>
+  <button onclick="decrement()">Decrement</button>
+  <button onclick="reset()">Reset</button>
 
-. . .
-
-`.` combines the names
-
-. . .
-
-`getElementById('demo')` searches for the specific element in the DOM
-
-. . .
-
-`.innerHTML` is a leaf that contains the actual text to be displayed
-
-. . .
-
-`=` read it *assign what is right to what is left, i.e., $\leftarrow$
-
-. . .
-
-`'My 2nd JS experiment'` a *string* (sequence of characters) that will be send to overwrite the existing text of the leaf
-
-
----
-
-## Exercise
-
-Work inside the `<script>` tag to add JS instructions, separated by `;`
-
-```js
-document.getElementById("demo").style.color = "blue"
-```
-
-```js
-alert('The title has been changed!') 
+  <script>
+    let count = 0;
+    
+    function increment() {
+      count++;
+      updateDisplay();
+    }
+    
+    function decrement() {
+      count--;
+      updateDisplay();
+    }
+    
+    function reset() {
+      count = 0;
+      updateDisplay();
+    }
+    
+    function updateDisplay() {
+      document.getElementById('count').textContent = count;
+    }
+  </script>
+</body>
+</html>
 ```
 
 ---
 
-## With images
-
-<img id="myImage" src="./imgs/html-requires-js.jpg" width="200" alt="An image goes here">
-
-Place in page then change the file
-
-
----
-
-![](https://upload.wikimedia.org/wikipedia/commons/5/5a/DOM-model.svg)
-
-- *DOM methods allow programmatic access to the tree*
-
-- *with them, one can change the structure, style or content of a document*
-
-
-# JS basics
+# A step back: the basics
 
 ---
 
@@ -135,8 +171,36 @@ In spreadsheets, cells are variables
 
 `B2 = 35` is a variable with name `B2`, content `35` and type `int`
 
+---
 
-# Functions
+## Data Types
+
+```{mermaid}
+%%| echo: false
+graph TD
+    A[JS] --> B[Primitive]
+    A --> C[Object]
+    
+    B --> D[String]
+    B --> E[Number]
+    B --> F[Boolean]
+    B --> G[Undefined]
+    B --> H[Null]
+    B --> I[Symbol]
+    B --> J[BigInt]
+    
+    C --> K[Object]
+    C --> L[Array]
+    C --> M[Function]
+    
+    style A fill:#f7df1e
+    style B fill:#4ecdc4
+    style C fill:#ff6b6b
+```
+
+---
+
+# JS Functions
 
 ![](./imgs/function-as-blackbox.png)
 
@@ -202,10 +266,207 @@ document.getElementById("convertedMarks").innerHTML = uk_marks;
 ```
 
 
+# Control Flow
+
 ---
 
+```{mermaid}
+%%| echo: false
+flowchart TD
+    A[Start] --> B{Condition?}
+    B -->|True| C[Execute Code Block]
+    B -->|False| D[Skip Block]
+    C --> E[Continue]
+    D --> E
+    E --> F[End]
+    
+    style A fill:#a8e6cf
+    style B fill:#ffd3b6
+    style C fill:#ffaaa5
+    style F fill:#a8e6cf
+```
 
-## Iteration (for later)
+---
+
+## Conditional Statements
+
+```javascript
+let age = 18;
+
+if (age >= 18) {
+  console.log("You are an adult");
+} else if (age >= 13) {
+  console.log("You are a teenager");
+} else {
+  console.log("You are a child");
+}
+
+// Ternary operator
+let status = age >= 18 ? "adult" : "minor";
+```
+
+---
+
+## Example 3: Age Checker
+
+```html
+<html>
+<head></head>
+<body>
+  <h1>Age Verification</h1>
+  <input type="number" id="ageInput" placeholder="Enter your age">
+  <button onclick="checkAge()">Check</button>
+  <p id="result"></p>
+
+  <script>
+    function checkAge() {
+      const age = document.getElementById('ageInput').value;
+      const result = document.getElementById('result');
+      
+      if (age === '') {
+        result.textContent = 'Please enter your age';
+      } else if (age < 13) {
+        result.textContent = 'You are a child';
+      } else if (age < 18) {
+        result.textContent = 'You are a teenager';
+      } else {
+        result.textContent = 'You are an adult';
+      }
+    }
+  </script>
+</body>
+</html>
+```
+
+
+# Iteration
+
+---
+
+## Basic idea
+
+We need to operate over sequences/collection of atomic data
+
+Example: column operations in spreasheets
+
+```js
+=AVERAGE(A1:A100)
+```
+
+```js
+=AVERAGEIF(A1:A100, ">0")
+```
+
+```js
+=ROUND(A1, 2)
+```
+
+then pull the formula over the whole column.
+
+---
+
+## Iterations, a
+
+```javascript
+// For loop
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+```
+
+---
+
+## Iterations, b
+
+```js
+// While loop
+let count = 0;
+while (count < 5) {
+  console.log(count);
+  count++;
+}
+```
+
+---
+
+## Indexed data
+
+A sequence of values stored in a variable that can be accessed individually by means of their **position** (index)
+
+```javascript
+let fruits = ["apple", "banana", "cherry"];
+
+console.log(fruits[0]);  // "apple"
+console.log(fruits[1]);  // "banana"
+console.log(fruits[2]);  // "cherry"
+```
+
+- use of square brackets
+- indices start at **0**
+- each element has a unique position
+- two main types: **arrays** and **strings**
+
+---
+
+## Strings
+
+Text treated as a sequence of keyboard characters
+
+Same indexing as arrays
+
+```javascript
+let word = "Hello";
+
+console.log(word[0]);  // "H"
+console.log(word[1]);  // "e"
+console.log(word[4]);  // "o"
+```
+
+---
+
+## the lenght
+
+Both arrays and strings have a **length** property
+
+```javascript
+let colors = ["red", "green", "blue"];
+
+let name = "JavaScript";
+
+console.log(colors.length);  // 3
+console.log(name.length);    // 10
+```
+
+Last element is always at index: `length-1`
+
+---
+
+## Practice
+
+```javascript
+let numbers = [10, 20, 30, 40, 50];
+
+let message = "Code";
+
+// What will these output?
+numbers[3]
+message[0]
+numbers[numbers.length - 1]
+```
+
+---
+
+## Iterations, c
+
+```js
+// fruits is an array of strings
+const fruits = ['apple', 'banana', 'orange'];
+for (const fruit of fruits) {
+  console.log(fruit);
+}
+```
+
+---
 
 ```js
 /* convert and show on the page the UK version of the marks */
@@ -217,8 +478,7 @@ for (const m of my_italian_exam_marks){
 
 Copy and run it on [pythontutor.com](https://pythontutor.com/)
 
-Instructions `console.log()` and `window.alert()` are simple ways to print out results. 
-
+`console.log()` and `window.alert()` are simple ways to print out results. 
 
 ---
 
@@ -231,78 +491,3 @@ Functions should be defined every time a block of code is required to appear mor
 - improve maintainance
 
 JS is probably the hardest programming language for learners :flushed:
-
-
-# Code pages with JS
-
----
-
-An image is shown in the page, right above a button
-
-If the user presses the button, an internal Javascript code is executed
-
-The code alters the leaf of the DOM tree that contains the name of the file containing the image
-
-A different image is now shown
-
-```html
-<img id="myImage" src=".mypicture.jpg" width="200" alt="An image">
-
-<p>
-  <button type="button" onclick="myFunc('summer')">Verano</button>
-  ...
-```
-
-Button come with a *listener:* ``onclick`` is an event: 
-
-see [the complete list](https://www.w3schools.com/jsref/dom_obj_event.asp) of events.
-
-
----
-
-```html
-<img id="myImage" src="./imgs/winter.jpg" width="200" alt="An image">
-
-<button type="button" onclick="myFunc('summer')">Verano</button>
-```
-
-* ``myImage`` should be a unique identifier
-  
-* ``./imgs/winter.jpg`` must be linked properly wrt. the position of the HTML file
-
-* ``myFunc()`` is a function we defined in a ``<script>`` element or in a separate ``.js`` file
-
-* it is called with a parameter which is a string ``myFunc('summer')``
-
-if any of this is not set up properly then the browser won't execute the code
-
----
-
-## JS: where to put it?
-
-<https://www.w3schools.com/js/js_whereto.asp>
-
-
----
-
-## Output
-
-<https://www.w3schools.com/js/js_output.asp>
-
-
----
-
-## The browser console
-
-Firefox: [Ctrl + Shift + k](https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Opening_the_Web_Console)
-
-Chromium: [Ctrl + Shift + j](https://developers.google.com/web/tools/chrome-devtools/console)
-
-
----
-
-## For home
-
-Analise the [WaterCSS](https://watercss.netlify.app/) CSS generator.
-
-Use [Markdown](https://gist.github.com/cuonggt/9b7d08a597b167299f0d) to format your instructions.

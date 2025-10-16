@@ -7,7 +7,7 @@ format:
     theme: [moon]
     preview-links: auto
     chalkboard: 
-      boardmarker-width: 5
+      boardmarker-width: 2
 from: markdown+emoji
 execute:
   echo: true
