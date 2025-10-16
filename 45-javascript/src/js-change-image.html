@@ -23,11 +23,11 @@
 
                 // we change the HTML of myImage 
                 // and re-assign the file where the image sits.
-                document.getElementById('myImage').src = "./imgs/summer.jpg"
+                document.getElementById('AnotherOne').src = "./imgs/summer.jpg"
             } else {
 
                 // for all other seasons we assign winter
-                document.getElementById('myImage').src = "./imgs/winter.jpg"
+                document.getElementById('AnotherOne').src = "./imgs/winter.jpg"
             }
 
         }
@@ -43,6 +43,9 @@
 
     <p>Click on the buttons to change the image <b>and</b> the page organisation as images of diffrent size are shown.</p>
 
+
+    <p>this is not going to change:</p>
+    <img id="AnotherOne" src="./imgs/html-requires-js.jpg" width="200" alt="An image goes here">
 </body>
 
 </html>

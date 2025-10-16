@@ -8,7 +8,7 @@ p {
 .myheroimage{
     width: 100vw;
     height: 150vh;
-    background-image: url(./imgs/torrevelasca.jpg);
+    background-image: url(./imgs/torrevelasca-cropped.jpg);
     background-position: top center;
     background-size: cover;
 }
@@ -37,13 +37,20 @@ p {
 
 
 /* deploy it only if you like it! */
-.myherofooter{
+.myherofooter {
     width: 100vw;
     height:100vh;
-    background-image: url(./imgs/torrevelasca.jpg);
+    background-image: url(./imgs/sc_pol-10-cropped.jpg);
     background-position: bottom center;
     background-size: cover;
 }
+
+.mycenteredimgs {
+    background-position: center center;
+    background-color: lightblue;
+}
+
+
 
 
 
