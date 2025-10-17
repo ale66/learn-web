@@ -27,8 +27,23 @@ So do AV resources: files to be linked
 
 ## Concepts, b
 
-The DOM 
+The DOM representation
 
+```{mermaid}
+%%| echo: false
+flowchart LR
+  A[html] --> B[head] & C[body]
+  B --> D[title]
+  C --> E[h1] & F[p] & G[p] & H[p]
+  E-.-> I[.my-hero-title]
+  D --> L[My DOM page]
+  E --> M[My visible title]
+  F --> N[some text]
+  G --> O[more text]
+  H --> P[further text]
+```
+
+for each leaf, a special `innerHTML` variable will contain the relative text and mark-up
 
 ---
 
@@ -36,3 +51,12 @@ The DOM
 
 Page animation: Javascript (JS)
 
+```html
+ <button type="button" onclick="changeSeason('summer')">Verano</button>
+```
+
+A new tag for buttons
+
+A *listener:* if we click then the *action* associated to `onclick` is executed
+
+A Javascript function `changeSeason()` is called, with input value `'summer'`

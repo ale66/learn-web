@@ -47,7 +47,7 @@ We will look for a schema CSS that will control *both*
 The CSS schema is best linked from the web so it will be available everywhere in the project
 
 
-# Exercise: mimic ``unimi.it``
+# Exercise: mimic `[com.cdl.unimi.it](https://com.cdl.unimi.it/en)`
 
 ![](./imgs/unimi-landing.png)
 
@@ -93,7 +93,7 @@ by *fixing* the initial part of the link we can in fact import available CSS, as
 
 ---
 
-- go to [https://www.unimi.it/](https://www.unimi.it/)
+- go to [com.cdl.unimi.it/en](https://com.cdl.unimi.it/en)
 
 - `CTRL+u` to see the HTML source code 
 
@@ -107,7 +107,9 @@ by *fixing* the initial part of the link we can in fact import available CSS, as
 
 While the unimi landing page is correct, the indexing of the tags is wrong
 
-To read the page and understand what is needed, look at the [myunimi.html](./myunimi.html) which has been *beautyfied* by hand
+To read the page and understand what is needed, look at the [com_landing_beautified.html](./com_landing_beautified.html) 
+
+*beautyfied* by hand after using [codebeautify.org](https://codebeautify.org/htmlviewer#)
 
 
 
