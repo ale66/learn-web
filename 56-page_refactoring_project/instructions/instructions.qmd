@@ -1,0 +1,123 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 2
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# In-class assigment
+
+---
+
+## Learning objectives
+
+To *put it all together* with the numerous HTML/CSS/JS concepts seen in class
+
+To stimulate curiosity to *go get it* with further web coding
+
+---
+
+## Theme
+
+Refactor the MA COM landing page to make a version that you think will be more effective
+
+Remember the three objectives of landing pages:
+
+- Hero: elict an emotional response to motivates reading on
+- Landing, human: to serve as a starting point for reference
+- Landing, SEO: to make the page (and then the MA) *popular*
+
+---
+
+## Materials
+
+Two possible starting points:
+
+- the original page, which is available locally in file [com_landing_original.html](./com_landing_original.html)
+
+- the refactoring seen in class (with Torre Velasca) in file [com_landing_seen_in_class.html](./com_landing_seen_in_class.html)
+
+---
+
+## Resources:
+
+- a simple CSS in [./styles/mystyle.css](./styles/mystyle.css)
+
+- a local copy of [./styles/verde_moderna.css](./styles/verde_moderna.css) for the CSSZenGarden
+
+- some stock images in [./imgs/](./imgs/)
+
+
+# Ideas for your in-class project
+
+---
+
+## Ideas, a
+
+
+The *'lab* photo is in [./imgs/sc_pol-10-cropped.jpg](./imgs/sc_pol-10-cropped.jpg)
+
+Consider how to re-deploy it in your project by, e.g., a smallsizing or a black/white rendering to avoid the blue screens
+
+---
+
+## Ideas, b
+
+Provide more relevant links, e.g.,
+
+- example syllabi or curriculum details
+- student testimonials
+- research centers or labs
+- alumni networks
+
+---
+
+## Ideas, c
+
+Find the YouTube video where the Programme director for MA COM is interviewed
+
+- embed that or other videos
+- consider adding a caption or description
+
+---
+
+## Ideas, d
+
+Embed relevant interactive maps from Google maps
+
+Links to live ATM mass transit information?
+
+Links to wiki pages of nearby landmarks, .e.g., Chiesa della Passione
+
+---
+
+## Ideas, e
+
+Emojis?
+
+They can be embedded, e.g., from [w3schools.com](https://www.w3schools.com/charsets/ref_emoji_smileys.asp)
+
+Could you re-pourpose them as, e.g.,
+- section headers
+- call-to-action buttons
+- navigation elements
+
+---
+
+## Submission
+
+Please upload your work to the Assigment tool inside the MS Teams channel of your class; refer to it for deadlines etc.
+
+Submit all edited files and new resources
+
+For videos, upload them to YT/Vimeo then link them; the same is possible for pictures via IG or similar
+
+Feedback is quantitative (a mark) and qualitative

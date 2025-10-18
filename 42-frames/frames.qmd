@@ -7,7 +7,7 @@ format:
     theme: [moon]
     preview-links: auto
     chalkboard: 
-      boardmarker-width: 5
+      boardmarker-width: 2
     mermaid:
       theme: forest
 from: markdown+emoji
@@ -69,7 +69,7 @@ pages are intended as rectangular: relatively narrow and tall
 
 The CSS may define *boxes* with padding around them
 
-The boxes may *float* so the browser will assign it dinamycally to the available *viewport*
+The boxes may *float* so the browser will assign it dynamically to the available *viewport*
 
 . . .
 
