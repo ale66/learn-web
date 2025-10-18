@@ -7,7 +7,7 @@ format:
     theme: [solarized]
     preview-links: auto
     chalkboard: 
-      boardmarker-width: 5
+      boardmarker-width: 2
     mermaid:
       theme: forest
       fontSize: 12
@@ -16,17 +16,16 @@ execute:
   echo: true
 ---
 
-# Javascript
 
---- 
+# Javascript into HTML
 
+---
 
 ## Review: the DOM representation
 
 [Document Object Model](https://en.wikipedia.org/wiki/Document_Object_Model).
 
 ![](./images/html-requires-js.jpg)
-
 
 ---
 
@@ -39,7 +38,6 @@ Browsers represent it internally as a tree.
 which grows from left to right.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/5/5a/DOM-model.svg)
-
 
 ---
 
@@ -58,7 +56,6 @@ JS can access and change each aspect of the tag
 ```js
 document.getElementById('demo').innerHTML = 'My 2nd JS experiment'
 ```
-
 
 ---
 
@@ -82,16 +79,15 @@ document.getElementById('demo').innerHTML = 'My 2nd JS experiment'
 
 . . .
 
-`=` read it *assign what is right to what is left, i.e., $\leftarrow$
+read `=` as *assign* (the result obtained on its right to the variable to its left)
 
 . . .
 
-`'My 2nd JS experiment'` a *string* (sequence of characters) that will be send to overwrite the existing text of the leaf
-
+`'My 2nd JS experiment'` a *string* (sequence of characters) that will overwrite the existing text of the leaf
 
 ---
 
-## Exercise
+## Exercise: alerts
 
 Work inside the `<script>` tag to add JS instructions, separated by `;`
 
@@ -102,179 +98,6 @@ document.getElementById("demo").style.color = "blue"
 ```js
 alert('The title has been changed!') 
 ```
-
----
-
-## With images
-
-<img id="myImage" src="./imgs/html-requires-js.jpg" width="200" alt="An image goes here">
-
-Place in page then change the file
-
-
----
-
-![](https://upload.wikimedia.org/wikipedia/commons/5/5a/DOM-model.svg)
-
-- *DOM methods allow programmatic access to the tree*
-
-- *with them, one can change the structure, style or content of a document*
-
-
-# JS basics
-
----
-
-## Variables
-
-A JS variable is a symbolic name for some content, the *value,* that is kept in memory
-
-In spreadsheets, cells are variables
-
-![](./imgs/quiz-data.png)
-
-`B2 = 35` is a variable with name `B2`, content `35` and type `int`
-
-
-# Functions
-
-![](./imgs/function-as-blackbox.png)
-
-
----
-
-Functions are a key abstraction to model nature and processes
-
-a regular input/output or cause/effect behaviour is identified and *given a name*
-
-```text
-The higher the temperature the quicker pizza cooks.
-
-Cooking time is a function of the temperature in the oven.
-```
-
-
----
-
-## Functions in coding
-
-A function is a block of code (instructions) that 
-
-- has a clear input/output definition and 
-
-- executes in a separated environment
-
-Spreadsheets: `B4 = (B2 + B3)/2` is a function
-
-
----
-
-```js
-/* Convert Italian exam marks into percentages */
-function marks2pc(marks) {
-
-  let converted = (marks / 30) * 100
-
-  // Math.round() is a 'foreign' function that rounds up 50.65 --> 51 etc.
-  let pc = Math.round(converted);
-
-  return pc;
-} 
-```
-
-`marks` is a *parameter* of the f.
-
-`pc` is the *return value* of the f.
-
----
-
-## Observations
-
-Functions only run when they are called ('invoked') within a code in execution
-
-```js
-/* convert and show on the page the UK version of the Webcomm marks */
-let my_marks = 27;
-
-let uk_marks = marks2pc(my_marks);
-
-document.getElementById("convertedMarks").innerHTML = uk_marks;
-```
-
-
----
-
-
-## Iteration (for later)
-
-```js
-/* convert and show on the page the UK version of the marks */
-for (const m of my_italian_exam_marks){
-  let uk_marks = marks2pc(m);
-  console.log(uK_marks)
-}
-```
-
-Copy and run it on [pythontutor.com](https://pythontutor.com/)
-
-Instructions `console.log()` and `window.alert()` are simple ways to print out results. 
-
-
----
-
-## Observations
-
-Functions should be defined every time a block of code is required to appear more than once: 
-
-- improve readability
-
-- improve maintainance
-
-JS is probably the hardest programming language for learners :flushed:
-
-
-# Code pages with JS
-
----
-
-An image is shown in the page, right above a button
-
-If the user presses the button, an internal Javascript code is executed
-
-The code alters the leaf of the DOM tree that contains the name of the file containing the image
-
-A different image is now shown
-
-```html
-<img id="myImage" src=".mypicture.jpg" width="200" alt="An image">
-
-<p>
-  <button type="button" onclick="myFunc('summer')">Verano</button>
-  ...
-```
-
-Button come with a *listener:* ``onclick`` is an event: 
-
-see [the complete list](https://www.w3schools.com/jsref/dom_obj_event.asp) of events.
-
-
----
-
-```html
-<img id="myImage" src="./imgs/winter.jpg" width="200" alt="An image">
-
-<button type="button" onclick="myFunc('summer')">Verano</button>
-```
-
-* ``myImage`` should be a unique identifier
-  
-* ``./imgs/winter.jpg`` must be linked properly wrt. the position of the HTML file
-
-* ``myFunc()`` is a function we defined in a ``<script>`` element or in a separate ``.js`` file
-
-* it is called with a parameter which is a string ``myFunc('summer')``
-
-if any of this is not set up properly then the browser won't execute the code
 
 ---
 
@@ -301,8 +124,10 @@ Chromium: [Ctrl + Shift + j](https://developers.google.com/web/tools/chrome-devt
 
 ---
 
-## For home
+## Exercise
 
-Analise the [WaterCSS](https://watercss.netlify.app/) CSS generator.
+Analise and deploy the [WaterCSS](https://watercss.netlify.app/) CSS generator.
 
-Use [Markdown](https://gist.github.com/cuonggt/9b7d08a597b167299f0d) to format your instructions.
+#### for home:
+
+Familiarise with [Markdown](https://gist.github.com/cuonggt/9b7d08a597b167299f0d) 
