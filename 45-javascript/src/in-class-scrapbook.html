@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Bulb+JS example</title>
+    <link href="./styles/mystyle.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <h1>My Second JavaScript (JS) page</h1>
+
+    <p id="myPara">Here, a JavaScript changes the value of the src (source) attribute of an image.</p>
+
+    <script>
+        function changeBackground(choice) {
+            // this code is only executed when invoked 
+            // by some HTML event such as onclick 
+            // variable choice contains a string 'sent' 
+            // by the invocation on line 30 or 32.
+            if (choice == 'lighter') {
+
+                // we change the HTML of myImage 
+                // and re-assign the file where the image sits.
+                document.getElementById('myPara').style = "color: azure; font-size: 30px; background-color="#F0FFFF" "
+            } else {
+
+                // for all other seasons we assign winter
+                document.getElementById('myPara').style = "color: darkblue;  font-size: 30px; background-color="#00008B" "
+            }
+
+        }
+    </script>
+
+    <img id="myImage" src="./imgs/html-requires-js.jpg" width="200" alt="An image goes here">
+
+    <p id="glass">
+        <button type="button" onclick="changeBackground('lighter')">Lighter text</button>
+
+        <button type="button" onclick="changeBackground('darker')">Darker text</button>
+    </p>
+
+    <p>Click on the buttons to change the image <b>and</b> the page organisation as images of diffrent size are shown.</p>
+
+</body>
+
+</html>

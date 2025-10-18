@@ -210,6 +210,19 @@ ale66
 </div>
 
 </section>
+<section class="slide level2">
+
+
+mermaid.initialize({
+    startOnLoad: true,
+    theme: 'default',
+    flowchart: {
+        useMaxWidth: true,
+        htmlLabels: true,
+        padding: 20
+    }
+});
+</section>
 <section>
 <section id="javascript" class="title-slide slide level1 center">
 <h1>Javascript</h1>
@@ -364,12 +377,12 @@ ale66
 <h1>A step back: the basics</h1>
 
 </section>
-<section id="variables" class="slide level2">
-<h2>Variables</h2>
-<p>A JS variable is a symbolic name for some content, the <em>value,</em> that is kept in memory</p>
+<section id="js-variables" class="slide level2">
+<h2>JS Variables</h2>
+<p>A JS variable is a symbolic name for some content, the <em>value,</em> that is kept in the browser’s (volatile) memory</p>
 <p>In spreadsheets, cells are variables</p>
 
-<img data-src="./imgs/quiz-data.png" class="r-stretch"><p><code>B2 = 35</code> is a variable with name <code>B2</code>, content <code>35</code> and type <code>int</code></p>
+<img data-src="./imgs/quiz-data.png" class="r-stretch"><p><code>B2 = 32</code> is a variable with name <code>B2</code>, content <code>32</code> and type <code>int</code></p>
 </section>
 <section id="data-types" class="slide level2">
 <h2>Data Types</h2>
@@ -379,7 +392,7 @@ ale66
 <p></p><figure class=""><p></p>
 <div>
 <pre class="mermaid mermaid-js">graph TD
-    A[JS] --&gt; B[Primitive]
+    A[JS  ] --&gt; B[Primitive]
     A --&gt; C[Object]
     
     B --&gt; D[String]

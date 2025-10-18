@@ -9,11 +9,13 @@ format:
     chalkboard: 
       boardmarker-width: 2
     mermaid: 
+      theme: neutral
       echo: false
 from: markdown+emoji
 execute:
   echo: true
 ---
+
 
 # Javascript
 
@@ -161,16 +163,16 @@ notice `;` as line terminator
 
 ---
 
-## Variables
+## JS Variables
 
-A JS variable is a symbolic name for some content, the *value,* that is kept in memory
+A JS variable is a symbolic name for some content, the *value,* that is kept in the browser's (volatile) memory
 
 In spreadsheets, cells are variables
 
 ![](./imgs/quiz-data.png)
 
-`B2 = 35` is a variable with name `B2`, content `35` and type `int`
-
+`B2 = 32` is a variable with name `B2`, content `32` and type `int`
+ 
 ---
 
 ## Data Types
@@ -178,7 +180,7 @@ In spreadsheets, cells are variables
 ```{mermaid}
 %%| echo: false
 graph TD
-    A[JS] --> B[Primitive]
+    A[JS  ] --> B[Primitive]
     A --> C[Object]
     
     B --> D[String]

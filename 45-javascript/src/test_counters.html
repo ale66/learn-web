@@ -1,0 +1,35 @@
+<html>
+
+<head></head>
+
+<body>
+    <h1>Count: <span id="count">0</span></h1>
+    <button onclick="increment()">Increment</button>
+    <button onclick="decrement()">Decrement</button>
+    <button onclick="reset()">Reset</button>
+
+    <script>
+        let count = 120;
+
+        function increment() {
+            count++;
+            updateDisplay();
+        }
+
+        function decrement() {
+            count--;
+            updateDisplay();
+        }
+
+        function reset() {
+            count = 0;
+            updateDisplay();
+        }
+
+        function updateDisplay() {
+            document.getElementById('count').textContent = count;
+        }
+    </script>
+</body>
+
+</html>

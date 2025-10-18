@@ -8,7 +8,7 @@ p {
 .myheroimage{
     width: 100vw;
     height: 150vh;
-    background-image: url(./imgs/torrevelasca-cropped.jpg);
+    background-image: url(../imgs/torrevelasca-cropped.jpg);
     background-position: top center;
     background-size: cover;
 }
@@ -40,7 +40,7 @@ p {
 .myherofooter {
     width: 100vw;
     height:100vh;
-    background-image: url(./imgs/sc_pol-10-cropped.jpg);
+    background-image: url(../imgs/sc_pol-10-cropped.jpg);
     background-position: bottom center;
     background-size: cover;
 }
