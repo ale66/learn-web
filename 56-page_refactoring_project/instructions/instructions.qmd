@@ -8,6 +8,24 @@ format:
     preview-links: auto
     chalkboard: 
       boardmarker-width: 2
+  pdf:
+    documentclass: article
+    papersize: a4
+    geometry:
+      - margin=1in
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    colorlinks: true
+    keep-tex: false
+    fontsize: 12pt
+    linestretch: 1.15
+    fig-pos: 'H'  # Keep figures in place
+    include-in-header:
+      text: |
+        \usepackage{fancyhdr}
+        \pagestyle{fancy}
+  
 from: markdown+emoji
 execute:
   echo: true

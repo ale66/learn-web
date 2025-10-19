@@ -9,27 +9,28 @@
 
     <button onclick="checkAge()">Check</button>
 
+    <!-- at the begining the paragraph is empty and de facto INVISIBLE -->
     <p id="result_para"></p>
 
     <script>
         function checkAge() {
             const age = parseInt(document.getElementById('ageInput').value);
-            const result = document.getElementById('result_para');
+            const my_output_area = document.getElementById('result_para');
 
             if (age === '') {
-                result.textContent = 'Please enter your age';
+                my_output_area.textContent = 'Please enter your age';
                 // program a behaviour here...
                 alert('please enter a number in the input area before pressing the button!')
 
             } else if (age < 13) {
-                result.textContent = 'You are a child';
+                my_output_area.textContent = 'You are a child';
                 document.body.style.backgroundColor = 'pink';
                 // program a behavious here...
             } else if (age < 18) {
-                result.textContent = 'You are a teenager';
+                my_output_area.textContent = 'You are a teenager';
             } else {
-                result.textContent = 'You are an adult';
-                result.style = 'background-color: blue;'
+                my_output_area.textContent = 'You are an adult';
+                my_output_area.style.backgroundColor = 'blue';
                 // more bells and whistles here...
             }
         }
