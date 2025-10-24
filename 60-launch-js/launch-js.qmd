@@ -7,7 +7,7 @@ format:
     theme: [moon]
     preview-links: auto
     chalkboard: 
-      boardmarker-width: 3
+      boardmarker-width: 2
     mermaid:
       theme: forest
       fontSize: 12
@@ -47,10 +47,39 @@ Element `demo` could be an `h1` or a `p` or a `div` etc.
 ## Change style
 
 ```js
-document.getElementById('myPara').style = "font-size: 30px;"
+document.getElementById('myPara').style.fontSize = "30px";
 ```
 
 Now text is bigger
+
+---
+
+## Redefine elements of the page with JS
+
+```js
+const my_restyled_para = document.getElementById('myPara');
+
+my_restyled_para.textContent = "My third JS experimen!"
+
+my_restyled_para.style.fontSize = "30px";
+```
+
+use the VS Code command-completion facility to know what parameters are available
+
+---
+
+```js
+document.getElementById("demo").textContent = 'My 2nd JS experiment';
+```
+
+only changes text, no HTML
+
+
+```js
+document.getElementById("demo").innerHTML = 'My 2nd JS <it>experiment</it>';
+```
+
+Can insert HTML and force a re-rendering of the page
 
 ---
 
@@ -66,6 +95,10 @@ As season change, we change the images.
 ```js
 document.getElementById('myImage').src = "./imgs/summer.jpg"
 ```
+Important: the new file must be reachable from the page, or we will spoil the existing rendering
+
+![](./imgs/summer.jpg)
+
 
 
 # JS controls the page
@@ -86,9 +119,6 @@ we apply function `func()` to the whole document
 The browser will run `func()` when encounters it in the process of rendering the page or of running a JS function call
 
 
-
-
-
 ## JS page activation
 
 
@@ -97,7 +127,6 @@ JS code can change a hidden parameter, common to all tags, that controls *visibi
 Hence, we control which parts are shown at each stage of the visit
 
 An extreme case: `document.write()` will wipe out the page and rewrite it from scratch; changes are irreversible
-
 
 ---
 
@@ -115,16 +144,10 @@ when the behaviour differs from expected, we can execute step-by-step and check 
 
 here `window`, `window.document` and `document` are interchangeable
 
-
----
-
-## More document-level functions
-
-[w3schools](https://www.w3schools.com/jsref/dom_obj_document.asp).
+For reference: document-level functions at [w3schools](https://www.w3schools.com/jsref/dom_obj_document.asp)
 
 
 #  Starting JS
-
 
 ---
 
@@ -164,7 +187,11 @@ a short list of commands, separated by `;` cna be placed almost everywhere
 
 please the [w3schools.com/js/js_whereto.asp](https://www.w3schools.com/js/js_whereto.asp)
 
-We will study JS by writing functions on a `code.js` file to be place locally to the web page
+Cleanest solution: 
+
+- put JS functions inside .js files
+
+- keep those in a local folder called, e.g., `JS` of `Scrips`  
 
 
 # A platform for learning
@@ -192,20 +219,7 @@ Firefox: [Ctrl + Shift + k](https://developer.mozilla.org/en-US/docs/Tools/Web_C
 Chromium: [Ctrl + Shift + j](https://developers.google.com/web/tools/chrome-devtools/console)
 
 
----
-
-## For home
-
-Analise the [WaterCSS](https://watercss.netlify.app/) CSS generator.
-
-Use [Markdown](https://gist.github.com/cuonggt/9b7d08a597b167299f0d) to format your instructions.
-
-
-Please do not watch YouTube videos as learning suffers as a result
-
-
 # Challenge
-
 
 ---
 
@@ -222,9 +236,12 @@ Thanks to the DOM we can write a 1-line function then invoke it in the `<script>
 
 ## Exercise:  
 
-MA COM is outsourced to the new *University of San Babila*
+MA COM is outsourced to the new *University of S. Babila*
 
 __Challenge:__ can you change all the links in a page from the base ``www.unimi.it`` to ``www.unibabila.it``?
+
+![](./src/imgs/homework2final.png)
+
 
 ---
 
@@ -243,4 +260,30 @@ to get ready for the challenge cover the following units first:
 
 requires handling a __collection__ of HTML elements.
 Proceed if you are familiar with lists or arrays in any programming language.
+
+---
+
+## Further topics
+
+Analise the [WaterCSS](https://watercss.netlify.app/) CSS generator.
+
+Use [Markdown](https://gist.github.com/cuonggt/9b7d08a597b167299f0d) to format your instructions.
+
+
+## A note about learning
+
+Please do not 
+
+- watch YouTube videos as they might slow down/comfuse/hinder your learning
+
+- prompt ChatGPT and similar as you (probably) won't learn anything
+
+. . .
+
+Please do use *active learning* web sites such as 
+
+- [wdpg.io]()
+- [w3schools.com/html](https://www.w3schools.com/html/default.asp) 
+- [w3schools.com/css](https://www.w3schools.com/css/default.asp) 
+- [w3schools.com/js](https://www.w3schools.com/js/default.asp) 
 

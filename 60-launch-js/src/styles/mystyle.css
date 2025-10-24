@@ -1,0 +1,95 @@
+p {
+    text-indent: 12pt;
+    color: darksalmon;
+    text-align-last: left;
+    font-variant: serif;
+}
+
+.myheroimage{
+    width: 100vw;
+    height: 150vh;
+    background-image: url(../imgs/torrevelasca-cropped.jpg);
+    background-position: top center;
+    background-size: cover;
+}
+
+.myherotitle{
+    text-indent: 12pt;
+    color:darksalmon;
+    font-size: 4em; /* four times as big as baseline text */
+    font-variant: serif;
+}
+
+/* new, adventorous style */
+
+.hero-left{
+    text-justify: right;
+    text-indent: 12pt;
+    color:darksalmon;
+    font-size: 4em; /* four times as big as baseline text */
+    font-variant: serif;
+}
+
+.p-official{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Logo_Universit%C3%A0_degli_Studi_di_Milano.svg/1024px-Logo_Universit%C3%A0_degli_Studi_di_Milano.svg.png)
+    /* TODO: manage size */
+}
+
+
+/* deploy it only if you like it! */
+.myherofooter {
+    width: 100vw;
+    height:100vh;
+    background-image: url(../imgs/sc_pol-10-cropped.jpg);
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.mycenteredimgs {
+    background-position: center center;
+    background-color: lightblue;
+}
+
+
+
+
+
+/* imported from 
+https://webdesignplayground.io/lessons/8-1-1/
+*/
+
+.toc {
+    float: left;
+    margin-left: 0em;
+    margin-bottom: 1em;
+    margin-bottom: 2em;
+    width: 30%;
+    padding: .5em;
+    background-color: darksalmon;
+    color: #f8f8f8;
+}
+
+.toc h3 {
+    margin-bottom: .5em;
+    letter-spacing: .05em;
+    text-align: center;
+}
+
+.toc div {
+    padding-left: 1em;
+    font-size: 1em;
+    font-weight: 500; 
+}
+/* end imported part */
+
+.toc p {
+    text-align: left;
+    padding-left: 1em;
+    font-size: 1em;
+    font-weight: 500; 
+    color: #f8f8f8;
+}
+
+.toc a {
+    text-emphasis-color: #f8f8f8;
+}
