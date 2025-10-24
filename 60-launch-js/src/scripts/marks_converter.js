@@ -1,16 +1,3 @@
-/* The 'change title' exercise here */
-
-let big_title = document.getElementById("demo").textContent;
-
-// remove when finished
-alert(big_title);
-// alternatively
-console.log(big_title);
-
-// now put that content to the new title
-document.title = big_title;
-
-
 /* Convert Italian exam marks into percentages */
 function pc2marks(marks) {
 
@@ -20,8 +7,38 @@ function pc2marks(marks) {
     let pc = Math.round(converted);
   
     return pc;
-  } 
-  
+} 
+
+
+function react() {
+
+    var it_marks = document.getElementById("marksSelector").value;
+
+    conv = pc2marks(it_marks);
+    
+    console.log(conv)
+
+    // notice that '+' here means concatenation
+    document.getElementById("output_area").innerHTML = "This is your equiv.UK marks: " + conv;  
+    
+    if (conv == 100) {
+
+        console.log('We have a winner!')
+
+        alert('Congratulations!');
+
+        // this only works if at execution time 'body' is completed
+        // try giving it ex post from the console
+        document.body.style.background = 'red';
+    } else {
+        console.log('go back to default page')
+        // the new value is below 30: go back to (or remain in) a normal background
+        document.body.style.background = 'white';
+    }
+}
+
+
+
 /* THE PART BELOW IS FOR STUDYING THE FUNCTION 
   ON PYTHONTUTOR.COM
 */
@@ -38,9 +55,3 @@ for (const m of my_uk_exam_marks){
   }
 */
 
-
-var it_marks = document.getElementById("pull_down_marks").value;
-
-conv = pc2marks(it_marks);
-
-document.getElementById("output_area").innerHTML = conv; 

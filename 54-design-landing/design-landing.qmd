@@ -70,8 +70,16 @@ Apply the color scheme consistently across your site.
 
 ![](./images/10-color-scheme-2.png)
 
-Idea: continue colors seen in an important picture for your thesis, one which is likely to become the *hero picture.*
+For project on the real COM page: keep the blue
+For project on the class page: try coming up with a new 3-way color scheme 
 
+---
+
+## Example
+
+Going from picture (or content) to the color scheme may be an art after all
+
+Consider preparing info pages that survey contemporary French Philosophy and its main authors
 
 ---
 

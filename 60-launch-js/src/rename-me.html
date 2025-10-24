@@ -10,36 +10,47 @@
     </head>
     <!-- --------------------------------------------------------------- -->
     <body>
-        <div id="fixed_part">
-            <h3>This page is a vessel for experimenting JS functions that alter page</h3>
+        <span id="fixed-text">A scrap page for experimenting JS functions that alter the page dynamically.
+        
+        <br />
+        Please read file <a href="./scripts/marks_converter.js">./scripts/marks_converter.js</a> to understand how marks
+            conversion is done by JS.
+        
+        <br />
+        Please put your JS attempts into file <a href="./scripts/myscripts.js">./js/myscripts.js</a>
+        </span>
 
-            <h5>Please put your JS functions into file <a href="./js/myscripts.js">./js/myscripts.js</a></h5>
-        </div>
-
-        <!-- off we go! -->
+        <!-- here we go! -->
         <div id="experimental">
             <p>
-                <h3 id="demo" class="myherotitle">A h3 of <i>id = "demo"</i> and </i> class <i>myherotitle</i></h3>
+                <h3 id="demo" class="myherotitle">A h3 of <i>id = "demo"</i> and class <i>myherotitle</i></h3>
 
                 <h4 id="h4-a" class="smalltitle">A title of class <i>smalltitle</i></h4>
 
                 <h4 id="h4-b" class="smalltitle">Another title of class <i>smalltitle</i></h4>
 
-                <label for="marks">What's your UK marks in Webcomm?</label>
-                <select name="marks" id="pull_down_marks">
+                <label for="marksSelector">What's your UK marks in Webcomm?</label>
+                <select name="marks" id="marksSelector">
                     <option value="27">27</option>
                     <option value="28">28</option>
                     <option value="29">29</option>
                     <option value="30">30</option>
                 </select>
             </p>
+
             <!-- Continue here with a framed box -->
-            <div class="isolated"> 
+            <div class="isolated" style="background-color: lightblue;"> 
                 <p id="output_area"></p>
             </div>
         </div>
 
-        <script src="./js/marks_converter.js"></script>
-
+        <script src="./scripts/marks_converter.js"></script>
+        
+        <script>
+            //'change' is managed by the browser;
+            // every time the selected value changes, it invokes the 'react' function
+            // notice the lack of parentheses for react: tricky setup! 
+            document.getElementById('marksSelector').addEventListener('change', react);
+        </script>
     </body>
 </html>
