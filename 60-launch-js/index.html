@@ -366,6 +366,35 @@ ale66
 <p>to get ready for the challenge cover the following units first:</p>
 <p><a href="https://www.w3schools.com/jsref/met_document_getelementbyid.asp">getElementById()</a></p>
 <p><a href="https://www.w3schools.com/jsref/coll_doc_links.asp">links()</a></p>
+</section></section>
+<section>
+<section id="listeners" class="title-slide slide level1 center">
+<h1>Listeners</h1>
+
+</section>
+<section id="user-actions-trigger-js-reactions" class="slide level2">
+<h2>User actions trigger JS reactions</h2>
+<p>There is a set of advanced HTML tags that are for user interaction:</p>
+<ul>
+<li>bottom</li>
+<li>input fields</li>
+<li>forms</li>
+<li>pull-down menus</li>
+<li>lists (see example in this section)</li>
+</ul>
+<p>User interaction on any of these can be connected to invocation of a JS function</p>
+<p>In principle, all DOM objects can be decorated with a <em>listener</em></p>
+</section>
+<section id="listeners-1" class="slide level2">
+<h2>Listeners</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb10-1"><a href=""></a><span class="op">&lt;</span>script<span class="op">&gt;</span></span>
+<span id="cb10-2"><a href=""></a>    <span class="co">//'change' is managed by the browser;</span></span>
+<span id="cb10-3"><a href=""></a>    <span class="co">// every time the selected value changes, it invokes the 'react' function</span></span>
+<span id="cb10-4"><a href=""></a>    <span class="co">// notice the lack of parentheses for react: tricky setup! </span></span>
+<span id="cb10-5"><a href=""></a>    <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'marksSelector'</span>)<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'change'</span><span class="op">,</span> react)<span class="op">;</span></span>
+<span id="cb10-6"><a href=""></a><span class="op">&lt;/</span>script<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>change</code> is the event that triggers execution of function <code>react()</code>, here without <code>()</code></p>
+<p>Other notable events are <code>click</code>, <code>mouseover</code>…</p>
 </section>
 <section id="advanced" class="slide level2">
 <h2>Advanced:</h2>

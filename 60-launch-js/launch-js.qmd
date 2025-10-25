@@ -252,6 +252,43 @@ to get ready for the challenge cover the following units first:
 [links()](https://www.w3schools.com/jsref/coll_doc_links.asp)
 
 
+# Listeners
+
+---
+
+## User actions trigger JS reactions
+
+There is a set of advanced HTML tags that are for user interaction:
+
+- bottom
+- input fields
+- forms
+- pull-down menus
+- lists (see example in this section)
+  
+User interaction on any of these can be connected to invocation of a JS function
+
+In principle, all DOM objects can be decorated with a *listener*
+
+---
+
+## Listeners
+
+```js
+<script>
+    //'change' is managed by the browser;
+    // every time the selected value changes, it invokes the 'react' function
+    // notice the lack of parentheses for react: tricky setup! 
+    document.getElementById('marksSelector').addEventListener('change', react);
+</script>
+```
+
+`change` is the event that triggers execution of function `react()`, here without `()`
+
+Other notable events are `click`, `mouseover`...
+
+
+
 ---
 
 ## Advanced:
