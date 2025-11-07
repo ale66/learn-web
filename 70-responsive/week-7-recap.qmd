@@ -1,0 +1,86 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 2
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Recap
+
+---
+
+## Concepts, a
+
+The flexbox approach, ch. 12 of the textbook
+
+- sees the page as a collection of *blocks* containing text, AV etc.
+
+- CSS styles determine how the blocks are shown in the page
+
+- essential ingredient: `display: flex`
+
+![](./imgs/12-basic-centering.png)
+
+
+---
+
+## Concepts, b
+
+Thw WaterCSS online CSS
+
+include it from a *CDN*
+
+
+---
+
+## Concepts, c
+
+Javascript functions can change all aspects of the page at runtime
+
+Two ways to embed JS into HTML:
+
+- a: direct embedding
+
+```html
+<div>
+  <script>console.log("I'm at the beginning of Ch. 4. Users won't see this message")</script>
+
+  <h2>Chapter 4</h2>
+  ...
+</div>
+```
+
+---
+
+- b: *listeners* capture user behaviour and launch JS functions to react
+
+```html
+ <button type="button" onclick="changeSeason('summer')">Verano</button>
+```
+
+we define the JS function in a separated file, e.g., `./scripts/myfunctions.js`
+
+Event `onclick` is one of an handful of event types that can be listened to, e.g. `dblclick`, `mouseover`...
+
+Listeners can be added dynamically:
+
+```js
+element.addEventListener('submit', function() {console.log('the form has been submitted')
+                        });
+```
+
+## Concepts, d
+
+Javascript allows iteration over collections of values, called lists
+
+
+
+
