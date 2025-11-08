@@ -7,7 +7,7 @@ format:
     theme: [moon]
     preview-links: auto
     chalkboard: 
-      boardmarker-width: 3
+      boardmarker-width: 32
     mermaid:
       theme: dark
       fontSize: 12
@@ -36,9 +36,7 @@ The simple `flexbox` option in the CSS make boxes *responsive*
 
 ---
 
-## The basic setup
-
-in the CSS:
+## The basic setup: CSS
 
 ```css
 * {
@@ -46,49 +44,71 @@ in the CSS:
 }
 ```
 
-in the HTML  `<head>`:
+it applies to *all elements*
+
+boxes are forced in their assigned dimension, which thus remain fixed
+
+---
+
+## The basic setup: HTML
 
 ```html
-<meta name="viewport" 
-      content="width=device-width, initial-scale = 1.0">
+<head>
+  <meta name = "viewport"
+        content = "width=device-width, initial-scale=1.0">
+  ...
+</head>    
 ```
 
-Thanks to these we can set dimensions as percentages.
+Thanks to these we can set dimensions as percentages
 
-Fix max (or min) dimension and let the browser adjust the rest.
+Fix max (or min) dimension and let the browser adjust the rest
 
+Default: circa 980px, a desktop screen. So on smaller screens everything would look tiny
+
+---
+
+Example: 200 or 250?
+
+```css
+div {
+  width: 200px;
+  padding: 20px;
+   border: 5px solid black;
+}
+```
+
+without `border-box`, it's 250...
+
+. . .
+
+```css
+div {
+  width: 50%; 
+  padding: 20px; 
+  border: 5px solid black;
+}
+```
+
+will always take up half of the screen, whatever the padding
 
 ---
 
 ## Media queries, 1
 
 ```css
-/* don't normally show quotations */
+/* don't normally show these elements */
 .quotation {
     display: none;
     padding-right: 1.67%;
 }
 ```
-
 
 ---
 
 ## Media queries, 2
 
-Don't normally show the element:
-
-```css
-/* don't normally show quotations */
-.quotation {
-    display: none;
-    padding-right: 1.67%;
-}
-```
-
-
----
-
-On wide screens start showing it:
+On wide screens start showing them:
 
 ```css
 @media (min-width: 750px) {
@@ -201,7 +221,7 @@ May create professional-looking, responsive pages
 
 Best for corporate sites with images in a database etc.
 
-Implementation is well-known to be flaky.
+Implementation is well-known to be error-prone.
 
 
 ---
@@ -222,6 +242,24 @@ work on [exercise 14-2](https://webdesignplayground.io/lessons/14-2-0)
 
 What if font sizes change to adapt to viewport size?
 
+---
+
+## Relative units
+
+`rem:` *relative* units of measure
+
+```css
+html {
+  font-size: 20px;
+}
+```
+
+Now 1rem=20px, 1.5em=30px and so on *for the whole page*
+
+By default, browers set `font-size: 16px;` so 1rem = 16px
+
+Vice versa, `em` is relative to the font size in the specific *container* we're in, not the whole document
+
 
 ---
 
@@ -229,7 +267,7 @@ What if font sizes change to adapt to viewport size?
 
 ![](./imgs/14-fonts-b.png)
 
-`rem:` *relative* units of measure
+
 
 ---
 

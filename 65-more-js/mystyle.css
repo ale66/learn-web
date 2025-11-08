@@ -10,7 +10,22 @@ div {
     background-color: white;
 }
 
-.myDiv {
+/*
+
+*/
+.instructions {
+    background-color: black;
+    color: greenyellow;
+    font-variant: small-caps;
+    font-size:smaller;
+    margin: 0 auto;
+    padding: 10px;
+    /* change to none to switch them off 
+    */
+    display: block;
+}
+
+.area {
     background-color: antiquewhite;
 }
 
@@ -21,26 +36,23 @@ p {
 }
 
 img {
-    max-width: 100%;
+    display: block;
+    /* 
+    center as needed, auto auto is also possible
+    */
+    margin: 0 auto;
+    padding: 20px;
+
+    background-color: #f0f0f0;
+
+    max-width: 80%;
     height: auto;
 }
 
-.myheroimage{
-    width: 100vw;
-    height: 150vh;
-    background-image: url(./imgs/torrevelasca.jpg);
-    background-position: top center;
-    background-size: cover;
-}
 
-.myherotitle{
-    text-indent: 12pt;
-    color:darksalmon;
-    font-size: 4em; /* four times as big as baseline text */
-    font-variant: serif;
-}
-
-/* new, adventorous style */
+/* 
+New style to be tested 
+*/
 
 .fixed_part p {
     text-indent: 12pt;
@@ -62,3 +74,23 @@ img {
     font-size: 2em; 
     font-variant: serif;
 }
+
+/* 
+Old part, reuse as needed
+ */
+
+ .myheroimage {
+     width: 100vw;
+     height: 150vh;
+     background-image: url(./imgs/torrevelasca.jpg);
+     background-position: top center;
+     background-size: cover;
+ }
+
+ .myherotitle {
+     text-indent: 12pt;
+     color: darksalmon;
+     font-size: 4em;
+     /* four times as big as baseline text */
+     font-variant: serif;
+ }

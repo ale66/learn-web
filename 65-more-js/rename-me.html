@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Bulb+JS example</title>
+    <title>Conditional execution in JS</title>
     
     <meta name="viewport" 
       content="width=device-width, initial-scale = 1.0">
@@ -13,6 +13,33 @@
 </head>
 
 <body>
+    <div class="instructions">
+        <h3>Instructions: read me then stop displaying (how?)</h3>
+        <ul>
+            <li>
+                this page should always look up to date with the fashion season                
+            </li>
+            <li>
+                study and run the JS embedded code; use <code>console.log(...)</code> to follow what JS is doing and to reveal the content of variables
+            </li>
+            <li>
+                your new image and style should take effect when clicking on the buttons
+            </li>
+            <li>
+                uncomment the two JS lines that set the month to April then check how your SS style looks
+            </li>
+            <li>
+                for the SS change the picture and the link to point to this link:
+                <a href="https://wwd.com/runway/spring-couture-2025/paris/armani-prive/review/">GA-SS-25</a>
+            </li>
+            <li>
+                also change the color padding around the Armani picture: for AW try to match the blue background 
+            </li>
+            <li>
+                also change the color padding around the Armani picture: for AW try matching the blue background
+            </li>
+        </ul>
+    </div>
 
     <h1>Conditional execution in JavaScript</h1>
 
@@ -32,7 +59,7 @@
             /* for verification, remove later */
             console.log('We are in month ' + month)
 
-            // true in April-September
+            // this condition will betrue from April (month 3) to September (month 8)
             if (month> 2 && month < 9) {
 
                 document.getElementById('myImage').src = "./imgs/summer.jpg";
@@ -78,7 +105,7 @@
         }
     </script>
 
-    <div class="myDiv" id="myDiv">
+    <div class="area" id="buttonsArea">
 
         <img id="myImage" src="./imgs/html-requires-js.jpg" width="200" alt="An image goes here">
 
@@ -89,6 +116,17 @@
         </p>
 
         <p>Click on the buttons to test your code.</p>
+    </div>
+
+    <div class="area" id="armaniArea">
+        <p>
+            Check out the <a id="currentArmani" href="https://wwd.com/fashion-news/shows-reviews/gallery/giorgio-armani-fall-2025-ready-to-wear-collection-1237011028/">current Armani collection</a>
+
+            <img id="armaniImage" 
+                src="https://wwd.com/wp-content/uploads/2025/03/giorgio-armani-fall-25-rtw-r-gg-001.jpeg?w=800" 
+                alt="if you read this check your tracking protection; for Firefox it's at about:preferences#privacy" 
+                width="50%">
+        </p>
     </div>
 </body>
 
