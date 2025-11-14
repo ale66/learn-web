@@ -1,0 +1,155 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 2
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Recap
+
+---
+
+## Concepts, a
+
+The responsive approach, ch. 13/14 of the textbook
+
+- sees the page as a collection of *fixed blocks* containing text, AV etc.
+
+- now the size of the physical display matters: smartphone, tablet, laptop or desktop?
+
+---
+
+## the setpup
+
+CSS:
+
+```css
+* {
+  box-sizing: border-box;
+}
+```
+
+HTML
+
+```html
+<head>
+  <meta name = "viewport"
+        content = "width=device-width, initial-scale=1.0">
+  ...
+</head>    
+```
+
+## Concepts, b
+
+The responsive approach, ch. 14 of the textbook
+
+- sees the page as a collection of *fixed blocks* containing text, AV etc.
+
+- now the size of the physical display matters: smartphone, tablet, laptop or desktop?
+
+- blocks are indexed to the display size: 50%, 60% etc.
+
+```css
+div {
+  width: 50%; 
+  padding: 20px; 
+  border: 5px solid black;
+}
+```
+
+## Concepts, 3
+
+The responsive approach, ch. 13/14 of the textbook
+
+- sees the page as a collection of *fixed blocks* containing text, AV etc.
+
+- now the size of the physical display matters: smartphone, tablet, laptop or desktop?
+
+- blocks are indexed to the display size: 50%, 60% etc.
+
+- CSS scales blocks to actual sizes
+  
+- menus and block may appear/disappear or be staked up differently
+
+---
+
+## The magician, a
+
+```css
+/* don't normally show these elements */
+.quotation {
+    display: none;
+    padding-right: 1.67%;
+}
+```
+
+
+---
+
+## The magician, b
+
+Media queries change the CSS at runtime to adapt it to the display
+
+```css
+/* don't normally show these elements */
+.quotation {
+    display: none;
+    padding-right: 1.67%;
+}
+```
+
+```css
+@media (min-width: 750px) {
+    /* ok, it's a big screen: 
+       show quotations */
+    .quotation {
+        display: block;
+    }
+}
+```
+
+
+---
+
+## Consequences for images
+
+Images might be zoomed in or out
+
+zooming can be blocked
+
+```css
+img {
+    max-width: 100%;
+    height: auto;
+}
+```
+
+When image quality matters, it's better to have 3/4 versions of the same image at different resolution and aspect ratio
+
+
+---
+
+## Consequences for text
+
+Fixed text, expressed in `px`, is going to clash with the boxes (see example)
+
+Relative font size, `rem` is the way
+
+However, all visible boxes should also be made relative:
+
+we end up with a CSS full of `%` symbols and no `px`
+
+--- 
+
+A bit labour-intensive
+Take 10 minutes to work on 
+
+[exercise 14-4](https://webdesignplayground.io/lessons/14-4-0)

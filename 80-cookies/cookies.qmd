@@ -136,11 +136,13 @@ Example: Crome on Win10:
 
 ### In-class work
 
-Design user profiling for your graduation project info web page:
+Design user profiling for your MA COM refactoring page:
 
 - ask one or more questions using buttons
 
 - record choices/preferences in cookies.
+
+- on second visit we shall salute them with their name and invited them to enroll!
 
 
 # Case study
