@@ -12,6 +12,8 @@ function setCookie(cookie_name, cookie_value, cookie_validity_in_days) {
   let expires = "expires=" + d.toUTCString();
     
   document.cookie = cookie_name + "=" + cookie_value + ";" + expires + ";path=/";
+
+  console.log("ok, I'm setting:", cookie_name, "=", cookie_value);
 }
   
 function getCookie(cname) {
@@ -46,32 +48,34 @@ function getCookie(cname) {
 }
   
 
-  function checkCookie() {
-    /* if the username exists already inside the cookie 
-        then salute the returning user
-    */
+function checkCookie() {
+  /* if the username exists already inside the cookie 
+      then salute the returning user
+  */
 
-    // is there a cookie already?
-    let user = getCookie("username");
+  console.log("Now, the available cookies are:", document.cookie);
 
-    if (user != "") {
+  // is there a username cookie already?
+  let user = getCookie("username");
+
+  if (user != "") {
+    // returning user: salute them
+    document.getElementById('salutation').innerText = 'Hello ' + user + ', good to see you again!'
+    document.getElementById('salutation').style.backgroundColor = "antiquewhite";
+
+  } else {
+
+    user = prompt("Thanks for visiting! Please enter your name:", "");
+
+    if (user != "" && user != null) {
+
+      // this will be kept for 1 day
+      setCookie("username", user, 1);
+
       // returning user: salute them
-      document.getElementById('salutation').innerText = 'Hello ' + user + ', good to see you again!'
+      document.getElementById('salutation').innerText = 'Hello ' + user + ', welcome to Webcomm!'
+
       document.getElementById('salutation').style.backgroundColor = "antiquewhite";
-
-    } else {
-
-      user = prompt("Thanks for visiting! Please enter your name:", "");
-
-      if (user != "" && user != null) {
-
-        // this will be kept for 1 day
-        setCookie("username", user, 1);
-
-        // returning user: salute them
-        document.getElementById('salutation').innerText = 'Hello ' + user + ', welcome to Webcomm!'
-
-        document.getElementById('salutation').style.backgroundColor = "antiquewhite";
-      }
     }
-  } 
+  }
+} 

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="../mystyle.css">
+    <!-- Mod A -->
+    <link rel="stylesheet" href="./survey.css">
+  </head>
+
+  <!-- this JS function executes as soon as the browser reads line 19
+      i.e., when the page is still not rendered, which happens at the end
+      of reading the body
+  -->
+  <!-- Mod B: run two distinct checkings for cookies
+  -->
+  <body onload="checkCookie(); checkFeedback();">
+
+    <div class="instructions">
+      <h3>Instructions: read me then stop displaying</h3>
+      <ul>
+        <li>
+          study how the HTML giving us the selector works
+        </li>
+        <li>
+          if the user select 'I like it' then they won't see the selector again
+        </li>
+        <li>
+          for the other two choices they still see it at the next visit (check it by reloading)
+        </li>
+        <li>
+          challenge: change the code so that if they say "don't like" 
+          then you deploy some dialog or writing to make them change their mind at the next visit
+        </li>
+      </ul>
+    </div>
+
+    <!-- JS will assign innerHTML content depending on 
+     whether it's the first visit -->
+    <div id="salutation" class = "salutation">
+      <p>You will never read this writing. Almost.</p>
+    </div>
+
+    <!-- Mod B: boilerplate radio buttons for selection -->
+    <div id="surveyContainer" class="survey-box hidden">
+
+      <h3>Do you like this page?</h3>
+      
+      <div class="radio-group">
+
+        <!-- first option -->
+        <label class="radio-option">
+          <input type="radio" name="feedback" value="yes">
+          I like it
+        </label>
+      
+        <!-- second option -->
+        <label class="radio-option">
+          <input type="radio" name="feedback" value="no">
+          I don't like it
+        </label>
+
+        <!-- third option -->
+        <label class="radio-option">
+          <input type="radio" name="feedback" value="unsure">
+          I still don't know
+        </label>
+      </div>
+
+      <!-- Mod C: a fairly complex function to handle the submitted preference -->
+      <button onclick="submitFeedback()">Submit</button>
+
+      <!-- Mod D: this empty, hidden area is used for thank you or for pleading -->
+      <div id="thankYouMessage" class="thank-you hidden"></div>
+    </div>
+
+    <script src="../script.js"></script>
+
+    <!-- Mod E: link the functions to handle the radio buttons -->
+    <script src="./script2.js"></script>
+
+  </body>
+</html>

@@ -11,9 +11,57 @@ body {
   background-color: lightgoldenrodyellow;
   color: blue;
   font-size: larger;
+  padding: 30px;
 }
 
 .fakeimg {
   height: 200px;
   background: #aaa;
+}
+
+/* from the original mystyle.css 
+*/
+
+
+div {
+  background-color: white;
+}
+
+/*
+
+*/
+.instructions {
+  background-color: black;
+  color: greenyellow;
+  font-variant: small-caps;
+  font-size: smaller;
+  margin: 0 auto;
+  padding: 15px;
+  /* change to 'none' to switch them off 
+    */
+  display: block;
+}
+
+.area {
+  background-color: antiquewhite;
+}
+
+p {
+  text-indent: 12pt;
+  color: darksalmon;
+  text-align-last: left;
+}
+
+img {
+  display: block;
+  /* 
+    center as needed, auto auto is also possible
+    */
+  margin: 0 auto;
+  padding: 20px;
+
+  background-color: #f0f0f0;
+
+  max-width: 80%;
+  height: auto;
 }

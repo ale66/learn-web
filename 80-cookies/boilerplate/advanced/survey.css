@@ -1,0 +1,61 @@
+
+/*
+imported classes for the survey 
+Notice the first class: by assigning it we can hide parts of the page
+
+*/
+
+.hidden {
+    display: none;
+}
+
+
+.survey-box {
+    background: #f8f9fa;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.survey-box h3 {
+    margin-top: 0;
+    color: #667eea;
+}
+
+.radio-group {
+    margin: 15px 0;
+}
+
+.radio-option {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+    color: gold;
+}
+
+.radio-option input[type="radio"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #5568d3;
+}
+
+.thank-you {
+    color: #28a745;
+    font-weight: bold;
+    margin-top: 10px;
+}
