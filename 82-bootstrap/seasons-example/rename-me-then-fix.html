@@ -1,5 +1,7 @@
 <!doctype html>
+
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -25,9 +27,15 @@
 
       <a class="navbar-brand season-default" href="#">Seasonal Demo</a>
 
-      <!-- added data-title so CSS can display the title inside the toggler button -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
-              aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation"
+      <!-- a big, big button from BS 5 -->
+      <!-- the data-title attribute is custom: so js can change it later --> 
+      <button class="navbar-toggler"
+              type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#navContent"
+              aria-controls="navContent" 
+              aria-expanded="false" 
+              aria-label="Toggle navigation"
               data-title="Seasonal Demo">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -35,13 +43,18 @@
       <div class="collapse navbar-collapse" id="navContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link season-default" href="https://wwd.com/fashion-news/shows-reviews/gallery/giorgio-armani-fall-2025-ready-to-wear-collection-1237011028/giorgio-armani-fall-2025-ready-to-wear-collection-16/">wwd.com</a>
+            <a class="nav-link season-default" 
+                href="https://wwd.com/fashion-news/shows-reviews/gallery/giorgio-armani-fall-2025-ready-to-wear-collection-1237011028/giorgio-armani-fall-2025-ready-to-wear-collection-16/">wwd.com</a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link season-default" href="#carouselSection">Gallery</a>
+            <a class="nav-link season-default" 
+              href="#carouselSection">Gallery</a>
           </li>
+          
           <li class="nav-item">
-            <a class="nav-link season-default" href="#controls">Themes</a>
+            <a class="nav-link season-default" 
+            href="#controls">Themes</a>
           </li>
         </ul>
       </div>
@@ -151,9 +164,19 @@
     <div class="container">
       <div class="d-flex justify-content-center align-items-center flex-wrap">
         <button type="button" class="btn season-default" id="btn-default" onclick="changeSeason('default')">Default</button>
+      
         <button type="button" class="btn season-default" id="btn-blackfriday" onclick="changeSeason('blackfriday')">Black Friday</button>
+      
         <button type="button" class="btn season-default" id="btn-christmas" onclick="changeSeason('christmas')">Christmas</button>
+
+        <!-- the 'nuclear' option: close down the shop for 5s -->
+        <button type="button" 
+                class="btn season-default" 
+                id="btn-close-down"
+                onclick="closeShop('./imgs/Armani-Reopens-Flagship-store-MO-10.jpg')"
+                >Close Shop</button>
       </div>
+
       <p class="mt-3 small text-center season-default">Theme preference is saved for future visits: check the cookie with the developer console (CTRL+SHIFT+k)</p>
     </div>
   </footer>
@@ -163,5 +186,9 @@
 
   <!-- load the JS needed for seasonal changes, cookies etc. -->
   <script src="./scripts/seasons-script.js"></script>
+
+  <!-- to replace the page with a fixed image -->
+  <script src="./scripts/close-shop.js"></script>
+  
 </body>
 </html>
