@@ -11,54 +11,81 @@ function setCookie(name, value, days) {
 
 function getCookie(name) {
   var nameEQ = name + "=";
+
+  // ca will be a list of cookie values: the cookie is split at each ;
   var ca = document.cookie.split(';');
+  
   for (var i = 0; i < ca.length; i++) {
+    
     var c = ca[i];
-    while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-    if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
+    
+    while (c.charAt(0) === ' ') {
+      c = c.substring(1, c.length);
+    }
+
+    if (c.indexOf(nameEQ) === 0) {
+      return decodeURIComponent(c.substring(nameEQ.length, c.length));
+    }
   }
+  
   return null;
 }
 
-// Replace any class on an element that starts with 'season-' with a new season class.
+// Replace any class on an element that starts with 'season-' 
+// with a new season class.
 function replaceSeasonClass(el, newSeasonClass) {
   var toRemove = [];
+
   el.classList.forEach(function(c) {
-    if (c.startsWith('season-')) toRemove.push(c);
+    if (c.startsWith('season-')) {
+      toRemove.push(c);
+    }
   });
+  
   toRemove.forEach(function(c) { el.classList.remove(c); });
+  
   el.classList.add(newSeasonClass);
 }
 
 // Main function called by all buttons
 function changeSeason(season) {
-  if (!season) return;
-  var newClass = 'season-' + season;
+  if (season != "") {
 
-  // Find all elements that currently have a season-... class.
-  var candidates = document.querySelectorAll('[class*="season-"]');
+      var newClass = 'season-' + season;
 
-  candidates.forEach(function(el) {
-    replaceSeasonClass(el, newClass);
-  });
+      // Find all elements that currently have a season-... class.
+      var candidates = document.querySelectorAll('[class*="season-"]');
 
-  // Also apply the season class to the body so global background/colors apply
-  replaceSeasonClass(document.body, newClass);
+      candidates.forEach(function(el) {
+        replaceSeasonClass(el, newClass);
+      });
 
-  // Persist preference in cookie for 365 days
-  setCookie('preferred-season', season, 365);
+      // Also apply the season class to the body so global background/colors apply
+      replaceSeasonClass(document.body, newClass);
 
-  // Reflect active state on buttons
-  document.querySelectorAll('.controls .btn').forEach(function(b) {
-    b.setAttribute('aria-pressed', 'false');
-  });
-  var activeBtn = document.getElementById('btn-' + season);
-  if (activeBtn) activeBtn.setAttribute('aria-pressed', 'true');
+      // Persist preference in cookie for 365 days
+      setCookie('preferred-season', season, 365);
+
+      // Reflect active state on buttons
+      document.querySelectorAll('.controls .btn').forEach(function(b) {
+        b.setAttribute('aria-pressed', 'false');
+      });
+      var activeBtn = document.getElementById('btn-' + season);
+      if (activeBtn) activeBtn.setAttribute('aria-pressed', 'true');
+  }
 }
 
 // On load, restore season from cookie (if any), otherwise default
+// notice how function() {...} is used to have a reaction that consist 
+// of more than one line of code
 document.addEventListener('DOMContentLoaded', function() {
+
   var saved = getCookie('preferred-season');
-  if (!saved) saved = 'default';
+
+  // if there is no preference yet expressed, now we fix default
+  if (!saved) {
+    saved = 'default';
+  }
+
   changeSeason(saved);
 });
