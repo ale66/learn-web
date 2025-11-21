@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="carousels_files/libs/clipboard/clipboard.min.js"></script>
-<script src="carousels_files/libs/quarto-html/tabby.min.js"></script>
-<script src="carousels_files/libs/quarto-html/popper.min.js"></script>
-<script src="carousels_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="carousels_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="carousels_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="carousels_files/libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="week-9-recap_files/libs/clipboard/clipboard.min.js"></script>
+<script src="week-9-recap_files/libs/quarto-html/tabby.min.js"></script>
+<script src="week-9-recap_files/libs/quarto-html/popper.min.js"></script>
+<script src="week-9-recap_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="week-9-recap_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="week-9-recap_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="week-9-recap_files/libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.26">
 
   <meta name="author" content="ale66">
@@ -14,8 +14,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="carousels_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="carousels_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="week-9-recap_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="week-9-recap_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -28,80 +28,14 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-      }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-    div.sourceCode
-      { color: #f8f8f2;  }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #f8f8f2; } /* Normal */
-    code span.al { color: #f07178; } /* Alert */
-    code span.an { color: #d4d0ab; } /* Annotation */
-    code span.at { color: #00e0e0; } /* Attribute */
-    code span.bn { color: #d4d0ab; } /* BaseN */
-    code span.bu { color: #abe338; } /* BuiltIn */
-    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #abe338; } /* Char */
-    code span.cn { color: #ffd700; } /* Constant */
-    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
-    code span.cv { color: #ffd700; } /* CommentVar */
-    code span.do { color: #f8f8f2; } /* Documentation */
-    code span.dt { color: #ffa07a; } /* DataType */
-    code span.dv { color: #d4d0ab; } /* DecVal */
-    code span.er { color: #f07178; text-decoration: underline; } /* Error */
-    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
-    code span.fl { color: #d4d0ab; } /* Float */
-    code span.fu { color: #ffa07a; } /* Function */
-    code span.im { color: #abe338; } /* Import */
-    code span.in { color: #d4d0ab; } /* Information */
-    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
-    code span.op { color: #ffa07a; } /* Operator */
-    code span.ot { color: #00e0e0; } /* Other */
-    code span.pp { color: #dcc6e0; } /* Preprocessor */
-    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
-    code span.sc { color: #abe338; } /* SpecialChar */
-    code span.ss { color: #abe338; } /* SpecialString */
-    code span.st { color: #abe338; } /* String */
-    code span.va { color: #00e0e0; } /* Variable */
-    code span.vs { color: #abe338; } /* VerbatimString */
-    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="carousels_files/libs/revealjs/dist/theme/quarto-06e768f098560084c2d7120de8ad04fb.css">
-  <link href="carousels_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="carousels_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="carousels_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="carousels_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="carousels_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="carousels_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="week-9-recap_files/libs/revealjs/dist/theme/quarto-06e768f098560084c2d7120de8ad04fb.css">
+  <link href="week-9-recap_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="week-9-recap_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="week-9-recap_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="week-9-recap_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="week-9-recap_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="week-9-recap_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -207,95 +141,36 @@ ale66
 
 </section>
 <section>
-<section id="bs5-carousels" class="title-slide slide level1 center">
-<h1>BS5 Carousels</h1>
+<section id="recap" class="title-slide slide level1 center">
+<h1>Recap</h1>
 
 </section>
-<section id="carousels" class="slide level2">
-<h2>Carousels</h2>
-<p>The best way to have a visual presentation that is beyond static.</p>
-<p>For academic or critical text, side-by-side images are key so carousel is not recommended</p>
-<p>recommended for commercial and in general where there is <em>choice</em></p>
-<p>Example: <a href="https://www.campari.com/our-products/campari-negroni/">campari.com</a></p>
-</section>
-<section id="html" class="slide level2">
-<h2>HTML</h2>
-<p>For reference:</p>
-<p><a href="https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp">HTML5 carousels</a></p>
+<section id="concepts-a" class="slide level2">
+<h2>Concepts, a</h2>
+<p>Pages now are <em>responsive</em></p>
+<p>Up to 4 scenarios are considered</p>
+<p>Every size is now made relative, <em>rem</em> replaces <em>px</em></p>
+<p><em>media</em> queries make the CSS responsive: it changes as the user resize</p>
+<p>Images need to be reworked/replicated</p>
 </section>
 <section id="bootstrap-5" class="slide level2">
 <h2>Bootstrap 5</h2>
-<p><a href="https://getbootstrap.com/docs/5.0/components/carousel/">Bootstrap 5 carousels</a></p>
-<p>[Read the manual and copy/paste the source into the boilerplate page up to section <code>With indicators</code>]</p>
+<p>A big CSS+JS that is now open source</p>
+<p>Link it from a CDN to have the latest version</p>
 </section>
-<section id="key-aspects" class="slide level2">
-<h2>Key aspects</h2>
-<p>One item must be <code>active</code> for the BS5 Carousel to show</p>
-<p>try re-assigning it (see <code>90-carousels/boilerplate/</code>)</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> id</span><span class="op">=</span><span class="st">"carouselExample"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"carousel slide"</span><span class="dt">&gt;</span></span>
-<span id="cb1-2"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"carousel-inner"</span><span class="dt">&gt;</span></span>
-<span id="cb1-3"><a href=""></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"carousel-item active"</span><span class="dt">&gt;</span></span>
-<span id="cb1-4"><a href=""></a>      ...</span>
-<span id="cb1-5"><a href=""></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-6"><a href=""></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"carousel-item"</span><span class="dt">&gt;</span></span>
-<span id="cb1-7"><a href=""></a>      <span class="co">&lt;!-- an image --&gt;</span></span>
-<span id="cb1-8"><a href=""></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-9"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"carousel-item"</span><span class="dt">&gt;</span></span>
-<span id="cb1-10"><a href=""></a>    <span class="co">&lt;!-- another image --&gt;</span></span>
-<span id="cb1-11"><a href=""></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-12"><a href=""></a>  <span class="co">&lt;!-- as many carousel-item elements as pictures</span></span>
-<span id="cb1-13"><a href=""></a><span class="co">&lt;/div&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="bs5-main-concept" class="slide level2">
+<h2>BS5 main concept</h2>
+<p>The screen is divided up in 12 columns</p>
+<p><em>containers</em> (sort of boxes) take up 1, 2 … columns</p>
+<p>there are classes that take care of visualisation in <em>xs</em>, <em>sm</em> … screens</p>
+<p>Use classes to program visualisation of the containers</p>
+<p><em>lots of divs, less CSS/JS</em></p>
 </section>
-<section id="sizing-in-bs5" class="slide level2">
-<h2>Sizing in BS5</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"carousel-inner"</span><span class="dt">&gt;</span></span>
-<span id="cb2-2"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"carousel-item active"</span><span class="dt">&gt;</span></span>
-<span id="cb2-3"><a href=""></a>    <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./imgs/carousel/campari-cannes.webp"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"d-block w-100"</span><span class="ot"> alt</span><span class="op">=</span><span class="st">""</span><span class="dt">&gt;</span></span>
-<span id="cb2-4"><a href=""></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>class <code>d-block</code> make sure that the carousel will be <em>displayed</em> on all screens (details <a href="https://getbootstrap.com/docs/5.3/utilities/display/">here</a>)</p>
-<p>class <code>w-100</code> ensures maximum width (details <a href="https://getbootstrap.com/docs/5.3/utilities/sizing/">here</a>)</p>
-<p>Try</p>
-<ul>
-<li><code>w-75</code>, more elegant?</li>
-<li><code>mh-100</code> maximum height</li>
-<li><code>mw-100</code> maximum width</li>
-</ul>
-</section>
-<section id="exercise" class="slide level2">
-<h2>Exercise</h2>
-<ul>
-<li><p>visit <code>90-carousels/boilerplate</code></p></li>
-<li><p>read <code>bs5-carousel.html</code> line by line</p></li>
-<li><p>extend the carousel by</p>
-<ul>
-<li>moving a file <code>imgs/</code> -&gt; <code>imgs/carousel/</code></li>
-<li>adding the relative code to <code>index.html</code></li>
-</ul></li>
-<li><p>from the <a href="https://getbootstrap.com/docs/5.0/components/carousel/">BS5 tutorial</a> copy+paste the source examples into the boilerplate page up to section <code>With indicators</code> included</p></li>
-</ul>
-</section></section>
-<section>
-<section id="advanced-lab-drop-in-carousels" class="title-slide slide level1 center">
-<h1>Advanced lab: drop-in carousels</h1>
-
-</section>
-<section id="a-carousel-with-variable-number-of-slides" class="slide level2">
-<h2>A Carousel with variable number of slides</h2>
-<p>Idea: there is a <em>gallery</em> hosted in a folder, typically called <code>imgs</code> or <code>images</code></p>
-<p>The gallery changes in size and composition as we add/drop files inside the folder</p>
-<p>At runtime, a JS function queries the operating system, picks up the file names and organises the carousel with what is available in the folder</p>
-<p>Boilerplate JS; change the HTML as needed; check your work with the <a href="https://validator.w3.org/">w3c validator</a></p>
-</section>
-<section class="slide level2">
-
-<h4 id="last-exercise">Last exercise</h4>
-<ul>
-<li><p>work on folder <code>94-php/boilerplate</code></p></li>
-<li><p>in folder <code>imgs</code> store <em>some</em> images (e.g, Euro capitals)</p></li>
-<li><p>update the TXT file server-side to selection</p></li>
-<li><p>for each image, add a bit of caption text with links to the ‘welcome/accueil’ page of the location</p></li>
-<li><p>advanced: make the images clickable (same targets)</p></li>
-</ul>
+<section id="bs5-classes" class="slide level2">
+<h2>BS5 classes</h2>
+<p>Too many to know!</p>
+<p>Reade the BS5 boilerplates seen in class</p>
+<p>Search and read about each class on <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">getbootstrap.com/docs/5.3/getting-started/introduction/</a></p>
 
 </section></section>
     </div>
@@ -306,20 +181,20 @@ ale66
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="carousels_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="week-9-recap_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="carousels_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="carousels_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="carousels_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="carousels_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="carousels_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="carousels_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="week-9-recap_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="week-9-recap_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="week-9-recap_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="week-9-recap_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="week-9-recap_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="week-9-recap_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="carousels_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="carousels_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="carousels_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="carousels_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="week-9-recap_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="week-9-recap_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="week-9-recap_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="week-9-recap_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
