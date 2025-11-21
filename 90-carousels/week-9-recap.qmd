@@ -1,0 +1,65 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 2
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Recap
+
+---
+
+## Concepts, a
+
+Pages now are *responsive*
+
+Up to 4 scenarios are considered
+
+Every size is now made relative, *rem* replaces *px*
+
+*media* queries make the CSS responsive: it changes as the user resize
+
+Images need to be reworked/replicated
+
+---
+
+## Bootstrap 5
+
+A big CSS+JS that is now open source
+
+Link it from a CDN to have the latest version
+
+---
+
+## BS5 main concept
+
+The screen is divided up in 12 columns
+
+*containers* (sort of boxes) take up 1, 2 ... columns
+
+there are classes that take care of visualisation in *xs*, *sm* ... screens
+
+Use classes to program visualisation of the containers
+
+*lots of divs, less CSS/JS*
+
+
+---
+
+## BS5 classes
+
+Too many to know!
+
+Reade the BS5 boilerplates seen in class
+
+Search and read about each class on [getbootstrap.com/docs/5.3/getting-started/introduction/](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+
+
