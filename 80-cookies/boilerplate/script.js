@@ -72,6 +72,11 @@ function checkCookie() {
       // this will be kept for 1 day
       setCookie("username", user, 1);
 
+      // experiment with cookies!
+      let their_location = prompt("Great, and where are you today?", "In the lab");
+      setCookie("last_self_localised_at", their_location, 0.5);
+
+
       // returning user: salute them
       document.getElementById('salutation').innerText = 'Hello ' + user + ', welcome to Webcomm!'
 
