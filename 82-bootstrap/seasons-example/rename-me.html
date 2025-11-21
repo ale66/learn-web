@@ -5,12 +5,18 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Seasonal Theme with Navbar & Carousel</title>
 
-  <!-- Bootstrap 5 CSS -->
+  <!-- Import BS 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Local styles -->
-  <link href="css/styles.css" rel="stylesheet">
+
+  <!-- our usual, bland WebComm style -->
+  <!-- <link href="./styles/mystyle.css" rel="stylesheet"> -->
+
+  <!-- The 'seasonal' style to work on! -->
+  <link href="./styles/seasonal-styles.css" rel="stylesheet">
 </head>
+
+<!-- Notice how everything now has a class, even the body -->
 <body class="season-default">
 
   <!-- NAVBAR -->
@@ -55,31 +61,62 @@
 
         <div class="carousel-item active">
           <figure class="frame season-default">
-            <img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1600&auto=format&fit=crop" class="d-block w-100 season-default" alt="Image 1">
+            <img src="./imgs/giorgio-armani-fall-25-rtw-r-gg-002.jpeg"
+              class="d-block w-100 season-default" alt="Image 1">
           </figure>
           <div class="carousel-caption d-none d-md-block">
-            <h5>Scenic View</h5>
-            <p>A clean bright shot for the default theme.</p>
+            <h5>Armani AW24</h5>
+            <p>A recent creation from Armani's Autumn/Winter 2024 collection.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item ">
+          <figure class="frame season-default">
+            <img src="./imgs/giorgio-armani-fall-25-rtw-r-gg-003.jpeg" class="d-block w-100 season-default" alt="Image 1">
+          </figure>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Armani AW24</h5>
+            <p>A recent creation from Armani's Autumn/Winter 2024 collection.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item ">
+          <figure class="frame season-default">
+            <img src="./imgs/giorgio-armani-fall-25-rtw-r-gg-007.jpeg" class="d-block w-100 season-default" alt="Image 1">
+          </figure>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Armani AW24</h5>
+            <p>A recent creation from Armani's Autumn/Winter 2024 collection.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item ">
+          <figure class="frame season-default">
+            <img src="./imgs/giorgio-armani-fall-25-rtw-r-gg-008.jpeg" class="d-block w-100 season-default" alt="Image 1">
+          </figure>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Armani AW24</h5>
+            <p>A recent creation from Armani's Autumn/Winter 2024 collection.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item ">
+          <figure class="frame season-default">
+            <img src="./imgs/giorgio-armani-fall-25-rtw-r-gg-015.jpeg" class="d-block w-100 season-default" alt="Image 1">
+          </figure>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Armani AW24</h5>
+            <p>A recent creation from Armani's Autumn/Winter 2024 collection.</p>
           </div>
         </div>
 
         <div class="carousel-item">
           <figure class="frame season-default">
-            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop" class="d-block w-100 season-default" alt="Image 2">
+            <img src="./imgs/giorgio-armani-fall-25-rtw-r-gg-016.jpeg" class="d-block w-100 season-default" alt="Image 1">
           </figure>
           <div class="carousel-caption d-none d-md-block">
-            <h5>Architectural Lines</h5>
-            <p>Strong composition that adapts to each theme.</p>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <figure class="frame season-default">
-            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop" class="d-block w-100 season-default" alt="Image 3">
-          </figure>
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Cozy Scene</h5>
-            <p>Warm and inviting content for festive modes.</p>
+            <h5>Armani AW24</h5>
+            <p>A recent creation from Armani's Autumn/Winter 2024 collection.</p>
           </div>
         </div>
 
@@ -109,7 +146,7 @@
   <!-- Bootstrap bundle (JS + Popper) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Local JS -->
-  <script src="js/script.js"></script>
+  <!-- load the JS needed for seasonal changes, cookies etc. -->
+  <script src="./scripts/seasons-script.js"></script>
 </body>
 </html>
