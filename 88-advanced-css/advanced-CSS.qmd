@@ -113,9 +113,11 @@ An inverted/perverse logic applies...
 
 * Visit the [wdpg.io](www.wdpg.io) playground
   
-* [fri] solve the first three exercises for Ch. 19.
+* do the first three exercises for Ch. 19.
 
-* [sat] solve the last two
+* cover the second part of this presentation 
+
+* do 19.5 and 19.7
   
 
 ---
