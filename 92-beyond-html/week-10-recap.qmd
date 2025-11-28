@@ -100,4 +100,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
   changeSeason(saved);
 });
-```js
+```
