@@ -1,0 +1,103 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 2
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Week 10 Recap
+
+---
+
+## Concepts, a
+
+Pages now are Bootstrap 5
+
+- *responsive* is granted
+
+- the season-example page contains boilerplate code for your project
+
+- carousel is boiler: just supply the local (curated) file names
+
+---
+
+## BS5 classes: how many is too many?
+
+Read the BS5 boilerplates seen in class
+
+1. Define what effect you'd like to have
+
+2. Search BS5 classes on  [getbootstrap.com/docs/5.3/getting-started/introduction/](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+
+---
+
+## A/B testing
+
+- stats that support an evidence-based development
+
+- we save profiles into cookies, but we still need to collect responses centrally
+
+- collecting responses and contacts is central to planning long-term interactions
+
+---
+
+## Useful functions
+
+
+```js
+setCookie(name, value, days)
+```
+
+Writes 
+
+```js
+'preference'='dark_theme;'
+```
+
+---
+
+```js
+getCookie(name)
+```
+
+reads it the next time
+
+
+---
+
+```js
+changeSeason(season)
+```
+
+where `season` is related to specific CSS styles
+
+
+---
+
+## Basic operation
+
+
+```js
+// On load, restore season from cookie (if any), otherwise default
+// notice how function() {...} is used to have a reaction that consist 
+// of more than one line of code
+document.addEventListener('DOMContentLoaded', function() {
+
+  var saved = getCookie('preferred-season');
+
+  // if there is no preference yet expressed, now we fix default
+  if (!saved) {
+    saved = 'default';
+  }
+
+  changeSeason(saved);
+});
+```js
