@@ -20,15 +20,55 @@ execute:
 
 ---
 
+## Summary of MD method 
+
+- Markdown is the simplest, lightest form of text annotation
+
+- the Pandoc software takes our MD text and generates an equiv. HTML page
+
+  - fragments for inclusion into an existing page, or 
+  - standalone pages
+
+- VS Code+Markdown-all-in-one supports MD with highlighting & preview
+
+- [pandoc.org/try/](https://pandoc.org/try/) generates pages from MD texts
+  
+- install Pandoc on your computer to render pages
+
+- other out. formats are available: DOCX, PDF, EPUB...
+
+---
+
+## Summary of Web presentation
+
+- create double-use web pages: 
+  
+  - live presentation/slideshow for seminar/Teams/YT
+  
+  - web reference pages for a larger audience
+
+- write simple MD text with light annotation
+  
+- embed it in a Remarkjs HTML page; 
+  
+- use its ad hoc styles to control the slide area & progression
+
+- tag `---` separates text into slides
+
+- tag `. . .` stops rendering until arrow/spacebar is pressed
+
+
+---
+
 ## Revealjs
 
-A personal [GitHub project](https://github.com/hakimel/reveal.js/) on making presentations that are in fact HTML pages (with lots of JS inside)
+a personal [GitHub project](https://github.com/hakimel/reveal.js/) on making presentations that are in fact HTML pages (with lots of JS inside)
 
 goes above and beyond Powerpoint
 
-The HTML page is self-contained and can be sent/loaded/published anywhere
+the HTML page is self-contained and can be sent/loaded/published anywhere
 
-In case, we can always edit the HTML page to tweak or add settings
+we may edit the HTML page to tweak/add settings
 
 Tutorial: [revealjs.com/](https://revealjs.com/)
 
@@ -39,7 +79,7 @@ Online editor: [slides.com/](https://slides.com/)
 
 ## Programme: 
 
-* open VS Code, put down quick Markdown notes, e.g., in file `my_notes.md`
+* in VS Code, put down quick MD notes, eg, in `my_notes.md`
 
 * insert links and images
 
@@ -55,20 +95,23 @@ Online editor: [slides.com/](https://slides.com/)
 
 * see the demos: presentations can go *inside* web pages!
 
+---
+
+# Installing Pandoc
 
 ---
 
-##  Commands
+##  Pandoc
 
-Pandoc is __a professional tool__ and needs Powershell (Win) or Terminal (MacOs) to be launched
+a *professional* tool: lanches from Powershell (Win) or Terminal (MacOs)
 
-The following instructions for Win can be applied almost verbatim to MacOs
+the following Win11 instructions are almost verbatim to MacOs
 
-For step-by-step instructions open `exercise/README.md` in VS code and read it with the preview
+step-by-step instructions: open `exercise/README.md` in VS code and read it with the preview
 
 ---
 
-## Commands: Win11
+## Install P. on Win11
 
 1. open the folder where the Markdown presentation file is, or where you want it to be.
 
@@ -85,62 +128,74 @@ cd C:/Users/aless/Dowloads/git/learn-web/96-revealjs
 where the *path* depends on your arrangements
 
 
-# Web presentations with MD
-
+# From MD to web presentation with RevealJS
 
 ---
 
 ## Run pandoc
 
-open a terminal from inside your work folder 
+- start a terminal, `pwd` to check the current working dir. 
+  
+- if needed, `cd` to where your file is (check with `dir`/`ls`)
 
-if, e.g., `my_notes.md` is your presentation, give command
+- if, eg, `my_notes.md` is there then give
 
 ```bash
 pandoc --standalone --from markdown --to revealjs my_notes.md -o my_pres.html
 ```
 
-Pandoc reads `my_notes.md` and creates a *standalone* (no auxiliary files) HTML page: 
+- Pandoc creates a new *standalone* (and all-in-one) file 
 
-`my_pres.html` will contain [lots of] JS code that is *injected* to create navigation, focus, pens etc. 
+- `my_pres.html` will contain [lots of] *injected* JS code: navigation, focus, pens etc. 
 
-open it with Firefox to run the presentation. 
-
-use arrows to move, `o` for overview
+- open the new page w. a brower and check results
+  
+- use spacebar to progress, arrows to navigate, `o` for overview etc.
 
 
 ---
 
 ## Themes and animations
 
+check the available options on [slides.com](https://www.slides.com) 
+
+check out [transition effects](https://revealjs.com/transitions/)
+
+check out [themes](https://revealjs.com/themes/)
+
+test combinations to find one you like
+
+here ale66 used `moon` with transition `none`
+
+try, eg, `dracula` with `zoom` by giving, *as a single line:*
+
 ```bash
-pandoc --standalone --from markdown --to revealjs my_pre.md -o my_pres.html -V transition=convex -V theme=solarized --verbose
+pandoc --standalone --from markdown --to revealjs my_pre.md -o my_pres.html 
+-V transition=dracula -V theme=zoom --verbose
 ```
 
-Check the available options on [slides.com](https://www.slides.com) 
 
-#### with CSS
+---
+
+## Revealjs with CSS
+
+Give this, *as a single line:*
 
 ```bash
 pandoc --standalone --from markdown --to revealjs my_pres.md -o my_pres.html 
 --css my_revealjs_style.css -V transition=convex -V theme=solarized --verbose
 ```
 
-Check out [transition effects](https://revealjs.com/transitions/)
-
-Check out [themes](https://revealjs.com/themes/)
-
-Test combinations to find one you like
-
-This theme is `moon` with transition `none`
-
-Try, e.g., `dracula` with `zoom`
 
 ---
 
-## Exercise
+## Exercise: tweak Revealjs presentations
 
-For page numbers, open your HTML presentation and add, towards the bottom:
+- start VS Code, open the HTML presentation 
+    
+- locate the script tag where Revealjs is intialised
+
+- add, towards the bottom:
 
 ```js
 Reveal.initialize({
@@ -148,8 +203,9 @@ Reveal.initialize({
 	});
 ```
 
-Save and reload in a browser: voil&agrave;!
+Save and reload in a browser: check that page numbers and progress now appear
 
+voil&agrave;!
 
 ---
 
