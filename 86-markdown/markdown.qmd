@@ -68,35 +68,36 @@ Residual cases:
 
 ---
 
-## The ubiquity of Markdown
+## Markdown rendering
 
-The process above is oftern called *rendering* of contents
+MD code is *rendered* into HTML equivalent annotations
 
-today large platforms with web page generation support Markdown contenct and render them automatically:
+platforms with web page generation support MD contents and render them automatically:
 
 - MyAriel
 
 - GitHub
 
-Advantages:
+---
+
+## MD is useful:
+
+
+in the `my_page.html` version:
+
+- fixed parts, e.g., `<body>...</body>` are automatically incorporated
+
+- annotations are interpreted and incorporated:
+
+    - `# My title` --> `<h1>My title</h1>`
+  
+    - `__nota bene__` --> `<b>nota bene</b>` and so on
 
 - less error-prone than HTML
 
 - fragments (as opposed to a complete page) can be easily integrated
 
 - uniform page appearance
-
-
-1.  in the `my_page.html` version:
-
-- fixed parts, e.g., `<body>...</body>` are automatically incorporated
-
-- annotations are interpreted and incorporated:
-
-    - `# Big title` --> `<h1>Big title</h1>`
-  
-    - `__boldface__` --> `<b>boldface</b>` and so on
-
 
 ---
 
@@ -198,10 +199,44 @@ The page explains how to code MD quickly
 ![](./imgs/md-all-in-one.png)
 
 
+# Summary of the method 
+
+---
+
+- Markdown is the simplest, lightest form of text annotation
+
+- the pandoc software takes our MD text and generates an equiv. HTML page
+
+  - fragments for inclusion into an existing page, or 
+  - standalone pages
+
+- VS Code+Markdown-all-in-one supports MD with highlighting & preview
+
+- [pandoc.org/try/](https://pandoc.org/try/) generates pages from MD texts
+  
+- install Pandoc on your computer to render pages
+
+- other output formats are available: DOCX, PPTX, PDF, EPUB etc.
+  
+---
+
+## Self-assessment
+
+- what is mark-up?
+
+- what is rendering? Who/what does it?
+
+- what is HTML injection? Who/what does it?
+
+- why do README.md files look good on GitHub?
+
+- what is pandoc?
+
 ---
 
 ## Coda: the HTML injection attack
 
+Malicious HTML generation could embed invisible parts that in fact communicate, using HTTP Post() methods!
 
 ![](./imgs/html-injection-attack.png)
 
