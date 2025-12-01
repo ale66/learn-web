@@ -39,19 +39,21 @@ Online editor: [slides.com/](https://slides.com/)
 
 ## Programme: 
 
-* put down quick Markdown notes
+* open VS Code, put down quick Markdown notes, e.g., in file `my_notes.md`
 
 * insert links and images
 
-* create slides with `Pandoc --to revealjs`
+* create slides with 
+ 
+```bash
+>pandoc --standalone --from markdown my_notes.md --to revealjs -o my_pres.html
+```
 
-* publish on accessible web page (e.g., W3schools spaces)
+* go to the meeting (or exam) and present your slideshow/pitch deck
 
-* go to the meeting (or exam) and present it
+* put `my_pres.html` on a personal web space, e.g., LinkedIn: let others catch up by reading it online
 
-* let others catch up by reading on the web site
-
-* see the demos: presentations can go *inside* web pages
+* see the demos: presentations can go *inside* web pages!
 
 
 ---
@@ -77,13 +79,13 @@ For step-by-step instructions open `exercise/README.md` in VS code and read it w
 If not we need to `cd` to the right directory, e.g.,
 
 ```bash
-cd C:/Users/aless/git/96-revealjs
+cd C:/Users/aless/Dowloads/git/learn-web/96-revealjs
 ```
 
-where the *path* is obviously personal
+where the *path* depends on your arrangements
 
 
-# From MD to Web presentation
+# Web presentations with MD
 
 
 ---
@@ -92,13 +94,13 @@ where the *path* is obviously personal
 
 open a terminal from inside your work folder 
 
-if, e.g., `my_pres.md` is your presentation, give command
+if, e.g., `my_notes.md` is your presentation, give command
 
 ```bash
-pandoc --standalone --from markdown --to revealjs my_pres.md -o my_pres.html
+pandoc --standalone --from markdown --to revealjs my_notes.md -o my_pres.html
 ```
 
-Pandoc reads `my_pres.md` and creates a *standalone* (no auxiliary files) HTML page: 
+Pandoc reads `my_notes.md` and creates a *standalone* (no auxiliary files) HTML page: 
 
 `my_pres.html` will contain [lots of] JS code that is *injected* to create navigation, focus, pens etc. 
 
@@ -115,7 +117,7 @@ use arrows to move, `o` for overview
 pandoc --standalone --from markdown --to revealjs my_pre.md -o my_pres.html -V transition=convex -V theme=solarized --verbose
 ```
 
-Check the available options on [slides.com](www.slides.com) 
+Check the available options on [slides.com](https://www.slides.com) 
 
 #### with CSS
 
@@ -172,9 +174,9 @@ Save and reload in a browser: voil&agrave;!
 
 an extension of Markdown that supports publishing
 
-`mypres.qmd` --> 
+`my_notes.qmd` --> 
 
-`mypres.html`, `mypres-revealjs.html`, `mypres.pdf` ...
+`my_pres.html`, `my_pres-revealjs.html`, `my_pres.pdf` ...
 
 it sets up Pandoc to produce more complex documents
 

@@ -71,7 +71,6 @@ While it promises to customise advertisement so that it's relevant to the user, 
 
 Alt. approach: use photos of [AI-generated non-persons](https://thispersondoesnotexist.com/)
 
-
 ---
 
 ## End-to-end encryption
@@ -113,20 +112,6 @@ browsers will allow navigation without saving any cookies or history
 
 Only good to avoid parental/corporate control: today most web services track the IP number of the device
 
-
----
-
-## Case study
-
-Visit [The Economist](https://www.economist.com/leaders/2021/11/27/adventure-capitalism)
-
-from different browsers of the same computer, even in incognito mode.
-
-Explore the source code, with `ctrl+u`: can you see the content?
-
-Compare with the access restrictions on [The Washington Post](https://www.washingtonpost.com/)
-
-
 ---
 
 ## Containers
@@ -148,19 +133,27 @@ A recommended solution is [multi-account containers](https://addons.mozilla.org/
 
 Chrome is built around an excellent *page rendering software*
 
-However, it is basically tracking your navigation to see where you go when you __jump out__ of site:
+However, it basically tracks your navigation to see where you go when you __jump out__ of site:
 
-this is the only part of navigation that the server-side cannot see
+that is the only part of navigation that the server-side cannot see
 
 Moreover, Chrome converts the action of *typing* a URL into *searching* a URL
 
+---
+
+![](./imgs/chromium.png)
+
+
 Google releases (at least for now) the [Chromium](https://www.chromium.org/) version of Chrome, which is lighter and less tracking
 
+
+---
+
+
+![](./imgs/duckduck.png)
+
+
 Use [DuckDuckGo](https://duckduckgo.com/app)
-
-DuckDuckGo collects search requests and passes them over to Google in batches
-
-![](./imgs/batches.jpg)
 
 ---
 
@@ -169,6 +162,10 @@ DuckDuckGo collects search requests and passes them over to Google in batches
 Don't log into Google services unless you have to (I have to)
 
 Use the [DuckDuckGo](https://duckduckgo.com/settings) aggregator for your searches
+
+DuckDuckGo collects search requests and passes them over to Google in batches
+
+![](./imgs/batches.jpg)
 
 
 # Academic research
@@ -185,7 +182,7 @@ The [Potential Gain model](https://dl.acm.org/doi/abs/10.1145/3350546.3352559) r
 
 . . .
 
-*In a social network navigability translates to the ability of reaching an individual through personal contacts*
+*In a social network, navigability translates into the ability of reaching an individual through personal contacts*
 
 ---
 

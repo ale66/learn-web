@@ -52,13 +52,42 @@ Residual cases:
 
 ---
 
-## MD as HTML injection
+## The Markdown vision
 
-Prepare a text with minimal annotations and no CSS: the Markdown file `myfile.md`
+1. prepare a text file with all the content but only minimal annotations: the Markdown file `my_contents.md`
 
-. . .
+2. feed it to a *parser* software, e.g., *pandoc* that *renders* it: 
 
-Feed it to a *parser* software that *renders* it in the `myfile.html` version:
+   - HTML tags are *injected* into the file, and 
+  
+   - CSS styles are linked and assigned to tags
+  
+3. the thus-created `my_page.html` can be manually refined/tweaked, if need be
+
+4. publish it
+
+---
+
+## The ubiquity of Markdown
+
+The process above is oftern called *rendering* of contents
+
+today large platforms with web page generation support Markdown contenct and render them automatically:
+
+- MyAriel
+
+- GitHub
+
+Advantages:
+
+- less error-prone than HTML
+
+- fragments (as opposed to a complete page) can be easily integrated
+
+- uniform page appearance
+
+
+1.  in the `my_page.html` version:
 
 - fixed parts, e.g., `<body>...</body>` are automatically incorporated
 
