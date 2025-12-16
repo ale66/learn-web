@@ -168,19 +168,21 @@ pandoc --from=txt mytext.txt -t html -o mypage.html
 pandoc --standalone --from markdown --to html5 myfile.md -o myoutputfile.hmtl
 ```
 
----
 
 more examples [here](https://pandoc.org/demos.html).
 
-Try it into the [online sandbox](https://pandoc.org/try/)!
+Try it into the [online sandbox](https://pandoc.org/try/)
 
-Example
+Example: Revealjs slides
+
 
 ```bash
-> pandoc -t markdown -o out.md .\grantPPA_PaccanaroRuediger-textonlyexample.txt
+pandoc --from markdown myideas.md \
+--to revealjs -s --slide-level=2 \
+-o mypres.html \
+-V theme=dracula \
+-V transition=convex
 ```
-
-
 ---
 
 ## Presentation vs. Web page
@@ -258,7 +260,6 @@ Idea: keep the Markdown in a separated file, keep the HTML and Javascript boiler
 
 # Revealjs
 
-
 ---
 
 A project now available as a stand-alone [slides.com](slides.com)
@@ -266,6 +267,18 @@ A project now available as a stand-alone [slides.com](slides.com)
 A refined set of Javascript embeddings is available from [the main site](revealjs.com)
 
 Let's focus on [MD embeddings](https://revealjs.com/markdown/)
+
+---
+
+From MD notes, eg, file `myideas.md` to a Revealjs pitch deck, eg. file `mypres.html` in one minute:
+
+```bash
+pandoc --from markdown myideas.md \
+--to revealjs -s --slide-level=2 \
+-o mypres.html \
+-V theme=dracula \
+-V transition=convex
+```
 
 
 ---

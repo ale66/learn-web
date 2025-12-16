@@ -317,13 +317,14 @@ ale66
 <p>Magic commands to transform files:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href=""></a><span class="ex">pandoc</span> <span class="at">--from</span><span class="op">=</span>txt mytext.txt <span class="at">-t</span> html <span class="at">-o</span> mypage.html </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href=""></a><span class="ex">pandoc</span> <span class="at">--standalone</span> <span class="at">--from</span> markdown <span class="at">--to</span> html5 myfile.md <span class="at">-o</span> myoutputfile.hmtl</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section class="slide level2">
-
 <p>more examples <a href="https://pandoc.org/demos.html">here</a>.</p>
-<p>Try it into the <a href="https://pandoc.org/try/">online sandbox</a>!</p>
-<p>Example</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href=""></a><span class="op">&gt;</span> pandoc <span class="ex">-t</span> markdown <span class="at">-o</span> out.md .<span class="dt">\g</span>rantPPA_PaccanaroRuediger-textonlyexample.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Try it into the <a href="https://pandoc.org/try/">online sandbox</a></p>
+<p>Example: Revealjs slides</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href=""></a><span class="ex">pandoc</span> <span class="at">--from</span> markdown myideas.md <span class="dt">\</span></span>
+<span id="cb6-2"><a href=""></a>--to revealjs <span class="at">-s</span> <span class="at">--slide-level</span><span class="op">=</span>2 <span class="dt">\</span></span>
+<span id="cb6-3"><a href=""></a>-o mypres.html <span class="dt">\</span></span>
+<span id="cb6-4"><a href=""></a>-V theme=dracula <span class="dt">\</span></span>
+<span id="cb6-5"><a href=""></a>-V transition=convex</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="presentation-vs.-web-page" class="slide level2">
 <h2>Presentation vs.&nbsp;Web page</h2>
@@ -390,6 +391,15 @@ ale66
 <p>A project now available as a stand-alone <a href="slides.com">slides.com</a></p>
 <p>A refined set of Javascript embeddings is available from <a href="revealjs.com">the main site</a></p>
 <p>Let’s focus on <a href="https://revealjs.com/markdown/">MD embeddings</a></p>
+</section>
+<section class="slide level2">
+
+<p>From MD notes, eg, file <code>myideas.md</code> to a Revealjs pitch deck, eg. file <code>mypres.html</code> in one minute:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href=""></a><span class="ex">pandoc</span> <span class="at">--from</span> markdown myideas.md <span class="dt">\</span></span>
+<span id="cb8-2"><a href=""></a>--to revealjs <span class="at">-s</span> <span class="at">--slide-level</span><span class="op">=</span>2 <span class="dt">\</span></span>
+<span id="cb8-3"><a href=""></a>-o mypres.html <span class="dt">\</span></span>
+<span id="cb8-4"><a href=""></a>-V theme=dracula <span class="dt">\</span></span>
+<span id="cb8-5"><a href=""></a>-V transition=convex</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="what-about-powerpoint" class="slide level2">
 <h2>What about Powerpoint?</h2>
