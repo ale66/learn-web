@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="26-structural-tags_files/libs/clipboard/clipboard.min.js"></script>
-<script src="26-structural-tags_files/libs/quarto-html/tabby.min.js"></script>
-<script src="26-structural-tags_files/libs/quarto-html/popper.min.js"></script>
-<script src="26-structural-tags_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="26-structural-tags_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="26-structural-tags_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="26-structural-tags_files/libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="24-styles_files/libs/clipboard/clipboard.min.js"></script>
+<script src="24-styles_files/libs/quarto-html/tabby.min.js"></script>
+<script src="24-styles_files/libs/quarto-html/popper.min.js"></script>
+<script src="24-styles_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="24-styles_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="24-styles_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="24-styles_files/libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="ale66">
@@ -14,8 +14,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="26-structural-tags_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="26-structural-tags_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="24-styles_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="24-styles_files/libs/revealjs/dist/reveal.css">
   <style>
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -101,13 +101,13 @@
     code span.vs { color: #abe338; } /* VerbatimString */
     code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="26-structural-tags_files/libs/revealjs/dist/theme/quarto-84b150702567ae7e15cad124fb9039e2.css">
-  <link href="26-structural-tags_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="26-structural-tags_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="26-structural-tags_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="26-structural-tags_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="26-structural-tags_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="26-structural-tags_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="24-styles_files/libs/revealjs/dist/theme/quarto-84b150702567ae7e15cad124fb9039e2.css">
+  <link href="24-styles_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="24-styles_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="24-styles_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="24-styles_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="24-styles_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="24-styles_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -213,39 +213,131 @@ ale66
 
 </section>
 <section>
-<section id="structural-tags" class="title-slide slide level1 center">
-<h1>Structural tags</h1>
+<section id="styles" class="title-slide slide level1 center">
+<h1>Styles</h1>
 
 </section>
-<section id="hierarchical" class="slide level2">
-<h2>Hierarchical</h2>
-<p>Titles are rendered with the simple <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags.</p>
-<p>The now-obsolete <code>&lt;hr&gt;</code> divides text without a title.</p>
+<section id="the-digital-page-so-far" class="slide level2">
+<h2>The digital page, so far</h2>
+<ul>
+<li><p>no fixed dimension</p></li>
+<li><p>light or no table of contents/hierarchy</p></li>
+<li><p>basic tags control appearance</p></li>
+<li><p>tag names and their effects are part of the HTML5 industrial standard</p></li>
+<li><p>minor variations on how browsers render HTML formatting.</p></li>
+</ul>
 </section>
-<section id="lists" class="slide level2">
-<h2>Lists</h2>
-<p>Several styles for lists are available, try toggling <code>ul</code> for <code>ol</code></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">ol</span><span class="dt">&gt;</span></span>
-<span id="cb1-2"><a href="" aria-label="2"></a>  <span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;</span>first item<span class="dt">&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
-<span id="cb1-3"><a href="" aria-label="3"></a></span>
-<span id="cb1-4"><a href="" aria-label="4"></a>  <span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;</span>second item<span class="dt">&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
-<span id="cb1-5"><a href="" aria-label="5"></a><span class="dt">&lt;/</span><span class="kw">ol</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Please see again <a href="https://www.w3schools.com/html/html_lists.asp">W3schools</a> for the details</p>
+<section id="style-personalization" class="slide level2">
+<h2>Style personalization</h2>
+<p>inside each tag we can re-assign some style measures, e.g., colour:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">tag</span><span class="ot"> style</span><span class="op">=</span><span class="st">"attribute:value;"</span><span class="dt">&gt;</span>my text<span class="dt">&lt;/</span><span class="kw">tag</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Both <code>attribute</code> and <code>value</code> must be selected from a list of admitted names/values.</p>
+<p>Mind the syntax: <code>style</code>, <code>=</code>, <code>""</code>, <code>:</code> and <code>;</code> are all indespensible.</p>
 </section>
-<section id="panels-e.g.-for-navigation" class="slide level2">
-<h2>Panels, e.g.&nbsp;for navigation</h2>
-<p>See p.&nbsp;67 of the textbook: we use special styles and <code>div</code> or <code>span</code> to achieve eye-catching</p>
+<section id="examples" class="slide level2">
+<h2>Examples</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">strong</span><span class="ot"> style</span><span class="op">=</span><span class="st">"color: red;"</span><span class="dt">&gt;</span>Lorem Ipsum<span class="dt">&lt;</span><span class="kw">strong</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>try it on your project</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">strong</span><span class="ot"> style</span><span class="op">=</span><span class="st">"color: red; font-weight: bolder;"</span><span class="dt">&gt;</span>Lorem Ipsum<span class="dt">&lt;/</span><span class="kw">strong</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>(check fonts weights on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">Mozilla</a>)</p>
+</section>
+<section class="slide level2">
+
+<p>but what about</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">b</span><span class="dt">&gt;</span>L<span class="dt">&lt;/</span><span class="kw">b</span><span class="dt">&gt;</span>orem ipsum <span class="dt">&lt;</span><span class="kw">strong</span><span class="ot"> style</span><span class="op">=</span><span class="st">"color: red;"</span><span class="dt">&gt;</span>dolor<span class="dt">&lt;/</span><span class="kw">strong</span><span class="dt">&gt;</span> sit amet, consectetur </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><b>L</b>orem ipsum <strong style="color: red;">dolor</strong> sit amet, consectetur</p>
+<ul>
+<li><p>cacophonic visual effects</p></li>
+<li><p>the source quickly becomes unreadable</p></li>
+<li><p>hard to make global changes (e.g., all instances of <em>dolor</em> now become green)</p></li>
+</ul>
+</section>
+<section id="a-special-operation" class="slide level2">
+<h2>A special operation</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">”text-indent:</span><span class="ot"> </span><span class="er">16px;”</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section></section>
 <section>
-<section id="screen-oriented-structure" class="title-slide slide level1 center">
-<h1>Screen-oriented structure</h1>
+<section id="the-css-standard" class="title-slide slide level1 center">
+<h1>The CSS standard</h1>
 
 </section>
 <section class="slide level2">
 
-<p>Unless most paper pages (books, magazines etc.), web pages might have a <em>variable layout</em> with different contents and styles</p>
 
-<img data-src="https://assets.htmlgoodies.com/uploads/2021/04/stylingblocks.png" class="r-stretch"><p>Specific layout tags will help us style the sections independently</p>
+<img data-src="https://kinsta.com/wp-content/uploads/2020/08/html-vs-css.png" class="r-stretch"></section>
+<section id="idea" class="slide level2">
+<h2>Idea</h2>
+<ul>
+<li><p>redefine tags with our styles</p></li>
+<li><p>create new tags to attach specific styles to text</p></li>
+<li><p><strong>keep webpage styles separated from content</strong></p></li>
+</ul>
+<p>–</p>
+</section>
+<section id="the-engineering-of-styles" class="slide level2">
+<h2>The engineering of styles</h2>
+<ul>
+<li><p>styles change seldom, mostly through large <em>facelifting</em> operations, graphics experts work on them</p></li>
+<li><p>contents may change by the minute and are produced by a variety of actors (journalists)</p></li>
+<li><p>to keep consistency across large web sites and re-use styles, two or more CSS files could be applied to one page</p></li>
+</ul>
+</section>
+<section id="get-started" class="slide level2">
+<h2>Get started</h2>
+<p>from VS Code create a new CSS file, e.g., <code>mystyle.css</code> and save it alongside your Lorem ipsum page</p>
+<p>write on it:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb6-1"><a href="" aria-label="1"></a>p {</span>
+<span id="cb6-2"><a href="" aria-label="2"></a>    <span class="kw">text-indent</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-3"><a href="" aria-label="3"></a>    <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">justify</span><span class="op">;</span></span>
+<span id="cb6-4"><a href="" aria-label="4"></a>    <span class="kw">letter-spacing</span><span class="ch">:</span> <span class="dv">3</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-5"><a href="" aria-label="5"></a>  }</span>
+<span id="cb6-6"><a href="" aria-label="6"></a></span>
+<span id="cb6-7"><a href="" aria-label="7"></a>span {</span>
+<span id="cb6-8"><a href="" aria-label="8"></a>      <span class="kw">background-color</span><span class="ch">:</span> <span class="cn">yellow</span><span class="op">;</span></span>
+<span id="cb6-9"><a href="" aria-label="9"></a>    } </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Notice the different syntax</p>
+<p>Use the embedded code selector, but with <em>restraint</em></p>
+</section>
+<section class="slide level2">
+
+<p>Now, on the HTML file put at the beginning, e.g.,</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href="" aria-label="1"></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"mystyle.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>reload to see how the browser applies the definitions from <code>mystyle.css</code> to the tags in, e.g., <code>lorem.html</code></p>
+</section>
+<section id="change-the-mood-all-at-once" class="slide level2">
+<h2>Change the mood, all at once</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb8-1"><a href="" aria-label="1"></a>body {</span>
+<span id="cb8-2"><a href="" aria-label="2"></a>    <span class="kw">font</span><span class="ch">:</span> <span class="dv">11</span><span class="dt">px</span> <span class="dv">georgia</span><span class="op">,</span> <span class="dv">serif</span><span class="op">;</span></span>
+<span id="cb8-3"><a href="" aria-label="3"></a>    <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb8-4"><a href="" aria-label="4"></a>    <span class="kw">color</span><span class="ch">:</span> <span class="cn">#fff</span><span class="op">;</span></span>
+<span id="cb8-5"><a href="" aria-label="5"></a>    <span class="kw">background</span><span class="ch">:</span> <span class="cn">#748A9B</span><span class="op">;</span></span>
+<span id="cb8-6"><a href="" aria-label="6"></a>    <span class="kw">margin</span><span class="ch">:</span> <span class="dv">0</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb8-7"><a href="" aria-label="7"></a>    }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Put this, the least-specific definition, as first in the CSS file</p>
+</section>
+<section class="slide level2">
+
+<p>This should be the default</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb9-1"><a href="" aria-label="1"></a>h1<span class="op">,</span> h2 {</span>
+<span id="cb9-2"><a href="" aria-label="2"></a>        <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb9-3"><a href="" aria-label="3"></a>        }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb10-1"><a href="" aria-label="1"></a>h1 {</span>
+<span id="cb10-2"><a href="" aria-label="2"></a>    <span class="kw">color</span><span class="ch">:</span> <span class="cn">purple</span><span class="op">;</span></span>
+<span id="cb10-3"><a href="" aria-label="3"></a>    }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section></section>
+<section>
+<section id="css-in-action" class="title-slide slide level1 center">
+<h1>CSS in action</h1>
+
+</section>
+<section id="the-css-zen-garden" class="slide level2">
+<h2>The CSS Zen Garden</h2>
+<p>A fixed HTML info page with a few links</p>
+<p>Different CSS files dress it up for different occasions and locations</p>
+<p>Visit it the <a href="https://csszengarden.com/218/">csszengarden</a></p>
+<p>Styles are on <a href="https://github.com/mezzoblue/csszengarden.com">GitHub</a></p>
 
 </section></section>
     </div>
@@ -256,20 +348,20 @@ ale66
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="26-structural-tags_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="24-styles_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="26-structural-tags_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="26-structural-tags_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="26-structural-tags_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="26-structural-tags_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="26-structural-tags_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="26-structural-tags_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="24-styles_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="24-styles_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="24-styles_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="24-styles_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="24-styles_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="24-styles_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="26-structural-tags_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="26-structural-tags_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="26-structural-tags_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="26-structural-tags_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="24-styles_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="24-styles_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="24-styles_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="24-styles_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
