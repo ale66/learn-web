@@ -6,8 +6,8 @@
 <script src="get_started_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="get_started_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="get_started_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="get_started_files/libs/quarto-html/quarto-syntax-highlighting-dark-b651517ce65839d647a86e2780455cfb.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.24">
+<link href="get_started_files/libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="ale66">
   <title>Learn Web</title>
@@ -17,10 +17,16 @@
   <link rel="stylesheet" href="get_started_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="get_started_files/libs/revealjs/dist/reveal.css">
   <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -29,7 +35,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="get_started_files/libs/revealjs/dist/theme/quarto-06e768f098560084c2d7120de8ad04fb.css">
+  <link rel="stylesheet" href="get_started_files/libs/revealjs/dist/theme/quarto-84b150702567ae7e15cad124fb9039e2.css">
   <link href="get_started_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="get_started_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="get_started_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -134,7 +140,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-ale66 
+ale66
 </div>
 </div>
 </div>
@@ -159,33 +165,33 @@ ale66
 <li><p>phones in the bag, off or on mute</p></li>
 <li><p>laptops on, with Teams on and the rest off</p></li>
 <li><p>a loud environment: keep your voice low at all times</p></li>
-<li><p>VS Code for coding locally</p></li>
-<li><p>Firefox or Chromium (not Chrome) for testing.</p></li>
+<li><p>VS Code for coding locally, from lab computers use <a href="https://vscode.dev/">vscode.dev/</a></p></li>
+<li><p>Firefox for testing.</p></li>
 </ul>
 </section>
 <section id="timetable" class="slide level2">
 <h2>Timetable</h2>
 <ul>
 <li><p>Friday 14:30 to 17:30: lectures + labs</p></li>
-<li><p>Saturday 8:30-ish to 11:30-ish: lectures, labs and workshop: work on your exam project.</p></li>
+<li><p>Saturday 9:00 to 11:45: lectures, labs and workshop: work on your exam project.</p></li>
 </ul>
 </section>
 <section id="learning-objectives" class="slide level2">
 <h2>Learning objectives</h2>
 <ul>
-<li><p>formal learning: coding authonomy with hypertext, markup, interpretation, boilerplates, web linking, containers etc.</p></li>
+<li><p>formal learning: coding autonomy with hypertext, markup, interpretation, boilerplates, web linking, containers etc.</p></li>
 <li><p>informal learning: plan, design and implement <em>a web communication project;</em> create a mock and present it to a technical/business committee</p></li>
 </ul>
 </section>
 <section class="slide level2">
 
-<h3 id="posponed-gratification">Posponed gratification</h3>
+<h3 id="postponed-gratification">Postponed gratification</h3>
 <ul>
 <li><p>working in COM today often involves joining a web/multimedia team</p></li>
 <li><p>teams with <em>front-end</em> (UX) and <em>back-end</em> figures</p></li>
-<li><p>as with all technical communities, a jargon and unspoke assumptions</p></li>
+<li><p>as with all technical communities, a jargon and unspoken assumptions</p></li>
 <li><p>technology is often unnecessarily obscure and</p></li>
-<li><p>continously changing</p></li>
+<li><p>continuously changing</p></li>
 </ul>
 </section>
 <section class="slide level2">
@@ -207,15 +213,16 @@ ale66
 <section id="the-exam" class="title-slide slide level1 center">
 <h1>The exam</h1>
 <ul>
-<li><p>detailed instructions on the MyAriel page</p></li>
-<li><p>exam dates are project submission dates</p></li>
-<li><p>[TBC] asynch assessment</p></li>
+<li>detailed instructions on the MyAriel page</li>
+</ul>
+<p>-submit your project in advance</p>
+<ul>
+<li>[TBC] async assessment</li>
 </ul>
 </section>
 <section id="lets-look-at-past-exam-essays" class="slide level2">
 <h2>Let’s look at past exam essays</h2>
 <p>Refactoring of existing web sites:</p>
-<p><a href="https://canilimilano.w3spaces.com/">Milan Dog shelter</a></p>
 <p><a href="https://www.4tsrl.it/">4T Mechanical toolmaker near Bologna</a></p>
 <p>some projects may have been taken offline by their creators</p>
 <p><a href="https://replit.com/@vlborriello/MondiParalleliWebCommExam">Refactoring the Web site of an indy comics store</a></p>
@@ -240,20 +247,12 @@ ale66
 </section>
 <section id="the-self-study-playground" class="slide level2">
 <h2>The self-study playground</h2>
-<p><a href="https://www.webdesignplayground.io/">https://www.webdesignplayground.io/</a></p>
+<p><a href="https://www.webdesignplayground.io/">https://www.wdpg.io/</a></p>
 </section>
 <section id="githib-and-gh-workspace" class="slide level2">
 <h2>Githib and GH workspace:</h2>
 <p><a href="https://www.github.com">www.github.com</a></p>
 <p><a href="https://github.blog/developer-skills/github/beginners-guide-to-github-repositories-how-to-create-your-first-repo/">A tutorial</a></p>
-</section>
-<section id="w3schools" class="slide level2">
-<h2>W3schools:</h2>
-<p><a href="https://www.w3schools.com/spaces/index.php">www.w3schools.com/spaces/</a></p>
-</section>
-<section id="the-replit.com-playground" class="slide level2">
-<h2>The Replit.com playground</h2>
-<p><a href="https://replit.com">https://replit.com</a></p>
 
 </section></section>
     </div>

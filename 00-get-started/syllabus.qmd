@@ -1,0 +1,96 @@
+---
+title: "Web Communication 2026-27"
+subtitle: ''
+author: ''
+date: ''
+format:
+  html:
+    toc: false
+    toc-depth: 2
+    number-sections: true
+---
+
+
+
+
+
+This course introduces students to the principles and practice of web
+communication and web design, from basic HTML/CSS to JavaScript, responsive layout, and beyond. 
+All lecture materials, exercises, and boilerplate code
+are published in the course GitHub repository.
+
+## Online Course resources 
+
+| Resource | Link |
+|---|---|
+| Moodle (course page, quizzes, readings) | [myariel.unimi.it/course/view.php?id=12470](https://myariel.unimi.it/course/view.php?id=12470) |
+| MS Teams (live sessions, announcements, chat) | [MS Teams team](TEAMS_URL_HERE) |
+| GitHub (lecture materials & code) | [github.com/ale66/learn-web](https://github.com/ale66/learn-web) |
+ Web design playground (learn HTML+CSS online) | [wdpg.io/](https://www.webdesignplayground.io/) | 
+
+
+## Logistics
+
+Lectures run 14:30--17:30 on Friday and 9:00--11:45 on Saturday. 
+All lectures take place in *Laboratorio 2* on the ground floor of the *Passione* building. A low-qual AV broadcast and lecture recording will be available.
+
+
+## Contacts
+
+Questions on course materials, logistics etc.: please post on Teams so all students benefit from the answer.
+
+Questions on personal project/studies: you may contact me on Teams anytime.
+
+In-person office hours: Friday after class and Saturday before class.
+
+
+## Calendar
+
+| Week | Friday | Saturday |
+|-|------|------|
+| 0 | Getting Started | HTML as Typography |
+|   | Installations | Lorem Ipsum Boilerplate |
+| 1 | Textbook Topics | Structural Tags   |
+|   | Styles | Visuals |  
+| 2 | HTTP | The DOM   |
+|   | AV, linking |  |  
+| 3 | Frames | External CSSs   |
+|   | JavaScript 1 |  |  
+| 4 | Page Layouts | Designing a Landing Page |
+|   |  |  |  
+| 5 | Responsive Design Flexbox | JavaScript 2 |
+|   |  |  |  
+| 6 |  Cookies  | RevealJS lab |
+|   |  |  |  
+| 7 | A/B Testing | POST methods  |
+|   | Web privacy | Carousels |  
+| 8 |  | |
+|   |  | |  
+| 9 | SEO | Project reviews |
+|   | Meta tags  |  |  
+
+
+
+## Software Tools
+
+Tools students need installed to follow the course and complete exercises:
+
+- **Web browser** Firefox will be used in class. 
+
+- **Package manager** to quickly install/update software. For Win: install [chocolatey.org](https://chocolatey.org/); For Mac: install [brew.sh](https://brew.sh/).
+
+- **Code editor** [code.visualstudio.com/](https://code.visualstudio.com/); also available online at [vscode.dev/](https://vscode.dev/)
+- **document converter** from [pandoc.org/](https://pandoc.org/), used under the hood by Quarto; also available online at [pandoc.org/try/](https://pandoc.org/try/)
+- **Renderer** [quarto.org/](https://quarto.org/) for authoring and rendering course materials (HTML, PDF, RevealJS slides)
+- **Version control software** [git-scm.com/](https://git-scm.com/), and a [github.com/](https://github.com/) account — for cloning the course repository and publishing work
+- **A modern Git manager**, e.g. [fork.dev](https://fork.dev/)
+
+## Exams
+
+Prepare a Web Communication project consisting of a *pitch deck* for a technical audience, a stub web page with styles, AV contents, links etc parked on your GitHub account and coordinated with email campaign plans and social media presence (IG, FB, X, WA etc.). 
+The oral exam consists of presenting your project and showing *ownership* of the code.
+
+**Exam dates** December 18 and 19 in person at the *sala seminari* on the second floor of the *Passione* building (TBC). Arrangements are available for Erasmus/exchange students who need to leave Milan earlier.
+For 2027, January 13 and 14 (TBC) and dates in March and July. 
+
+

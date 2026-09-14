@@ -36,9 +36,9 @@ execute:
 
 - a loud environment: keep your voice low at all times
 
-- VS Code for coding locally
+- VS Code for coding locally, from lab computers use [vscode.dev/](https://vscode.dev/)
   
-- Firefox or Chromium (not Chrome) for testing.
+- Firefox for testing.
 
 ---
 
@@ -46,29 +46,29 @@ execute:
 
 - Friday 14:30 to 17:30: lectures + labs
   
-- Saturday 8:30-ish to 11:30-ish: lectures, labs and workshop: work on your exam project.
+- Saturday 9:00 to 11:45: lectures, labs and workshop: work on your exam project.
   
 ---
 
 ## Learning objectives
 
-* formal learning: coding authonomy with hypertext, markup, interpretation, boilerplates, web linking, containers etc.
+* formal learning: coding autonomy with hypertext, markup, interpretation, boilerplates, web linking, containers etc.
 
 * informal learning: plan, design and implement *a web communication project;* create a mock and present it to a technical/business committee
 
 ---
 
-### Posponed gratification
+### Postponed gratification
 
 * working in COM today often involves joining a web/multimedia team
 
 * teams with *front-end* (UX) and *back-end* figures
 
-* as with all technical communities, a jargon and unspoke assumptions
+* as with all technical communities, a jargon and unspoken assumptions
 
 * technology is often unnecessarily obscure and
 
-* continously changing  
+* continuously changing  
 
 ---
 
@@ -93,9 +93,9 @@ execute:
 
 - detailed instructions on the MyAriel page
 
-- exam dates are project submission dates
+-submit your project in advance
   
-- [TBC] asynch assessment
+- [TBC] async assessment
 
 ---
 
@@ -103,10 +103,7 @@ execute:
 
 Refactoring of existing web sites:
 
-[Milan Dog shelter](https://canilimilano.w3spaces.com/)
-
 [4T Mechanical toolmaker near Bologna](https://www.4tsrl.it/)
-
 
 some projects may have been taken offline by their creators
 
@@ -117,7 +114,6 @@ some projects may have been taken offline by their creators
 [A newly-formed theatre company needs a Web site](https://replit.com/@ErikaBelvedere/Exam-Website-Erika-Belvedere#index.html)
 
 [Technical brief here](https://replit.com/@ErikaBelvedere/Exam-Presentation-Erika-Belvedere)
-
 
 [A personal portfolio](https://replit.com/@donnaashrafyous/Portfolio#index.html)
 
@@ -135,8 +131,6 @@ some projects may have been taken offline by their creators
 - implementation autonomy relieves us from dependence on social web platforms
 
 
-
-
 # Online resources
 
 
@@ -144,7 +138,7 @@ some projects may have been taken offline by their creators
 
 ## The self-study playground
 
-[https://www.webdesignplayground.io/](https://www.webdesignplayground.io/)
+[https://www.wdpg.io/](https://www.webdesignplayground.io/)
 
 
 ---
@@ -156,14 +150,3 @@ some projects may have been taken offline by their creators
 [A tutorial](https://github.blog/developer-skills/github/beginners-guide-to-github-repositories-how-to-create-your-first-repo/)
 
 
----
-
-## W3schools: 
-
-[www.w3schools.com/spaces/](https://www.w3schools.com/spaces/index.php)
-
----
-
-## The Replit.com playground
-
-[https://replit.com](https://replit.com)
