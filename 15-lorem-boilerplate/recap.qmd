@@ -1,0 +1,143 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 5
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Recap
+
+---
+
+## Concepts
+
+We study Web Communication by doing small projects, mostly web pages
+
+We install several new softwares that support us in creating/styling local web pages
+
+---
+
+## Installations, recap
+
+- install an *installer* to simplify managing software on your computer
+
+- via the installer, get 
+  - Firefox
+  - VS Code
+
+
+# Win 
+
+---
+
+## Win installation: Chocolatey
+
+- in ``Settings`` enable ``Developer mode`` and ``sudo``
+
+- visit ``Chocolatey.org`` click on ``Get Started`` then on ``Try it now`` then on ``Individual``
+  
+- copy the long, nasty command: ``>Set-ExecutionPolicy Bypass -Scope Process -Force... ``
+
+--- 
+
+## Win, cont'd
+
+- now, go back to yor computer and start a Windows terminal or a Windows Powershell or a cmd.exe in Administrator mode. 
+  
+- it's **crucial** that you see 'Administrator' on the upper left corner of the command window
+
+- paste the long, nasty command then press 'enter'
+
+- follow through the installation 
+
+---
+
+## Win installation: Firefox etc.
+
+- open a Win. terminal or similar *in Administrator mode*
+
+- type ``choco install firefox`` then accept installation with ``A``
+
+- similarly, ``choco install vscode``
+
+---
+
+## Install more
+
+*I'm bored, I want to play some games*
+
+- type ``choco install pacman --yes``
+
+---
+
+## Updating your software
+
+- type ``choco upgrade all --yes``
+
+
+# Mac 
+
+---
+
+## Mac installation: HomeBrew
+
+- visit ``brew.sh`` 
+
+- copy the long, nasty command: ``/bin/bash -c "$(curl ... ``
+
+- now, go back to yor computer and start a MacOs Terminal
+
+- paste the long, nasty command then press 'enter'
+  
+- when required, give the system password you set up when you bought the computer (not your everyday password), for security, it won't show on the scree
+
+- follow through the installation 
+
+## MacOs installation: Firefox etc.
+
+- open a MacOs Terminal 
+
+- type ``brew install firefox`` and follow through 
+
+- similarly, ``brew install visual-studio-code``
+
+---
+
+## Install more
+
+*I'm bored, I want to play some games*
+
+- type ``brew install mgba`` for *Gameboy*
+
+---
+
+## Updating your software
+
+- type ``brew upgrade``
+
+
+# VS Code extensions 
+
+---
+
+## To get started
+
+Click on the Lego blocks on the left or type CTRL+Shift+x (CMD+Shift+x)
+
+- [Visual Studio Code CSS Intellisense for HTML](https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css)
+
+- [HTML Boilerplate](https://marketplace.visualstudio.com/items?itemName=sidthesloth.html5-boilerplate)
+
+- [Path intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
+
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) for later
+
+- [Live ](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for later

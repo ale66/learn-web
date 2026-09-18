@@ -21,9 +21,7 @@ For better learning setup your computer to work on a local folder with HTML, CSS
 
 Several new softwares and settings mush be applied to your laptop
 
-This presentation relates to Win 10 laptops. 
-
-For Win 11: authorise installations. 
+Win 11: authorise installations. MacOs: you should be fine.
 
 ---
 
@@ -31,9 +29,9 @@ For Win 11: authorise installations.
 
 Installations typically require *admin* access.
 
-Win: start the ``Windows PowerShell`` app by finding it with the magnifyng lens then right-clik and select 'Run as admin'
+Win: start the ``Windows PowerShell`` app by finding it with the magnifying lens then right-click and select 'Run as admin'
 
-donloading+installing may require time. 
+downloading+installing may require time. 
 
 ---
 
@@ -43,7 +41,7 @@ donloading+installing may require time.
 
 It manages installed software as linux does: the whole platform can be updated at a stroke
 
-Intallation is slightly complex, see [here](https://chocolatey.org/install)
+Installation is slightly complex, see [here](https://chocolatey.org/install)
 
 ---
 
@@ -53,12 +51,12 @@ it simplifies installing/upgrading apps
 
 Example: I want the Chromium browser, which is less nosy than Chrome
 
-1. Start a Windows __PowerShell__ in administrator mode 
+1. Start a Windows terminal or PowerShell in administrator mode 
   
 2. type:
 
 ```bash
-> choco install chromium
+> choco install firefox
 ```
 
 ---
@@ -118,7 +116,7 @@ __CTRL+Shift+x__ takes you to the markeplace; get
 
 to maintain your copy of the GH repo [github.com/ale66/learn-web](https://github.com/ale66/learn-web) up-to-date
 
-General tendence: code is public but data is very private
+General tendencies: code is public but data is very private
 
 # MacOs
 
@@ -128,19 +126,23 @@ See instructions for Win and
 
 - use the *Terminal* app instead of *PowerShell*
 
-- to run admin commands inside Terminal type `> sudo su`
+- to run admin commands inside Terminal type `>sudo su`
 
 then enter the computer's password (not your own).
-End the admin session with `> exit`
+End the admin session with `>exit`
 
 Some commands differ: to see the local files Win uses `>dir` while MacOs uses `>ls -lrt`
 
+```bash
+>brew install visual-studio-code
+```
+
+
 ---
 
-<<<<<<< HEAD
-Git implements incremental/differential synchronisation
+Git implements incremental/differential synchronization
 
-it's easy to synchronise your local copy of a repo with the Github version
+it's easy to synchronies your local copy of a repo with the Github version
 
 - first time: clone existing repository into a suitable folder
 
@@ -157,9 +159,7 @@ it's easy to synchronise your local copy of a repo with the Github version
 ---
 
 ## [Chocolatey](https://chocolatey.org/)
-=======
 ## [Home Brew](https://brew.sh/)
->>>>>>> 103141406c8962dbbe966dc113237fe8f59b65ef
 
 <img src="./images/homebrew.png" height="180">
 
@@ -169,7 +169,6 @@ Essentially the same as Chocolatey, but for MacOS.
 > brew --cask install visual-studio-code
 ```
 
-<<<<<<< HEAD
 ---
 
 ## [Chocolatey](https://chocolatey.org/)
@@ -194,7 +193,7 @@ Essentially the same as Chocolatey, but for MacOS.
 
 <img src="./images/vscode-extensions.png" height="140">
 
-__CTRL+Shift+x__ takes you to the markeplace; get
+__CTRL+Shift+x__ takes you to the marketplace; get
 
 * HTML CSS Support
 
@@ -205,9 +204,7 @@ __CTRL+Shift+x__ takes you to the markeplace; get
 * JavaScript
 
 * Markdown All-in-one / Markdown Preview Enhanced
-=======
 N.B. on MacOs use Brew to install Git  
->>>>>>> 103141406c8962dbbe966dc113237fe8f59b65ef
 
 ---
 
@@ -215,7 +212,7 @@ N.B. on MacOs use Brew to install Git
 
 * try practicing daily, in your __zone__
 
-* try getting past frustation and *enjoy* the progress you make: you are in control now
+* try getting past frustration and *enjoy* the progress you make: you are in control now
 
 * sign up to [Stack Overflow](https://stackoverflow.com/) to find solutions
 

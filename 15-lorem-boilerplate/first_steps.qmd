@@ -1,0 +1,110 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 5
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+
+# First steps: local web pages 
+
+---
+
+## On your computer
+
+- A web page begins with a file containing the page structure and content, e.g. ``index.html``
+
+- open with VS Code: see the *source code* that was sent or downloaded
+
+- open with a browser: see the *rendering* of the page with styles, links, images, AV content etc.
+
+---
+
+## On your Browser
+
+- a *monster* software
+
+- interprets commands in formal language
+
+  - HTML: text + settings (invisible) + *mark up* tags
+  
+  - CSS: the style associated to tags
+
+- let learn HTML by playing around on some web pages
+
+- load pages by either clicking on the icon or press `alt` then the `File` menu
+
+
+# Exercises
+
+---
+
+## Exercise A: learn by defacing
+
+- open the *file system* of our computer (the yellow folders)
+  
+- navigate to `learn-web/15-lorem-boilerplate`
+
+- right-click on `index.html` to open with VS Code
+
+- on the upper right corner click on the window with magnifying lens
+
+- scroll the code towards the center, try changing small parts to see how the preview changes
+
+- exit without saving the changes
+
+---
+
+## Exercise B: study the basics
+
+- Creativity is mediated by *strict rules* of HTML etc.
+
+- apart from spaces, all characters and punctuation matter!
+
+
+On [https://wdpg.io](https://wdpg.io) we did
+
+- 1.1 and 1.2 to get started with HTML+CSS and rendering
+
+- 2.1 to 2.8 to learn the basic mark-up tags, e.g., `p`, `b`, `em`... 
+
+
+![](./wdpg-ch2.png)
+
+---
+
+## Exercise C: the Lorem exercise
+
+- take the *boilerplate* project inside `learn-web/15-lorem-boilerplate`
+
+- select file `rename-then-edit-me.html`, right-click then rename it. E.g., `ale-lorem.html` 
+
+- select file `mystyle.css`, right-click then rename it. E.g., `ale-style.css` 
+
+Alternatively, you can copy the two files and put them into any folder, e.g., `Downloads`, that sits outside  `learn-web `
+
+---
+
+Think of an intended reader of your page. E.g. 
+
+- High-school students of Latin 
+
+- teachers who are looking for classroom examples
+
+- tourists of Rome/Latium who get curious about Latin lit 
+
+- adult readers who enjoy Cicero's Latin prose
+
+write HTML/CSS to create a suitable style
+
+it should deploy all concepts learned in WDPG 2.1--2.8
+
+Later, include concepts from WDPG 2.9 & 2.10

@@ -101,22 +101,25 @@ execute:
 
 ## Let's look at past exam essays
 
+
+(some projects may have gone taken offline)
+
+
 Refactoring of existing web sites:
 
 [4T Mechanical toolmaker near Bologna](https://www.4tsrl.it/)
 
-some projects may have been taken offline by their creators
+Freelance photographer
 
-[Refactoring the Web site of an indy comics store](https://replit.com/@vlborriello/MondiParalleliWebCommExam)
+[Ekaterina's photography workshop](https://ekaterinaphotography.w3spaces.com/)
 
-[Technical brief here](https://replit.com/@vlborriello/PresentationMondiParalleli)
+[Technical brief/pith deck](https://ekaterinaphotography.w3spaces.com/presentation/#/title-slide)
 
-[A newly-formed theatre company needs a Web site](https://replit.com/@ErikaBelvedere/Exam-Website-Erika-Belvedere#index.html)
+New concepts for private dining in Milan
 
-[Technical brief here](https://replit.com/@ErikaBelvedere/Exam-Presentation-Erika-Belvedere)
+[The rooting table](https://gtedescoo.github.io/)
 
-[A personal portfolio](https://replit.com/@donnaashrafyous/Portfolio#index.html)
-
+[Technical brief/pitch deck](https://gtedescoo.github.io/pitch/#/the-rooting-table)
 
 ---
 

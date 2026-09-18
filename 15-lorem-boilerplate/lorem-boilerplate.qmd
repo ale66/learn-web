@@ -20,11 +20,11 @@ execute:
 
 ## Ch. 1 & 2 of the textbook
 
-- creating pages in the way printshop create books
+- creating pages in the way print shops create books
 
 - can we take an arbitrary text and make it look good in print?
   
-- boilerplates: a fixed structure with nexted tags that is applied to provide conformity and readability
+- boilerplates: a fixed structure with nested tags that is applied to provide conformity and readability
 
 ---
 
@@ -41,11 +41,11 @@ Please look at Ch.1 of the textbook and the first set of exercises on [wdpg.io](
 
 ## Early observations
 
-- HTML is verbose: each page must declare its documentstyle, head, body etc.
+- HTML is verbose: each page must declare its ``documentstyle``, ``head``, ``body`` etc.
   
 - the discipline of nesting tags one into the other is __strict__
 
-- similarly, [:](), [{}]() and [;]() *must be right* in CSS
+- similarly, ``:``, ``{}`` and ``;`` *must be right* in CSS
 
 - browsers may ignore some errors, but trouble looms
 
@@ -80,7 +80,7 @@ Please look at Ch.1 of the textbook and the first set of exercises on [wdpg.io](
 
 ---
 
-## Test yoursel, HTML
+## Test yourself, HTML
 
 Do you understand, line by line, this boilerplate?
 
@@ -104,7 +104,7 @@ It won't show anything on the screen...
 
 ---
 
-tags beginning by 'bang,' [!](), are special *directives* to the browser, they describe *preliminary work*
+tags beginning by ``!`` ('bang'), are special *directives* to the browser, they describe *preliminary work*
 
 
 . . .
@@ -123,7 +123,7 @@ Example: comments
 
 ---
 
-## 
+## Containment
 
 Apart from doctype everything must go inside the html mega-tag
 
@@ -212,7 +212,7 @@ It's standard today: include it in the boilerplate
 
 ---
 
-Whathever the device (PC, laptop, tablet or smartphone) the page should take up the whole screenwidth 
+Whatever the device (PC, laptop, tablet or smartphone) the page should take up the whole screen width 
 
 
 ```html
