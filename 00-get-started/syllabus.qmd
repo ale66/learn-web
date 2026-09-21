@@ -1,6 +1,6 @@
 ---
 title: "Web Communication 2026-27"
-subtitle: 'v. of Sep. 15th'
+subtitle: 'v. of Sep. 21th'
 author: ''
 date: ''
 format:
@@ -12,9 +12,9 @@ format:
 
 This course introduces students to the principles and practice of web
 communication and web design, from basic HTML/CSS to JavaScript, responsive layout, and beyond. 
-All lecture materials, exercises, and boilerplate code
+All lecture materials, exercises, and boilerplate codes
 are published in the course GitHub repository. 
-Please register for a [github.com/](https://github.com/) account using your *@studenti.unimi.it* account and join [https://github.com/education](https://github.com/education).
+Please register for a [github.com/](https://github.com/) account using your *@studenti.unimi.it* account and join [github.com/education](https://github.com/education).
 
 
 ## Online Course resources 
@@ -22,7 +22,7 @@ Please register for a [github.com/](https://github.com/) account using your *@st
 | Resource | Link |
 |---|---|
 | Moodle (course page, quizzes, readings) | [myariel.unimi.it/course/view.php?id=12470](https://myariel.unimi.it/course/view.php?id=12470) |
-| MS Teams (live sessions, announcements, chat) | [MS Teams team](https://teams.microsoft.com/l/team/19%3A9LnhbtG9QgJM2nTxbl_EV1XOVHQ-Pds5TiH_Y52sDDI1%40thread.tacv2/conversations?groupId=a1903621-5288-463d-baf7-5ffc799cd4f6&tenantId=13b55eef-7018-4674-a3d7-cc0db06d545c) |
+| MS Teams (live sessions, announcements, chat) | [shorturl.at/pyS08](https://teams.microsoft.com/l/team/19%3A9LnhbtG9QgJM2nTxbl_EV1XOVHQ-Pds5TiH_Y52sDDI1%40thread.tacv2/conversations?groupId=a1903621-5288-463d-baf7-5ffc799cd4f6&tenantId=13b55eef-7018-4674-a3d7-cc0db06d545c) |
 | GitHub (lecture materials & code) | [github.com/ale66/learn-web](https://github.com/ale66/learn-web) |
  Web design playground (learn HTML+CSS online) | [wdpg.io/](https://www.webdesignplayground.io/) | 
 
@@ -76,11 +76,11 @@ Installed these to follow the course and complete exercises:
 
 - **Web browser** Firefox will be used in class. 
 
-- **Package manager** to quickly install/update software. For Win: install [chocolatey.org](https://chocolatey.org/); For Mac: install [brew.sh](https://brew.sh/).
+- **Package manager** to quickly install/update apps. For Win: install [chocolatey.org](https://chocolatey.org/); For Mac: install [brew.sh](https://brew.sh/).
 
 - **Code editor** [code.visualstudio.com/](https://code.visualstudio.com/); also available online at [vscode.dev/](https://vscode.dev/).
-- **document converter** from [pandoc.org/](https://pandoc.org/), used under the hood by Quarto; also available online at [pandoc.org/try/](https://pandoc.org/try/).
-- **Renderer** [quarto.org/](https://quarto.org/) for authoring and rendering course materials (HTML, PDF, RevealJS slides)
+- **document converter** from [pandoc.org/](https://pandoc.org/); also available online at [pandoc.org/try/](https://pandoc.org/try/).
+- **Renderer** [quarto.org/](https://quarto.org/) for authoring and rendering course materials (HTML slides or PDF)
 - **Version control software** [git-scm.com/](https://git-scm.com/).
 - **A modern Git manager**, e.g., [fork.dev](https://fork.dev/). 
 
@@ -89,7 +89,7 @@ Installed these to follow the course and complete exercises:
 Prepare a Web Communication project consisting of a *pitch deck* for a technical audience, a stub web page with styles, AV contents, links etc parked on your GitHub space and coordinated with email campaign plans and social media presence (IG, FB, X, WA etc.). 
 The oral exam consists of presenting the technical side of your project and showing *ownership* of the code.
 
-**Exam dates** December 18 and 19 in person at the *sala seminari* on the second floor of the *Passione* building (TBC). 
+**Exam dates** December 18 and 19 in person at the *Sala seminari* on the second floor of the *Passione* building (i.e., right above the Laboratorio 2). 
 Exam slots are bookable via Teams. Arrangements are available for Erasmus/exchange students who need to leave Milan earlier.
 For 2027, January 13 and 14 (TBC) and dates in March and July. 
 
