@@ -1,0 +1,17 @@
+%% DOM tree of the MDN "Using the W3C DOM Level 1 Core" example document:
+%% <html><head><title>My Document</title></head><body><h1>Header</h1><p>Paragraph</p></body></html>
+%% Rectangles = element nodes, rounded pills = text nodes.
+flowchart TD
+    html["HTML"] --> head["HEAD"]
+    html --> body["BODY"]
+    head --> title["TITLE"]
+    title --> t1(["My Document"])
+    body --> h1["H1"]
+    body --> p["P"]
+    h1 --> t2(["Header"])
+    p --> t3(["Paragraph"])
+
+    classDef element fill:#268bd2,stroke:#073642,color:#fdf6e3,stroke-width:2px;
+    classDef text fill:#eee8d5,stroke:#073642,color:#073642,stroke-width:2px;
+    class html,head,body,title,h1,p element;
+    class t1,t2,t3 text;
