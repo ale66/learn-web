@@ -6,8 +6,8 @@
 <script src="structure_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="structure_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="structure_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="structure_files/libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.25">
+<link href="structure_files/libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="ale66">
   <title>Learn Web</title>
@@ -17,10 +17,16 @@
   <link rel="stylesheet" href="structure_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="structure_files/libs/revealjs/dist/reveal.css">
   <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -95,7 +101,7 @@
     code span.vs { color: #abe338; } /* VerbatimString */
     code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="structure_files/libs/revealjs/dist/theme/quarto-06e768f098560084c2d7120de8ad04fb.css">
+  <link rel="stylesheet" href="structure_files/libs/revealjs/dist/theme/quarto-84b150702567ae7e15cad124fb9039e2.css">
   <link href="structure_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="structure_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="structure_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -203,27 +209,132 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-ale66 
+ale66
 </div>
 </div>
 </div>
 
 </section>
 <section>
-<section id="structure" class="title-slide slide level1 center">
-<h1>Structure</h1>
+<section id="learning-objectives" class="title-slide slide level1 center">
+<h1>Learning objectives</h1>
+
+</section>
+<section id="topics" class="slide level2">
+<h2>Topics</h2>
+<ul>
+<li><p>A glimpse of browser operations</p></li>
+<li><p>HTML is a <em>formal language</em> for defining pages</p>
+<ul>
+<li>parsing</li>
+<li>formal grammars</li>
+<li>an industrial standard</li>
+</ul></li>
+<li><p>the DOM representation of pages</p>
+<ul>
+<li><em>tree</em> representation</li>
+<li>tree decoration</li>
+</ul></li>
+<li><p>CSS and JS</p></li>
+</ul>
+</section></section>
+<section>
+<section id="brower-operations" class="title-slide slide level1 center">
+<h1>Brower operations</h1>
+
+</section>
+<section id="concept-platform" class="slide level2">
+<h2>Concept: platform</h2>
+<p>the combination of</p>
+<ul>
+<li>network access</li>
+<li>hardware</li>
+<li>operating system</li>
+<li>browser</li>
+</ul>
+<p>that supports our page visit experience</p>
+<p>E.g.: Eduroam Wi-Fi/Acer laptop w. Intel Celeron/Win 11 Pro/Firefox 156</p>
+</section>
+<section id="concept-interoperability" class="slide level2">
+<h2>Concept: interoperability</h2>
+<p>files that are uniformly processed (or rendered or executed) independently of the <em>platform</em></p>
+</section>
+<section id="levels-of-interoperability" class="slide level2">
+<h2>Levels of interoperability</h2>
+<p>Text/data filees, e.g.&nbsp;<code>thesis.txt</code> or <code>thesis.docx</code>: almost always interoperable</p>
+<p>Web pages, e.g., <code>promotions.html</code>: broadly interoperable, but browser issues</p>
+<p>AV, e.g., <code>my_profile_pic.jpg</code>: generally ok but hardware-dependent experience</p>
+</section>
+<section class="slide level2">
+
+<p>Source codes, e.g., <code>my_code.py</code>: interoperable, but compiler issues</p>
+<p>executables, e.g., <code>firefox.exe</code>: generally not interoperable</p>
+<ul>
+<li>create one for each plat.</li>
+<li>runtime environments</li>
+</ul>
+<p>operating sys: look the same but are very plat. specific (drivers)</p>
+</section>
+<section id="browsers" class="slide level2">
+<h2>Browsers</h2>
+<p>Reads HTML files and renders a page for viewing/clicking</p>
+<p>To do so, it will read and incorporate several auxiliary files</p>
+<ul>
+<li>style files in CSS format</li>
+<li>images</li>
+<li>linked pages (for previews)</li>
+</ul>
+<div class="fragment">
+<p>Browsers are the top software today with <a href="https://openhub.net/p/chrome/analyses/latest/languages_summary">a huge code base</a></p>
+</div>
+</section>
+<section id="the-gist-a" class="slide level2">
+<h2>The gist, a</h2>
+<p>We often experience web pages as digital equivalents of the newspaper page:</p>
+<p>read title, go down, read top-to-bottom, left-to-right</p>
+</section>
+<section id="the-gist-b" class="slide level2">
+<h2>The gist, b</h2>
+<p>HTML files are generally organised top-to-bottom, left-to-right</p>
+<p>However, they have tag containment, which creates a hierarchy of reading</p>
+<p>Browsers read HTMl files and create an internal representation in the form of a <em>tree.</em></p>
+</section></section>
+<section>
+<section id="the-tree-model-of-web-pages" class="title-slide slide level1 center">
+<h1>The tree model of web pages</h1>
 
 </section>
 <section id="important-properties" class="slide level2">
 <h2>Important properties</h2>
 <p>Whereas rendered pages are normally related to a linear, left-to-right, top-down reading, browsers see pages as <em>trees</em></p>
 <p>Biological tree: one <em>root</em> element at the bottom which splits up repeatedly in smaller and smaller branches; leaves at the top</p>
+
+<img data-src="./imgs/dragon-blood-tree.jpg" class="r-stretch"></section>
+<section id="html-example-page" class="slide level2">
+<h2>HTML example page</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="" aria-label="1"></a><span class="dt">&lt;!doctype</span> html<span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="" aria-label="2"></a></span>
+<span id="cb1-3"><a href="" aria-label="3"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> lang</span><span class="op">=</span><span class="st">"en"</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a href="" aria-label="4"></a>  <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb1-5"><a href="" aria-label="5"></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>Example web page<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb1-6"><a href="" aria-label="6"></a>  <span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb1-7"><a href="" aria-label="7"></a></span>
+<span id="cb1-8"><a href="" aria-label="8"></a>  <span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb1-9"><a href="" aria-label="9"></a>    <span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Cicero's Lorem Ipsum<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb1-10"><a href="" aria-label="10"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-11"><a href="" aria-label="11"></a>      <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>A summary<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb1-12"><a href="" aria-label="12"></a>      <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Lorem ipsum dolor...<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb1-13"><a href="" aria-label="13"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-14"><a href="" aria-label="14"></a>  <span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb1-15"><a href="" aria-label="15"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
 <p>HTML tree: flipped upside down</p>
 <p>a single root element at the top</p>
-<p>branching out into several smaller elements, some of which are siblings</p>
+<p>branching out into several smaller elements, some of them are <em>siblings</em></p>
+
+<img data-src="./imgs/example-dom.png" class="r-stretch"><p>the two <code>&lt;p&gt;</code> are siblings```</p>
 </section>
 <section id="parsing" class="slide level2">
 <h2>Parsing</h2>
@@ -233,14 +344,14 @@ ale66
 </section>
 <section class="slide level2">
 
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href=""></a><span class="dt">&lt;!doctype</span> html<span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="" aria-label="1"></a><span class="dt">&lt;!doctype</span> html<span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This is not HTML but a directive (via the <code>!</code>)</p>
 <p>the browser (and the operating system and the network services running below it) will know how to handle it.</p>
 <div class="fragment">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href=""></a><span class="dt">&lt;!doctype</span> html<span class="dt">&gt;</span></span>
-<span id="cb2-2"><a href=""></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> lang</span><span class="op">=</span><span class="st">"en"</span><span class="dt">&gt;</span></span>
-<span id="cb2-3"><a href=""></a>  ...</span>
-<span id="cb2-4"><a href=""></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="" aria-label="1"></a><span class="dt">&lt;!doctype</span> html<span class="dt">&gt;</span></span>
+<span id="cb3-2"><a href="" aria-label="2"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> lang</span><span class="op">=</span><span class="st">"en"</span><span class="dt">&gt;</span></span>
+<span id="cb3-3"><a href="" aria-label="3"></a>  ...</span>
+<span id="cb3-4"><a href="" aria-label="4"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section class="slide level2">
@@ -248,12 +359,12 @@ ale66
 <p>Mandatory: one root with two branches</p>
 <div class="columns">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href=""></a><span class="dt">&lt;!doctype</span> html<span class="dt">&gt;</span></span>
-<span id="cb3-2"><a href=""></a></span>
-<span id="cb3-3"><a href=""></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> lang</span><span class="op">=</span><span class="st">"en"</span><span class="dt">&gt;</span></span>
-<span id="cb3-4"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
-<span id="cb3-5"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
-<span id="cb3-6"><a href=""></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="" aria-label="1"></a><span class="dt">&lt;!doctype</span> html<span class="dt">&gt;</span></span>
+<span id="cb4-2"><a href="" aria-label="2"></a></span>
+<span id="cb4-3"><a href="" aria-label="3"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> lang</span><span class="op">=</span><span class="st">"en"</span><span class="dt">&gt;</span></span>
+<span id="cb4-4"><a href="" aria-label="4"></a>  <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb4-5"><a href="" aria-label="5"></a>  <span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb4-6"><a href="" aria-label="6"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell" data-reveal="true" data-layout-align="default">
 <div class="cell-output-display">
@@ -277,17 +388,17 @@ ale66
 <p>One root, two branches and two leaves</p>
 <div class="columns">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href=""></a><span class="dt">&lt;!doctype</span> html<span class="dt">&gt;</span></span>
-<span id="cb4-2"><a href=""></a></span>
-<span id="cb4-3"><a href=""></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
-<span id="cb4-4"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
-<span id="cb4-5"><a href=""></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>My DOM page<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
-<span id="cb4-6"><a href=""></a>  <span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
-<span id="cb4-7"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
-<span id="cb4-8"><a href=""></a>    <span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Visible title<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
-<span id="cb4-9"><a href=""></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>First para<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb4-10"><a href=""></a>  <span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
-<span id="cb4-11"><a href=""></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href="" aria-label="1"></a><span class="dt">&lt;!doctype</span> html<span class="dt">&gt;</span></span>
+<span id="cb5-2"><a href="" aria-label="2"></a></span>
+<span id="cb5-3"><a href="" aria-label="3"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
+<span id="cb5-4"><a href="" aria-label="4"></a>  <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb5-5"><a href="" aria-label="5"></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>My DOM page<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb5-6"><a href="" aria-label="6"></a>  <span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb5-7"><a href="" aria-label="7"></a>  <span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb5-8"><a href="" aria-label="8"></a>    <span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Visible title<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb5-9"><a href="" aria-label="9"></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>First para<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb5-10"><a href="" aria-label="10"></a>  <span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb5-11"><a href="" aria-label="11"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell" data-reveal="true" data-layout-align="default">
 <div class="cell-output-display">
@@ -310,16 +421,16 @@ ale66
 
 <div class="columns">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
-<span id="cb5-2"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
-<span id="cb5-3"><a href=""></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>My DOM page<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
-<span id="cb5-4"><a href=""></a>  <span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
-<span id="cb5-5"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
-<span id="cb5-6"><a href=""></a>    <span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Visible title<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
-<span id="cb5-7"><a href=""></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>First para.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb5-8"><a href=""></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>More text.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb5-9"><a href=""></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Further text.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb5-10"><a href=""></a>...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
+<span id="cb6-2"><a href="" aria-label="2"></a>  <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb6-3"><a href="" aria-label="3"></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>My DOM page<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb6-4"><a href="" aria-label="4"></a>  <span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb6-5"><a href="" aria-label="5"></a>  <span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb6-6"><a href="" aria-label="6"></a>    <span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Visible title<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb6-7"><a href="" aria-label="7"></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>First para.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb6-8"><a href="" aria-label="8"></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>More text.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb6-9"><a href="" aria-label="9"></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Further text.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb6-10"><a href="" aria-label="10"></a>...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell" data-reveal="true" data-layout-align="default">
 <div class="cell-output-display">
@@ -341,24 +452,24 @@ ale66
 <section class="slide level2">
 
 <p>Browsers process each tag as a <em>path</em> from root to the respective leaf:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;&lt;</span><span class="kw">body</span><span class="dt">&gt;&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Visible title<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;&lt;</span><span class="kw">Body</span><span class="dt">&gt;&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>First para<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;&lt;</span><span class="kw">body</span><span class="dt">&gt;&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Visible title<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb8-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;&lt;</span><span class="kw">Body</span><span class="dt">&gt;&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>First para<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Additionally, leaves may be assigned an <code>id</code> name:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb8-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;&lt;</span><span class="kw">body</span><span class="dt">&gt;&lt;</span><span class="kw">p</span><span class="ot"> id</span><span class="op">=</span><span class="st">"top-para"</span><span class="dt">&gt;</span>First para.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb9-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;&lt;</span><span class="kw">body</span><span class="dt">&gt;&lt;</span><span class="kw">p</span><span class="ot"> id</span><span class="op">=</span><span class="st">"top-para"</span><span class="dt">&gt;</span>First para.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>And so on:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb9-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;&lt;</span><span class="kw">body</span><span class="dt">&gt;&lt;</span><span class="kw">p</span><span class="ot"> id</span><span class="op">=</span><span class="st">"middle-para"</span><span class="dt">&gt;</span>More text<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb9-2"><a href=""></a></span>
-<span id="cb9-3"><a href=""></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;&lt;</span><span class="kw">body</span><span class="dt">&gt;&lt;</span><span class="kw">p</span><span class="ot"> id</span><span class="op">=</span><span class="st">"bottom-para"</span><span class="dt">&gt;</span>Further text.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb10-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;&lt;</span><span class="kw">body</span><span class="dt">&gt;&lt;</span><span class="kw">p</span><span class="ot"> id</span><span class="op">=</span><span class="st">"middle-para"</span><span class="dt">&gt;</span>More text<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb10-2"><a href="" aria-label="2"></a></span>
+<span id="cb10-3"><a href="" aria-label="3"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;&lt;</span><span class="kw">body</span><span class="dt">&gt;&lt;</span><span class="kw">p</span><span class="ot"> id</span><span class="op">=</span><span class="st">"bottom-para"</span><span class="dt">&gt;</span>Further text.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
 <p>Next, all the needed CSS command will be picked up from the CSS file and attached to the element</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb10-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;&lt;</span><span class="kw">body</span><span class="dt">&gt;&lt;</span><span class="kw">h1</span><span class="ot"> class</span><span class="op">=</span><span class="st">"my_hero_title"</span><span class="dt">&gt;</span>My big, fat title<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb11-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;&lt;</span><span class="kw">body</span><span class="dt">&gt;&lt;</span><span class="kw">h1</span><span class="ot"> class</span><span class="op">=</span><span class="st">"my_hero_title"</span><span class="dt">&gt;</span>My big, fat title<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Where the CSS contains:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb11-1"><a href=""></a><span class="fu">.my_hero_title</span> {</span>
-<span id="cb11-2"><a href=""></a>  font-color<span class="ch">:</span> <span class="cn">darksalmon</span><span class="op">;</span></span>
-<span id="cb11-3"><a href=""></a>  ...</span>
-<span id="cb11-4"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb12-1"><a href="" aria-label="1"></a><span class="fu">.my_hero_title</span> {</span>
+<span id="cb12-2"><a href="" aria-label="2"></a>  font-color<span class="ch">:</span> <span class="cn">darksalmon</span><span class="op">;</span></span>
+<span id="cb12-3"><a href="" aria-label="3"></a>  ...</span>
+<span id="cb12-4"><a href="" aria-label="4"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Free choice of class names but they must be unique</p>
 </section>
 <section id="how-browers-actually-see-our-page" class="slide level2">

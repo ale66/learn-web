@@ -1,0 +1,35 @@
+graph TD
+    document([document])
+    html[html]
+    head[head]
+    body[body]
+    title[title]
+    h1[h1]
+    div[div]
+    text1["Example web page"]
+    text2["Cicero's Lorem Ipsum"]
+    p1[p]
+    p2[p]
+    text3["The original text"]
+    text4["Lorem ipsum dolor..."]
+
+    document --> html
+    html --> head
+    html --> body
+    head --> title
+    title --> text1
+    body --> h1
+    body --> div
+    h1 --> text2
+    div --> p1
+    div --> p2
+    p1 --> text3
+    p2 --> text4
+
+    classDef docNode fill:#8ecae6,stroke:#5a9bc4,color:#0b1e33,font-weight:bold;
+    classDef elNode fill:#f28b82,stroke:#e06c68,color:#ffffff,font-weight:bold;
+    classDef textNode fill:#3d5a73,stroke:#2c435a,color:#ffffff;
+
+    class document docNode;
+    class html,head,body,title,h1,div,p1,p2 elNode;
+    class text1,text2,text3,text4 textNode;

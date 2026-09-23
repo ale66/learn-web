@@ -14,8 +14,105 @@ execute:
   echo: true
 ---
 
-# Structure
+# Learning objectives
 
+---
+
+## Topics
+
+- A glimpse of browser operations
+
+- HTML is a *formal language* for defining pages
+  - parsing
+  - formal grammars
+  - an industrial standard
+
+- the DOM representation of pages 
+  - *tree* representation
+  - tree decoration
+
+- CSS and JS 
+
+# Brower operations
+
+---
+
+## Concept: platform
+
+the combination of 
+
+- network access
+- hardware
+- operating system
+- browser
+
+that supports our page visit experience
+
+E.g.: Eduroam Wi-Fi/Acer laptop w. Intel Celeron/Win 11 Pro/Firefox 156
+
+---
+
+## Concept: interoperability
+
+files that are uniformly processed (or rendered or executed) independently of the *platform*
+
+## Levels of interoperability
+
+Text/data filees, e.g. `thesis.txt` or `thesis.docx`: almost always interoperable
+
+Web pages, e.g., `promotions.html`: broadly interoperable, but browser issues
+
+AV, e.g., `my_profile_pic.jpg`: generally ok but hardware-dependent experience
+
+
+---
+
+Source codes, e.g.,  `my_code.py`: interoperable, but compiler issues
+
+executables, e.g., `firefox.exe`: generally not interoperable
+
+  - create one for each plat.
+  - runtime environments
+
+operating sys: look the same but are very plat. specific (drivers)
+
+---
+
+## Browsers
+
+Reads HTML files and renders a page for viewing/clicking
+
+To do so, it will read and incorporate several auxiliary files
+
+  - style files in CSS format
+  - images
+  - linked pages (for previews)
+
+
+. . .
+
+Browsers are the top software today with [a huge code base](https://openhub.net/p/chrome/analyses/latest/languages_summary)
+
+---
+
+## The gist, a
+
+We often experience web pages as digital equivalents of the newspaper page:
+
+read title, go down, read top-to-bottom, left-to-right
+
+---
+
+## The gist, b 
+
+HTML files are generally organised top-to-bottom, left-to-right
+
+However, they have tag containment, which creates a hierarchy of reading
+
+Browsers read HTMl files and create an internal representation in the form of a *tree.*
+
+
+# The tree model of web pages
 
 ---
 
@@ -25,6 +122,30 @@ Whereas rendered pages are normally related to a linear, left-to-right, top-down
 
 Biological tree: one *root* element at the bottom which splits up repeatedly in smaller and smaller branches; leaves at the top
 
+![](./imgs/dragon-blood-tree.jpg)
+
+---
+
+## HTML example page
+
+```html
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>Example web page</title>
+  </head>
+
+  <body>
+    <h1>Cicero's Lorem Ipsum</h1>
+    <div>
+      <p>A summary</p>
+      <p>Lorem ipsum dolor...</p>
+    </div>
+  </body>
+</html>
+```
+
 
 ---
 
@@ -32,7 +153,15 @@ HTML tree: flipped upside down
 
 a single root element at the top
 
-branching out into several smaller elements, some of which are siblings
+branching out into several smaller elements, some of them are *siblings*
+
+
+
+
+![](./imgs/example-dom.png)
+
+
+the two ``<p>`` are siblings```
 
 
 ---
