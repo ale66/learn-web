@@ -33,7 +33,7 @@ execute:
 
 - CSS and JS 
 
-# Brower operations
+# Browser operations
 
 ---
 
@@ -155,11 +155,7 @@ a single root element at the top
 
 branching out into several smaller elements, some of them are *siblings*
 
-
-
-
 ![](./imgs/example-dom.png)
-
 
 the two ``<p>`` are siblings```
 
@@ -209,6 +205,7 @@ Mandatory: one root with two branches
   <body></body>
 </html>
 ```
+
 :::
 ::: {.column}
 ```{mermaid}
@@ -327,7 +324,7 @@ Free choice of class names but they must be unique
 
 ---
 
-## How browers actually see our page 
+## How browsers actually see our page 
 
 ```{mermaid}
 %%| echo: false
@@ -339,11 +336,7 @@ flowchart LR
 ```
 
 
-# The DOM 
-
----
-
-## Document Object model
+## Make pages alive
 
 each HTML page has an associated *tree* representation with tags and class names
 
@@ -357,7 +350,7 @@ Try the *red background* example on Sec. 1.1 of [dom.spec.whatwg.org/](https://d
 
 ---
 
-## Exercise: view the DOM of your own pages
+## Exercise, a: view the DOM of your own pages
 
 Take your own Lorem project and feed it to DOM visualisers on GH:
 
@@ -365,12 +358,14 @@ Take your own Lorem project and feed it to DOM visualisers on GH:
 
 [bioub.github.io/dom-visualizer/](http://bioub.github.io/dom-visualizer/)
 
-Try again with your favourite CSSengarden project
+Try again with some published page, e.g., [com.cdl.unimi.it/en](https://com.cdl.unimi.it/en)
 
 ---
 
+
 ## Represent content
 
+assume that ``my_font`` is a style defined in the relative .css file (more later)
 
 ```{mermaid}
 %%| echo: false
@@ -378,7 +373,7 @@ flowchart LR
   A[html] --> B[head] & C[body]
   B --> D[title]
   C --> E[h1] & F[p] & G[p] & H[p]
-  E-.-> I[.my-hero-title]
+  E-.-> I[.my_font]
 ```
 
 inside most tags there is content to be displayed.
@@ -395,7 +390,7 @@ flowchart LR
   A[html] --> B[head] & C[body]
   B --> D[title]
   C --> E[h1] & F[p] & G[p] & H[p]
-  E-.-> I[.my-hero-title]
+  E-.-> I[.my_font]
   D --> L[My DOM page]
   E --> M[My visible title]
   F --> N[some text]
@@ -415,15 +410,52 @@ flowchart TD
   A[html] --> B[head] & C[body]
   B --> D[title]
   C --> E[h1] & F[p] & G[p] & H[p]
-  E-.-> I[.my-hero-title]
+  E-.-> I[.my_font]
   D --> L[My DOM page]
   E --> M[My visible title]
   F --> N[some text]
-  F-.-> Q[.my-p-style]
+  F-.-> Q[.my-para-style]
   G --> O[more text]
   G-.-> Q
   H --> P[further text]
   H-.-> Q
 ```
 
-Javascript code takes this representation and change it as the bruwser *runs* the page
+all later tools (CSS, JavaScript, accessibility) work on the DOM when the browser loads the page
+
+
+## Exercise, b
+
+Open your Lorem page on Firefox
+
+Press ``alt``: the menus appear on top
+
+select ``Tools/Browser tools/Web developer tools``
+
+explore the final (i.e., after decoration) state of the page
+
+
+---
+
+## A language that never says "no"
+
+In CS, formal language correctness is fundamental (no poetry!)
+
+Yet, the HTMl *parser* module of browsers is **total**: any input yields a tree/a page
+
+* legacy of the 90s: browsers were forgiving, so pages were sloppy
+
+* today tags like `<html>`, `<head>` and `<body>` are still *implied*  
+
+* the standard now specifies the *recovery* precisely, so all browsers build *the same* tree (visualisation may show subtle differences)
+
+
+
+
+## For reference only
+
+* [WHATWG HTML Standard: parsing](https://html.spec.whatwg.org/multipage/parsing.html)
+
+* [WHATWG DOM Standard](https://dom.spec.whatwg.org/)
+
+* [MDN: Introduction to the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)

@@ -239,8 +239,8 @@ ale66
 </ul>
 </section></section>
 <section>
-<section id="brower-operations" class="title-slide slide level1 center">
-<h1>Brower operations</h1>
+<section id="browser-operations" class="title-slide slide level1 center">
+<h1>Browser operations</h1>
 
 </section>
 <section id="concept-platform" class="slide level2">
@@ -472,8 +472,8 @@ ale66
 <span id="cb12-4"><a href="" aria-label="4"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Free choice of class names but they must be unique</p>
 </section>
-<section id="how-browers-actually-see-our-page" class="slide level2">
-<h2>How browers actually see our page</h2>
+<section id="how-browsers-actually-see-our-page" class="slide level2">
+<h2>How browsers actually see our page</h2>
 <div class="cell" data-reveal="true" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -490,29 +490,25 @@ ale66
 </div>
 </div>
 </div>
-</section></section>
-<section>
-<section id="the-dom" class="title-slide slide level1 center">
-<h1>The DOM</h1>
-
 </section>
-<section id="document-object-model" class="slide level2">
-<h2>Document Object model</h2>
+<section id="make-pages-alive" class="slide level2">
+<h2>Make pages alive</h2>
 <p>each HTML page has an associated <em>tree</em> representation with tags and class names</p>
 <p>the tree representation guides the writing of JavaScript (JS) programs that can manipulate the structure of the page</p>
 <p>and how it looks to, e.g., classes of users</p>
 <p><strong>We study the DOM to make pages come alive</strong></p>
 <p>Try the <em>red background</em> example on Sec. 1.1 of <a href="https://dom.spec.whatwg.org/">dom.spec.whatwg.org/</a></p>
 </section>
-<section id="exercise-view-the-dom-of-your-own-pages" class="slide level2">
-<h2>Exercise: view the DOM of your own pages</h2>
+<section id="exercise-a-view-the-dom-of-your-own-pages" class="slide level2">
+<h2>Exercise, a: view the DOM of your own pages</h2>
 <p>Take your own Lorem project and feed it to DOM visualisers on GH:</p>
 <p><a href="https://codu-code.github.io/dom-visualizer/index.html">codu-code.github.io/dom-visualizer/</a></p>
 <p><a href="http://bioub.github.io/dom-visualizer/">bioub.github.io/dom-visualizer/</a></p>
-<p>Try again with your favourite CSSengarden project</p>
+<p>Try again with some published page, e.g., <a href="https://com.cdl.unimi.it/en">com.cdl.unimi.it/en</a></p>
 </section>
 <section id="represent-content" class="slide level2">
 <h2>Represent content</h2>
+<p>assume that <code>my_font</code> is a style defined in the relative .css file (more later)</p>
 <div class="cell" data-reveal="true" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -522,7 +518,7 @@ ale66
   A[html] --&gt; B[head] &amp; C[body]
   B --&gt; D[title]
   C --&gt; E[h1] &amp; F[p] &amp; G[p] &amp; H[p]
-  E-.-&gt; I[.my-hero-title]
+  E-.-&gt; I[.my_font]
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -543,7 +539,7 @@ ale66
   A[html] --&gt; B[head] &amp; C[body]
   B --&gt; D[title]
   C --&gt; E[h1] &amp; F[p] &amp; G[p] &amp; H[p]
-  E-.-&gt; I[.my-hero-title]
+  E-.-&gt; I[.my_font]
   D --&gt; L[My DOM page]
   E --&gt; M[My visible title]
   F --&gt; N[some text]
@@ -569,11 +565,11 @@ ale66
   A[html] --&gt; B[head] &amp; C[body]
   B --&gt; D[title]
   C --&gt; E[h1] &amp; F[p] &amp; G[p] &amp; H[p]
-  E-.-&gt; I[.my-hero-title]
+  E-.-&gt; I[.my_font]
   D --&gt; L[My DOM page]
   E --&gt; M[My visible title]
   F --&gt; N[some text]
-  F-.-&gt; Q[.my-p-style]
+  F-.-&gt; Q[.my-para-style]
   G --&gt; O[more text]
   G-.-&gt; Q
   H --&gt; P[further text]
@@ -584,7 +580,32 @@ ale66
 </div>
 </div>
 </div>
-<p>Javascript code takes this representation and change it as the bruwser <em>runs</em> the page</p>
+<p>all later tools (CSS, JavaScript, accessibility) work on the DOM when the browser loads the page</p>
+</section>
+<section id="exercise-b" class="slide level2">
+<h2>Exercise, b</h2>
+<p>Open your Lorem page on Firefox</p>
+<p>Press <code>alt</code>: the menus appear on top</p>
+<p>select <code>Tools/Browser tools/Web developer tools</code></p>
+<p>explore the final (i.e., after decoration) state of the page</p>
+</section>
+<section id="a-language-that-never-says-no" class="slide level2">
+<h2>A language that never says “no”</h2>
+<p>In CS, formal language correctness is fundamental (no poetry!)</p>
+<p>Yet, the HTMl <em>parser</em> module of browsers is <strong>total</strong>: any input yields a tree/a page</p>
+<ul>
+<li><p>legacy of the 90s: browsers were forgiving, so pages were sloppy</p></li>
+<li><p>today tags like <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> are still <em>implied</em></p></li>
+<li><p>the standard now specifies the <em>recovery</em> precisely, so all browsers build <em>the same</em> tree (visualisation may show subtle differences)</p></li>
+</ul>
+</section>
+<section id="for-reference-only" class="slide level2">
+<h2>For reference only</h2>
+<ul>
+<li><p><a href="https://html.spec.whatwg.org/multipage/parsing.html">WHATWG HTML Standard: parsing</a></p></li>
+<li><p><a href="https://dom.spec.whatwg.org/">WHATWG DOM Standard</a></p></li>
+<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">MDN: Introduction to the DOM</a></p></li>
+</ul>
 
 </section></section>
     </div>
