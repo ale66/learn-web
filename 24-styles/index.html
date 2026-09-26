@@ -249,7 +249,7 @@ ale66
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">b</span><span class="dt">&gt;</span>L<span class="dt">&lt;/</span><span class="kw">b</span><span class="dt">&gt;</span>orem ipsum <span class="dt">&lt;</span><span class="kw">strong</span><span class="ot"> style</span><span class="op">=</span><span class="st">"color: red;"</span><span class="dt">&gt;</span>dolor<span class="dt">&lt;/</span><span class="kw">strong</span><span class="dt">&gt;</span> sit amet, consectetur </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><b>L</b>orem ipsum <strong style="color: red;">dolor</strong> sit amet, consectetur</p>
 <ul>
-<li><p>cacophonic visual effects</p></li>
+<li><p>too muany visuals at once</p></li>
 <li><p>the source quickly becomes unreadable</p></li>
 <li><p>hard to make global changes (e.g., all instances of <em>dolor</em> now become green)</p></li>
 </ul>
@@ -257,6 +257,78 @@ ale66
 <section id="a-special-operation" class="slide level2">
 <h2>A special operation</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">”text-indent:</span><span class="ot"> </span><span class="er">16px;”</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section></section>
+<section>
+<section id="motivations-for-styling" class="title-slide slide level1 center">
+<h1>Motivations for styling</h1>
+
+</section>
+<section id="digital-twins" class="slide level2">
+<h2>Digital twins</h2>
+<p>A new concept in Engineering</p>
+<p>From <a href="https://en.wikipedia.org/wiki/Digital_twin">Wikipedia</a>:</p>
+<p><em>[…] a computational model of an intended or actual real-world physical product, system, or process (a physical twin)</em></p>
+<div class="fragment">
+<p><em>that serves as a digital counterpart of it for purposes such as simulation, integration, testing, monitoring, and maintenance.</em></p>
+</div>
+</section>
+<section id="digital-twins-1" class="slide level2">
+<h2>Digital twins</h2>
+<p><em>[…] a computational model of an intended or actual real-world physical product, system, or process (a physical twin) that serves as a digital counterpart of it for purposes such as simulation, integration, testing, monitoring, and maintenance.</em></p>
+<div class="fragment">
+<p><em>By its strict definition, a digital twin is distinguished from an ordinary simulation in that it continuously uses real data from its physical counterpart to dynamically synchronize with the real system.</em></p>
+</div>
+</section>
+<section id="web-digital-twins" class="slide level2">
+<h2>Web digital twins</h2>
+<p>Sometimes our IG/FB/LI profile, continuosly maintained, is <em>our digital twin</em></p>
+<p>(where does the analogy break down?)</p>
+<div class="fragment">
+<p>the web page today is a <em>cultural digital twin</em> of many companies/products/events</p>
+</div>
+</section>
+<section id="levels-of-digitality-top-down" class="slide level2">
+<h2>Levels of <em>digitality,</em> top down</h2>
+<p>Digital life: - online banks, - online newspapers, - online universities, - digital art, - AI BF/GF/BF…</p>
+</section>
+<section id="hybrid" class="slide level2">
+<h2>Hybrid</h2>
+<p><a href="https://www.unimi.it">www.unimi.it</a></p>
+<ul>
+<li><p>presents a physical university</p></li>
+<li><p>some activities are online-only</p></li>
+</ul>
+</section>
+<section id="physical-with-cultural-digital-twins" class="slide level2">
+<h2>Physical, with cultural digital twins</h2>
+<p><a href="https://www.campari.com/">www.campari.com</a></p>
+<ul>
+<li>can you like it, until you sip it?</li>
+<li>not really an online shop</li>
+<li>reclaims the brand and the image online</li>
+<li><strong>style is all</strong></li>
+</ul>
+</section></section>
+<section>
+<section id="styling-pages" class="title-slide slide level1 center">
+<h1>Styling pages</h1>
+
+</section>
+<section id="idea" class="slide level2">
+<h2>Idea</h2>
+<ul>
+<li><p>redefine tags with our styles</p></li>
+<li><p>create new tags to attach specific styles to text</p></li>
+<li><p><strong>keep webpage styles separated from content</strong></p></li>
+</ul>
+</section>
+<section id="the-engineering-of-styles" class="slide level2">
+<h2>The engineering of styles</h2>
+<ul>
+<li><p>styles change seldom, mostly through large <em>facelifting</em> operations, graphics experts work on them</p></li>
+<li><p>contents may change by the minute and are produced by a variety of actors (journalists)</p></li>
+<li><p>to keep consistency across large web sites and re-use styles, two or more CSS files could be applied to one page</p></li>
+</ul>
 </section></section>
 <section>
 <section id="the-css-standard" class="title-slide slide level1 center">
@@ -267,25 +339,9 @@ ale66
 
 
 <img data-src="https://kinsta.com/wp-content/uploads/2020/08/html-vs-css.png" class="r-stretch"></section>
-<section id="idea" class="slide level2">
-<h2>Idea</h2>
-<ul>
-<li><p>redefine tags with our styles</p></li>
-<li><p>create new tags to attach specific styles to text</p></li>
-<li><p><strong>keep webpage styles separated from content</strong></p></li>
-</ul>
-<p>–</p>
-</section>
-<section id="the-engineering-of-styles" class="slide level2">
-<h2>The engineering of styles</h2>
-<ul>
-<li><p>styles change seldom, mostly through large <em>facelifting</em> operations, graphics experts work on them</p></li>
-<li><p>contents may change by the minute and are produced by a variety of actors (journalists)</p></li>
-<li><p>to keep consistency across large web sites and re-use styles, two or more CSS files could be applied to one page</p></li>
-</ul>
-</section>
-<section id="get-started" class="slide level2">
-<h2>Get started</h2>
+<section id="catch-up-work" class="slide level2">
+<h2>Catch-up work</h2>
+<p>(discretionary for those who already used <code>mystyle.css</code>)</p>
 <p>from VS Code create a new CSS file, e.g., <code>mystyle.css</code> and save it alongside your Lorem ipsum page</p>
 <p>write on it:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb6-1"><a href="" aria-label="1"></a>p {</span>
@@ -297,14 +353,25 @@ ale66
 <span id="cb6-7"><a href="" aria-label="7"></a>span {</span>
 <span id="cb6-8"><a href="" aria-label="8"></a>      <span class="kw">background-color</span><span class="ch">:</span> <span class="cn">yellow</span><span class="op">;</span></span>
 <span id="cb6-9"><a href="" aria-label="9"></a>    } </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Notice the different syntax</p>
-<p>Use the embedded code selector, but with <em>restraint</em></p>
+<p>Notice the different syntax; use the embedded <em>code selector</em></p>
 </section>
-<section class="slide level2">
-
-<p>Now, on the HTML file put at the beginning, e.g.,</p>
+<section id="linking-up-your-style" class="slide level2">
+<h2>Linking up your style</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href="" aria-label="1"></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"mystyle.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>reload to see how the browser applies the definitions from <code>mystyle.css</code> to the tags in, e.g., <code>lorem.html</code></p>
+<p>reload to see how the browser applies the definitions from <code>mystyle.css</code> to the tags.</p>
+<p>Linking is <em>syntactical:</em> href value should be a valid path inside your folders</p>
+<ul>
+<li><p><code>href="./mystyle.css"</code> in the same folder</p></li>
+<li><p><code>href="../mystyle.css"</code> in the folder above</p></li>
+</ul>
+</section>
+<section id="wheres-my-style" class="slide level2">
+<h2>Where’s my style?</h2>
+<ul>
+<li><p><code>href="../../mystyle.css"</code> two folders above</p></li>
+<li><p><code>href="../30-visuals/mystyle.css"</code> in the <em>sibling/parallel</em> folder called <code>30-visuals</code></p></li>
+</ul>
+<p>Always check by following up links</p>
 </section>
 <section id="change-the-mood-all-at-once" class="slide level2">
 <h2>Change the mood, all at once</h2>

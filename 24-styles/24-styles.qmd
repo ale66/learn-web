@@ -71,7 +71,7 @@ but what about
 
 <b>L</b>orem ipsum <strong style="color: red;">dolor</strong> sit amet, consectetur 
 
-- cacophonic visual effects
+- too muany visuals at once
 
 - the source quickly becomes unreadable
 
@@ -85,12 +85,82 @@ but what about
 <div style=”text-indent: 16px;”>
 ```
 
+# Motivations for styling
 
-# The CSS standard
 
 ---
 
-![](https://kinsta.com/wp-content/uploads/2020/08/html-vs-css.png)
+## Digital twins
+
+A new concept in Engineering
+
+From [Wikipedia](https://en.wikipedia.org/wiki/Digital_twin):
+
+*[...] a computational model of an intended or actual real-world physical product, system, or process (a physical twin)* 
+
+. . .
+
+*that serves as a digital counterpart of it for purposes such as simulation, integration, testing, monitoring, and maintenance.*
+
+---
+
+## Digital twins
+
+
+*[...] a computational model of an intended or actual real-world physical product, system, or process (a physical twin) that serves as a digital counterpart of it for purposes such as simulation, integration, testing, monitoring, and maintenance.*
+
+. . .
+
+*By its strict definition, a digital twin is distinguished from an ordinary simulation in that it continuously uses real data from its physical counterpart to dynamically synchronize with the real system.*
+
+
+---
+
+## Web digital twins
+
+Sometimes our IG/FB/LI profile, continuosly maintained, is *our digital twin*
+
+(where does the analogy break down?)
+
+. . .
+
+the web page today is a *cultural digital twin* of many companies/products/events
+
+
+---
+
+## Levels of *digitality,* top down
+
+Digital life: 
+  - online banks, 
+  - online newspapers, 
+  - online universities, 
+  - digital art, 
+  - AI BF/GF/BF...
+
+---
+
+## Hybrid
+
+[www.unimi.it](https://www.unimi.it) 
+
+  - presents a physical university
+
+  - some activities are online-only 
+
+---
+
+## Physical, with cultural digital twins
+
+[www.campari.com](https://www.campari.com/)  
+
+  - can you like it, until you sip it?
+  - not really an online shop
+  - reclaims the brand and the image online
+  - **style is all** 
+
+
+# Styling pages
 
 
 ---
@@ -103,7 +173,7 @@ but what about
 
 - __keep webpage styles separated from content__
 
---
+---
 
 ## The engineering of styles
 
@@ -113,9 +183,19 @@ but what about
 
 - to keep consistency across large web sites and re-use styles, two or more CSS files could be applied to one page
 
+
+# The CSS standard
+
 ---
 
-## Get started
+![](https://kinsta.com/wp-content/uploads/2020/08/html-vs-css.png)
+
+
+---
+ 
+## Catch-up work 
+
+(discretionary for those who already used ``mystyle.css``)  
 
 from VS Code create a new CSS file, e.g., ``mystyle.css`` and save it alongside your Lorem ipsum page
 
@@ -133,22 +213,38 @@ write on it:
       } 
   ```
 
-Notice the different syntax
-
-Use the embedded code selector, but with *restraint*
+Notice the different syntax; use the embedded *code selector*
 
 ---
 
-Now, on the HTML file put at the beginning, e.g., 
+
+## Linking up your style
+
 
 ```html
   <link href="mystyle.css" rel="stylesheet" type="text/css" />
 ```  
 
-reload to see how the browser applies the definitions from ``mystyle.css`` to the tags in, e.g., ``lorem.html``
+reload to see how the browser applies the definitions from ``mystyle.css`` to the tags.
+
+Linking is *syntactical:* href value should be a valid path inside your folders
+
+- ``  href="./mystyle.css"``  in the same folder
+
+- ``  href="../mystyle.css"``  in the folder above
+
 
 ---
 
+## Where's my style?
+
+- ``href="../../mystyle.css"``  two folders above
+
+- ``href="../30-visuals/mystyle.css"``  in the *sibling/parallel* folder called ``30-visuals``
+
+Always check by following up links
+
+---
 
 ## Change the mood, all at once
 
