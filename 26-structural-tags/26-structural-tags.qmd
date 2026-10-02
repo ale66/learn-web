@@ -37,19 +37,31 @@ Several styles for lists are available, try toggling ``ul`` for ``ol``
 </ol>
 ```
 
-Please see again [W3schools](https://www.w3schools.com/html/html_lists.asp) for the details
+see [W3schools](https://www.w3schools.com/html/html_lists.asp) for a detailed description
+
+---
+
+## Navigation Panels 
+
+See [wdpg.io/4-9-1](https://webdesignplayground.io/lessons/4-9-1/) (and p. 67 of the textbook)
+
+![](./imgs/nav-panel-example.png)
 
 
-## Panels, e.g. for navigation 
+---
 
-See p. 67 of the textbook: we use special styles and ``div`` or ``span`` to achieve eye-catching
+## Navigation Panels, cont'd 
 
+use special styles and ``div`` or ``span`` to capture attention to a text
+
+![](./imgs/nav-panel-source.png)
 
 
 # Screen-oriented structure
 
-
 ---
+
+## Beyond page
 
 Unless most paper pages (books, magazines etc.), web pages might have a *variable layout* with different contents and styles
 
@@ -57,4 +69,4 @@ Unless most paper pages (books, magazines etc.), web pages might have a *variabl
 
 Specific layout tags will help us style the sections independently
 
-
+Deploy **semantic tags**
