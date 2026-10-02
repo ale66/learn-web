@@ -30,7 +30,7 @@ execute:
 
 - GitHub: Git + Hub 
   
-- Installing the Git client
+- Installing the Git client 
 
 - The everyday commands to synchronise a local copy with GitHub
 
