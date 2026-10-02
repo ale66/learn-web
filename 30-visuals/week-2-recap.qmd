@@ -17,11 +17,23 @@ execute:
 
 ---
 
+## What is expected now
+
+- Win: `chocolatey`; MacOS: `HomeBrew` 
+- `VS Code` with several extensions
+- a local copy of the GH repo [github.com/ale66/learn-coding](https://github.com/ale66/learn-coding)` 
+- a HTML file in your name inside `...\learn-web\15-lorem-boilerplate`
+  - rename `rename-then-edit-me.html` into, e.g., `ale-lorem-page.html` 
+- a CSS file in your name, also inside `...\learn-web\15-lorem-boilerplate`
+    - rename `mystyle.css` into, e.g., `ale-style.css` 
+
+---
+
 ## Concepts, a
 
 The HTML baseline code (aka boilerplate) read out and commented line-by-line
 
-Still curious about `<head>`
+Still curious about what goes into `<head>`?
 
 ---
 
@@ -29,7 +41,7 @@ Still curious about `<head>`
 
 Some default tags support styling text.
 
-While HTML is built for *pages* we are now focuse on documents that are digital-only: no (or not necessarily) left-to-right top-down
+While HTML is built for *pages* we are now focus on documents that are digital-only: no (or not necessarily) left-to-right top-down
 
 ---
 
@@ -84,7 +96,7 @@ The `<div>` tag:
 
 divides text or areas of the page
 
-it's a semantic tag: what it does will be coded by us
+it's a *semantic* tag: what it does will be coded by us
 
 Example: style the first para. differently
 
@@ -97,11 +109,14 @@ Example: style the first para. differently
 
 ## Skills, a
 
-- VS Code and extensions running on computer to edit HTML/CSS files
+- VS Code with extensions to edit HTML/CSS files
+
+are you confortable?
+
   
 ---
 
-## Skills, b
+## Skills, b (today)
 
 - git to synchronise with the class Github repository:
 
@@ -117,7 +132,6 @@ Synch the material daily (or weekly)
 >git pull
 ```
 
-this is all for the moment!
 
 ---
 
@@ -125,5 +139,8 @@ this is all for the moment!
 
 The basic HTML typography mark-up
 
-A small, bookish project on a fixed literaly text (Lorem ipsum)
+A small, 'Digital Humanities' project to popularise Cicero's work
+
+
+
 

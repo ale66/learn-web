@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="week-2-recap_files/libs/clipboard/clipboard.min.js"></script>
-<script src="week-2-recap_files/libs/quarto-html/tabby.min.js"></script>
-<script src="week-2-recap_files/libs/quarto-html/popper.min.js"></script>
-<script src="week-2-recap_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="week-2-recap_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="week-2-recap_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="week-2-recap_files/libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="learn-git-a_files/libs/clipboard/clipboard.min.js"></script>
+<script src="learn-git-a_files/libs/quarto-html/tabby.min.js"></script>
+<script src="learn-git-a_files/libs/quarto-html/popper.min.js"></script>
+<script src="learn-git-a_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="learn-git-a_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="learn-git-a_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="learn-git-a_files/libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="ale66">
-  <title>Learn Web</title>
+  <title>Working with Git and GitHub</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="week-2-recap_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="week-2-recap_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="learn-git-a_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="learn-git-a_files/libs/revealjs/dist/reveal.css">
   <style>
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -101,13 +101,13 @@
     code span.vs { color: #abe338; } /* VerbatimString */
     code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="week-2-recap_files/libs/revealjs/dist/theme/quarto-84b150702567ae7e15cad124fb9039e2.css">
-  <link href="week-2-recap_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="week-2-recap_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="week-2-recap_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="week-2-recap_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="week-2-recap_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="week-2-recap_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="learn-git-a_files/libs/revealjs/dist/theme/quarto-84b150702567ae7e15cad124fb9039e2.css">
+  <link href="learn-git-a_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="learn-git-a_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="learn-git-a_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="learn-git-a_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="learn-git-a_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="learn-git-a_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -201,7 +201,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Learn Web</h1>
+  <h1 class="title">Working with Git and GitHub</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -213,90 +213,287 @@ ale66
 
 </section>
 <section>
-<section id="recap" class="title-slide slide level1 center">
-<h1>Recap</h1>
+<section id="learning-objectives" class="title-slide slide level1 center">
+<h1>Learning objectives</h1>
 
 </section>
-<section id="what-is-expected-now" class="slide level2">
-<h2>What is expected now</h2>
+<section id="topics" class="slide level2">
+<h2>Topics</h2>
 <ul>
-<li>Win: <code>chocolatey</code>; MacOS: <code>HomeBrew</code></li>
-<li><code>VS Code</code> with several extensions</li>
-<li>a local copy of the GH repo <a href="https://github.com/ale66/learn-coding">github.com/ale66/learn-coding</a>`</li>
-<li>a HTML file in your name inside <code>...\learn-web\15-lorem-boilerplate</code>
+<li><p>the <em>versioning</em> of documents and source code</p>
 <ul>
-<li>rename <code>rename-then-edit-me.html</code> into, e.g., <code>ale-lorem-page.html</code></li>
+<li>track/review progress and collaboration</li>
 </ul></li>
-<li>a CSS file in your name, also inside <code>...\learn-web\15-lorem-boilerplate</code>
+<li><p>Git concepts</p>
 <ul>
-<li>rename <code>mystyle.css</code> into, e.g., <code>ale-style.css</code></li>
+<li>version, repository, clone, commit, push, pull</li>
 </ul></li>
+<li><p>GitHub: Git + Hub</p></li>
+<li><p>Installing the Git client</p></li>
+<li><p>The everyday commands to synchronise a local copy with GitHub</p></li>
 </ul>
+<p>Official <a href="https://docs.github.com/en/get-started/using-github/hello-world">Hello World tutorial</a></p>
+</section></section>
+<section>
+<section id="versioning-documents" class="title-slide slide level1 center">
+<h1>Versioning documents</h1>
+
 </section>
-<section id="concepts-a" class="slide level2">
-<h2>Concepts, a</h2>
-<p>The HTML baseline code (aka boilerplate) read out and commented line-by-line</p>
-<p>Still curious about what goes into <code>&lt;head&gt;</code>?</p>
-</section>
-<section id="concepts-b" class="slide level2">
-<h2>Concepts, b</h2>
-<p>Some default tags support styling text.</p>
-<p>While HTML is built for <em>pages</em> we are now focus on documents that are digital-only: no (or not necessarily) left-to-right top-down</p>
-</section>
-<section id="concepts-c" class="slide level2">
-<h2>Concepts, c</h2>
-<p>Style: all in a separate file please</p>
-<p>Styling is a separated activity, CSS files are often re-used</p>
-</section>
-<section id="concepts-d" class="slide level2">
-<h2>Concepts, d</h2>
-<p>The <code>&lt;a&gt;</code> tag:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#label"</span><span class="dt">&gt;</span>go down on this page<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
-<span id="cb1-2"><a href="" aria-label="2"></a>...</span>
-<span id="cb1-3"><a href="" aria-label="3"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> id</span><span class="op">=</span><span class="st">"label"</span><span class="dt">&gt;</span>...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="fragment">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"./another_page.html"</span><span class="dt">&gt;</span>go to another page of the same site<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div class="fragment">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://unimi.it/ma/com/"</span><span class="dt">&gt;</span>go to a web site<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div class="fragment">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://unimi.it/ma/com/exams.html"</span><span class="dt">&gt;</span>go to a page on a web site<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div class="fragment">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://unimi.it/ma/com/index.html#label"</span><span class="dt">&gt;</span>go to a specifi position of an external page<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="concepts-e" class="slide level2">
-<h2>Concepts, e</h2>
-<p>The <code>&lt;div&gt;</code> tag:</p>
-<p>divides text or areas of the page</p>
-<p>it’s a <em>semantic</em> tag: what it does will be coded by us</p>
-<p>Example: style the first para. differently</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> id</span><span class="op">=</span><span class="st">"first"</span><span class="dt">&gt;</span>...<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb6-2"><a href="" aria-label="2"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> id</span><span class="op">=</span><span class="st">"regular"</span><span class="dt">&gt;</span>...<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="skills-a" class="slide level2">
-<h2>Skills, a</h2>
+<section id="concept-version" class="slide level2">
+<h2>Concept: version</h2>
+<p>a saved state of a document/folder which</p>
 <ul>
-<li>VS Code with extensions to edit HTML/CSS files</li>
+<li>is part of a long-term project</li>
+<li>has a name and a specific footprint <em>somewhere</em></li>
 </ul>
-<p>are you confortable?</p>
+<p>Everybody does it by hand:</p>
+<p><code>thesis.docx</code>, <code>thesis_v2.docx</code>, <code>thesis_final.docx</code>, <code>thesis_final_REALLY.docx</code></p>
 </section>
-<section id="skills-b-today" class="slide level2">
-<h2>Skills, b (today)</h2>
+<section id="issues-with-manual-file-name-versioning" class="slide level2">
+<h2>Issues with manual file-name versioning</h2>
 <ul>
-<li>git to synchronise with the class Github repository:</li>
+<li>which one is current? On which folder is it?</li>
+<li>Ok, but what changed?</li>
+<li>On which computer/cloud/USB pen is the last version?</li>
+<li><em>it’s bad, I want to go back</em></li>
+<li>I accidentally deleted a good sentence/code</li>
+<li>the code doesn’t work anymore, I want to go back!</li>
 </ul>
-<p>Get started, get a local copy:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="" aria-label="1"></a><span class="op">&gt;</span>git <span class="ex">clone</span> https://github.com/ale66/learn-coding.git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Synch the material daily (or weekly)</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="" aria-label="1"></a><span class="op">&gt;</span>git <span class="ex">pull</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="fragment">
+<ul>
+<li>who changed it?</li>
+<li>Oh no, Stelios overwrote my fantastic solution</li>
+</ul>
+</div>
 </section>
-<section id="skills-c" class="slide level2">
-<h2>skills: c</h2>
-<p>The basic HTML typography mark-up</p>
-<p>A small, ‘Digital Humanities’ project to popularise Cicero’s work</p>
+<section id="version-control-system-vcs" class="slide level2">
+<h2>Version control system (VCS)</h2>
+<p>Software that records the history of a set of files:</p>
+<ul>
+<li>every saved state, with <em>who</em>, <em>when</em> and <em>why</em></li>
+<li>comparison between states</li>
+<li>return to any earlier state</li>
+</ul>
+<div class="fragment">
+<p>Works best on <em>plain text</em> (<code>.py</code>, <code>.qmd</code>, <code>.html</code>, <code>.css</code>): changes can be compared line by line</p>
+</div>
+</section>
+<section id="git" class="slide level2">
+<h2>Git</h2>
+<p>an open <em>protocol</em> that is implemented by several VCS</p>
+<p>Focus on coding, alone, on one computer, on a long project (Linux OS)</p>
+<p>Extends to general editing (thesis), collaborative, distributed</p>
+<p>Underpins Cloud versioning (MS OneDrive, Dropbox, PCloud, Google Drive)</p>
+</section>
+<section id="storing-versions-deltas" class="slide level2">
+<h2>Storing versions: deltas</h2>
+<p>Classic VCS store, for each file, the list of <em>changes</em> over a base version</p>
+
+<img data-src="./imgs/deltas.png" style="width:85.0%" alt="Delta-based version storage" class="r-stretch"><p>(all images from <a href="https://git-scm.com/book/en/v2">git-scm.com/book</a>)</p>
+</section>
+<section id="collaborative-coding" class="slide level2">
+<h2>Collaborative coding</h2>
+<p>two or more edit the <em>same</em> files at the same time</p>
+<ul>
+<li><p>destructive save: the last save may overwrite all previous saves:</p>
+<ul>
+<li>a <strong>conflict</strong> to avoid losing previous work</li>
+</ul></li>
+<li><ul>
+<li>won’t allow Stelios to overwrite my fantastic code</li>
+</ul></li>
+<li><p>tracking changes and responsibilities</p></li>
+<li><p>testing ideas on shared files without compromising them</p></li>
+</ul>
+</section>
+<section id="git-centralised-versus-distributed" class="slide level2">
+<h2>Git: Centralised versus distributed</h2>
+<div class="columns">
+<div class="column">
+<p><strong>Centralised</strong>: one server holds the history</p>
+<p><img data-src="./imgs/centralized.png" style="width:90.0%"></p>
+</div><div class="column">
+<p><strong>Local only</strong>: history on one machine</p>
+<p><img data-src="./imgs/local.png" style="width:90.0%"></p>
+</div></div>
+</section>
+<section id="distributed-git" class="slide level2">
+<h2>Distributed Git</h2>
+<p>Every collaborator holds a full copy of the history</p>
+
+<img data-src="./imgs/distributed.png" style="width:35.0%" class="r-stretch"></section></section>
+<section>
+<section id="git-concepts" class="title-slide slide level1 center">
+<h1>Git concepts</h1>
+
+</section>
+<section id="concept-repository" class="slide level2">
+<h2>Concept: repository</h2>
+<p>a folder of files <em>plus</em> its complete history, stored in a hidden <code>.git</code> folder</p>
+<p>Two flavours of the same repository:</p>
+<ul>
+<li><strong>local</strong>: on your computer</li>
+<li><strong>remote</strong>: on a server (e.g., GitHub), by convention named <code>origin</code></li>
+</ul>
+</section>
+<section id="concept-commit" class="slide level2">
+<h2>Concept: commit</h2>
+<p>a saved <em>snapshot</em> of the whole project at a moment in time</p>
+<p>Each commit has:</p>
+<ul>
+<li>a unique id (a hash, e.g.&nbsp;<code>a1b2c3d</code>)</li>
+<li>an author and a date</li>
+<li>a <em>message</em> saying what and why</li>
+<li>a pointer to the previous commit(s)</li>
+</ul>
+</section>
+<section id="snapshots-vs.-deltas" class="slide level2">
+<h2>Snapshots vs.&nbsp;deltas</h2>
+<p>Each commit records what all files look like; unchanged files are just linked</p>
+
+<img data-src="./imgs/snapshots.png" style="width:90.0%" alt="Git snapshot storage" class="r-stretch"></section>
+<section id="git-history" class="slide level2">
+<h2>Git history</h2>
+<ul>
+<li><p>a chain of commits</p></li>
+<li><p>each commits points back to its parent; a <em>branch</em> is a movable label on a commit</p></li>
+</ul>
+
+<img data-src="./imgs/basic-branching-6.png" style="width:70.0%" class="r-stretch"></section>
+<section id="git-staging" class="slide level2">
+<h2>Git Staging</h2>
+<p>within a directory, not all files need versioning, e.g., <code>thesis.pdf</code></p>
+<ul>
+<li><em>working directory</em>: the files you edit</li>
+<li><em>staging area</em>: what goes into the next commit</li>
+<li><em>repository</em>: the committed history</li>
+</ul>
+
+<img data-src="./imgs/areas.png" style="width:65.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>clone</strong></td>
+<td>copy a remote repo, with its history, <em>here</em></td>
+</tr>
+<tr class="even">
+<td><strong>commit</strong></td>
+<td>save a snapshot in the <em>local</em> repository</td>
+</tr>
+<tr class="odd">
+<td><strong>push</strong></td>
+<td>send your new commits to the remote</td>
+</tr>
+<tr class="even">
+<td><strong>fetch</strong></td>
+<td>download new remote commits, without merging</td>
+</tr>
+<tr class="odd">
+<td><strong>pull</strong></td>
+<td>fetch + merge into your current branch</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p>Commit is <em>local</em>: nobody sees it until you push</p>
+</div>
+</section></section>
+<section>
+<section id="getting-started" class="title-slide slide level1 center">
+<h1>Getting started</h1>
+
+</section>
+<section id="install-win" class="slide level2">
+<h2>Install: Win</h2>
+<p>Open a terminal or a PowerShell <em>in administrator mode</em></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="" aria-label="1"></a><span class="op">&gt;</span>choco <span class="fu">install</span> git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="fragment">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="" aria-label="1"></a><span class="op">&gt;</span>git <span class="ex">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Other methods are be available</p>
+</div>
+</section>
+<section id="install-macos" class="slide level2">
+<h2>Install: MacOs</h2>
+<p>Open a terminal</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="" aria-label="1"></a><span class="op">&gt;</span>brew <span class="fu">install</span> git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="fragment">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="" aria-label="1"></a><span class="op">&gt;</span>git <span class="ex">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Other methods are be available</p>
+</div>
+</section>
+<section id="get-a-fresh-copy-of-the-repository" class="slide level2">
+<h2>Get a fresh copy of the repository</h2>
+<p>From the folder where you want to save your copy of the repo</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="" aria-label="1"></a><span class="op">&gt;</span>git <span class="ex">clone</span> https://github.com/ale66/learn-coding.git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="update-your-copy-of-the-repository" class="slide level2">
+<h2>Update your copy of the repository</h2>
+<p><strong>inside</strong> the folder where you want to save your copy of the repo</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="" aria-label="1"></a><span class="op">&gt;</span>git <span class="ex">pull</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="check-whether-you-changed-local-files" class="slide level2">
+<h2>Check whether you changed local files</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="" aria-label="1"></a><span class="op">&gt;</span>git <span class="ex">status</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>No change will affect the copy on <code>github.com</code>, for the moment</p>
+</section>
+<section id="discretionary-first-time-configuration" class="slide level2">
+<h2>Discretionary: first-time configuration</h2>
+<p>Same on both systems; your name and email will label every commit</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="" aria-label="1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Alessandro Provetti"</span></span>
+<span id="cb8-2"><a href="" aria-label="2"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"alessandro.provetti@unimi.it"</span></span>
+<span id="cb8-3"><a href="" aria-label="3"></a><span class="fu">git</span> config <span class="at">--global</span> init.defaultBranch main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section></section>
+<section>
+<section id="working-with-github" class="title-slide slide level1 center">
+<h1>Working with GitHub</h1>
+
+</section>
+<section id="start-of-the-day" class="slide level2">
+<h2>Start of the day</h2>
+<p>Open the folder that is versioned on GH</p>
+<p>Spin up a terminal that works <em>there</em></p>
+<p>Win:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="" aria-label="1"></a><span class="op">&gt;</span>dir</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>MacOS:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="" aria-label="1"></a><span class="op">&gt;</span>pwd</span>
+<span id="cb10-2"><a href="" aria-label="2"></a><span class="op">&gt;</span>ls <span class="ex">-lrta</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="get-in-synch-with-the-project" class="slide level2">
+<h2>Get in synch with the project</h2>
+<p>What did we do yesterday?</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="" aria-label="1"></a><span class="op">&gt;</span>git <span class="ex">status</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Update your copy of the repo to that on GH</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="" aria-label="1"></a><span class="op">&gt;</span>git <span class="ex">pull</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Save your work into the project</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="" aria-label="1"></a><span class="op">&gt;</span>git <span class="ex">commit</span> <span class="at">-a</span> <span class="at">-m</span> <span class="st">"This is what I did yesterday, It is ready for sharing"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="issues" class="slide level2">
+<h2>Issues</h2>
+<p>Several things can go wrong, when the code base changes quickly</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="" aria-label="1"></a><span class="ex">Updating</span> 4c7822c..5bbdd1b</span>
+<span id="cb14-2"><a href="" aria-label="2"></a><span class="ex">error:</span> Your local changes to the following files would be overwritten by merge:</span>
+<span id="cb14-3"><a href="" aria-label="3"></a>        <span class="ex">30-iterables/case-study.ipynb</span></span>
+<span id="cb14-4"><a href="" aria-label="4"></a><span class="ex">Please</span> commit your changes or stash them before you merge.</span>
+<span id="cb14-5"><a href="" aria-label="5"></a><span class="ex">Aborting</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section class="slide level2">
+
+<p>OK, stash my changes away in a safe place</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="" aria-label="1"></a><span class="op">&gt;</span>git <span class="ex">stash</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Pull in the new version from GH</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="" aria-label="1"></a><span class="op">&gt;</span>git <span class="ex">pull</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Put my changes back in</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="" aria-label="1"></a><span class="op">&gt;</span>git <span class="ex">stash</span> pop</span>
+<span id="cb17-2"><a href="" aria-label="2"></a><span class="op">&gt;</span>git <span class="ex">commit</span> <span class="at">-a</span> <span class="at">-m</span> <span class="st">"I incorporate my changes from yesterday"</span></span>
+<span id="cb17-3"><a href="" aria-label="3"></a><span class="op">&gt;</span>git <span class="ex">push</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </section></section>
     </div>
@@ -307,20 +504,20 @@ ale66
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="week-2-recap_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="learn-git-a_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="week-2-recap_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="week-2-recap_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="week-2-recap_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="week-2-recap_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="week-2-recap_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="week-2-recap_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="learn-git-a_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="learn-git-a_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="learn-git-a_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="learn-git-a_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="learn-git-a_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="learn-git-a_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="week-2-recap_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="week-2-recap_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="week-2-recap_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="week-2-recap_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="learn-git-a_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="learn-git-a_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="learn-git-a_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="learn-git-a_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -462,7 +659,7 @@ ale66
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'slide',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
