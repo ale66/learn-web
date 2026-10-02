@@ -6,11 +6,11 @@
 <script src="visuals_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="visuals_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="visuals_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="visuals_files/libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="visuals_files/libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="visuals_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="visuals_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="visuals_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.25">
+  <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="ale66">
   <title>Learn Web</title>
@@ -20,10 +20,16 @@
   <link rel="stylesheet" href="visuals_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="visuals_files/libs/revealjs/dist/reveal.css">
   <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -98,7 +104,7 @@
     code span.vs { color: #abe338; } /* VerbatimString */
     code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="visuals_files/libs/revealjs/dist/theme/quarto-06e768f098560084c2d7120de8ad04fb.css">
+  <link rel="stylesheet" href="visuals_files/libs/revealjs/dist/theme/quarto-84b150702567ae7e15cad124fb9039e2.css">
   <link href="visuals_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="visuals_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="visuals_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -203,7 +209,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-ale66 
+ale66
 </div>
 </div>
 </div>
@@ -219,72 +225,49 @@ ale66
 <ul>
 <li><p>a HTML file on our computer</p></li>
 <li><p>beside, a CSS file with custom styles</p></li>
-<li><p>the page is <em>ditigal</em> but static, unconnected</p></li>
+<li><p>the page is <em>digital</em> but static, unconnected</p></li>
+<li><p>focus on <em>style:</em> look again at the [csszengarden.com]</p></li>
 </ul>
 </section>
 <section id="css-styles" class="slide level2">
 <h2>CSS styles</h2>
 <p>Even though style settings can go almost anywhere in HTML pages, we keep them <em>segregated</em> in CSS files.</p>
 <p>This line must be inside the <code>&lt;head&gt;</code> part:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"mystyle.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="" aria-label="1"></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"mystyle.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>In this case <code>mystyle.css</code> must be in the same folder as the HTML file.</p>
 </section>
 <section id="case-the-css-file-is-in-a-different-folder" class="slide level2">
 <h2>Case: the CSS file is in a different folder</h2>
 <p>In a sub-folder:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"./css/mystyle.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="" aria-label="1"></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"./css/mystyle.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>In the folder above:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"../mystyle.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="" aria-label="1"></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"../mystyle.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>in a parallel folder:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"../css/general_site_style.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="" aria-label="1"></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"../css/general_site_style.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="case-there-are-several-styles" class="slide level2">
 <h2>Case: there are several styles</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"../css/general_site_style.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
-<span id="cb5-2"><a href=""></a></span>
-<span id="cb5-3"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"./css/specific_section_style.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href="" aria-label="1"></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"../css/general_site_style.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb5-2"><a href="" aria-label="2"></a></span>
+<span id="cb5-3"><a href="" aria-label="3"></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"./css/specific_section_style.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Cascading effect:</p>
 <p>if both define an element of style, e.g.&nbsp;<code>font-color</code>, then the setup in the latter <em>wins</em></p>
 </section>
 <section id="case-the-style-file-is-somewhere-else-in-the-file-system" class="slide level2">
 <h2>Case: the style file is somewhere else in the file system</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"c:/path/to/the/css/folder/style.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"c:/path/to/the/css/folder/style.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="case-the-style-file-is-online" class="slide level2">
 <h2>Case: the style file is online</h2>
 <p>We <em>borrow</em> the style from an online resource</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://csszengarden.com/examples/style.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Get styles are on <a href="https://github.com/mezzoblue/csszengarden.com">GitHub</a></p>
-</section></section>
-<section>
-<section id="exercise" class="title-slide slide level1 center">
-<h1>Exercise</h1>
-
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://csszengarden.com/examples/style.css"</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text/css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="work-with-csszengarden-styles" class="slide level2">
-<h2>Work with csszengarden styles</h2>
-<p>Can we import sophisticated styles into our pages?</p>
-<p>Try out a version of your Lorem Lipsum page with Zengarden looks</p>
-<p>Study the CSS to see what’s available then use the styleLet’s try simple styles, e.g.&nbsp;<em>Verde Moderna</em> or <em>Tranquille</em></p>
-</section>
-<section class="slide level2">
-
-<ul>
-<li><p>visit <a href="https://csszengarden.com/pages/alldesigns/">https://csszengarden.com/pages/alldesigns/</a></p></li>
-<li><p>select a simple style</p></li>
-<li><p>look at the HTML source then at the CSS file to understand how it works</p></li>
-<li><p>now link the style into your Lorem page to see the transformations</p>
-<ul>
-<li><p>download the CSS, put it local to your Lipsum page the from the <code>head</code> section link the new style</p></li>
-<li><p>from the HTML link the style on the Web (e.g., Github)</p></li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
-<p>Get all the styles at once from <a href="https://github.com/mezzoblue/csszengarden.com">github.com/mezzoblue/csszengarden.com</a></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href=""></a><span class="op">&gt;</span>git <span class="ex">clone</span> https://github.com/mezzoblue/csszengarden.com.git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Challenge: you can clone directly from VS Code, thanks to the Git extension</p>
+<section id="side-project" class="slide level2">
+<h2>Side project</h2>
+<p>get <a href="https://csszengarden.com/214/">csszengarden.com/</a> styles from <a href="https://github.com/mezzoblue/csszengarden.com">github.com/mezzoblue/csszengarden.com</a></p>
+<p>Try out a version of your page with Zengarden looks, e.g., <em>Verde Moderna</em> or <em>Tranquille</em></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="" aria-label="1"></a><span class="fu">git</span> clone https://github.com/mezzoblue/csszengarden.com.git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Challenge: you can clone directly from VS Code, thanks to the Git extension?</p>
 </section></section>
 <section>
 <section id="images" class="title-slide slide level1 center">
@@ -297,7 +280,7 @@ ale66
 <img data-src="./imgs/raymond-quenau-page.jpg" class="r-stretch"><p>Browsers pick up image files and incorporate them in the rendering of the page</p>
 <p>The HTML code will link image files in the same way as it links to the CSS file</p>
 <p>The <code>&lt;img&gt;</code> tag has parameters that control the exact rendering of the image</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb9-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./imgs/quenau-page-1.jpg"</span><span class="ot"> alt</span><span class="op">=</span><span class="st">"I show when the file fails to load"</span><span class="ot"> title</span><span class="op">=</span><span class="st">"show when mouse over"</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb9-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./imgs/quenau-page-1.jpg"</span><span class="ot"> alt</span><span class="op">=</span><span class="st">"I show when the file fails to load"</span><span class="ot"> title</span><span class="op">=</span><span class="st">"show when mouse over"</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Notice: there is no <code>&lt;/img&gt;</code></p>
 </section>
 <section class="slide level2">
@@ -306,9 +289,9 @@ ale66
 <img data-src="./imgs/6-img-2.png" class="r-stretch"></section>
 <section id="online-image-embedding" class="slide level2">
 <h2>Online image embedding</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb10-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Logo_Universit%C3%A0_degli_Studi_di_Milano.svg/1024px-Logo_Universit%C3%A0_degli_Studi_di_Milano.svg.png"</span><span class="ot"> alt</span><span class="op">=</span><span class="st">"The unimi Minerva"</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb10-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Logo_Universit%C3%A0_degli_Studi_di_Milano.svg/1024px-Logo_Universit%C3%A0_degli_Studi_di_Milano.svg.png"</span><span class="ot"> alt</span><span class="op">=</span><span class="st">"The unimi Minerva"</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Logo_Universit%C3%A0_degli_Studi_di_Milano.svg/1024px-Logo_Universit%C3%A0_degli_Studi_di_Milano.svg.png" alt="The unimi Minerva" class="r-stretch"><p>Try embedding the Uni logo in your Lorem page</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Logo_Universit%C3%A0_degli_Studi_di_Milano.svg/1024px-Logo_Universit%C3%A0_degli_Studi_di_Milano.svg.png" alt="The unimi Minerva" class="r-stretch"><p>Try embedding the Uni logo in your Lorem (or exercise-35) page</p>
 <p>Warning: we are <em>leasing</em> an area of the page to the source site</p>
 </section>
 <section id="a-brief-on-formats" class="slide level2">
@@ -329,7 +312,7 @@ ale66
 <h2>Images as decor</h2>
 <ul>
 <li><p>an image can become the background of the page or portions thereof</p></li>
-<li><p>with <em>tiling</em> the same pattern/logo can be repeated throghout arbitrary surfaces</p></li>
+<li><p>with <em>tiling</em> the same pattern/logo can be repeated throughout arbitrary surfaces</p></li>
 <li><p>details in Ch. 6 of the textbook</p></li>
 </ul>
 </section></section>
@@ -340,40 +323,44 @@ ale66
 </section>
 <section id="motivations" class="slide level2">
 <h2>Motivations</h2>
-<p>CSS definitions can customise the standard HTML tags</p>
+<p>CSS definitions can <em>customise</em> the standard HTML tags</p>
 <p>However, there are few of those and CSS will change all its instances at once</p>
 <p>Example</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb11-1"><a href=""></a>p {</span>
-<span id="cb11-2"><a href=""></a>  align<span class="ch">:</span> <span class="dv">right</span><span class="op">;</span></span>
-<span id="cb11-3"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb11-1"><a href="" aria-label="1"></a>p {</span>
+<span id="cb11-2"><a href="" aria-label="2"></a>  align<span class="ch">:</span> <span class="dv">right</span><span class="op">;</span></span>
+<span id="cb11-3"><a href="" aria-label="3"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>aligns the whole document to the right…</p>
 </section>
 <section id="visual-classes" class="slide level2">
 <h2>Visual classes</h2>
 <p>Create ad hoc styles via new classes</p>
 <p>Each class name needs be unique and begin by <code>.</code></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb12-1"><a href=""></a>p {</span>
-<span id="cb12-2"><a href=""></a>  <span class="kw">text-indent</span><span class="ch">:</span> <span class="dv">12</span><span class="dt">pt</span><span class="op">;</span></span>
-<span id="cb12-3"><a href=""></a></span>
-<span id="cb12-4"><a href=""></a>  align<span class="ch">:</span> <span class="dv">left</span><span class="op">;</span></span>
-<span id="cb12-5"><a href=""></a>}</span>
-<span id="cb12-6"><a href=""></a></span>
-<span id="cb12-7"><a href=""></a><span class="fu">.latinpara</span> {</span>
-<span id="cb12-8"><a href=""></a>  <span class="kw">text-indent</span><span class="ch">:</span> <span class="dv">4</span><span class="dt">pt</span><span class="op">;</span></span>
-<span id="cb12-9"><a href=""></a></span>
-<span id="cb12-10"><a href=""></a>  align<span class="ch">:</span> <span class="dv">right</span><span class="op">;</span></span>
-<span id="cb12-11"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb12-1"><a href="" aria-label="1"></a>p {</span>
+<span id="cb12-2"><a href="" aria-label="2"></a>  <span class="kw">text-indent</span><span class="ch">:</span> <span class="dv">12</span><span class="dt">pt</span><span class="op">;</span></span>
+<span id="cb12-3"><a href="" aria-label="3"></a></span>
+<span id="cb12-4"><a href="" aria-label="4"></a>  align<span class="ch">:</span> <span class="dv">left</span><span class="op">;</span></span>
+<span id="cb12-5"><a href="" aria-label="5"></a>}</span>
+<span id="cb12-6"><a href="" aria-label="6"></a></span>
+<span id="cb12-7"><a href="" aria-label="7"></a><span class="fu">.latinpara</span> {</span>
+<span id="cb12-8"><a href="" aria-label="8"></a>  <span class="kw">text-indent</span><span class="ch">:</span> <span class="dv">4</span><span class="dt">pt</span><span class="op">;</span></span>
+<span id="cb12-9"><a href="" aria-label="9"></a></span>
+<span id="cb12-10"><a href="" aria-label="10"></a>  align<span class="ch">:</span> <span class="dv">right</span><span class="op">;</span></span>
+<span id="cb12-11"><a href="" aria-label="11"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb13-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>This is a presentation of an ancient text. Its author is Cicero.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb13-2"><a href=""></a></span>
-<span id="cb13-3"><a href=""></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">"latinpara"</span><span class="dt">&gt;</span>Lorem ipsum ... <span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb13-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>This is a presentation of an ancient text. Its author is Cicero.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb13-2"><a href="" aria-label="2"></a></span>
+<span id="cb13-3"><a href="" aria-label="3"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">"latinpara"</span><span class="dt">&gt;</span>Lorem ipsum ... <span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="draft-new-styles" class="slide level2">
 <h2>Draft new styles</h2>
 <p>Go to the Web Design Playground:</p>
 <p><a href="https://webdesignplayground.io/lessons/7-4-0/">https://webdesignplayground.io/lessons/7-4-0/</a></p>
+</section>
+<section id="the-css-is-what-makes-the-site" class="slide level2">
+<h2>The CSS is what makes the site</h2>
+<p>Site <a href="https://css-tricks.com/">css-tricks.com/</a> is a simple list of technical announcements: software bugs, new releases etc.</p>
 </section></section>
 <section>
 <section id="the-hero-image" class="title-slide slide level1 center">
@@ -408,18 +395,19 @@ ale66
 <section class="slide level2">
 
 <h4 id="web-native-illustration-2">Web-native illustration, 2</h4>
-<p>Can your replicate this type of page with this <code>.jpg</code> file? (click to enlarge)</p>
+<p>Can your replicate a hero page with this <code>.jpg</code> file? (click to enlarge)</p>
 
-<img data-src="./imgs/torrevelasca.jpg" style="width:5in" class="r-stretch"></section>
+<img data-src="./imgs/torrevelasca.jpg" style="width:5in" class="r-stretch"><p>boilerplate in <a href="">learn-web\30-visuals</a></p>
+</section>
 <section class="slide level2">
 
 <p><a href="./imgs/torrevelasca.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="./imgs/torrevelasca.jpg"></a></p>
-</section></section>
-<section id="exercise-1" class="title-slide slide level1 center">
-<h1>Exercise</h1>
+</section>
+<section id="exercise" class="slide level2">
+<h2>Exercise</h2>
 <div class="columns">
 <div class="column" style="width:75%;">
-<p>Create a hero image for your Lorem</p>
+<p>Find a hero image for your Lorem or exercise-35 page</p>
 <p>be creative around classic images</p>
 <p>develop a CSS with special classes for title, claim etc. <em>over</em> the picture</p>
 </div><div class="column" style="width:5%;">
@@ -437,7 +425,7 @@ ale66
 <p>discuss the page with a colleague</p>
 </div></div>
 
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

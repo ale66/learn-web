@@ -13,8 +13,8 @@ execute:
   echo: true
 ---
 
-# Visuals
 
+# Visuals
 
 ---
 
@@ -24,7 +24,14 @@ execute:
   
 - beside, a CSS file with custom styles
 
-- the page is *ditigal* but static, unconnected
+- the page is *digital* but static, unconnected
+
+
+
+
+- focus on *style:* look again at the [csszengarden.com]
+
+
 
 ---
 
@@ -96,49 +103,25 @@ We *borrow* the style from an online resource
 <link href="https://csszengarden.com/examples/style.css" rel="stylesheet" type="text/css" />
 ```
 
-Get styles are on [GitHub](https://github.com/mezzoblue/csszengarden.com)
-
-
-# Exercise
-
 ---
 
-## Work with csszengarden styles
+## Side project 
 
-Can we import sophisticated styles into our pages?
-
-Try out a version of your Lorem Lipsum page with Zengarden looks
-
-Study the CSS to see what's available then use the styleLet's try simple styles, e.g. *Verde Moderna* or *Tranquille*
-
----
-
-- visit [https://csszengarden.com/pages/alldesigns/](https://csszengarden.com/pages/alldesigns/)
-
-- select a simple style
-  
-- look at the HTML source then at the CSS file to understand how it works 
-  
-- now link the style into your Lorem page to see the transformations
-
-  - download the CSS, put it local to your Lipsum page the from the `head` section link the new style
-
-  - from the HTML link the style on the Web (e.g., Github)
+get [csszengarden.com/](https://csszengarden.com/214/) styles from [github.com/mezzoblue/csszengarden.com](https://github.com/mezzoblue/csszengarden.com)
 
 
----
-
-Get all the styles at once from [github.com/mezzoblue/csszengarden.com
-](https://github.com/mezzoblue/csszengarden.com)
+Try out a version of your page with Zengarden looks, e.g., *Verde Moderna* or *Tranquille*
 
 ```bash
->git clone https://github.com/mezzoblue/csszengarden.com.git
+git clone https://github.com/mezzoblue/csszengarden.com.git
 ```
 
-Challenge: you can clone directly from VS Code, thanks to the Git extension
+Challenge: you can clone directly from VS Code, thanks to the Git extension?
 
 
 # Images
+
+---
 
 ## Including images
 
@@ -171,7 +154,7 @@ Notice: there is no `</img>`
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Logo_Universit%C3%A0_degli_Studi_di_Milano.svg/1024px-Logo_Universit%C3%A0_degli_Studi_di_Milano.svg.png" alt="The unimi Minerva">
 
-Try embedding the Uni logo in your Lorem page
+Try embedding the Uni logo in your Lorem (or exercise-35) page
 
 Warning: we are *leasing* an area of the page to the source site
 
@@ -204,16 +187,18 @@ Details in Ch. 6 of the textbook
 
 - an image can become the background of the page or portions thereof
 
-- with *tiling* the same pattern/logo can be repeated throghout arbitrary surfaces
+- with *tiling* the same pattern/logo can be repeated throughout arbitrary surfaces
   
 - details in Ch. 6 of the textbook
 
 
 # Custom styles
 
+---
+
 ## Motivations
 
-CSS definitions can customise the standard HTML tags
+CSS definitions can *customise* the standard HTML tags
 
 However, there are few of those and CSS will change all its instances at once
 
@@ -250,7 +235,6 @@ p {
 }
 ```
 
-
 ---
 
 ```html
@@ -267,8 +251,16 @@ Go to the Web Design Playground:
 
 [https://webdesignplayground.io/lessons/7-4-0/](https://webdesignplayground.io/lessons/7-4-0/)
 
+---
+
+## The CSS is what makes the site
+
+Site [css-tricks.com/](https://css-tricks.com/) is a simple list of technical announcements: software bugs, new releases etc.
+
 
 # The *hero image*
+
+---
 
 ## An inviting visuals
 
@@ -302,20 +294,22 @@ The CSS file can accomodate an hero image layout by
 
 #### Web-native illustration, 2
 
-Can your replicate this type of page with this `.jpg` file? (click to enlarge)
+Can your replicate a hero page with this `.jpg` file? (click to enlarge)
 
 ![](./imgs/torrevelasca.jpg){width=5in}
+
+boilerplate in [learn-web\30-visuals\exercise]()
 
 ---
 
 ![](./imgs/torrevelasca.jpg){.lightbox}
 
 
-# Exercise
+## Exercise
 
 :::: {.columns}
 ::: {.column width="75%"}
-Create a hero image for your Lorem 
+Find a hero image for your Lorem or exercise-35 page
 
 be creative around classic images
 
@@ -346,15 +340,3 @@ the colors in the picture drive the choice of the "on top" style
 discuss the page with a colleague 
 :::
 ::::
-
-
-
-
-
-
-
-
-
-
-
-
