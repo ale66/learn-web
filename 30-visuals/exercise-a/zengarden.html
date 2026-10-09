@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- Webcomm boilerplate, restyled with CSS Zen Garden designs -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>One page, many looks</title>
+<meta name="description" content="Same HTML, different CSS: styles loaded from the CSS Zen Garden repository.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--
+  TO CHANGE THE LOOK: edit ONLY the href of the active <link> below
+  (or comment it out and un-comment another one). Nothing else changes.
+  Styles are served straight from github.com/mezzoblue/csszengarden.com
+  through the jsDelivr GitHub CDN (raw.githubusercontent.com cannot be
+  used for CSS: it is served as text/plain and browsers ignore it).
+  Any design number from 001 to 221 works: .../NNN/NNN.css
+-->
+
+<!-- ACTIVE STYLE -->
+<link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/gh/mezzoblue/csszengarden.com@master/001/001.css">
+
+<!-- Alternatives (swap one in, one at a time):
+<link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/gh/mezzoblue/csszengarden.com@master/214/214.css">  Verde Moderna
+<link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/gh/mezzoblue/csszengarden.com@master/221/221.css">  Mid Century Modern
+<link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/gh/mezzoblue/csszengarden.com@master/218/218.css">  Apothecary
+<link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/gh/mezzoblue/csszengarden.com@master/217/217.css">  Screen Filler
+<link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/gh/mezzoblue/csszengarden.com@master/219/219.css">  Steel
+-->
+</head>
+
+<body id="css-zen-garden">
+<div class="page-wrapper">
+
+  <section class="intro" id="zen-intro">
+    <header role="banner">
+      <h1>One Page, Many Looks</h1>
+      <h2>The same <abbr title="HyperText Markup Language">HTML</abbr>, dressed by different <abbr title="Cascading Style Sheets">CSS</abbr></h2>
+    </header>
+
+    <div class="summary" id="zen-summary" role="article">
+      <p>This page never changes. Only the stylesheet in the <code>&lt;head&gt;</code> does. Swap one line and layout, colour, type and imagery all follow.</p>
+      <p>The markup follows the structure of the CSS Zen Garden, so every design in its archive can be plugged in.</p>
+    </div>
+
+    <div class="preamble" id="zen-preamble" role="article">
+      <h3>Structure First</h3>
+      <p>Good visual communication starts from meaningful structure: headers, sections, asides, lists. Presentation is a separate layer that can be replaced without touching the content.</p>
+      <p>Compare two designs and notice what moved: the sidebar, the headings, the footer links. The words stayed exactly where they were in the source.</p>
+    </div>
+  </section>
+
+  <div class="main supporting" id="zen-supporting" role="main">
+
+    <div class="explanation" id="zen-explanation" role="article">
+      <h3>What Is Happening Here?</h3>
+      <p>The browser downloads one stylesheet from the CDN and applies it to the elements below. Each design targets the same ids and classes: <code>#zen-intro</code>, <code>.summary</code>, <code>.preamble</code>, <code>.explanation</code>, <code>.participation</code>, <code>.benefits</code>, <code>.requirements</code> and the <code>.sidebar</code>.</p>
+      <p>Empty <code>.extra1</code> to <code>.extra6</code> elements at the end of the page exist only so designers can hang extra imagery on them.</p>
+    </div>
+
+    <div class="participation" id="zen-participation" role="article">
+      <h3>Try It Yourself</h3>
+      <p>Open this file in a text editor, find the active <code>&lt;link&gt;</code> line and replace the design number, for instance <code>001</code> with <code>221</code>. Save, reload, compare.</p>
+      <p>Then change the same number in the file name too: the path has the form <code>NNN/NNN.css</code>.</p>
+      <p>Copy a few paragraphs, shorten them, make them longer: see how each design copes with more or less text.</p>
+    </div>
+
+    <div class="benefits" id="zen-benefits" role="article">
+      <h3>Why It Matters</h3>
+      <p>Separating content from presentation makes pages easier to maintain, to translate and to make accessible. It also lets the same message reach different readers in different forms.</p>
+    </div>
+
+    <div class="requirements" id="zen-requirements" role="article">
+      <h3>Things To Watch</h3>
+      <p>Some designs rely on images and web fonts that live next to the CSS; the CDN serves them too, so you need to be online.</p>
+      <p>Some designs break at narrow widths, others adapt gracefully: resize the window and observe.</p>
+      <p>Always check the effect on long headings and on the sidebar lists.</p>
+      <p>Design numbers run from 001 to 221; a few of the older ones use fixed widths.</p>
+      <p role="contentinfo">Stylesheets and artwork belong to their authors (see the CSS Zen Garden licence, CC BY-NC-SA).</p>
+    </div>
+
+    <footer>
+      <a href="http://validator.w3.org/check/referer" title="Check the validity of this page's HTML" class="zen-validate-html">HTML</a>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer" title="Check the validity of this page's CSS" class="zen-validate-css">CSS</a>
+      <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="Creative Commons Attribution-NonCommercial-ShareAlike" class="zen-license">CC</a>
+      <a href="http://mezzoblue.com/zengarden/faq/#aaa" title="Read about the accessibility of the Zen Garden" class="zen-accessibility">A11y</a>
+      <a href="https://github.com/mezzoblue/csszengarden.com" title="The CSS Zen Garden repository" class="zen-github">GH</a>
+    </footer>
+
+  </div>
+
+  <aside class="sidebar" role="complementary">
+    <div class="wrapper">
+
+      <div class="design-selection" id="design-selection">
+        <h3 class="select">Select a Design:</h3>
+        <nav role="navigation">
+          <ul>
+            <li><a href="https://www.csszengarden.com/001/">Tranquille</a> by <a href="http://www.mezzoblue.com/">Dave Shea</a></li>
+            <li><a href="https://www.csszengarden.com/214/">Verde Moderna</a> by <a href="http://www.mezzoblue.com/">Dave Shea</a></li>
+            <li><a href="https://www.csszengarden.com/221/">Mid Century Modern</a> by <a href="http://andrewlohman.com/">Andrew Lohman</a></li>
+            <li><a href="https://www.csszengarden.com/218/">Apothecary</a> by <a href="http://trentwalton.com">Trent Walton</a></li>
+            <li><a href="https://www.csszengarden.com/217/">Screen Filler</a> by <a href="http://elliotjaystocks.com/">Elliot Jay Stocks</a></li>
+            <li><a href="https://www.csszengarden.com/219/">Steel</a> by <a href="http://steffen-knoeller.de">Steffen Knoeller</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="design-archives" id="design-archives">
+        <h3 class="archives">Archives:</h3>
+        <nav role="navigation">
+          <ul>
+            <li class="next"><a href="https://www.csszengarden.com/214/page1">Next Designs <span class="indicator">&rsaquo;</span></a></li>
+            <li class="viewall"><a href="https://www.csszengarden.com/pages/alldesigns/" title="View every submission to the Zen Garden.">View All Designs</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="zen-resources" id="zen-resources">
+        <h3 class="resources">Resources:</h3>
+        <ul>
+          <li class="view-css"><a href="https://github.com/mezzoblue/csszengarden.com" title="Browse the CSS files in the repository">Browse the Designs&#8217; CSS</a></li>
+          <li class="css-resources"><a href="https://www.csszengarden.com/pages/resources/" title="Links to great sites with information on using CSS.">CSS Resources</a></li>
+          <li class="zen-faq"><a href="https://www.csszengarden.com/pages/faq/" title="Frequently Asked Questions about the Zen Garden.">FAQ</a></li>
+          <li class="zen-submit"><a href="https://www.csszengarden.com/pages/submit/" title="Send in your own CSS file.">Submit a Design</a></li>
+          <li class="zen-translations"><a href="https://www.csszengarden.com/pages/translations/" title="View translated versions of this page.">Translations</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </aside>
+
+</div>
+
+<!-- Catch-all elements that designs may use for extra imagery -->
+<div class="extra1" role="presentation"></div><div class="extra2" role="presentation"></div><div class="extra3" role="presentation"></div>
+<div class="extra4" role="presentation"></div><div class="extra5" role="presentation"></div><div class="extra6" role="presentation"></div>
+
+</body>
+</html>
