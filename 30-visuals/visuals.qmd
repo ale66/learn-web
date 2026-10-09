@@ -298,18 +298,18 @@ Can your replicate a hero page with this `.jpg` file? (click to enlarge)
 
 ![](./imgs/torrevelasca.jpg){width=5in}
 
-boilerplate in [learn-web\30-visuals\exercise]()
+boilerplate in [learn-web\30-visuals\exercise-a]()
 
 ---
 
 ![](./imgs/torrevelasca.jpg){.lightbox}
 
 
-## Exercise
+## Exercise B
 
 :::: {.columns}
 ::: {.column width="75%"}
-Find a hero image for your Lorem or exercise-35 page
+Go back to your 'Lorem' page, which began with [learn-web\15-lorem-boilerplate\rename-then-edit-me.html]()
 
 be creative around classic images
 
