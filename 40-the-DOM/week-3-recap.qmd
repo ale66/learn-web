@@ -63,3 +63,46 @@ Text-on-image special fonts and colours
 
 Exercise: embed Cicero's images on your Lorem page
 
+# 4-Sat Recap 
+
+
+## Concepts and competencies
+
+- computer organisation
+
+  - manila folders
+
+  - terminal and its commands: `dir`/`ls`, `cd`..
+
+- Git protocol
+
+  - participate in Web/software projects `git clone https...`
+  - obtain updates `git pull`
+  - save your work `git stash` / `git commit -a -m ""`
+
+---
+
+
+- work offline
+
+  - VS Code and extensions
+
+- HTML
+
+  - tags and their nestings
+
+  - basic tags
+
+  - `<div>...</div>`
+
+ 
+- CSS
+
+  - keep in separated file
+
+  - create own styles:   - `.myfancygothictitle {...}`
+
+
+## Current project
+
+
