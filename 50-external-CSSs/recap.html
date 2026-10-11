@@ -6,8 +6,8 @@
 <script src="week-4-recap_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="week-4-recap_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="week-4-recap_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="week-4-recap_files/libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.25">
+<link href="week-4-recap_files/libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.19">
 
   <meta name="author" content="ale66">
   <title>Learn Web</title>
@@ -17,10 +17,16 @@
   <link rel="stylesheet" href="week-4-recap_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="week-4-recap_files/libs/revealjs/dist/reveal.css">
   <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -95,7 +101,7 @@
     code span.vs { color: #abe338; } /* VerbatimString */
     code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="week-4-recap_files/libs/revealjs/dist/theme/quarto-06e768f098560084c2d7120de8ad04fb.css">
+  <link rel="stylesheet" href="week-4-recap_files/libs/revealjs/dist/theme/quarto-84b150702567ae7e15cad124fb9039e2.css">
   <link href="week-4-recap_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="week-4-recap_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="week-4-recap_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -203,7 +209,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-ale66 
+ale66
 </div>
 </div>
 </div>
@@ -248,10 +254,107 @@ ale66
 <section id="concepts-c" class="slide level2">
 <h2>Concepts, c</h2>
 <p>Page animation: Javascript (JS)</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href=""></a> <span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> type</span><span class="op">=</span><span class="st">"button"</span><span class="ot"> onclick</span><span class="op">=</span><span class="st">"changeSeason('summer')"</span><span class="dt">&gt;</span>Verano<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="" aria-label="1"></a> <span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> type</span><span class="op">=</span><span class="st">"button"</span><span class="ot"> onclick</span><span class="op">=</span><span class="st">"changeSeason('summer')"</span><span class="dt">&gt;</span>Verano<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>A new tag for buttons</p>
 <p>A <em>listener:</em> if we click then the <em>action</em> associated to <code>onclick</code> is executed</p>
 <p>A Javascript function <code>changeSeason()</code> is called, with input value <code>'summer'</code></p>
+</section></section>
+<section>
+<section id="in-class-project-recap" class="title-slide slide level1 center">
+<h1>In-class project Recap</h1>
+
+</section>
+<section id="objectives" class="slide level2">
+<h2>Objectives</h2>
+<p>Work on a simple project to learn how to</p>
+<ul>
+<li><p>arrange files in your computer, work with the terminal (aka CLI: Command Line Interface)</p></li>
+<li><p>edit HTML+CSS files with VS Code: div, class .hero-style{}</p></li>
+<li><p>link up this and that, embed images, videos, podcasts</p></li>
+<li><p>use the Git collaboration software</p></li>
+</ul>
+<div class="fragment">
+<ul>
+<li>develop <em>your own web style</em></li>
+</ul>
+</div>
+</section>
+<section id="issues-so-far" class="slide level2">
+<h2>Issues so far</h2>
+<ul>
+<li>terminal must be ‘pointed’ to the <em>right</em> folder (check with <code>dir</code>/<code>ls -lrta</code>, use <code>cd</code> to reach there)</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>I have
+<ul>
+<li><p><code>learn-web-main.zip</code> (must <em>unzip</em> first, but see below)</p></li>
+<li><p><code>learn-web-main/</code> (install git and <code>git clone</code> a fresh copy)</p></li>
+<li><p>2 or more copies of <code>learn-web/</code> (may delete all but the <em>working copy</em>)</p></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="more-issues" class="slide level2">
+<h2>More issues</h2>
+<ul>
+<li>VS Code preview malfunctions (get <code>Live Preview</code> by Microsoft or <code>HTML Preview</code> by George Oliveira)</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>low <em>scaffolding:</em> learn everything, everywhere, all at once (read slides to catch up)</li>
+</ul>
+</div>
+</section>
+<section id="in-class-project" class="slide level2">
+<h2>In-class project</h2>
+<h3 id="refactor-the-ma-com-landing-page">Refactor the MA COM landing page</h3>
+<p><a href=""></a></p>
+<p>can you do a better job than that?</p>
+</section>
+<section id="milestone" class="slide level2">
+<h2>Milestone</h2>
+<p>By now you should have, typically in <code>30-visuals/exercise-a/</code></p>
+<ul>
+<li><p>an <code>index.html</code> file you edited to add <em>divs,</em> text, links etc.</p></li>
+<li><p>a <code>mystyle.css</code>file with your styles (or <code>myfonts.css</code>)</p></li>
+<li><p>some extra images in <code>./imgs/</code></p></li>
+</ul>
+</section>
+<section id="go-online" class="slide level2">
+<h2>Go online</h2>
+<ol type="1">
+<li><p>join GitHub with your <code>name.surname@studenti.unimi.it</code> email; get a <code>name.surname</code> id</p></li>
+<li><p>send your id to instructor by PM on Teams</p></li>
+</ol>
+<div class="fragment">
+<ol type="1">
+<li>from a terminal, log into GitHub (details in <code>34-git/index.html</code>, page …)</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="3" type="1">
+<li>clone a copy of the class exercise:</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="" aria-label="1"></a><span class="fu">git</span> clone </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section class="slide level2">
+
+<ol start="4" type="1">
+<li><p>look inside: there’s a folder in your id name</p></li>
+<li><p>copy into it your project: <code>index.html</code>, <code>mystyle.css</code> and the <code>imgs</code> folder</p></li>
+<li><p>git commands to create a new version</p></li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="" aria-label="1"></a><span class="fu">git</span> commit <span class="at">-a</span> <span class="at">-m</span> <span class="st">"Wow, this is my initial commit!"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="7" type="1">
+<li>push your version into GitHub</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="" aria-label="1"></a><span class="fu">git</span> push</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="8" type="1">
+<li><p>check your project online at <code>https://ale66.github.io/in-class-project2627/name.surname/</code></p></li>
+<li><p>check it also on your smartphone</p></li>
+</ol>
 
 </section></section>
     </div>

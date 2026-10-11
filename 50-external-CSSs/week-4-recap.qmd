@@ -59,4 +59,117 @@ A new tag for buttons
 
 A *listener:* if we click then the *action* associated to `onclick` is executed
 
-A Javascript function `changeSeason()` is called, with input value `'summer'`
+A Javascript function `changeSeason()` is called, with input value `'summer'` 
+
+
+# In-class project Recap
+
+---
+
+## Objectives
+
+Work on a simple project to learn how to
+
+- arrange files in your computer, work with the terminal (aka CLI: Command Line Interface)
+  
+- edit HTML+CSS files with VS Code: div, class .hero-style{}
+
+- link up this and that, embed images, videos, podcasts
+  
+- use the Git collaboration software
+
+. . .
+
+- develop *your own web style* 
+
+
+
+---
+
+## Issues so far
+
+- terminal must be 'pointed' to the *right* folder (check with `dir`/`ls -lrta`, use `cd` to reach there) 
+
+. . .
+
+- I have 
+  - `learn-web-main.zip` (must *unzip* first, but see below)
+
+  - `learn-web-main/` (install git and `git clone` a fresh copy)
+
+  - 2 or more copies of `learn-web/` (may delete all but the *working copy*)
+
+--- 
+
+## More issues
+
+- VS Code preview malfunctions (get `Live Preview` by Microsoft or `HTML Preview` by George Oliveira)
+
+. . .
+
+- low *scaffolding:* learn everything, everywhere, all at once (read slides to catch up)
+
+---
+
+## In-class project
+
+### Refactor the MA COM landing page
+
+[]()
+
+can you do a better job than that? 
+
+---
+
+## Milestone
+
+By now you should have, typically in `30-visuals/exercise-a/`
+
+- an `index.html` file you edited to add *divs,* text, links etc.
+
+- a `mystyle.css`file with your styles (or `myfonts.css`)
+
+- some extra images in `./imgs/`
+
+
+---
+
+## Go online
+
+1. join GitHub with your `name.surname@studenti.unimi.it` email; get a `name.surname` id
+
+2. send your id to instructor by PM on Teams
+
+. . .
+
+1. from a terminal, log into GitHub (details in `34-git/index.html`, page ...)
+
+. . .
+
+3. clone a copy of the class exercise: 
+
+```bash
+git clone 
+```
+
+---
+
+4. look inside: there's a folder in your id name
+  
+5. copy into it your project: `index.html`, `mystyle.css` and the `imgs` folder
+
+6. git commands to create a new version
+
+```bash
+git commit -a -m "Wow, this is my initial commit!"
+```
+
+7. push your version into GitHub
+
+```bash
+git push
+```
+
+8. check your project online at `https://ale66.github.io/in-class-project2627/name.surname/`
+
+9. check it also on your smartphone
