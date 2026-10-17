@@ -140,6 +140,8 @@ Instead, experiment by uploading pages to the free GitHub project
 
 ## Go online by going GitHub
 
+0. we will publish pages under [ale66.github.io/learn-web-playground-2026-27/](https://ale66.github.io/learn-web-playground-2026-27/){target="_blank"}
+
 1. join GitHub with your `name.surname@studenti.unimi.it` email; get a `name.surname` id
 
 2. send your id to instructor by PM on Teams
@@ -174,9 +176,21 @@ git commit -a -m "Wow, this is my initial commit!"
 git push
 ```
 
-8. check your project online at `https://ale66.github.io/in-class-project2627/name.surname/`
+8. check your project online at `ale66.github.io/learn-web-playground-2026-27/essays/name.surname/`
 
 9. check it also on your smartphone
+
+---
+
+## Projects, so far
+
+- [ale66](https://ale66.github.io/learn-web-playground-2026-27/essays/ale66/)
+
+this is the baseline code that is also in `ale66/learn-web/30-visuals/exercise-a`
+
+- [Khulanb326](https://ale66.github.io/learn-web-playground-2026-27/essays/Khulanb326/)
+
+this is a student's folder
 
 
 # Week 5

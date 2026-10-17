@@ -17,21 +17,34 @@ execute:
 
 # The Limits of HTML
 
+---
+
+## Three theses against HTML
+
+- a: the page orientation 
+
+- b: the static layout
+  
+- c: the landing page
+
+
+# A: The page orientation
 
 ---
 
-## The page orientation
+## So far...
 
-So far, each HTML page is a stand-alone, complete page
 
-Even recurrent elements, e.g., links to reference pages, are repeated
+- each HTML page is a stand-alone, complete page
 
-pages might share a common CSS file, but not the HTML structure itself
+- even recurrent elements, e.g., links to reference pages, are repeated
+
+- pages might share a common CSS file, but not the HTML structure itself
 
 
 ---
 
-## Case study 
+## Case study
 
 - [unimi.it](https://www.unimi.it/en/education) offers more than 150 study programs
 
@@ -46,11 +59,10 @@ pages might share a common CSS file, but not the HTML structure itself
 
 recurrent parts of the page are annotated by *invisible,* semantic tags
 
-altough invisible, the tags guide presentation, and can be replicated across the whole platform, e.g., ``unimi.it``
+although invisible, the tags guide presentation, and can be replicated across the whole platform, e.g., ``unimi.it``
 
 
-# Static layout
-
+# B Static layout
 
 ---
 
@@ -108,19 +120,42 @@ For reference: a better finish
 - [Ex. 9.4](https://webdesignplayground.io/lessons/9-4-0): Controlling the Margins
 
 
-# Exercise
-
-Try *pair coding* with the [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) extension of VS Code
+# Intermezzo: in-class project 
 
 ---
 
-- in your project, Box up the official text from ``unimi.it`` and make it float
+## Checkpoint
+
+Have a version of the `30-visuals/exercise-a` folder with 
+
+  - own hero page for COM 
+  - own style in `mystyle.css` and/or `fonts-style.css`
+  - owm images in `./imgs/`
+  - links on the page, images embedded
+  - YT and GM embeds, 
+  - possibly, own video (upload to new folder `./videos/` or `./av/`)
+
+
+---
+
+## Today
+
+- obtain GH account
+
+- get own folder on `learn-web-playground-2026-27`
+
+- copy materials there
+
+- make floating menu with useful links
+
+- box up some official text from `https://com.cdl.unimi.it/en` and make it float
 
 - make a menu of navigation links and float it (details in past presentations) 
 
+try *pair coding* with your neighbor via the [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) VS Code extension
 
 
-# Landing pages
+# C: Landing pages
 
 ---
 
@@ -129,6 +164,8 @@ Hero page:
 - seeks an emotional response
 
 - graphics takes over from text
+
+. . .
 
 Landing page
 
@@ -195,7 +232,7 @@ sense the device and apply the appropriate styles
 Example: section with links collapses into the *hamburger* menu
 
 
-#  For refrence: `before::` and `after::`
+#  For reference: `before::` and `after::`
 
 ---
 

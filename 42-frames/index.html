@@ -6,8 +6,8 @@
 <script src="frames_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="frames_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="frames_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="frames_files/libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.25">
+<link href="frames_files/libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.19">
 
   <meta name="author" content="ale66">
   <title>Learn Web</title>
@@ -17,10 +17,16 @@
   <link rel="stylesheet" href="frames_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="frames_files/libs/revealjs/dist/reveal.css">
   <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -95,7 +101,7 @@
     code span.vs { color: #abe338; } /* VerbatimString */
     code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="frames_files/libs/revealjs/dist/theme/quarto-06e768f098560084c2d7120de8ad04fb.css">
+  <link rel="stylesheet" href="frames_files/libs/revealjs/dist/theme/quarto-84b150702567ae7e15cad124fb9039e2.css">
   <link href="frames_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="frames_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="frames_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -200,7 +206,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-ale66 
+ale66
 </div>
 </div>
 </div>
@@ -211,11 +217,26 @@ ale66
 <h1>The Limits of HTML</h1>
 
 </section>
-<section id="the-page-orientation" class="slide level2">
-<h2>The page orientation</h2>
-<p>So far, each HTML page is a stand-alone, complete page</p>
-<p>Even recurrent elements, e.g., links to reference pages, are repeated</p>
-<p>pages might share a common CSS file, but not the HTML structure itself</p>
+<section id="three-theses-against-html" class="slide level2">
+<h2>Three theses against HTML</h2>
+<ul>
+<li><p>a: the page orientation</p></li>
+<li><p>b: the static layout</p></li>
+<li><p>c: the landing page</p></li>
+</ul>
+</section></section>
+<section>
+<section id="a-the-page-orientation" class="title-slide slide level1 center">
+<h1>A: The page orientation</h1>
+
+</section>
+<section id="so-far" class="slide level2">
+<h2>So far…</h2>
+<ul>
+<li><p>each HTML page is a stand-alone, complete page</p></li>
+<li><p>even recurrent elements, e.g., links to reference pages, are repeated</p></li>
+<li><p>pages might share a common CSS file, but not the HTML structure itself</p></li>
+</ul>
 </section>
 <section id="case-study" class="slide level2">
 <h2>Case study</h2>
@@ -228,14 +249,14 @@ ale66
 <section id="idea-semantic-tagging" class="slide level2">
 <h2>Idea: semantic tagging</h2>
 <p>recurrent parts of the page are annotated by <em>invisible,</em> semantic tags</p>
-<p>altough invisible, the tags guide presentation, and can be replicated across the whole platform, e.g., <code>unimi.it</code></p>
+<p>although invisible, the tags guide presentation, and can be replicated across the whole platform, e.g., <code>unimi.it</code></p>
 </section></section>
 <section>
-<section id="static-layout" class="title-slide slide level1 center">
-<h1>Static layout</h1>
+<section id="b-static-layout" class="title-slide slide level1 center">
+<h1>B Static layout</h1>
 
 </section>
-<section id="so-far" class="slide level2">
+<section id="so-far-1" class="slide level2">
 <h2>So far</h2>
 <p>pages are intended as rectangular: relatively narrow and tall</p>
 <ul>
@@ -276,20 +297,37 @@ ale66
 </ul>
 </section></section>
 <section>
-<section id="exercise" class="title-slide slide level1 center">
-<h1>Exercise</h1>
-<p>Try <em>pair coding</em> with the <a href="https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare">Live Share</a> extension of VS Code</p>
-</section>
-<section class="slide level2">
+<section id="intermezzo-in-class-project" class="title-slide slide level1 center">
+<h1>Intermezzo: in-class project</h1>
 
+</section>
+<section id="checkpoint" class="slide level2">
+<h2>Checkpoint</h2>
+<p>Have a version of the <code>30-visuals/exercise-a</code> folder with</p>
 <ul>
-<li><p>in your project, Box up the official text from <code>unimi.it</code> and make it float</p></li>
+<li>own hero page for COM</li>
+<li>own style in <code>mystyle.css</code> and/or <code>fonts-style.css</code></li>
+<li>owm images in <code>./imgs/</code></li>
+<li>links on the page, images embedded</li>
+<li>YT and GM embeds,</li>
+<li>possibly, own video (upload to new folder <code>./videos/</code> or <code>./av/</code>)</li>
+</ul>
+</section>
+<section id="today" class="slide level2">
+<h2>Today</h2>
+<ul>
+<li><p>obtain GH account</p></li>
+<li><p>get own folder on <code>learn-web-playground-2026-27</code></p></li>
+<li><p>copy materials there</p></li>
+<li><p>make floating menu with useful links</p></li>
+<li><p>box up some official text from <code>https://com.cdl.unimi.it/en</code> and make it float</p></li>
 <li><p>make a menu of navigation links and float it (details in past presentations)</p></li>
 </ul>
+<p>try <em>pair coding</em> with your neighbor via the <a href="https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare">Live Share</a> VS Code extension</p>
 </section></section>
 <section>
-<section id="landing-pages" class="title-slide slide level1 center">
-<h1>Landing pages</h1>
+<section id="c-landing-pages" class="title-slide slide level1 center">
+<h1>C: Landing pages</h1>
 
 </section>
 <section class="slide level2">
@@ -299,12 +337,14 @@ ale66
 <li><p>seeks an emotional response</p></li>
 <li><p>graphics takes over from text</p></li>
 </ul>
+<div class="fragment">
 <p>Landing page</p>
 <ul>
 <li><p>extends hero</p></li>
 <li><p>the page that search engines point</p></li>
 <li><p>seeks to entice and guide a deeper visit</p></li>
 </ul>
+</div>
 </section>
 <section id="example-landing-page" class="slide level2">
 <h2>Example landing page</h2>
@@ -345,8 +385,8 @@ ale66
 <p>Example: section with links collapses into the <em>hamburger</em> menu</p>
 </section></section>
 <section>
-<section id="for-refrence-before-and-after" class="title-slide slide level1 center">
-<h1>For refrence: <code>before::</code> and <code>after::</code></h1>
+<section id="for-reference-before-and-after" class="title-slide slide level1 center">
+<h1>For reference: <code>before::</code> and <code>after::</code></h1>
 
 </section>
 <section id="after" class="slide level2">
@@ -359,12 +399,12 @@ ale66
 <h2>::before</h2>
 <p>apply a certain style before the browser starts rendering the element</p>
 <p>See the <a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_before">example from w3schools</a></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb1-1"><a href=""></a>p<span class="in">::before</span> { </span>
-<span id="cb1-2"><a href=""></a>  <span class="kw">content</span><span class="ch">:</span> <span class="st">"Read this -"</span><span class="op">;</span></span>
-<span id="cb1-3"><a href=""></a>  <span class="kw">background-color</span><span class="ch">:</span> <span class="cn">yellow</span><span class="op">;</span></span>
-<span id="cb1-4"><a href=""></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">red</span><span class="op">;</span></span>
-<span id="cb1-5"><a href=""></a>  <span class="kw">font-weight</span><span class="ch">:</span> <span class="dv">bold</span><span class="op">;</span></span>
-<span id="cb1-6"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb1-1"><a href="" aria-label="1"></a>p<span class="in">::before</span> { </span>
+<span id="cb1-2"><a href="" aria-label="2"></a>  <span class="kw">content</span><span class="ch">:</span> <span class="st">"Read this -"</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="" aria-label="3"></a>  <span class="kw">background-color</span><span class="ch">:</span> <span class="cn">yellow</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="" aria-label="4"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb1-5"><a href="" aria-label="5"></a>  <span class="kw">font-weight</span><span class="ch">:</span> <span class="dv">bold</span><span class="op">;</span></span>
+<span id="cb1-6"><a href="" aria-label="6"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
