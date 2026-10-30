@@ -27,7 +27,13 @@ execute:
 
 * in web, competing sites vie for users' attention
 
-* yet the Zen garden is a proof-of-concept but very possibly *far too much.*
+* yet the Zen garden is a proof-of-concept but probably *far too much:*
+
+    - [Verde Moderna](https://csszengarden.com/214/){target="_blank"}
+
+    - [A Robot Named Jimmy](https://csszengarden.com/215/){target="_blank"}
+
+    - [Steel](https://csszengarden.com/219/){target="_blank"}
 
 
 ---
@@ -50,7 +56,7 @@ Because
 
 * a set of CSS styles that create a new standard page organization.
 
-* to summarise: a landing page, with semantic tages but also *responsive*
+* to summarise: a landing page, with semantic taes but also *responsive*
 
 
 ---
@@ -100,9 +106,9 @@ a number greater than 1 increases pro quota participation in growth/shrinkage.
 
 ## Recap: a Flexbox page title
 
-![](./imgs/12-site-title.png)
+![](./imgs/12-site-title.png){width="15%"}
 
-![](./imgs/12-site-title-css.png)
+![](./imgs/12-site-title-css.png){width="65%"}
 
 
 ---
@@ -111,11 +117,11 @@ a number greater than 1 increases pro quota participation in growth/shrinkage.
 
 Go over the only exercises:
 
-- [wdpg.io/12-1-0](https://webdesignplayground.io/lessons/12-1-0/)
+- [wdpg.io/12-1-0](https://webdesignplayground.io/lessons/12-1-0/){target="_blank"}
 
-- [wdpg.io/12-2-0](https://webdesignplayground.io/lessons/12-1-0/)
+- [wdpg.io/12-2-0](https://webdesignplayground.io/lessons/12-1-0/){target="_blank"}
 
-- [wdpg.io/12-3-0](https://webdesignplayground.io/lessons/12-1-0/)
+- [wdpg.io/12-3-0](https://webdesignplayground.io/lessons/12-1-0/){target="_blank"}
 
 The latter shows a basic *plumbing* of a flex Web page: see the boilerplate in this section
 
