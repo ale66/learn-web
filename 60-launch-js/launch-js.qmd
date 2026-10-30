@@ -76,7 +76,7 @@ only changes text, no HTML
 
 
 ```js
-document.getElementById("demo").innerHTML = 'My 2nd JS <it>experiment</it>';
+document.getElementById("demo").innerHTML = 'My 2nd JS <it>experiment</>';
 ```
 
 Can insert HTML and force a re-rendering of the page
@@ -183,7 +183,7 @@ We mostly study JS through the latter
 
 ## JS: where to put it?
 
-a short list of commands, separated by `;` cna be placed almost everywhere
+a short list of commands, separated by `;` can be placed almost everywhere
 
 please the [w3schools.com/js/js_whereto.asp](https://www.w3schools.com/js/js_whereto.asp)
 
@@ -201,7 +201,7 @@ Cleanest solution:
 
 Learning programming languages is much like learning foreign human languages: theory and practice 
 
-Python: interpreter, VS Code with lots of extensions, code profiler, problem-solvinng challenges etc.
+Python: interpreter, VS Code with lots of extensions, code profiler, problem-solving etc.
 
 JS: VS Code, refresh page in the browser, not much else... 
 
@@ -236,9 +236,9 @@ Thanks to the DOM we can write a 1-line function then invoke it in the `<script>
 
 ## Exercise:  
 
-MA COM is outsourced to the new *University of S. Babila*
+MA COM is outsourced to the new *University of San Babila*
 
-__Challenge:__ can you change all the links in a page from the base ``www.unimi.it`` to ``www.unibabila.it``?
+__Challenge:__ can you change all the links in your refactored page the base ``www.unimi.it`` to ``www.unisanbabila.it``?
 
 ![](./src/imgs/homework2final.png)
 

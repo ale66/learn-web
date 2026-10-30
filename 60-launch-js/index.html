@@ -6,8 +6,8 @@
 <script src="launch-js_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="launch-js_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="launch-js_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="launch-js_files/libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.25">
+<link href="launch-js_files/libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.19">
 
   <meta name="author" content="ale66">
   <title>Learn Web</title>
@@ -17,10 +17,16 @@
   <link rel="stylesheet" href="launch-js_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="launch-js_files/libs/revealjs/dist/reveal.css">
   <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -95,7 +101,7 @@
     code span.vs { color: #abe338; } /* VerbatimString */
     code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="launch-js_files/libs/revealjs/dist/theme/quarto-06e768f098560084c2d7120de8ad04fb.css">
+  <link rel="stylesheet" href="launch-js_files/libs/revealjs/dist/theme/quarto-84b150702567ae7e15cad124fb9039e2.css">
   <link href="launch-js_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="launch-js_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="launch-js_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -200,7 +206,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-ale66 
+ale66
 </div>
 </div>
 </div>
@@ -222,35 +228,35 @@ ale66
 </section>
 <section id="change-text" class="slide level2">
 <h2>Change text</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href=""></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"demo"</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="st">'My 2nd JS experiment'</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="" aria-label="1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"demo"</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="st">'My 2nd JS experiment'</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Element <code>demo</code> could be an <code>h1</code> or a <code>p</code> or a <code>div</code> etc.</p>
 </section>
 <section id="change-style" class="slide level2">
 <h2>Change style</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href=""></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'myPara'</span>)<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">fontSize</span> <span class="op">=</span> <span class="st">"30px"</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="" aria-label="1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'myPara'</span>)<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">fontSize</span> <span class="op">=</span> <span class="st">"30px"</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Now text is bigger</p>
 </section>
 <section id="redefine-elements-of-the-page-with-js" class="slide level2">
 <h2>Redefine elements of the page with JS</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href=""></a><span class="kw">const</span> my_restyled_para <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'myPara'</span>)<span class="op">;</span></span>
-<span id="cb3-2"><a href=""></a></span>
-<span id="cb3-3"><a href=""></a>my_restyled_para<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">"My third JS experimen!"</span></span>
-<span id="cb3-4"><a href=""></a></span>
-<span id="cb3-5"><a href=""></a>my_restyled_para<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">fontSize</span> <span class="op">=</span> <span class="st">"30px"</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="" aria-label="1"></a><span class="kw">const</span> my_restyled_para <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'myPara'</span>)<span class="op">;</span></span>
+<span id="cb3-2"><a href="" aria-label="2"></a></span>
+<span id="cb3-3"><a href="" aria-label="3"></a>my_restyled_para<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">"My third JS experimen!"</span></span>
+<span id="cb3-4"><a href="" aria-label="4"></a></span>
+<span id="cb3-5"><a href="" aria-label="5"></a>my_restyled_para<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">fontSize</span> <span class="op">=</span> <span class="st">"30px"</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>use the VS Code command-completion facility to know what parameters are available</p>
 </section>
 <section class="slide level2">
 
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href=""></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"demo"</span>)<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">'My 2nd JS experiment'</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="" aria-label="1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"demo"</span>)<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">'My 2nd JS experiment'</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>only changes text, no HTML</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href=""></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"demo"</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="st">'My 2nd JS &lt;it&gt;experiment&lt;/it&gt;'</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="" aria-label="1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"demo"</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="st">'My 2nd JS &lt;it&gt;experiment&lt;/&gt;'</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Can insert HTML and force a re-rendering of the page</p>
 </section>
 <section id="change-any-property-of-the-named-tag" class="slide level2">
 <h2>Change any property of the named tag</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> id</span><span class="op">=</span><span class="st">"myImage"</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./imgs/winter.jpg"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"200"</span><span class="ot"> alt</span><span class="op">=</span><span class="st">"Start pic"</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> id</span><span class="op">=</span><span class="st">"myImage"</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./imgs/winter.jpg"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"200"</span><span class="ot"> alt</span><span class="op">=</span><span class="st">"Start pic"</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>As season change, we change the images.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb7-1"><a href=""></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'myImage'</span>)<span class="op">.</span><span class="at">src</span> <span class="op">=</span> <span class="st">"./imgs/summer.jpg"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb7-1"><a href="" aria-label="1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'myImage'</span>)<span class="op">.</span><span class="at">src</span> <span class="op">=</span> <span class="st">"./imgs/summer.jpg"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Important: the new file must be reachable from the page, or we will spoil the existing rendering</p>
 
 <img data-src="./imgs/summer.jpg" class="r-stretch"></section></section>
@@ -263,7 +269,7 @@ ale66
 
 <p>JS functions can <em>get</em> the document they’re in</p>
 <p>With JS commands of type</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><a href=""></a><span class="bu">document</span><span class="op">.</span><span class="fu">func</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><a href="" aria-label="1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">func</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>we apply function <code>func()</code> to the whole document</p>
 <p>The browser will run <code>func()</code> when encounters it in the process of rendering the page or of running a JS function call</p>
 </section>
@@ -275,7 +281,7 @@ ale66
 </section>
 <section class="slide level2">
 
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb9-1"><a href=""></a><span class="bu">window</span><span class="op">.</span><span class="fu">alert</span>(<span class="st">'A message to be seen'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb9-1"><a href="" aria-label="1"></a><span class="bu">window</span><span class="op">.</span><span class="fu">alert</span>(<span class="st">'A message to be seen'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>a gentle way to get users’ attention</p>
 <p>useful in <em>debugging</em> code:</p>
 <p>when the behaviour differs from expected, we can execute step-by-step and check what values are stored into variables</p>
@@ -387,12 +393,12 @@ ale66
 </section>
 <section id="listeners-1" class="slide level2">
 <h2>Listeners</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb10-1"><a href=""></a><span class="op">&lt;</span>script<span class="op">&gt;</span></span>
-<span id="cb10-2"><a href=""></a>    <span class="co">//'change' is managed by the browser;</span></span>
-<span id="cb10-3"><a href=""></a>    <span class="co">// every time the selected value changes, it invokes the 'react' function</span></span>
-<span id="cb10-4"><a href=""></a>    <span class="co">// notice the lack of parentheses for react: tricky setup! </span></span>
-<span id="cb10-5"><a href=""></a>    <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'marksSelector'</span>)<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'change'</span><span class="op">,</span> react)<span class="op">;</span></span>
-<span id="cb10-6"><a href=""></a><span class="op">&lt;/</span>script<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb10-1"><a href="" aria-label="1"></a><span class="op">&lt;</span>script<span class="op">&gt;</span></span>
+<span id="cb10-2"><a href="" aria-label="2"></a>    <span class="co">//'change' is managed by the browser;</span></span>
+<span id="cb10-3"><a href="" aria-label="3"></a>    <span class="co">// every time the selected value changes, it invokes the 'react' function</span></span>
+<span id="cb10-4"><a href="" aria-label="4"></a>    <span class="co">// notice the lack of parentheses for react: tricky setup! </span></span>
+<span id="cb10-5"><a href="" aria-label="5"></a>    <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'marksSelector'</span>)<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'change'</span><span class="op">,</span> react)<span class="op">;</span></span>
+<span id="cb10-6"><a href="" aria-label="6"></a><span class="op">&lt;/</span>script<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><code>change</code> is the event that triggers execution of function <code>react()</code>, here without <code>()</code></p>
 <p>Other notable events are <code>click</code>, <code>mouseover</code>…</p>
 </section>

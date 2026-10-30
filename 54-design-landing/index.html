@@ -6,8 +6,8 @@
 <script src="design-landing_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="design-landing_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="design-landing_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="design-landing_files/libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.25">
+<link href="design-landing_files/libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.19">
 
   <meta name="author" content="ale66">
   <title>Learn Web</title>
@@ -17,10 +17,16 @@
   <link rel="stylesheet" href="design-landing_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="design-landing_files/libs/revealjs/dist/reveal.css">
   <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -95,7 +101,7 @@
     code span.vs { color: #abe338; } /* VerbatimString */
     code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="design-landing_files/libs/revealjs/dist/theme/quarto-06e768f098560084c2d7120de8ad04fb.css">
+  <link rel="stylesheet" href="design-landing_files/libs/revealjs/dist/theme/quarto-84b150702567ae7e15cad124fb9039e2.css">
   <link href="design-landing_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="design-landing_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="design-landing_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -200,7 +206,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-ale66 
+ale66
 </div>
 </div>
 </div>
@@ -255,7 +261,7 @@ ale66
 <section id="living-philosophers-1" class="slide level2">
 <h2>Living philosophers, 1</h2>
 <p>Michel Onfray: materialism, hedonism, neo-paganism etc.</p>
-<p><a href="https://en.wikipedia.org/wiki/Michel_Onfray"><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Michel_Onfray_no_Fronteiras_do_Pensamento_Santa_Catarina_2012_%288212742449%29.jpg/440px-Michel_Onfray_no_Fronteiras_do_Pensamento_Santa_Catarina_2012_%288212742449%29.jpg" height="300"></a></p>
+<p><a href="https://en.wikipedia.org/wiki/Michel_Onfray"><img data-src="./images/michel_onfray.jpg" height="300"></a></p>
 <p>black, white, pink-ish?</p>
 </section>
 <section id="living-philosophers-2" class="slide level2">
@@ -298,9 +304,9 @@ ale66
 <section class="slide level2">
 
 <p>The uni logo may go on the footer, preferably on the left:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://www.unimi.it/"</span><span class="dt">&gt;&lt;</span><span class="kw">img</span><span class="ot"> source</span><span class="op">=</span><span class="st">"./images/unimi-logo.png"</span><span class="dt">&gt;&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://www.unimi.it/"</span><span class="dt">&gt;&lt;</span><span class="kw">img</span><span class="ot"> source</span><span class="op">=</span><span class="st">"./images/unimi-logo.png"</span><span class="dt">&gt;&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>By direct linking:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://www.unimi.it/"</span><span class="dt">&gt;&lt;</span><span class="kw">img</span><span class="ot"> source</span><span class="op">=</span><span class="st">"https://www.unimi.it/sites/default/files/2019-05/LogoFooter_a9f0c3692bf29c71609e5f204522c5d4_0.png"</span><span class="dt">&gt;&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://www.unimi.it/"</span><span class="dt">&gt;&lt;</span><span class="kw">img</span><span class="ot"> source</span><span class="op">=</span><span class="st">"https://www.unimi.it/sites/default/files/2019-05/LogoFooter_a9f0c3692bf29c71609e5f204522c5d4_0.png"</span><span class="dt">&gt;&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>it is a signature but not as <em>institutional</em> as on the upper left</p>
 </section>
 <section id="a-method-for-your-projects" class="slide level2">

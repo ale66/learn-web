@@ -87,7 +87,7 @@ Consider preparing info pages that survey contemporary French Philosophy and its
 
 Michel Onfray: materialism, hedonism, neo-paganism etc.
 
-[![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Michel_Onfray_no_Fronteiras_do_Pensamento_Santa_Catarina_2012_%288212742449%29.jpg/440px-Michel_Onfray_no_Fronteiras_do_Pensamento_Santa_Catarina_2012_%288212742449%29.jpg){height="300"}](https://en.wikipedia.org/wiki/Michel_Onfray)
+[![](./images/michel_onfray.jpg){height="300"}](https://en.wikipedia.org/wiki/Michel_Onfray)
 
 black, white, pink-ish?
 
