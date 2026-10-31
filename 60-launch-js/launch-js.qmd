@@ -229,7 +229,7 @@ I.e., write a JS function which changes the title of the page, e.g., inserting t
 
 Hint: study the [title](https://www.w3schools.com/jsref/prop_doc_title.asp) function
 
-Thanks to the DOM we can write a 1-line function then invoke it in the `<script>` part at the bottom.
+Thanks to the DOM we can write a 1-line function then invoke it in the `<script>` part at the button.
 
 
 ---
@@ -258,9 +258,9 @@ to get ready for the challenge cover the following units first:
 
 ## User actions trigger JS reactions
 
-There is a set of advanced HTML tags that are for user interaction:
+A set of advanced HTML tags involve user interaction:
 
-- bottom
+- button
 - input fields
 - forms
 - pull-down menus
@@ -268,11 +268,13 @@ There is a set of advanced HTML tags that are for user interaction:
   
 User interaction on any of these can be connected to invocation of a JS function
 
-In principle, all DOM objects can be decorated with a *listener*
+
 
 ---
 
 ## Listeners
+
+In principle, all DOM objects can be decorated with a *listener*
 
 ```js
 <script>
@@ -313,7 +315,7 @@ Please do not
 
 - watch YouTube videos as they might slow down/comfuse/hinder your learning
 
-- prompt ChatGPT and similar as you (probably) won't learn anything
+- prompt ChatGPT etc. as they depress learning
 
 . . .
 
