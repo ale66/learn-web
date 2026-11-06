@@ -34,15 +34,13 @@ HTML forms let users make choices (radio buttons, drop down etc.) or enter text:
 ## handlings strings with JS
 
 ```js
-let salutation = "Hello, World!";
+let mystring = "Hello, World!";
 
 document.getElementById("myParagraph").innerHTML =
-salutation; 
+mystring; 
 ```
 
 ---
-
-## The browser memory during JS execution
 
 Remember: JS uses the browser memory as it were a spreadsheet:
 
@@ -50,7 +48,7 @@ Remember: JS uses the browser memory as it were a spreadsheet:
 
 . . .
 
-![](./imgs/string in spreadsheet.png){width="30%"}
+![](./imgs/1-key-many-vals-salutation.png){width="25%"}
 
 
 ---
@@ -71,7 +69,7 @@ let mystring = "Hello, World!";
 prints 13 as spaces and punctuation count
 
 ```js
-console.log(mystring.lenght);
+console.log(mystring.length);
 ```
 
 
@@ -96,12 +94,17 @@ console.log(mystring[7]); //prints 'W'
 
 easy to assemble longer strings from pieces
 
+here `+` means *concatenation*
 
 ```js
-salutation_fr = 'Bonjour ' + 'tout le monde!'
+let salutation = "Hello, World!";
+
+let salutation_fr = 'Bonjour ' + 'a tout le monde!'
 
 
 salutation_ca = salutation + ' But also ' + salutation_fr
+
+console.log(salutation_ca); // what does this print?
 ```
 
 
@@ -118,12 +121,14 @@ example: take che characters of a string and make them uppercase (wow -> WOW)
 
 the `for` instruction iterates an arbitrary block of code
 
-
 ---
 
 ```js
+let n=12
+
 for (let i = 0; i < n; i++) {
     // block of code that uses a different value of i each time
+    console.log(mystring[i]);
 } 
 ```
 
@@ -148,6 +153,20 @@ for (let i = 0; i < length; i++) {
     console.log(salutation[i]);
 }
 ```
+
+![](./imgs/1-key-many-vals-salutation.png){width="25%"}
+
+---
+
+```js
+// let's count how many characters are in the string
+let length = salutation.length;
+
+for (let i = 0; i < length; i++) {
+    console.log(salutation[i]);
+}
+```
+
 
 Let's unroll it
 

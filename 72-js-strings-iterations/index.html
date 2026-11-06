@@ -224,14 +224,17 @@ ale66
 </section>
 <section id="handlings-strings-with-js" class="slide level2">
 <h2>handlings strings with JS</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="" aria-label="1"></a><span class="kw">let</span> salutation <span class="op">=</span> <span class="st">"Hello, World!"</span><span class="op">;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="" aria-label="1"></a><span class="kw">let</span> mystring <span class="op">=</span> <span class="st">"Hello, World!"</span><span class="op">;</span></span>
 <span id="cb2-2"><a href="" aria-label="2"></a></span>
 <span id="cb2-3"><a href="" aria-label="3"></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"myParagraph"</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span></span>
-<span id="cb2-4"><a href="" aria-label="4"></a>salutation<span class="op">;</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-4"><a href="" aria-label="4"></a>mystring<span class="op">;</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="the-browser-memory-during-js-execution" class="slide level2">
+<h2>The browser memory during JS execution</h2>
 <p>Remember: JS uses the browser memory as it were a spreadsheet:</p>
-<p><img data-src="./imgs/1-key-many-vals.png" style="width:30.0%"></p>
+<p><img data-src="./imgs/1-key-many-vals.png" style="width:25.0%"></p>
 <div class="fragment">
-<p><img data-src="./imgs/string%20in%20spreadsheet.png" style="width:30.0%"></p>
+<p><img data-src="./imgs/1-key-many-vals-salutation.png" style="width:25.0%"></p>
 </div>
 </section>
 <section id="strings" class="slide level2">
@@ -241,7 +244,7 @@ ale66
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="" aria-label="1"></a><span class="kw">let</span> mystring <span class="op">=</span> <span class="st">"Hello, World!"</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="fragment">
 <p><code>length</code> is automatically defined for any string variable prints 13 as spaces and punctuation count</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="" aria-label="1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(mystring<span class="op">.</span><span class="at">lenght</span>)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="" aria-label="1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(mystring<span class="op">.</span><span class="at">length</span>)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section class="slide level2">
@@ -255,10 +258,15 @@ ale66
 <section id="string-concatenation" class="slide level2">
 <h2>String concatenation</h2>
 <p>easy to assemble longer strings from pieces</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb7-1"><a href="" aria-label="1"></a>salutation_fr <span class="op">=</span> <span class="st">'Bonjour '</span> <span class="op">+</span> <span class="st">'tout le monde!'</span></span>
+<p>here <code>+</code> means <em>concatenation</em></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb7-1"><a href="" aria-label="1"></a><span class="kw">let</span> salutation <span class="op">=</span> <span class="st">"Hello, World!"</span><span class="op">;</span></span>
 <span id="cb7-2"><a href="" aria-label="2"></a></span>
-<span id="cb7-3"><a href="" aria-label="3"></a></span>
-<span id="cb7-4"><a href="" aria-label="4"></a>salutation_ca <span class="op">=</span> salutation <span class="op">+</span> <span class="st">' But also '</span> <span class="op">+</span> salutation_fr</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-3"><a href="" aria-label="3"></a><span class="kw">let</span> salutation_fr <span class="op">=</span> <span class="st">'Bonjour '</span> <span class="op">+</span> <span class="st">'a tout le monde!'</span></span>
+<span id="cb7-4"><a href="" aria-label="4"></a></span>
+<span id="cb7-5"><a href="" aria-label="5"></a></span>
+<span id="cb7-6"><a href="" aria-label="6"></a>salutation_ca <span class="op">=</span> salutation <span class="op">+</span> <span class="st">' But also '</span> <span class="op">+</span> salutation_fr</span>
+<span id="cb7-7"><a href="" aria-label="7"></a></span>
+<span id="cb7-8"><a href="" aria-label="8"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(salutation_ca)<span class="op">;</span> <span class="co">// what does this print?</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section></section>
 <section>
 <section id="iteration" class="title-slide slide level1 center">
@@ -274,9 +282,12 @@ ale66
 </section>
 <section class="slide level2">
 
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><a href="" aria-label="1"></a><span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> n<span class="op">;</span> i<span class="op">++</span>) {</span>
-<span id="cb8-2"><a href="" aria-label="2"></a>    <span class="co">// block of code that uses a different value of i each time</span></span>
-<span id="cb8-3"><a href="" aria-label="3"></a>} </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><a href="" aria-label="1"></a><span class="kw">let</span> n<span class="op">=</span><span class="dv">12</span></span>
+<span id="cb8-2"><a href="" aria-label="2"></a></span>
+<span id="cb8-3"><a href="" aria-label="3"></a><span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> n<span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb8-4"><a href="" aria-label="4"></a>    <span class="co">// block of code that uses a different value of i each time</span></span>
+<span id="cb8-5"><a href="" aria-label="5"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(mystring[i])<span class="op">;</span></span>
+<span id="cb8-6"><a href="" aria-label="6"></a>} </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>assign <em>i</em> to 0</p>
 <p>execute the block</p>
 <p>check whether the condition (<em>i&lt;n</em>) is still true</p>
@@ -290,72 +301,82 @@ ale66
 <span id="cb9-4"><a href="" aria-label="4"></a><span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> length<span class="op">;</span> i<span class="op">++</span>) {</span>
 <span id="cb9-5"><a href="" aria-label="5"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(salutation[i])<span class="op">;</span></span>
 <span id="cb9-6"><a href="" aria-label="6"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+<img data-src="./imgs/1-key-many-vals-salutation.png" style="width:25.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb10-1"><a href="" aria-label="1"></a><span class="co">// let's count how many characters are in the string</span></span>
+<span id="cb10-2"><a href="" aria-label="2"></a><span class="kw">let</span> length <span class="op">=</span> salutation<span class="op">.</span><span class="at">length</span><span class="op">;</span></span>
+<span id="cb10-3"><a href="" aria-label="3"></a></span>
+<span id="cb10-4"><a href="" aria-label="4"></a><span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> length<span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb10-5"><a href="" aria-label="5"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(salutation[i])<span class="op">;</span></span>
+<span id="cb10-6"><a href="" aria-label="6"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Let’s unroll it</p>
 </section>
 <section class="slide level2">
 
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb10-1"><a href="" aria-label="1"></a>i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb10-2"><a href="" aria-label="2"></a>length <span class="op">=</span> <span class="dv">13</span><span class="op">;</span></span>
-<span id="cb10-3"><a href="" aria-label="3"></a>i <span class="op">&lt;</span> length<span class="op">?</span> <span class="co">// Yes.</span></span>
-<span id="cb10-4"><a href="" aria-label="4"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(salutation[<span class="dv">0</span>])<span class="op">;</span> <span class="co">//prints 'H'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb11-1"><a href="" aria-label="1"></a>i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb11-1"><a href="" aria-label="1"></a>i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
 <span id="cb11-2"><a href="" aria-label="2"></a>length <span class="op">=</span> <span class="dv">13</span><span class="op">;</span></span>
 <span id="cb11-3"><a href="" aria-label="3"></a>i <span class="op">&lt;</span> length<span class="op">?</span> <span class="co">// Yes.</span></span>
-<span id="cb11-4"><a href="" aria-label="4"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(salutation[<span class="dv">1</span>])<span class="op">;</span> <span class="co">//prints 'e'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb11-4"><a href="" aria-label="4"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(salutation[<span class="dv">0</span>])<span class="op">;</span> <span class="co">//prints 'H'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb12-1"><a href="" aria-label="1"></a>i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb12-2"><a href="" aria-label="2"></a>length <span class="op">=</span> <span class="dv">13</span><span class="op">;</span></span>
+<span id="cb12-3"><a href="" aria-label="3"></a>i <span class="op">&lt;</span> length<span class="op">?</span> <span class="co">// Yes.</span></span>
+<span id="cb12-4"><a href="" aria-label="4"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(salutation[<span class="dv">1</span>])<span class="op">;</span> <span class="co">//prints 'e'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb12-1"><a href="" aria-label="1"></a>i <span class="op">=</span> <span class="dv">12</span><span class="op">;</span></span>
-<span id="cb12-2"><a href="" aria-label="2"></a>length <span class="op">=</span> <span class="dv">13</span><span class="op">;</span></span>
-<span id="cb12-3"><a href="" aria-label="3"></a>i <span class="op">&lt;</span> length<span class="op">?</span> <span class="co">// Yes.</span></span>
-<span id="cb12-4"><a href="" aria-label="4"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(salutation[<span class="dv">12</span>])<span class="op">;</span> <span class="co">//prints '!'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb13-1"><a href="" aria-label="1"></a>i <span class="op">=</span> <span class="dv">13</span><span class="op">;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb13-1"><a href="" aria-label="1"></a>i <span class="op">=</span> <span class="dv">12</span><span class="op">;</span></span>
 <span id="cb13-2"><a href="" aria-label="2"></a>length <span class="op">=</span> <span class="dv">13</span><span class="op">;</span></span>
-<span id="cb13-3"><a href="" aria-label="3"></a>i <span class="op">&lt;</span> length<span class="op">?</span> <span class="co">// no.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb13-3"><a href="" aria-label="3"></a>i <span class="op">&lt;</span> length<span class="op">?</span> <span class="co">// Yes.</span></span>
+<span id="cb13-4"><a href="" aria-label="4"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(salutation[<span class="dv">12</span>])<span class="op">;</span> <span class="co">//prints '!'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb14-1"><a href="" aria-label="1"></a>i <span class="op">=</span> <span class="dv">13</span><span class="op">;</span></span>
+<span id="cb14-2"><a href="" aria-label="2"></a>length <span class="op">=</span> <span class="dv">13</span><span class="op">;</span></span>
+<span id="cb14-3"><a href="" aria-label="3"></a>i <span class="op">&lt;</span> length<span class="op">?</span> <span class="co">// no.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The JS interpreter moves on to the next instruction below</p>
 </section>
 <section id="methods" class="slide level2">
 <h2>Methods</h2>
 <p>a method is a function that is associated to a JS object, e.g., variables</p>
 <p>a method is called with the dot notation</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb14-1"><a href="" aria-label="1"></a>stringvariable<span class="op">.</span><span class="fu">method</span>()<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb15-1"><a href="" aria-label="1"></a>stringvariable<span class="op">.</span><span class="fu">method</span>()<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>prefer methods to writing our own functions</p>
 <p>most activities are already implemented in methods</p>
 </section>
 <section id="string-slicing" class="slide level2">
 <h2>String slicing</h2>
 <p>with <code>charAt()</code> an individual character of a string can be copied or changed</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb15-1"><a href="" aria-label="1"></a><span class="kw">let</span> mystring <span class="op">=</span> <span class="st">"Hello, World!"</span><span class="op">;</span></span>
-<span id="cb15-2"><a href="" aria-label="2"></a></span>
-<span id="cb15-3"><a href="" aria-label="3"></a><span class="kw">let</span> theFirst <span class="op">=</span> mystring<span class="op">.</span><span class="fu">charAt</span>(<span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb16-1"><a href="" aria-label="1"></a><span class="kw">let</span> mystring <span class="op">=</span> <span class="st">"Hello, World!"</span><span class="op">;</span></span>
+<span id="cb16-2"><a href="" aria-label="2"></a></span>
+<span id="cb16-3"><a href="" aria-label="3"></a><span class="kw">let</span> theFirst <span class="op">=</span> mystring<span class="op">.</span><span class="fu">charAt</span>(<span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
 <p>with <code>slice()</code> a <em>substring</em> can be copied</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb16-1"><a href="" aria-label="1"></a><span class="kw">let</span> mystring <span class="op">=</span> <span class="st">"Hello, World!"</span><span class="op">;</span></span>
-<span id="cb16-2"><a href="" aria-label="2"></a></span>
-<span id="cb16-3"><a href="" aria-label="3"></a><span class="kw">let</span> theFirst <span class="op">=</span> mystring<span class="op">.</span><span class="fu">charAt</span>(<span class="dv">0</span>)</span>
-<span id="cb16-4"><a href="" aria-label="4"></a></span>
-<span id="cb16-5"><a href="" aria-label="5"></a><span class="kw">let</span> theRest <span class="op">=</span> mystring<span class="op">.</span><span class="fu">slice</span>(<span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="capitalization" class="slide level2">
-<h2>Capitalization</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb17-1"><a href="" aria-label="1"></a><span class="kw">let</span> mystring <span class="op">=</span> <span class="st">"Hello, World!"</span><span class="op">;</span></span>
 <span id="cb17-2"><a href="" aria-label="2"></a></span>
 <span id="cb17-3"><a href="" aria-label="3"></a><span class="kw">let</span> theFirst <span class="op">=</span> mystring<span class="op">.</span><span class="fu">charAt</span>(<span class="dv">0</span>)</span>
 <span id="cb17-4"><a href="" aria-label="4"></a></span>
-<span id="cb17-5"><a href="" aria-label="5"></a><span class="kw">let</span> theRest <span class="op">=</span> mystring<span class="op">.</span><span class="fu">slice</span>(<span class="dv">1</span>)</span>
-<span id="cb17-6"><a href="" aria-label="6"></a></span>
-<span id="cb17-7"><a href="" aria-label="7"></a><span class="kw">let</span> lowercasefirst <span class="op">=</span> theFirst<span class="op">.</span><span class="fu">toLowerCase</span>()</span>
-<span id="cb17-8"><a href="" aria-label="8"></a></span>
-<span id="cb17-9"><a href="" aria-label="9"></a><span class="kw">const</span> mynewstring <span class="op">=</span> lowecasefirst <span class="op">+</span> theRest</span>
-<span id="cb17-10"><a href="" aria-label="10"></a></span>
-<span id="cb17-11"><a href="" aria-label="11"></a><span class="co">// prints HELLO, WORLD!</span></span>
-<span id="cb17-12"><a href="" aria-label="12"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(mynewstring)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb17-5"><a href="" aria-label="5"></a><span class="kw">let</span> theRest <span class="op">=</span> mystring<span class="op">.</span><span class="fu">slice</span>(<span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="capitalization" class="slide level2">
+<h2>Capitalization</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb18-1"><a href="" aria-label="1"></a><span class="kw">let</span> mystring <span class="op">=</span> <span class="st">"Hello, World!"</span><span class="op">;</span></span>
+<span id="cb18-2"><a href="" aria-label="2"></a></span>
+<span id="cb18-3"><a href="" aria-label="3"></a><span class="kw">let</span> theFirst <span class="op">=</span> mystring<span class="op">.</span><span class="fu">charAt</span>(<span class="dv">0</span>)</span>
+<span id="cb18-4"><a href="" aria-label="4"></a></span>
+<span id="cb18-5"><a href="" aria-label="5"></a><span class="kw">let</span> theRest <span class="op">=</span> mystring<span class="op">.</span><span class="fu">slice</span>(<span class="dv">1</span>)</span>
+<span id="cb18-6"><a href="" aria-label="6"></a></span>
+<span id="cb18-7"><a href="" aria-label="7"></a><span class="kw">let</span> lowercasefirst <span class="op">=</span> theFirst<span class="op">.</span><span class="fu">toLowerCase</span>()</span>
+<span id="cb18-8"><a href="" aria-label="8"></a></span>
+<span id="cb18-9"><a href="" aria-label="9"></a><span class="kw">const</span> mynewstring <span class="op">=</span> lowecasefirst <span class="op">+</span> theRest</span>
+<span id="cb18-10"><a href="" aria-label="10"></a></span>
+<span id="cb18-11"><a href="" aria-label="11"></a><span class="co">// prints HELLO, WORLD!</span></span>
+<span id="cb18-12"><a href="" aria-label="12"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(mynewstring)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="chaining-methods" class="slide level2">
 <h2>chaining methods</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb18-1"><a href="" aria-label="1"></a><span class="kw">let</span> lowercasefirst <span class="op">=</span> word<span class="op">.</span><span class="fu">charAt</span>(<span class="dv">0</span>)<span class="op">.</span><span class="fu">toUpperCase</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb19-1"><a href="" aria-label="1"></a><span class="kw">let</span> lowercasefirst <span class="op">=</span> word<span class="op">.</span><span class="fu">charAt</span>(<span class="dv">0</span>)<span class="op">.</span><span class="fu">toUpperCase</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section></section>
 <section>
 <section id="arrays" class="title-slide slide level1 center">
@@ -367,23 +388,23 @@ ale66
 <p>A variable that contains more than value, thanks to indexing</p>
 <p>Corresponds to spreadsheet columns or rows</p>
 <p>normally, values are homogenous</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb19-1"><a href="" aria-label="1"></a><span class="kw">let</span> ages <span class="op">=</span> [<span class="dv">19</span><span class="op">,</span> <span class="dv">24</span><span class="op">,</span> <span class="dv">22</span><span class="op">,</span> <span class="dv">22</span>]</span>
-<span id="cb19-2"><a href="" aria-label="2"></a></span>
-<span id="cb19-3"><a href="" aria-label="3"></a><span class="kw">let</span> names <span class="op">=</span> [<span class="st">'Alice'</span><span class="op">,</span> <span class="st">'Bob'</span><span class="op">,</span> <span class="st">'Charlie'</span><span class="op">,</span> <span class="st">'Diana'</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb20-1"><a href="" aria-label="1"></a><span class="kw">let</span> ages <span class="op">=</span> [<span class="dv">19</span><span class="op">,</span> <span class="dv">24</span><span class="op">,</span> <span class="dv">22</span><span class="op">,</span> <span class="dv">22</span>]</span>
+<span id="cb20-2"><a href="" aria-label="2"></a></span>
+<span id="cb20-3"><a href="" aria-label="3"></a><span class="kw">let</span> names <span class="op">=</span> [<span class="st">'Alice'</span><span class="op">,</span> <span class="st">'Bob'</span><span class="op">,</span> <span class="st">'Charlie'</span><span class="op">,</span> <span class="st">'Diana'</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="fragment">
 <p>indexing is done as with strings</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb20-1"><a href="" aria-label="1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(names[<span class="dv">0</span>] <span class="op">+</span> <span class="st">' is now '</span> <span class="op">+</span> <span class="bu">String</span>(ages[<span class="dv">0</span>]))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb21-1"><a href="" aria-label="1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(names[<span class="dv">0</span>] <span class="op">+</span> <span class="st">' is now '</span> <span class="op">+</span> <span class="bu">String</span>(ages[<span class="dv">0</span>]))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><em>Alice is now 19</em></p>
 </div>
 </section>
 <section id="splitting-strings" class="slide level2">
 <h2>Splitting strings</h2>
 <p>Very useful to go from a long string of text to an array of words: later we will iterate it with a <code>for</code> cycle</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb21-1"><a href="" aria-label="1"></a><span class="kw">const</span> str <span class="op">=</span> <span class="st">'The quick brown fox jumps over the lazy dog.'</span><span class="op">;</span></span>
-<span id="cb21-2"><a href="" aria-label="2"></a></span>
-<span id="cb21-3"><a href="" aria-label="3"></a><span class="kw">const</span> words <span class="op">=</span> str<span class="op">.</span><span class="fu">split</span>(<span class="st">' '</span>)<span class="op">;</span></span>
-<span id="cb21-4"><a href="" aria-label="4"></a></span>
-<span id="cb21-5"><a href="" aria-label="5"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(words[<span class="dv">3</span>])<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb22-1"><a href="" aria-label="1"></a><span class="kw">const</span> str <span class="op">=</span> <span class="st">'The quick brown fox jumps over the lazy dog.'</span><span class="op">;</span></span>
+<span id="cb22-2"><a href="" aria-label="2"></a></span>
+<span id="cb22-3"><a href="" aria-label="3"></a><span class="kw">const</span> words <span class="op">=</span> str<span class="op">.</span><span class="fu">split</span>(<span class="st">' '</span>)<span class="op">;</span></span>
+<span id="cb22-4"><a href="" aria-label="4"></a></span>
+<span id="cb22-5"><a href="" aria-label="5"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(words[<span class="dv">3</span>])<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>What is the expected output?</p>
 
 </section></section>
