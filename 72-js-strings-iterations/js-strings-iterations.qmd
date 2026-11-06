@@ -4,7 +4,7 @@ author: "ale66"
 format: 
   revealjs:
     footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
-    theme: [moon]
+    theme: [beige]
     preview-links: auto
     chalkboard: 
       boardmarker-width: 3
@@ -28,8 +28,6 @@ HTML forms let users make choices (radio buttons, drop down etc.) or enter text:
 <input type="text" id="myInputForm" >
 ```
 
-Next, a JS function can operate on the text, which is available via the id of the form
-
 
 ---
 
@@ -41,6 +39,19 @@ let salutation = "Hello, World!";
 document.getElementById("myParagraph").innerHTML =
 salutation; 
 ```
+
+---
+
+## The browser memory during JS execution
+
+Remember: JS uses the browser memory as it were a spreadsheet:
+
+![](./imgs/1-key-many-vals.png){width="25%"}
+
+. . .
+
+![](./imgs/string in spreadsheet.png){width="30%"}
+
 
 ---
 
@@ -56,7 +67,7 @@ let mystring = "Hello, World!";
 
 . . .
 
-`lenght` is automatically defined for any string variable
+`length` is automatically defined for any string variable
 prints 13 as spaces and punctuation count
 
 ```js
