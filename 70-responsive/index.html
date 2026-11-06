@@ -6,8 +6,8 @@
 <script src="responsive_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="responsive_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="responsive_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="responsive_files/libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.25">
+<link href="responsive_files/libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.19">
 
   <meta name="author" content="ale66">
   <title>Learn Web</title>
@@ -17,10 +17,16 @@
   <link rel="stylesheet" href="responsive_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="responsive_files/libs/revealjs/dist/reveal.css">
   <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -95,7 +101,7 @@
     code span.vs { color: #abe338; } /* VerbatimString */
     code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="responsive_files/libs/revealjs/dist/theme/quarto-06e768f098560084c2d7120de8ad04fb.css">
+  <link rel="stylesheet" href="responsive_files/libs/revealjs/dist/theme/quarto-84b150702567ae7e15cad124fb9039e2.css">
   <link href="responsive_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="responsive_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="responsive_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -200,7 +206,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-ale66 
+ale66
 </div>
 </div>
 </div>
@@ -223,59 +229,60 @@ ale66
 </section>
 <section id="the-basic-setup-css" class="slide level2">
 <h2>The basic setup: CSS</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb1-1"><a href=""></a><span class="op">*</span> {</span>
-<span id="cb1-2"><a href=""></a>  <span class="kw">box-sizing</span><span class="ch">:</span> <span class="dv">border-box</span><span class="op">;</span></span>
-<span id="cb1-3"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb1-1"><a href="" aria-label="1"></a><span class="op">*</span> {</span>
+<span id="cb1-2"><a href="" aria-label="2"></a>  <span class="kw">box-sizing</span><span class="ch">:</span> <span class="dv">border-box</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="" aria-label="3"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>it applies to <em>all elements</em></p>
 <p>boxes are forced in their assigned dimension, which thus remain fixed</p>
 </section>
 <section id="the-basic-setup-html" class="slide level2">
 <h2>The basic setup: HTML</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
-<span id="cb2-2"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> name </span><span class="op">=</span> <span class="st">"viewport"</span></span>
-<span id="cb2-3"><a href=""></a><span class="ot">        content </span><span class="op">=</span> <span class="st">"width=device-width, initial-scale=1.0"</span><span class="dt">&gt;</span></span>
-<span id="cb2-4"><a href=""></a>  ...</span>
-<span id="cb2-5"><a href=""></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span>    </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb2-2"><a href="" aria-label="2"></a>  <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> name </span><span class="op">=</span> <span class="st">"viewport"</span></span>
+<span id="cb2-3"><a href="" aria-label="3"></a><span class="ot">        content </span><span class="op">=</span> <span class="st">"width=device-width, initial-scale=1.0"</span><span class="dt">&gt;</span></span>
+<span id="cb2-4"><a href="" aria-label="4"></a>  ...</span>
+<span id="cb2-5"><a href="" aria-label="5"></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span>    </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Thanks to these we can set dimensions as percentages</p>
 <p>Fix max (or min) dimension and let the browser adjust the rest</p>
 <p>Default: circa 980px, a desktop screen. So on smaller screens everything would look tiny</p>
+<p>See <a href="https://www.w3schools.com/css/css_rwd_viewport.asp">www.w3schools.com/css/css_rwd_viewport.asp</a></p>
 </section>
 <section class="slide level2">
 
 <p>Example: 200 or 250?</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb3-1"><a href=""></a>div {</span>
-<span id="cb3-2"><a href=""></a>  <span class="kw">width</span><span class="ch">:</span> <span class="dv">200</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb3-3"><a href=""></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb3-4"><a href=""></a>   <span class="kw">border</span><span class="ch">:</span> <span class="dv">5</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">black</span><span class="op">;</span></span>
-<span id="cb3-5"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb3-1"><a href="" aria-label="1"></a>div {</span>
+<span id="cb3-2"><a href="" aria-label="2"></a>  <span class="kw">width</span><span class="ch">:</span> <span class="dv">200</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb3-3"><a href="" aria-label="3"></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb3-4"><a href="" aria-label="4"></a>   <span class="kw">border</span><span class="ch">:</span> <span class="dv">5</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">black</span><span class="op">;</span></span>
+<span id="cb3-5"><a href="" aria-label="5"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>without <code>border-box</code>, it’s 250…</p>
 <div class="fragment">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb4-1"><a href=""></a>div {</span>
-<span id="cb4-2"><a href=""></a>  <span class="kw">width</span><span class="ch">:</span> <span class="dv">50</span><span class="dt">%</span><span class="op">;</span> </span>
-<span id="cb4-3"><a href=""></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span><span class="op">;</span> </span>
-<span id="cb4-4"><a href=""></a>  <span class="kw">border</span><span class="ch">:</span> <span class="dv">5</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">black</span><span class="op">;</span></span>
-<span id="cb4-5"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb4-1"><a href="" aria-label="1"></a>div {</span>
+<span id="cb4-2"><a href="" aria-label="2"></a>  <span class="kw">width</span><span class="ch">:</span> <span class="dv">50</span><span class="dt">%</span><span class="op">;</span> </span>
+<span id="cb4-3"><a href="" aria-label="3"></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span><span class="op">;</span> </span>
+<span id="cb4-4"><a href="" aria-label="4"></a>  <span class="kw">border</span><span class="ch">:</span> <span class="dv">5</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">black</span><span class="op">;</span></span>
+<span id="cb4-5"><a href="" aria-label="5"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>will always take up half of the screen, whatever the padding</p>
 </div>
 </section>
 <section id="media-queries-1" class="slide level2">
 <h2>Media queries, 1</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb5-1"><a href=""></a><span class="co">/* don't normally show these elements */</span></span>
-<span id="cb5-2"><a href=""></a><span class="fu">.quotation</span> {</span>
-<span id="cb5-3"><a href=""></a>    <span class="kw">display</span><span class="ch">:</span> <span class="dv">none</span><span class="op">;</span></span>
-<span id="cb5-4"><a href=""></a>    <span class="kw">padding-right</span><span class="ch">:</span> <span class="dv">1.67</span><span class="dt">%</span><span class="op">;</span></span>
-<span id="cb5-5"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb5-1"><a href="" aria-label="1"></a><span class="co">/* don't normally show these elements */</span></span>
+<span id="cb5-2"><a href="" aria-label="2"></a><span class="fu">.quotation</span> {</span>
+<span id="cb5-3"><a href="" aria-label="3"></a>    <span class="kw">display</span><span class="ch">:</span> <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb5-4"><a href="" aria-label="4"></a>    <span class="kw">padding-right</span><span class="ch">:</span> <span class="dv">1.67</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb5-5"><a href="" aria-label="5"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="media-queries-2" class="slide level2">
 <h2>Media queries, 2</h2>
 <p>On wide screens start showing them:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb6-1"><a href=""></a><span class="im">@media</span> <span class="fu">(</span><span class="kw">min-width</span><span class="ch">:</span> <span class="dv">750</span><span class="dt">px</span><span class="fu">)</span> {</span>
-<span id="cb6-2"><a href=""></a>    <span class="co">/* ok, it's a big screen: </span></span>
-<span id="cb6-3"><a href=""></a><span class="co">       show quotations */</span></span>
-<span id="cb6-4"><a href=""></a>    <span class="fu">.quotation</span> {</span>
-<span id="cb6-5"><a href=""></a>        <span class="kw">display</span><span class="ch">:</span> <span class="dv">block</span><span class="op">;</span></span>
-<span id="cb6-6"><a href=""></a>    }</span>
-<span id="cb6-7"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb6-1"><a href="" aria-label="1"></a><span class="im">@media</span> <span class="fu">(</span><span class="kw">min-width</span><span class="ch">:</span> <span class="dv">750</span><span class="dt">px</span><span class="fu">)</span> {</span>
+<span id="cb6-2"><a href="" aria-label="2"></a>    <span class="co">/* ok, it's a big screen: </span></span>
+<span id="cb6-3"><a href="" aria-label="3"></a><span class="co">       show quotations */</span></span>
+<span id="cb6-4"><a href="" aria-label="4"></a>    <span class="fu">.quotation</span> {</span>
+<span id="cb6-5"><a href="" aria-label="5"></a>        <span class="kw">display</span><span class="ch">:</span> <span class="dv">block</span><span class="op">;</span></span>
+<span id="cb6-6"><a href="" aria-label="6"></a>    }</span>
+<span id="cb6-7"><a href="" aria-label="7"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Try it out on the <a href="https://webdesignplayground.io/lessons/13-5-1">wdpg/13-5-1</a></p>
 </section>
 <section id="definitions" class="slide level2">
@@ -308,10 +315,10 @@ ale66
 </section>
 <section id="making-images-fluid" class="slide level2">
 <h2>Making images <em>fluid</em></h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb7-1"><a href=""></a>img {</span>
-<span id="cb7-2"><a href=""></a>    <span class="kw">max-width</span><span class="ch">:</span> <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
-<span id="cb7-3"><a href=""></a>    <span class="kw">height</span><span class="ch">:</span> <span class="bu">auto</span><span class="op">;</span></span>
-<span id="cb7-4"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb7-1"><a href="" aria-label="1"></a>img {</span>
+<span id="cb7-2"><a href="" aria-label="2"></a>    <span class="kw">max-width</span><span class="ch">:</span> <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb7-3"><a href="" aria-label="3"></a>    <span class="kw">height</span><span class="ch">:</span> <span class="bu">auto</span><span class="op">;</span></span>
+<span id="cb7-4"><a href="" aria-label="4"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Expansion is capped to the original dimensions</p>
 <p><em>shrinkage</em> not so</p>
 </section>
@@ -357,9 +364,9 @@ ale66
 <section id="relative-units" class="slide level2">
 <h2>Relative units</h2>
 <p><code>rem:</code> <em>relative</em> units of measure</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb8-1"><a href=""></a>html {</span>
-<span id="cb8-2"><a href=""></a>  <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb8-3"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb8-1"><a href="" aria-label="1"></a>html {</span>
+<span id="cb8-2"><a href="" aria-label="2"></a>  <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb8-3"><a href="" aria-label="3"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Now 1rem=20px, 1.5em=30px and so on <em>for the whole page</em></p>
 <p>By default, browers set <code>font-size: 16px;</code> so 1rem = 16px</p>
 <p>Vice versa, <code>em</code> is relative to the font size in the specific <em>container</em> we’re in, not the whole document</p>

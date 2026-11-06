@@ -66,6 +66,8 @@ Fix max (or min) dimension and let the browser adjust the rest
 
 Default: circa 980px, a desktop screen. So on smaller screens everything would look tiny
 
+See [www.w3schools.com/css/css_rwd_viewport.asp](https://www.w3schools.com/css/css_rwd_viewport.asp)
+
 ---
 
 Example: 200 or 250?

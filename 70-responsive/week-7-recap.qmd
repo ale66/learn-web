@@ -4,7 +4,7 @@ author: "ale66"
 format: 
   revealjs:
     footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
-    theme: [moon]
+    theme: [beige]
     preview-links: auto
     chalkboard: 
       boardmarker-width: 2
@@ -29,12 +29,17 @@ The flexbox approach, ch. 12 of the textbook
 
 ![](./imgs/12-basic-centering.png)
 
+---
+
+## Essential ingredient: `display: flex`
+
+![](./imgs/12-basic-centering.png){width="60%"}
 
 ---
 
 ## Concepts, b
 
-Thw WaterCSS online CSS
+Thw e WaterCSS online CSS
 
 include it from a *CDN*
 
@@ -51,7 +56,9 @@ Two ways to embed JS into HTML:
 
 ```html
 <div>
-  <script>console.log("I'm at the beginning of Ch. 4. Users won't see this message")</script>
+  <script>
+    console.log("I'm at the beginning of Ch. 4. Users won't see this message")
+  </script>
 
   <h2>Chapter 4</h2>
   ...
@@ -63,12 +70,12 @@ Two ways to embed JS into HTML:
 - b: *listeners* capture user behaviour and launch JS functions to react
 
 ```html
- <button type="button" onclick="changeSeason('summer')">Verano</button>
+<button type="button" onclick="changeSeason('summer')">Verano</button>
 ```
 
 we define the JS function in a separated file, e.g., `./scripts/myfunctions.js`
 
-Event `onclick` is one of an handful of event types that can be listened to, e.g. `dblclick`, `mouseover`...
+Event `onclick` is one of an handful of event types that can be listened to, e.g. `dblclick`, `mouseover` ...
 
 Listeners can be added dynamically:
 
@@ -77,9 +84,44 @@ element.addEventListener('submit', function() {console.log('the form has been su
                         });
 ```
 
+---
+
 ## Concepts, d
 
 Javascript allows iteration over collections of values, called lists
+
+How we see it:
+
+![](./imgs/1-key-many-vals.png){width="40%"}
+
+. . .
+
+How the browser sees it:
+
+```js
+Student_ID = ["S1", "S2"]
+```
+
+---
+
+Alternatively:
+
+```js
+Student_ID[0] = "S1"
+Student_ID[1] = "S2"
+
+Student_Name[0] = "John"
+Student_Name[1] = "Mary"
+
+i=0
+
+console.log(Student_Name[i])
+```
+
+![](./imgs/1-key-many-vals.png){width="30%"}
+
+
+
 
 
 
