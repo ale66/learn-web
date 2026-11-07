@@ -413,7 +413,25 @@ Turn the phone: the square keeps fitting.
 
 ---
 
-## Exercise 1
+## Exercise, a 
+
+Follow instructions on Ch. 13 of [wdpg.io/lessons/13-4-0/](https://webdesignplayground.io/lessons/13-4-0/)
+
+add a __media query__ to your CSS: make the page look different on mobile
+
+- a disappearing side note (13-1-0 to 13-3-0)
+
+- image resize (13-5-0)
+
+- advanced: the `<nav>...</nav>` manu becomes an *hamburger*
+
+git status/git add --all/git commit -m ""/git push
+
+ask a friend to check on their smartphones
+
+---
+
+## Exercise, b 
 
 start from your `mystyle.css`
 
@@ -427,7 +445,7 @@ What happens when you change the browser's default text size?
 
 ---
 
-## Exercise, cont'd
+## Exercise, c
 
 amend the *.hero* setup
 
