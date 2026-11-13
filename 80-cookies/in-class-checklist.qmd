@@ -1,0 +1,321 @@
+---
+title: "Learn Web"
+author: "ale66"
+format: 
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [beige]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 2
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# In-class project synch
+
+
+---
+
+## Milestones and to dos...
+
+Check your progress thorough the class
+
+- device with choco/brew 
+- git, VS Code installed
+- VS Code extensions, e.g., HTML Preview and Makwon all-in-one
+- local copy of the class notes (`git clone https://github.com/ale66/learn-web`) 
+- in parallel, a local copy of the in-class projects (`git clone https://github.com/ale66/learn-web-playground-2026-27`)
+
+ready for work with a colleague
+
+---
+
+## The container
+
+- use your unimi.it email, e.g., `john.smith@studenti.unimi.it` in all places
+
+- a GH account and profile, e.g., `github.com/john.smith`
+
+- the GH authenticator in your smartphone
+
+- join `github.com/education` with a picture of your uni id card
+
+---
+
+## The content
+
+- a own folder in  `/path/to/your/work_folder/learn-web-playground-2026-27/essays/john.smith`
+  
+- ability to push (publish) versions of your MA COM project 
+  
+- the `git status`, [`git add `], `git pull`, `git commit -m ""`, `git push` chain
+
+- own `index.html`, `mystyle.css` `./imgs/myimage.png` files 
+
+---
+
+## Project checklist, a
+
+1. a landing page for MA COM: hero section, hero image, background image: `index.html`
+
+2. own `.hero`, `p` definitions in the CSS (see your `mystyle.css`)
+   
+3. own font styles (see your `test-fonts.css`)
+
+4. own color schema: (principal, secondary, accent)
+
+5. icons and links in the footer (see `icons.getbootstrap.com/`)
+
+6. example articles (yellow boxes in the original)
+
+---
+
+## Project checklist, b
+
+Semantic tags: seen from afar, your page should show this organization
+
+```{html}
+<!--- upper part not shown -->
+<body>
+  <header>
+    <h1>Site title</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+  </nav>
+
+  <main>
+
+    <!-- landing page with hero here -->
+
+    <article></article>
+
+    <aside></aside>
+  </main>
+
+  <footer></footer>
+</body>
+```
+
+---
+
+```{html}
+<!--- upper part not shown -->
+<body>
+  <header></header>
+  <nav></nav>
+
+  <main>
+
+    <!-- landing page with hero here -->
+
+    <article>
+      <section class="myyellowbox">
+        <h2>Some news</h2>
+        <p>...</p>
+      </section>
+      <section class="myyellowbox">
+        <h2>another news</h2>
+        <p>...</p>
+      </section>
+    </article>
+
+    <aside></aside>
+  </main>
+
+  <footer></footer>
+</body>
+```
+
+---
+
+```{html}
+<!--- upper part not shown -->
+<body>
+  <header></header>
+
+  <nav></nav>
+
+  <main>
+
+    <!-- landing page with hero here -->
+
+    <article></article>
+
+    <aside>
+      <p>Related infos/links</p>
+    </aside>
+  </main>
+
+  <footer>
+    <p>Contacts, copyright</p>
+  </footer>
+</body>
+```
+
+---
+
+# Inside pages
+
+---
+
+## the setpup
+
+CSS:
+
+```css
+* {
+  box-sizing: border-box;
+}
+```
+
+HTML
+
+```html
+<head>
+  <meta name = "viewport"
+        content = "width=device-width, initial-scale=1.0">
+  ...
+</head>    
+```
+
+## Concepts, b
+
+The responsive approach, ch. 14 of the textbook
+
+- sees the page as a collection of *fixed blocks* containing text, AV etc.
+
+- now the size of the physical display matters: smartphone, tablet, laptop or desktop?
+
+- blocks are indexed to the display size: 50%, 60% etc.
+
+```css
+div {
+  width: 50%; 
+  padding: 20px; 
+  border: 5px solid black;
+}
+```
+
+## Concepts, 3
+
+The responsive approach, ch. 13/14 of the textbook
+
+- sees the page as a collection of *fixed blocks* containing text, AV etc.
+
+- now the size of the physical display matters: smartphone, tablet, laptop or desktop?
+
+- blocks are indexed to the display size: 50%, 60% etc.
+
+- CSS scales blocks to actual sizes
+  
+- menus and block may appear/disappear or be staked up differently
+
+---
+
+## The magician, a
+
+```css
+/* don't normally show these elements */
+.quotation {
+    display: none;
+    padding-right: 1.67%;
+}
+```
+
+
+---
+
+## The magician, b
+
+Media queries change the CSS at runtime to adapt it to the display
+
+```css
+/* don't normally show these elements */
+.quotation {
+    display: none;
+    padding-right: 1.67%;
+}
+```
+
+```css
+@media (min-width: 750px) {
+    /* ok, it's a big screen: 
+       show quotations */
+    .quotation {
+        display: block;
+    }
+}
+```
+
+
+---
+
+## Consequences for images
+
+Images might be zoomed in or out
+
+zooming can be blocked
+
+```css
+img {
+    max-width: 100%;
+    height: auto;
+}
+```
+
+When image quality matters, it's better to have 3/4 versions of the same image at different resolution and aspect ratio
+
+
+---
+
+## Consequences for text
+
+Fixed text, expressed in `px`, is going to clash with the boxes (see example)
+
+Relative font size, `rem` is the way
+
+However, all visible boxes should also be made relative:
+
+we end up with a CSS full of `%` symbols and no `px`
+
+--- 
+
+## Catch-up exercise
+
+A slightly labour-intensive exercise for learning relative measures in pages
+
+[exercise 14-4](https://webdesignplayground.io/lessons/14-4-0)
+
+
+--- 
+
+# The JS
+
+---
+
+# internal setup
+
+```{html}
+<!--- upper part not shown -->
+<body>
+  <header></header>
+
+  <nav></nav>
+
+  <main></main>
+
+  <footer></footer>
+
+  <script>
+    alert("Hello from JavaScript!");
+    
+    console.log("Hello from the console!");
+  </script>
+
+</body>
+```
