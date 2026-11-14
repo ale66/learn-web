@@ -1,0 +1,355 @@
+---
+title: "Learn Web"
+author: "ale66"
+format:
+  revealjs:
+    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
+    theme: [beige]
+    preview-links: auto
+    chalkboard:
+      boardmarker-width: 2
+mermaid:
+  theme: dark
+  fontSize: 12
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Your page on GitHub
+
+---
+
+## The goal
+
+A long-term personal page, public, at
+
+`https://<user-name>.github.io`
+
+- free: no server to buy or to manage
+- the content is Markdown/HTML/CSS 
+- every change you *commit* or push from your computer goes online by itself
+
+---
+
+## GitHub Pages
+
+GitHub can *serve* the files of a repository as a web site
+
+There are two kinds of site:
+
+- **user site**: the repo is called `<user-name>.github.io` --> `https://<user-name>.github.io`
+
+- **project site**: any other repo, e.g., `my-repo` --> `https://<user-name>.github.io/my-repo`
+
+. . .
+
+Today: the user site. The name of the repository is the magic word.
+
+---
+
+## Example
+
+Compare 
+
+  - source: [github.com/ale66/ale66.github.io](https://github.com/ale66/ale66.github.io){target="_blank"}, and
+    
+  - rendering: [ale66.github.io](https://ale66.github.io){target="_blank"}  
+
+
+---
+
+## Lab experience
+
+0. sign in, go to your GH profile
+
+1. create the repository, add a minimal web page
+
+2. publish the repo, check it on github.io 
+
+3. from your computer, `git clone` and start work
+
+
+# Step by step
+
+---
+
+## 1. Create the repository
+
+1. sign in to [github.com](https://github.com) and click **New repository**
+
+2. *Repository name*: exactly `<user-name>.github.io`
+
+3. choose **Public**
+
+4. tick *Add a README file*
+
+5. click **Create repository**
+
+. . .
+
+Careful: your exact user name + `.github.io`
+
+`ale66` --> `ale66.github.io`
+
+---
+
+## 1. Create the repository
+
+![](./imgs/new-repo.png)
+
+---
+
+## 2. A first page
+
+In the new repository: **Add file** --> **Create new file**
+
+name it `index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My first page</title>
+</head>
+<body>
+  <h1>Hello, I am <user-name></h1>
+  <p>This is my page on GitHub.</p>
+</body>
+</html>
+```
+
+then **Commit changes**
+
+---
+
+## Why `index.html`?
+
+When nobody asks for a specific file, the server delivers `index.html`
+
+- `https://<user-name>.github.io` --> `index.html`
+
+- `https://<user-name>.github.io/about.html` --> `about.html`
+
+
+---
+
+## 3. Switch on publishing
+
+**Settings** --> **Pages**
+
+- *Source*: **Deploy from a branch**
+- *Branch*: `main`, folder `/ (root)`
+- click **Save**
+
+. . .
+
+If Pages is already active then we're done.
+
+![](./imgs/pages-settings.png)
+
+---
+
+## 4. Visit your page
+
+1. open the **Actions** tab: a job called *pages build and deployment* runs
+
+2. wait for the green tick (a minute or two)
+
+3. go to `https://<user-name>.github.io`
+
+. . .
+
+Not there yet? See *When it does not work*, a few slides ahead.
+
+---
+
+## What just happened
+
+```{mermaid}
+flowchart LR
+  A[edit] --> B[commit]
+  B --> C[GH builds the site]
+  C --> D[GH publish on github.io]
+```
+
+Every commit on the `main`branch repeats the cycle.
+
+# Editing
+
+---
+
+## Option A: in the browser
+
+- open the file in the repository
+- click the pencil icon
+- change the text, then **Commit changes**
+
+Quick fixes, no installation.
+
+---
+
+## Option B: with VS Code
+
+Clone the repo to your computer and work as usual
+
+```bash
+git clone https://github.com/<user-name>/<user-name>.github.io.git
+```
+
+Open the folder in VS Code, edit, save. Then publish the changes:
+
+```bash
+git status # are all changes good?
+git add .
+git commit -m "update my page"
+git push
+```
+
+
+# Markdown
+
+---
+
+Thanks to automated Pandoc interpretation, GH can render and publish at once
+
+
+Replace `index.html` with `index.md`
+
+```markdown
+# Hello, I am <user-name>
+
+This is my page on GitHub.
+
+- [About me](about.html)
+- [My projects](projects.html)
+```
+
+GitHub renders it into HTML and sends it to `github.io`
+
+. . .
+
+Keep *one* of the two, `index.html` or `index.md`, not both.
+
+---
+
+## A site with several pages
+
+```
+<user-name>.github.io/
+├── index.html
+├── about.html
+├── style.css
+└── imgs/
+    └── me.png
+```
+
+links use *relative* paths:
+
+- `<a href="about.html">About</a>`
+- `![](./imgs/me.png)`
+- `<link rel="stylesheet" href="style.css">`
+
+
+# Potential Issues
+
+## Unreachable
+
+`404`: page not found
+
+- typos in the repo name
+- the repo is not **Public**
+- there is no `index.html` (nor `index.md`) in the root folder
+
+. . .
+
+the page is old: wait a minute, then reload without cache (`Ctrl+Shift+R`)
+
+. . .
+
+images are missing: `Me.png` is not `me.png`, check upper/lower case and the path
+
+. . .
+
+a red cross in the **Actions** tab: open it and read the message
+
+---
+
+## Issues around publishing
+
+All-or-nothing: public is universal
+
+private repos can have collaborators
+
+- no phone number, home address, ID documents, passwords...
+  
+- no pictures of other people without their consent
+
+  - the version history is public too: deleted files are still visible in earlier commits.
+
+# Summary of the method
+
+---
+
+- a repository called `<user-name>.github.io` is published as the web site `https://<user-name>.github.io`
+
+- the repository must be public
+
+- `index.html` (or `index.md`) is the front door
+
+- Settings --> Pages: deploy from the `main` branch
+
+- every commit is online within minutes
+
+- edit from the browser, or clone and use VS Code with `git add`, `commit`, `push`
+
+---
+
+## Self-assessment
+
+- what must the repository be called, and why?
+
+- what is `index.html` for?
+
+- what happens when you commit a change to `main`?
+
+- where do you look when your page shows a `404`?
+
+- what should you *not* publish on a public page?
+
+---
+
+## Coda: more sites from one account
+
+Any other repository can be published too, as a *project site*
+
+`https://<user-name>.github.io/my-repo`
+
+Same recipe: **Settings** --> **Pages** --> `main`
+
+Your user site can link to all of them.
+
+---
+
+## Towards exam assessment
+
+a. keep your GH profile in good standing
+
+b. come up with a long-term personal page in `<user-name>.github.io/`
+
+c. [migrate the MA COM refactoring into a personal project]
+
+d. work on your exam project in a dedicated new repo with a name pertinent to the project, e.g. 
+
+---
+
+- curated news about Italian politics and dissent: `<user-name>.github.io/spazio20/`
+
+- the launch of *Via Passione*, a new Milan-inspired perfume: `<user-name>.github.io/via-passione/`
+
+- refactoring of `campari.com`: `<user-name>.github.io/campari-new/`
+
+- Tourist resources for Andorra:  `<user-name>.github.io/visit-andorra/`
+
+- your friend Anna is running for mayor of Lodi, IT: `<user-name>.github.io/anna-x-lodi/`

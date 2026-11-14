@@ -6,8 +6,8 @@
 <script src="markdown_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="markdown_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="markdown_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="markdown_files/libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.26">
+<link href="markdown_files/libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.19">
 
   <meta name="author" content="ale66">
   <title>Learn Web</title>
@@ -17,10 +17,16 @@
   <link rel="stylesheet" href="markdown_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="markdown_files/libs/revealjs/dist/reveal.css">
   <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -56,46 +62,46 @@
         -khtml-user-select: none; -moz-user-select: none;
         -ms-user-select: none; user-select: none;
         padding: 0 4px; width: 4em;
+        color: #aaaaaa;
       }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
     div.sourceCode
-      { color: #f8f8f2;  }
+      { color: #003b4f; background-color: #f1f3f5; }
     @media screen {
     pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
     }
-    code span { color: #f8f8f2; } /* Normal */
-    code span.al { color: #f07178; } /* Alert */
-    code span.an { color: #d4d0ab; } /* Annotation */
-    code span.at { color: #00e0e0; } /* Attribute */
-    code span.bn { color: #d4d0ab; } /* BaseN */
-    code span.bu { color: #abe338; } /* BuiltIn */
-    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #abe338; } /* Char */
-    code span.cn { color: #ffd700; } /* Constant */
-    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
-    code span.cv { color: #ffd700; } /* CommentVar */
-    code span.do { color: #f8f8f2; } /* Documentation */
-    code span.dt { color: #ffa07a; } /* DataType */
-    code span.dv { color: #d4d0ab; } /* DecVal */
-    code span.er { color: #f07178; text-decoration: underline; } /* Error */
-    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
-    code span.fl { color: #d4d0ab; } /* Float */
-    code span.fu { color: #ffa07a; } /* Function */
-    code span.im { color: #abe338; } /* Import */
-    code span.in { color: #d4d0ab; } /* Information */
-    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
-    code span.op { color: #ffa07a; } /* Operator */
-    code span.ot { color: #00e0e0; } /* Other */
-    code span.pp { color: #dcc6e0; } /* Preprocessor */
-    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
-    code span.sc { color: #abe338; } /* SpecialChar */
-    code span.ss { color: #abe338; } /* SpecialString */
-    code span.st { color: #abe338; } /* String */
-    code span.va { color: #00e0e0; } /* Variable */
-    code span.vs { color: #abe338; } /* VerbatimString */
-    code span.wa { color: #dcc6e0; } /* Warning */
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="markdown_files/libs/revealjs/dist/theme/quarto-06e768f098560084c2d7120de8ad04fb.css">
+  <link rel="stylesheet" href="markdown_files/libs/revealjs/dist/theme/quarto-5c8106c274dac56d8e05e3022a5a12af.css">
   <link href="markdown_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="markdown_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="markdown_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -190,7 +196,7 @@
     }
   </style>
 </head>
-<body class="quarto-dark">
+<body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
@@ -200,17 +206,17 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-ale66 
+ale66
 </div>
 </div>
 </div>
 
 </section>
 <section>
-<section id="markdown" class="title-slide slide level1 center">
-<h1>Markdown</h1>
+<section id="markdownhtml-injection" class="title-slide slide level1 center">
+<h1>Markdown/HTML injection</h1>
 
-</section>
+<img data-src="https://www.enjoyyourcooking.com/wp-content/uploads/2012/03/eclairs-custard-step10b-200x150.jpg" class="r-stretch"></section>
 <section id="mark-up-a-recap" class="slide level2">
 <h2>Mark-up, a recap</h2>
 <p>Enrich the text with annotations that may describe</p>
@@ -223,7 +229,7 @@ ale66
 <p>Residual cases:</p>
 <ul>
 <li><p>tags inside <code>&lt;head&gt;</code> for indexing etc., in particular <code>&lt;meta&gt;</code></p></li>
-<li><p>tages inside <code>&lt;body&gt;</code>: <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code></p></li>
+<li><p>tags inside <code>&lt;body&gt;</code>, e.g., <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code></p></li>
 </ul>
 </div>
 </section>
@@ -239,12 +245,12 @@ ale66
 <h2>The Markdown vision</h2>
 <ol type="1">
 <li><p>prepare a text file with all the content but only minimal annotations: the Markdown file <code>my_contents.md</code></p></li>
-<li><p>feed it to a <em>parser</em> software, e.g., <em>pandoc</em> that <em>renders</em> it:</p>
+<li><p>feed it to a <em>parser</em> software, e.g., <em>Pandoc</em> that <em>renders</em> it:</p>
 <ul>
 <li><p>HTML tags are <em>injected</em> into the file, and</p></li>
 <li><p>CSS styles are linked and assigned to tags</p></li>
 </ul></li>
-<li><p>the thus-created <code>my_page.html</code> can be manually refined/tweaked, if need be</p></li>
+<li><p>the thus-created <code>my_page.html</code> can be manually refined/tweaked, if it so needs</p></li>
 <li><p>publish it</p></li>
 </ol>
 </section>
@@ -259,64 +265,40 @@ ale66
 </section>
 <section id="md-is-useful" class="slide level2">
 <h2>MD is useful:</h2>
-<p>in the <code>my_page.html</code> version:</p>
+<p>in a MD-generated <code>my_page.html</code> file:</p>
 <ul>
 <li><p>fixed parts, e.g., <code>&lt;body&gt;...&lt;/body&gt;</code> are automatically incorporated</p></li>
 <li><p>annotations are interpreted and incorporated:</p>
 <ul>
 <li><p><code># My title</code> –&gt; <code>&lt;h1&gt;My title&lt;/h1&gt;</code></p></li>
-<li><p><code>__nota bene__</code> –&gt; <code>&lt;b&gt;nota bene&lt;/b&gt;</code> and so on</p></li>
+<li><p><code>__N. B.__</code> –&gt; <code>&lt;b&gt;N. B.&lt;/b&gt;</code> and so on</p></li>
 </ul></li>
 <li><p>less error-prone than HTML</p></li>
-<li><p>fragments (as opposed to a complete page) can be easily integrated</p></li>
+<li><p>extra fragments can be easily integrated (unlike with HTML)</p></li>
 <li><p>uniform page appearance</p></li>
 </ul>
-</section>
-<section id="two-meanings-for" class="slide level2">
-<h2>two meanings for <code>[]()</code></h2>
-<p><code>[linked text](https://www.unimi.it)</code> –&gt;</p>
-<div class="fragment">
-<p><code>&lt;a href='https://www.unimi.it'&gt;linked text&lt;/a&gt;</code></p>
-</div>
-<div class="fragment">
-<p><code>![](./imgs/image.png)</code> –&gt;</p>
-</div>
-<div class="fragment">
-<p><code>&lt;img src='./imgs/image.png'&gt;</code></p>
-</div>
 </section>
 <section class="slide level2">
 
 <p>MD files are essentially parsed and rendered row by row</p>
 <p>it is possible to put HTML tags into a MD file and to see them in the rendering.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href=""></a>### this is an h3 title in MD</span>
-<span id="cb1-2"><a href=""></a></span>
-<span id="cb1-3"><a href=""></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">'./imgs/image.png'</span><span class="ot"> width</span><span class="op">=</span><span class="st">"50%"</span><span class="ot"> alt</span><span class="op">=</span><span class="st">'Merry Xmas'</span><span class="dt">&gt;</span></span>
-<span id="cb1-4"><a href=""></a></span>
-<span id="cb1-5"><a href=""></a>__this is a boldface caption to the image__</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="" aria-label="1"></a>### this is an h3 title in MD</span>
+<span id="cb1-2"><a href="" aria-label="2"></a></span>
+<span id="cb1-3"><a href="" aria-label="3"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">'./imgs/image.png'</span><span class="ot"> width</span><span class="op">=</span><span class="st">"50%"</span><span class="ot"> alt</span><span class="op">=</span><span class="st">'Merry Xmas'</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a href="" aria-label="4"></a></span>
+<span id="cb1-5"><a href="" aria-label="5"></a>__this is a boldface caption to the image__</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="md-interpreters" class="slide level2">
 <h2>MD interpreters</h2>
 <ul>
-<li><p>download the MD extension for VS Code</p></li>
-<li><p>use online interpreters from GitHub</p></li>
+<li><p>install the MD extension for VS Code</p></li>
+<li><p>edit in-browser with</p>
+<ul>
+<li><a href="https://markdownreader.github.io/" target="_blank">markdownreader.github.io/</a></li>
+<li><a href="https://www.tomarkdown.org/editor" target="_blank">tomarkdown.org/editor/</a></li>
+<li><a href="https://markdownviewer.org/" target="_blank">markdownviewer.org/</a></li>
+</ul></li>
 </ul>
-
-<img data-src="./imgs/online-html-to-markdown.png" class="r-stretch"></section>
-<section id="the-limits-of-md" class="slide level2">
-<h2>The limits of MD</h2>
-<p>There is no internation/industrial standard:</p>
-<p>ambiguity ensues</p>
-<p><code>![My text](./imgs/image.png)</code> –&gt;</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">'./imgs/image.png'</span><span class="ot"> alt</span><span class="op">=</span><span class="st">"My text"</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column" style="width:50%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">'./imgs/image.png'</span><span class="dt">&gt;</span></span>
-<span id="cb3-2"><a href=""></a></span>
-<span id="cb3-3"><a href=""></a><span class="dt">&lt;</span><span class="kw">h6</span><span class="dt">&gt;</span>My text<span class="dt">&lt;/</span><span class="kw">h6</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div></div>
-<p>Use Pandoc/Quarto Markdown</p>
 </section></section>
 <section>
 <section id="learn-md" class="title-slide slide level1 center">
@@ -337,6 +319,59 @@ ale66
 
 <img data-src="./imgs/md-all-in-one.png" class="r-stretch"></section></section>
 <section>
+<section id="the-pandoc-software" class="title-slide slide level1 center">
+<h1>The Pandoc software</h1>
+
+</section>
+<section id="pandoc-all-documents." class="slide level2">
+<h2><a href="https://pandoc.org/">Pandoc</a> = all documents.</h2>
+<p>Peels the decorations off, gives the content to the needed <strong>injector</strong></p>
+<p>On Win, install it via <a href="https://community.chocolatey.org/packages/pandoc">Chocolatey</a>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="" aria-label="1"></a><span class="ex">choco</span> install pandoc</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>On Apple, use <a href="https://brew.sh/">Homebrew</a>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="" aria-label="1"></a><span class="ex">brew</span> install pandoc</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="work-with-pandoc" class="slide level2">
+<h2>Work with Pandoc</h2>
+<p>Magic commands to transform files:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="" aria-label="1"></a><span class="ex">pandoc</span> <span class="at">--from</span><span class="op">=</span>txt mytext.txt <span class="at">-t</span> html <span class="at">-o</span> mypage.html </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="" aria-label="1"></a><span class="ex">pandoc</span> <span class="at">--standalone</span> <span class="at">--from</span> markdown <span class="at">--to</span> html5 myfile.md <span class="at">-o</span> mypage.hmtl</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>more examples <a href="https://pandoc.org/demos.html">here</a>.</p>
+</section></section>
+<section>
+<section id="the-limits-of-md" class="title-slide slide level1 center">
+<h1>The limits of MD</h1>
+
+</section>
+<section class="slide level2">
+
+<p>There is no industrial standard:</p>
+<p>ambiguity ensues</p>
+<p><code>![My text](./imgs/image.png)</code> –&gt;</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">'./imgs/image.png'</span><span class="ot"> alt</span><span class="op">=</span><span class="st">"My text"</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column" style="width:50%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">'./imgs/image.png'</span><span class="dt">&gt;</span></span>
+<span id="cb7-2"><a href="" aria-label="2"></a></span>
+<span id="cb7-3"><a href="" aria-label="3"></a><span class="dt">&lt;</span><span class="kw">h6</span><span class="dt">&gt;</span>My text<span class="dt">&lt;/</span><span class="kw">h6</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div></div>
+<p>Use Pandoc/Quarto Markdown</p>
+</section>
+<section id="two-meanings-for" class="slide level2">
+<h2>two meanings for <code>[]()</code></h2>
+<p><code>[linked text](https://www.unimi.it)</code> –&gt;</p>
+<div class="fragment">
+<p><code>&lt;a href='https://www.unimi.it'&gt;linked text&lt;/a&gt;</code></p>
+</div>
+<div class="fragment">
+<p><code>![](./imgs/image.png)</code> –&gt;</p>
+</div>
+<div class="fragment">
+<p><code>&lt;img src='./imgs/image.png'&gt;</code></p>
+</div>
+</section></section>
+<section>
 <section id="summary-of-the-method" class="title-slide slide level1 center">
 <h1>Summary of the method</h1>
 
@@ -345,13 +380,13 @@ ale66
 
 <ul>
 <li><p>Markdown is the simplest, lightest form of text annotation</p></li>
-<li><p>the pandoc software takes our MD text and generates an equiv. HTML page</p>
+<li><p>Pandoc software takes our MD text and generates an equiv. HTML page</p>
 <ul>
 <li>fragments for inclusion into an existing page, or</li>
 <li>standalone pages</li>
 </ul></li>
 <li><p>VS Code+Markdown-all-in-one supports MD with highlighting &amp; preview</p></li>
-<li><p><a href="https://pandoc.org/try/">pandoc.org/try/</a> generates pages from MD texts</p></li>
+<li><p><a href="https://pandoc.org/try/" target="_blank">pandoc.org/try/</a> generates pages from MD texts</p></li>
 <li><p>install Pandoc on your computer to render pages</p></li>
 <li><p>other output formats are available: DOCX, PPTX, PDF, EPUB etc.</p></li>
 </ul>
@@ -363,7 +398,7 @@ ale66
 <li><p>what is rendering? Who/what does it?</p></li>
 <li><p>what is HTML injection? Who/what does it?</p></li>
 <li><p>why do README.md files look good on GitHub?</p></li>
-<li><p>what is pandoc?</p></li>
+<li><p>what is Pandoc?</p></li>
 </ul>
 </section>
 <section id="coda-the-html-injection-attack" class="slide level2">

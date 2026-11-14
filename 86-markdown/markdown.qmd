@@ -4,7 +4,7 @@ author: "ale66"
 format: 
   revealjs:
     footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
-    theme: [moon]
+    theme: [beige]
     preview-links: auto
     chalkboard: 
       boardmarker-width: 2
@@ -16,7 +16,10 @@ execute:
   echo: true
 ---
 
-# Markdown
+# Markdown/HTML injection
+
+![](https://www.enjoyyourcooking.com/wp-content/uploads/2012/03/eclairs-custard-step10b-200x150.jpg)
+
 
 ---
 
@@ -36,8 +39,7 @@ Residual cases:
 
 - tags inside `<head>` for indexing etc., in particular `<meta>`
 
-- tages inside `<body>`: `<div>` and `<span>`
-
+- tags inside `<body>`, e.g., `<div>` and `<span>`
 
 ---
 
@@ -49,20 +51,19 @@ Residual cases:
 
 - the mark-up is not very readable and often repetitive
 
-
 ---
 
 ## The Markdown vision
 
 1. prepare a text file with all the content but only minimal annotations: the Markdown file `my_contents.md`
 
-2. feed it to a *parser* software, e.g., *pandoc* that *renders* it: 
+2. feed it to a *parser* software, e.g., *Pandoc* that *renders* it: 
 
    - HTML tags are *injected* into the file, and 
   
    - CSS styles are linked and assigned to tags
   
-3. the thus-created `my_page.html` can be manually refined/tweaked, if need be
+3. the thus-created `my_page.html` can be manually refined/tweaked, if it so needs
 
 4. publish it
 
@@ -83,7 +84,7 @@ platforms with web page generation support MD contents and render them automatic
 ## MD is useful:
 
 
-in the `my_page.html` version:
+in a MD-generated `my_page.html` file:
 
 - fixed parts, e.g., `<body>...</body>` are automatically incorporated
 
@@ -91,33 +92,13 @@ in the `my_page.html` version:
 
     - `# My title` --> `<h1>My title</h1>`
   
-    - `__nota bene__` --> `<b>nota bene</b>` and so on
+    - `__N. B.__` --> `<b>N. B.</b>` and so on
 
 - less error-prone than HTML
 
-- fragments (as opposed to a complete page) can be easily integrated
+- extra fragments can be easily integrated (unlike with HTML)
 
 - uniform page appearance
-
----
-
-## two meanings for `[]()`
-
-
-`[linked text](https://www.unimi.it)` --> 
-
-. . .
-
-`<a href='https://www.unimi.it'>linked text</a>`
-
-. . .
-
-`![](./imgs/image.png)` --> 
-
-. . .
-
-`<img src='./imgs/image.png'>`
-
 
 ---
 
@@ -137,18 +118,81 @@ __this is a boldface caption to the image__
 
 ## MD interpreters
 
-- download the MD extension for VS Code
+- install the MD extension for VS Code
 
-- use online interpreters from GitHub
-  
-![](./imgs/online-html-to-markdown.png)
+- edit in-browser with 
+  - [markdownreader.github.io/](https://markdownreader.github.io/){target="_blank"}
+  - [tomarkdown.org/editor/](https://www.tomarkdown.org/editor){target="_blank"}
+  - [markdownviewer.org/](https://markdownviewer.org/){target="_blank"}
 
+
+# Learn MD
 
 ---
 
-## The limits of MD
+## Get started 
 
-There is no internation/industrial standard:
+Study the simplified language on [GitHub](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) where interpretation is automated
+
+GitHub interprets Markdown automatically
+
+Example: [collapsed sections](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections)
+
+---
+
+## Mardown in VS Code
+
+VS code supplies a preview of the rendering of `.md` files
+
+install the [Markdown-all-in-one](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) extension by Yu Zhang
+
+The page explains how to code MD quickly
+
+![](./imgs/md-all-in-one.png)
+
+
+# The Pandoc software
+
+---
+
+## [Pandoc](https://pandoc.org/) = all documents.
+
+Peels the decorations off, gives the content to the needed __injector__
+
+On Win, install it via [Chocolatey](https://community.chocolatey.org/packages/pandoc):
+
+```bash
+choco install pandoc
+```
+
+On Apple, use [Homebrew](https://brew.sh/):
+
+```bash
+brew install pandoc
+```
+
+---
+
+## Work with Pandoc
+
+Magic commands to transform files:
+
+```bash
+pandoc --from=txt mytext.txt -t html -o mypage.html 
+```
+
+```bash
+pandoc --standalone --from markdown --to html5 myfile.md -o mypage.hmtl
+```
+
+more examples [here](https://pandoc.org/demos.html).
+
+
+# The limits of MD
+
+---
+
+There is no industrial standard:
 
 ambiguity ensues
 
@@ -171,32 +215,24 @@ ambiguity ensues
 
 Use Pandoc/Quarto Markdown
 
-
-# Learn MD
-
-
 ---
 
-## Get started 
-
-Study the simplified language on [GitHub](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) where interpretation is automated
-
-GitHub interprets Markdown automatically
-
-Example: [collapsed sections](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections)
+## two meanings for `[]()`
 
 
----
+`[linked text](https://www.unimi.it)` --> 
 
-## Mardown in VS Code
+. . .
 
-VS code supplies a preview of the rendering of `.md` files
+`<a href='https://www.unimi.it'>linked text</a>`
 
-install the [Markdown-all-in-one](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) extension by Yu Zhang
+. . .
 
-The page explains how to code MD quickly
+`![](./imgs/image.png)` --> 
 
-![](./imgs/md-all-in-one.png)
+. . .
+
+`<img src='./imgs/image.png'>`
 
 
 # Summary of the method 
@@ -205,14 +241,14 @@ The page explains how to code MD quickly
 
 - Markdown is the simplest, lightest form of text annotation
 
-- the pandoc software takes our MD text and generates an equiv. HTML page
+- Pandoc software takes our MD text and generates an equiv. HTML page
 
   - fragments for inclusion into an existing page, or 
   - standalone pages
 
 - VS Code+Markdown-all-in-one supports MD with highlighting & preview
 
-- [pandoc.org/try/](https://pandoc.org/try/) generates pages from MD texts
+- [pandoc.org/try/](https://pandoc.org/try/){target="_blank"} generates pages from MD texts
   
 - install Pandoc on your computer to render pages
 
@@ -230,7 +266,7 @@ The page explains how to code MD quickly
 
 - why do README.md files look good on GitHub?
 
-- what is pandoc?
+- what is Pandoc?
 
 ---
 
@@ -239,4 +275,3 @@ The page explains how to code MD quickly
 Malicious HTML generation could embed invisible parts that in fact communicate, using HTTP Post() methods!
 
 ![](./imgs/html-injection-attack.png)
-
