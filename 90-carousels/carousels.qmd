@@ -1,21 +1,22 @@
 ---
-title: "Learn Web"
-author: "ale66"
+title: 'Learn Web'
+author: 'ale66'
 format: 
   revealjs:
-    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
-    theme: [moon]
+    footer: '[github.com/ale66/learn-web](https://github.com/ale66/learn-coding)&nbsp;&nbsp;&nbsp;'
+    theme: [beige]
     preview-links: auto
-    code-line-numbers: true
+    link-external-newwindow: true
+    slide-number: c/t
     chalkboard: 
       boardmarker-width: 2
-    mermaid:
-      theme: dark
-      fontSize: 12
 from: markdown+emoji
 execute:
   echo: true
 ---
+
+
+
 
 # BS5 Carousels
 

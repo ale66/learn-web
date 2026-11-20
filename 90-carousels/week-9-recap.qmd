@@ -1,17 +1,23 @@
 ---
-title: "Learn Web"
-author: "ale66"
+title: 'Learn Web'
+author: 'ale66'
 format: 
   revealjs:
-    footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
-    theme: [moon]
+    footer: '[github.com/ale66/learn-web](https://github.com/ale66/learn-coding)&nbsp;&nbsp;&nbsp;'
+    theme: [beige]
     preview-links: auto
+    link-external-newwindow: true
+    slide-number: c/t
     chalkboard: 
       boardmarker-width: 2
 from: markdown+emoji
 execute:
   echo: true
 ---
+
+
+
+
 
 # Recap
 
@@ -58,7 +64,7 @@ Use classes to program visualisation of the containers
 
 Too many to know!
 
-Reade the BS5 boilerplates seen in class
+Read the BS5 boilerplates seen in class
 
 Search and read about each class on [getbootstrap.com/docs/5.3/getting-started/introduction/](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 

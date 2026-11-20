@@ -6,6 +6,8 @@ format:
     footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
     theme: [beige]
     preview-links: auto
+    link-external-newwindow: true
+    slide-number: c/t
     chalkboard: 
       boardmarker-width: 2
     mermaid:
@@ -171,6 +173,9 @@ On Apple, use [Homebrew](https://brew.sh/):
 brew install pandoc
 ```
 
+Do this for `quarto` (will install lots of dependencies)
+
+
 ---
 
 ## Work with Pandoc
@@ -255,6 +260,36 @@ Use Pandoc/Quarto Markdown
 - other output formats are available: DOCX, PPTX, PDF, EPUB etc.
   
 ---
+
+## Work with Quarto
+
+Idea: active documents with code inside that generates *data displays*
+
+Use for science, teaching, *data journalism*
+
+Write code in one of 4 main languages: Julia, R, Python and Observable (JS)
+
+Generate 'views:' HTML, HTML slides, PDF, Word ...
+
+---
+
+
+Magic commands to transform text into a web page:
+
+```bash
+quarto render mytext.qmd --to html -o mypage.html 
+```
+
+Make slides
+
+
+```bash
+quarto render mytext.qmd --to revaljs -o myslidedeck.html 
+```
+
+more examples on [quarto.org/](https://quarto.org/).
+
+
 
 ## Self-assessment
 
