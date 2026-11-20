@@ -6,6 +6,8 @@ format:
     footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
     theme: [beige]
     preview-links: auto
+    link-external-newwindow: true
+    slide-number: c/t
     chalkboard:
       boardmarker-width: 2
 mermaid:
@@ -94,17 +96,47 @@ Careful: your exact user name + `.github.io`
 
 ---
 
-## 1. Create the repository
+## Create the repository
 
-![](./imgs/new-repo.png)
+![](./imgs/new-repo-a.png){width="30%"}
 
 ---
 
-## 2. A first page
+![](./imgs/new-repo-b.png){width="40%"}
+
+---
+
+![](./imgs/new-repo-c.png){width="40%"}
+
+---
+
+## Default option
+
+`readme.md`on the repo --> `index.html` on github.io
+
+Automated processing, html injection and publication
+
+some delays in deployment to be expected
+
+`index.html` is not easily accessible
+
+---
+
+## Advanced option: own landing page
+
+Edit `readme.md` for Github.com access
 
 In the new repository: **Add file** --> **Create new file**
 
 name it `index.html`
+
+copy/paste the page structure from an existing page, 
+
+or create one on your computer by editing a MD page then running pandoc
+
+---
+
+A placeholder for the page:
 
 ```html
 <!DOCTYPE html>
@@ -126,7 +158,7 @@ then **Commit changes**
 
 ## Why `index.html`?
 
-When nobody asks for a specific file, the server delivers `index.html`
+by default, any server delivers `index.html`
 
 - `https://<user-name>.github.io` --> `index.html`
 
@@ -135,7 +167,9 @@ When nobody asks for a specific file, the server delivers `index.html`
 
 ---
 
-## 3. Switch on publishing
+## Aside: more publishing 
+
+A subfolder can also have its landing page (`index.html`)
 
 **Settings** --> **Pages**
 
@@ -143,15 +177,11 @@ When nobody asks for a specific file, the server delivers `index.html`
 - *Branch*: `main`, folder `/ (root)`
 - click **Save**
 
-. . .
-
-If Pages is already active then we're done.
-
-![](./imgs/pages-settings.png)
+Several Git Pages options are available from [docs.github.com/en/pages](https://docs.github.com/en/pages)
 
 ---
 
-## 4. Visit your page
+## Visit your page
 
 1. open the **Actions** tab: a job called *pages build and deployment* runs
 
@@ -159,13 +189,9 @@ If Pages is already active then we're done.
 
 3. go to `https://<user-name>.github.io`
 
-. . .
-
-Not there yet? See *When it does not work*, a few slides ahead.
-
 ---
 
-## What just happened
+## The deployment cycle
 
 ```{mermaid}
 flowchart LR
@@ -207,31 +233,6 @@ git commit -m "update my page"
 git push
 ```
 
-
-# Markdown
-
----
-
-Thanks to automated Pandoc interpretation, GH can render and publish at once
-
-
-Replace `index.html` with `index.md`
-
-```markdown
-# Hello, I am <user-name>
-
-This is my page on GitHub.
-
-- [About me](about.html)
-- [My projects](projects.html)
-```
-
-GitHub renders it into HTML and sends it to `github.io`
-
-. . .
-
-Keep *one* of the two, `index.html` or `index.md`, not both.
-
 ---
 
 ## A site with several pages
@@ -264,11 +265,7 @@ links use *relative* paths:
 
 . . .
 
-the page is old: wait a minute, then reload without cache (`Ctrl+Shift+R`)
-
-. . .
-
-images are missing: `Me.png` is not `me.png`, check upper/lower case and the path
+images are missing: `Me.png` vs. `me.png`
 
 . . .
 
@@ -286,7 +283,8 @@ private repos can have collaborators
   
 - no pictures of other people without their consent
 
-  - the version history is public too: deleted files are still visible in earlier commits.
+- the version history is public too: deleted files are still visible in earlier commits.
+
 
 # Summary of the method
 
@@ -296,13 +294,13 @@ private repos can have collaborators
 
 - the repository must be public
 
-- `index.html` (or `index.md`) is the front door
+- `readme.md` (or `index.html`) is the front door
 
-- Settings --> Pages: deploy from the `main` branch
+- edit from the browser, or clone and use VS Code with `git add`, `git commit`, `git push`
 
-- every commit is online within minutes
+- commits are online within minutes
 
-- edit from the browser, or clone and use VS Code with `git add`, `commit`, `push`
+- see [docs.github.com/en/pages/quickstart](https://docs.github.com/en/pages/quickstart) for a walkthough of the method
 
 ---
 
@@ -316,7 +314,7 @@ private repos can have collaborators
 
 - where do you look when your page shows a `404`?
 
-- what should you *not* publish on a public page?
+- when is `public` too public?
 
 ---
 
@@ -338,7 +336,7 @@ a. keep your GH profile in good standing
 
 b. come up with a long-term personal page in `<user-name>.github.io/`
 
-c. [migrate the MA COM refactoring into a personal project]
+c. [migrate the MA COM refactoring into a personal project, not `<user-name>.github.io/`]
 
 d. work on your exam project in a dedicated new repo with a name pertinent to the project, e.g. 
 
@@ -352,4 +350,4 @@ d. work on your exam project in a dedicated new repo with a name pertinent to th
 
 - Tourist resources for Andorra:  `<user-name>.github.io/visit-andorra/`
 
-- your friend Anna is running for mayor of Lodi, IT: `<user-name>.github.io/anna-x-lodi/`
+- your friend Anna is running for mayor of Lodi, IT: `<user-name>.github.io/anna-4-lodi/`
