@@ -6,8 +6,8 @@
 <script src="cookies_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="cookies_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="cookies_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="cookies_files/libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.25">
+<link href="cookies_files/libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.19">
 
   <meta name="author" content="ale66">
   <title>Learn Web</title>
@@ -17,10 +17,16 @@
   <link rel="stylesheet" href="cookies_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="cookies_files/libs/revealjs/dist/reveal.css">
   <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -56,46 +62,46 @@
         -khtml-user-select: none; -moz-user-select: none;
         -ms-user-select: none; user-select: none;
         padding: 0 4px; width: 4em;
+        color: #aaaaaa;
       }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
     div.sourceCode
-      { color: #f8f8f2;  }
+      { color: #003b4f; background-color: #f1f3f5; }
     @media screen {
     pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
     }
-    code span { color: #f8f8f2; } /* Normal */
-    code span.al { color: #f07178; } /* Alert */
-    code span.an { color: #d4d0ab; } /* Annotation */
-    code span.at { color: #00e0e0; } /* Attribute */
-    code span.bn { color: #d4d0ab; } /* BaseN */
-    code span.bu { color: #abe338; } /* BuiltIn */
-    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #abe338; } /* Char */
-    code span.cn { color: #ffd700; } /* Constant */
-    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
-    code span.cv { color: #ffd700; } /* CommentVar */
-    code span.do { color: #f8f8f2; } /* Documentation */
-    code span.dt { color: #ffa07a; } /* DataType */
-    code span.dv { color: #d4d0ab; } /* DecVal */
-    code span.er { color: #f07178; text-decoration: underline; } /* Error */
-    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
-    code span.fl { color: #d4d0ab; } /* Float */
-    code span.fu { color: #ffa07a; } /* Function */
-    code span.im { color: #abe338; } /* Import */
-    code span.in { color: #d4d0ab; } /* Information */
-    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
-    code span.op { color: #ffa07a; } /* Operator */
-    code span.ot { color: #00e0e0; } /* Other */
-    code span.pp { color: #dcc6e0; } /* Preprocessor */
-    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
-    code span.sc { color: #abe338; } /* SpecialChar */
-    code span.ss { color: #abe338; } /* SpecialString */
-    code span.st { color: #abe338; } /* String */
-    code span.va { color: #00e0e0; } /* Variable */
-    code span.vs { color: #abe338; } /* VerbatimString */
-    code span.wa { color: #dcc6e0; } /* Warning */
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="cookies_files/libs/revealjs/dist/theme/quarto-06e768f098560084c2d7120de8ad04fb.css">
+  <link rel="stylesheet" href="cookies_files/libs/revealjs/dist/theme/quarto-5c8106c274dac56d8e05e3022a5a12af.css">
   <link href="cookies_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="cookies_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="cookies_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -190,7 +196,7 @@
     }
   </style>
 </head>
-<body class="quarto-dark">
+<body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
@@ -200,7 +206,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-ale66 
+ale66
 </div>
 </div>
 </div>
@@ -223,7 +229,7 @@ ale66
 <p>HTTPS is designed to make browsers follow up links or download needed files <em>transparently</em></p>
 <ul>
 <li><p>clicking on <code>&lt;a&gt;</code>s sends us to a new page, local or web</p></li>
-<li><p>online images, style files etc. are fetched and redered</p></li>
+<li><p>online images, style files etc. are fetched and rendered</p></li>
 </ul>
 <div class="fragment">
 <p>we realise that this is all networked <em>only when it stops working</em></p>
@@ -246,7 +252,7 @@ ale66
 <h2>Cookies</h2>
 <p>A small text file which is saved in a <em>secret</em> local folder which is managed by the browser</p>
 <p>keep record of previous visits and help in <em>customising</em> pages</p>
-<p>inside, there’s a tiny database organised in atribute/value pairs:</p>
+<p>inside, there’s a tiny database organised in attribute/value pairs:</p>
 <p><code>"name"="ale"; "last_visit"="15-11-24"; "hour"=14; ...</code></p>
 <p>JS functions create/read/amend cookie files</p>
 <p>In principle, it’s public information, and local</p>
@@ -254,14 +260,14 @@ ale66
 <section class="slide level2">
 
 <p>Let’s visualise cookies.</p>
-<p>Please add <a href="https://add0n.com/sqlite-manager.html">SQLite Manager (by Lunu)</a> to your Browser!</p>
+<p>Please add <a href="https://add0n.com/sqlite-manager.html" target="_blank">SQLite Manager (by Lunu)</a> to your Browser!</p>
 </section>
 <section id="instructions" class="slide level2">
 <h2>Instructions</h2>
-<p><span class="citation" data-cites="firefox">@firefox</span>: <a href="https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager-webext/">https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager-webext/</a></p>
+<p><span class="citation" data-cites="firefox">@firefox</span>: <a href="https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager-webext/" target="_blank">https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager-webext/</a></p>
 <p>try</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href=""></a>about:support</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>on your browser, or follow instruction on <a href="http://mzl.la/1BAQULj">http://mzl.la/1BAQULj</a></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="" aria-label="1"></a>about:support</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>on your browser, or follow instruction on <a href="http://mzl.la/1BAQULj" target="_blank">http://mzl.la/1BAQULj</a></p>
 <p>Example: Firefox 132 on Win11:</p>
 <p><code>C:\Users\aless\AppData\Roaming\Mozilla\Firefox\Profiles\kqgptv3l.default-release\cookies.sqlite</code></p>
 </section>
@@ -269,13 +275,13 @@ ale66
 
 <p>Open file <em>cookies.sqlite</em> with the browser extension</p>
 <p>search for our cookie, e.g.&nbsp;with</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href=""></a><span class="kw">select</span> <span class="op">*</span> </span>
-<span id="cb2-2"><a href=""></a><span class="kw">from</span> <span class="ot">"moz_cookies"</span> </span>
-<span id="cb2-3"><a href=""></a><span class="kw">where</span> name <span class="op">=</span> <span class="ot">"likejavascript"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="" aria-label="1"></a><span class="kw">select</span> <span class="op">*</span> </span>
+<span id="cb2-2"><a href="" aria-label="2"></a><span class="kw">from</span> <span class="ot">"moz_cookies"</span> </span>
+<span id="cb2-3"><a href="" aria-label="3"></a><span class="kw">where</span> name <span class="op">=</span> <span class="ot">"likejavascript"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="for-other-browsers" class="slide level2">
 <h2>For other browsers</h2>
-<p>The same process can be done by opening the cookies file directly from the file systems, as described <a href="https://www.digitalcitizen.life/cookies-location-windows-10/">here (for Win 10)</a>.</p>
+<p>The same process can be done by opening the cookies file directly from the file systems, as described <a href="https://www.digitalcitizen.life/cookies-location-windows-10/" target="_blank">here (for Win 10)</a>.</p>
 <p>Example: Crome on Win10:</p>
 <p><code>C:\Users\aless\AppData\Local\Google\Chrome\User Data\Default\Network</code></p>
 </section>
@@ -296,17 +302,17 @@ ale66
 </section>
 <section id="forms-we-collect-data" class="slide level2">
 <h2>Forms: we collect data</h2>
-<p>Users can assign values to variables thanks to <a href="https://www.w3schools.com/html/html_forms.asp">forms</a>.</p>
-<p>Forms require attention as there are many <a href="https://www.w3schools.com/html/html_forms_attributes.asp">form attributes</a> and details.</p>
+<p>Users can assign values to variables thanks to <a href="https://www.w3schools.com/html/html_forms.asp" target="_blank">forms</a>.</p>
+<p>Forms require attention as there are many <a href="https://www.w3schools.com/html/html_forms_attributes.asp" target="_blank">form attributes</a> and details.</p>
 <p>Please complete the subsequent units <em>a la carte:</em> look at the forms you deem useful for your work on a COM landing page.</p>
 </section>
 <section id="collect-emails" class="slide level2">
 <h2>Collect emails?</h2>
-<p>Today, browsers collect lots of user behaviours, e.g., scroll speed in Facebook-like pages.</p>
+<p>Today, browsers collect lots of user behaviors, e.g., scroll speed in Facebook-like pages.</p>
 <p>Independent web sites may create a user base or a <em>community</em> around a web presence</p>
-<p>Idea: use forms to collect emails (not indentities) to manage a simple circular email system, weekly or monthly.</p>
+<p>Idea: use forms to collect emails (not identities) to manage a simple circular email system, weekly or monthly.</p>
 <p>GDPR regulation restricts <em>consent, safe storage</em> etc.</p>
-<p>See the <a href="https://mailchimp.com/en-gb/">Mailchimp</a> software.</p>
+<p>See the <a href="https://mailchimp.com/en-gb/" target="_blank">Mailchimp</a> software.</p>
 </section></section>
 <section>
 <section id="cookies-lab" class="title-slide slide level1 center">
@@ -315,26 +321,105 @@ ale66
 </section>
 <section id="the-baseline" class="slide level2">
 <h2>the baseline</h2>
-<p>inside folder <code>src</code> see files <code>rename-me.html</code>, <code>mystyle.css</code> and <code>script.js</code></p>
+<p>inside folder <code>boilerplate</code> see files <code>rename-me.html</code>, <code>mystyle.css</code> and <code>script.js</code></p>
 <p>open them all in VS Code, read the HTML and the CSS</p>
 <p>Notice how <code>checkCookie()</code> is executed every time the browser (re)loads <code>&lt;body&gt;</code></p>
 <p>next, load the page on Firefox etc and open the console (CTRL+SHIFT+k)</p>
 <p>check the cookie then refresh to check second-time behaviour</p>
 </section>
+<section id="inside-the-browsers-memory" class="slide level2">
+<h2>Inside the browser’s memory</h2>
+
+<img data-src="./imgs/cookie-grid.png" class="r-stretch"></section>
+<section id="handle-js" class="slide level2">
+<h2>Handle JS</h2>
+<p>Proper learning JS is beyond the scope of <code>github.com/ale66/learn-web</code></p>
+<p>Learn how to run pre-packaged JS functions</p>
+<p>Let’s learn</p>
+<ul>
+<li><p>set a cookie value in the browser memory, assign name, value and expiration date (days)</p></li>
+<li><p>read a cookie value from memory into a JS variable (then act on it)</p></li>
+<li><p>check whether there are cookies already, in particular, <code>username</code></p></li>
+</ul>
+</section>
 <section class="slide level2">
 
-<p>read the script.js file line by line, don’t move on until you understood</p>
-<p>Look up on W3Schools parts that are new, e.g., <code>while</code></p>
-<p>place a <code>console.log()</code> or an <code>window.alert()</code> at each step to visualise the content of the variables</p>
-<p>example:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href=""></a>user <span class="op">=</span> <span class="fu">prompt</span>(<span class="st">"Thanks for visiting! Please enter your name:"</span><span class="op">,</span> <span class="st">""</span>)<span class="op">;</span></span>
-<span id="cb3-2"><a href=""></a></span>
-<span id="cb3-3"><a href=""></a><span class="cf">if</span> (user <span class="op">!=</span> <span class="st">""</span> <span class="op">&amp;&amp;</span> user <span class="op">!=</span> <span class="kw">null</span>) {</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>becomes</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href=""></a>user <span class="op">=</span> <span class="fu">prompt</span>(<span class="st">"Thanks for visiting! Please enter your name:"</span><span class="op">,</span> <span class="st">""</span>)<span class="op">;</span></span>
-<span id="cb4-2"><a href=""></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">'User has entered '</span><span class="op">+</span> user)</span>
-<span id="cb4-3"><a href=""></a><span class="cf">if</span> (user <span class="op">!=</span> <span class="st">""</span> <span class="op">&amp;&amp;</span> user <span class="op">!=</span> <span class="kw">null</span>) {</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>set a cookie value in the browser memory, assign name, value and expiration date (days)</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="" aria-label="1"></a><span class="kw">function</span> <span class="fu">setCookie</span>(cookie_name<span class="op">,</span> cookie_value<span class="op">,</span> cookie_validity_in_days) {</span>
+<span id="cb3-2"><a href="" aria-label="2"></a>  <span class="co">/* sets the 'expires' value to the value of cookie_validity_in_days from now</span></span>
+<span id="cb3-3"><a href="" aria-label="3"></a><span class="co">    it is done in milliseconds</span></span>
+<span id="cb3-4"><a href="" aria-label="4"></a><span class="co">  */</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>In page:</p>
+<div class="fragment">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb4-2"><a href="" aria-label="2"></a>  <span class="fu">setCookie</span>(<span class="st">"username"</span><span class="op">,</span> <span class="st">"Ale"</span><span class="op">,</span> <span class="dv">365</span>)</span>
+<span id="cb4-3"><a href="" aria-label="3"></a></span>
+<span id="cb4-4"><a href="" aria-label="4"></a>  <span class="fu">setCookie</span>(<span class="st">"self_localisation"</span><span class="op">,</span> <span class="st">"Via Passione"</span><span class="op">,</span> <span class="fl">0.5</span>)</span>
+<span id="cb4-5"><a href="" aria-label="5"></a>  <span class="op">...</span></span>
+<span id="cb4-6"><a href="" aria-label="6"></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section class="slide level2">
 
+<ul>
+<li>read a cookie value from memory into a JS variable (then act on it)</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="" aria-label="1"></a><span class="kw">function</span> <span class="fu">getCookie</span>(cname) {</span>
+<span id="cb5-2"><a href="" aria-label="2"></a>  <span class="co">/* if the cookie named cname exists then return its value, </span></span>
+<span id="cb5-3"><a href="" aria-label="3"></a><span class="co">    else return ""</span></span>
+<span id="cb5-4"><a href="" aria-label="4"></a><span class="co">  */</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>In page:</p>
+<div class="fragment">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb6-2"><a href="" aria-label="2"></a>  visitor <span class="op">=</span> <span class="fu">getCookie</span>(<span class="st">"username"</span>)</span>
+<span id="cb6-3"><a href="" aria-label="3"></a></span>
+<span id="cb6-4"><a href="" aria-label="4"></a>  <span class="cf">if</span> (visitor <span class="op">!=</span> <span class="st">""</span>) {</span>
+<span id="cb6-5"><a href="" aria-label="5"></a>    possible_email <span class="op">=</span> visitor <span class="op">+</span> <span class="st">"@studenti.unimi.it"</span></span>
+<span id="cb6-6"><a href="" aria-label="6"></a>  }</span>
+<span id="cb6-7"><a href="" aria-label="7"></a>  <span class="op">...</span></span>
+<span id="cb6-8"><a href="" aria-label="8"></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>check whether there are cookies already, in particular, <code>username</code></li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb7-1"><a href="" aria-label="1"></a><span class="kw">function</span> <span class="fu">checkCookie</span>() {</span>
+<span id="cb7-2"><a href="" aria-label="2"></a>  <span class="co">/* if the 'username' cookie exists already  </span></span>
+<span id="cb7-3"><a href="" aria-label="3"></a><span class="co">      then salute the returning user</span></span>
+<span id="cb7-4"><a href="" aria-label="4"></a><span class="co">  */</span></span>
+<span id="cb7-5"><a href="" aria-label="5"></a></span>
+<span id="cb7-6"><a href="" aria-label="6"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"Now, the available cookies are:"</span><span class="op">,</span> <span class="bu">document</span><span class="op">.</span><span class="at">cookie</span>)<span class="op">;</span></span>
+<span id="cb7-7"><a href="" aria-label="7"></a>  <span class="op">...</span></span>
+<span id="cb7-8"><a href="" aria-label="8"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>In page:</p>
+<div class="fragment">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb8-1"><a href="" aria-label="1"></a>  <span class="co">&lt;!-- this JS function executes as soon as the browser reads line 17</span></span>
+<span id="cb8-2"><a href="" aria-label="2"></a><span class="co">      i.e., when the page is still not rendered, which happens at the end</span></span>
+<span id="cb8-3"><a href="" aria-label="3"></a><span class="co">      of reading the body (line 48)</span></span>
+<span id="cb8-4"><a href="" aria-label="4"></a><span class="co">  --&gt;</span></span>
+<span id="cb8-5"><a href="" aria-label="5"></a>  <span class="dt">&lt;</span><span class="kw">body</span><span class="ot"> onload</span><span class="op">=</span><span class="st">"checkCookie()"</span><span class="dt">&gt;</span></span>
+<span id="cb8-6"><a href="" aria-label="6"></a>    ...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="lab" class="slide level2">
+<h2>Lab</h2>
+<p>read the <code>script.js</code> file line by line, don’t move on until you understood</p>
+<p>Look up on W3Schools parts that are new, e.g., <code>while</code></p>
+<p>place a <code>console.log()</code> or an <code>window.alert()</code> at each step to visualise the content of the variables, e.g.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb9-1"><a href="" aria-label="1"></a>user <span class="op">=</span> <span class="fu">prompt</span>(<span class="st">"Thanks for visiting! Please enter your name:"</span><span class="op">,</span> <span class="st">""</span>)<span class="op">;</span></span>
+<span id="cb9-2"><a href="" aria-label="2"></a></span>
+<span id="cb9-3"><a href="" aria-label="3"></a><span class="cf">if</span> (user <span class="op">!=</span> <span class="st">""</span> <span class="op">&amp;&amp;</span> user <span class="op">!=</span> <span class="kw">null</span>) {</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="fragment">
+<p>becomes</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb10-1"><a href="" aria-label="1"></a>user <span class="op">=</span> <span class="fu">prompt</span>(<span class="st">"Thanks for visiting! Please enter your name:"</span><span class="op">,</span> <span class="st">""</span>)<span class="op">;</span></span>
+<span id="cb10-2"><a href="" aria-label="2"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">'User has entered '</span><span class="op">+</span> user)</span>
+<span id="cb10-3"><a href="" aria-label="3"></a><span class="cf">if</span> (user <span class="op">!=</span> <span class="st">""</span> <span class="op">&amp;&amp;</span> user <span class="op">!=</span> <span class="kw">null</span>) {</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+</div>
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">

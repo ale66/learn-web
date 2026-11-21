@@ -17,6 +17,9 @@ function setCookie(cookie_name, cookie_value, cookie_validity_in_days) {
 }
   
 function getCookie(cname) {
+  /* if the cookie named cname exists then return its value, 
+    else return ""
+  */
 
   let name = cname + "=";
   
@@ -61,6 +64,7 @@ function checkCookie() {
   if (user != "") {
     // returning user: salute them
     document.getElementById('salutation').innerText = 'Hello ' + user + ', good to see you again!'
+
     document.getElementById('salutation').style.backgroundColor = "antiquewhite";
 
   } else {
@@ -74,7 +78,7 @@ function checkCookie() {
 
       // experiment with cookies!
       let their_location = prompt("Great, and where are you today?", "In the lab");
-      setCookie("last_self_localised_at", their_location, 0.5);
+      setCookie("self_localisation", their_location, 0.5);
 
 
       // returning user: salute them

@@ -252,7 +252,6 @@ Media queries change the CSS at runtime to adapt it to the display
 }
 ```
 
-
 ---
 
 ## Consequences for images
@@ -269,7 +268,6 @@ img {
 ```
 
 When image quality matters, it's better to have 3/4 versions of the same image at different resolution and aspect ratio
-
 
 ---
 
@@ -289,16 +287,13 @@ we end up with a CSS full of `%` symbols and no `px`
 
 A slightly labour-intensive exercise for learning relative measures in pages
 
-[exercise 14-4](https://webdesignplayground.io/lessons/14-4-0)
-
-
---- 
+[exercise 14-4](https://webdesignplayground.io/lessons/14-4-0) 
 
 # The JS
 
 ---
 
-# internal setup
+## internal setup
 
 ```{html}
 <!--- upper part not shown -->
@@ -313,7 +308,7 @@ A slightly labour-intensive exercise for learning relative measures in pages
 
   <script>
     alert("Hello from JavaScript!");
-    
+
     console.log("Hello from the console!");
   </script>
 

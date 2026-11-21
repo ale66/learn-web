@@ -4,7 +4,7 @@ author: "ale66"
 format: 
   revealjs:
     footer: "[github.com/ale66/learn-web](https://github.com/ale66/learn-web)&nbsp;&nbsp;&nbsp;"
-    theme: [moon]
+    theme: [beige]
     preview-links: auto
     chalkboard: 
       boardmarker-width: 2
@@ -41,7 +41,7 @@ HTTPS is designed to make browsers follow up links or download needed files *tra
 
 - clicking on `<a>`s sends us to a new page, local or web
 
-- online images, style files etc. are fetched and redered
+- online images, style files etc. are fetched and rendered
 
 . . .
 
@@ -74,7 +74,7 @@ A small text file which is saved in a *secret* local folder which is managed by 
 
 keep record of previous visits and help in *customising* pages
 
-inside, there's a tiny database organised in atribute/value pairs: 
+inside, there's a tiny database organised in attribute/value pairs: 
 
 `"name"="ale"; "last_visit"="15-11-24"; "hour"=14; ...`
 
@@ -87,14 +87,14 @@ In principle, it's public information, and local
 
 Let's visualise cookies.
 
-Please add [SQLite Manager (by Lunu)](https://add0n.com/sqlite-manager.html) to your Browser!
+Please add [SQLite Manager (by Lunu)](https://add0n.com/sqlite-manager.html){target="_blank"} to your Browser!
 
 
 ---
 
 ## Instructions
 
-@firefox: [https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager-webext/](https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager-webext/)
+@firefox: [https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager-webext/](https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager-webext/){target="_blank"}
 
 try
 
@@ -102,7 +102,7 @@ try
 about:support
 ```
 
-on your browser, or follow instruction on [http://mzl.la/1BAQULj](http://mzl.la/1BAQULj)
+on your browser, or follow instruction on [http://mzl.la/1BAQULj](http://mzl.la/1BAQULj){target="_blank"}
 
 Example: Firefox 132 on Win11:
 
@@ -124,7 +124,7 @@ where name = "likejavascript"
 
 ## For other browsers
 
-The same process can be done by opening the cookies file directly from the file systems, as described [here (for Win 10)](https://www.digitalcitizen.life/cookies-location-windows-10/).
+The same process can be done by opening the cookies file directly from the file systems, as described [here (for Win 10)](https://www.digitalcitizen.life/cookies-location-windows-10/){target="_blank"}.
 
 
 Example: Crome on Win10:
@@ -150,9 +150,9 @@ Design user profiling for your MA COM refactoring page:
 
 ## Forms: we collect data
 
-Users can assign values to variables thanks to [forms](https://www.w3schools.com/html/html_forms.asp).
+Users can assign values to variables thanks to [forms](https://www.w3schools.com/html/html_forms.asp){target="_blank"}.
 
-Forms require attention as there are many [form attributes](https://www.w3schools.com/html/html_forms_attributes.asp) and details.
+Forms require attention as there are many [form attributes](https://www.w3schools.com/html/html_forms_attributes.asp){target="_blank"} and details.
 
 Please complete the subsequent units *a la carte:* look at the forms you deem useful for your work on a COM landing page.
 
@@ -161,15 +161,15 @@ Please complete the subsequent units *a la carte:* look at the forms you deem us
 
 ## Collect emails?
 
-Today, browsers collect lots of user behaviours, e.g., scroll speed in Facebook-like pages. 
+Today, browsers collect lots of user behaviors, e.g., scroll speed in Facebook-like pages. 
 
 Independent web sites may create a user base or a *community* around a web presence
 
-Idea: use forms to collect emails (not indentities) to manage a simple circular email system, weekly or monthly.
+Idea: use forms to collect emails (not identities) to manage a simple circular email system, weekly or monthly.
 
 GDPR regulation restricts *consent, safe storage* etc.
 
-See the [Mailchimp](https://mailchimp.com/en-gb/) software.
+See the [Mailchimp](https://mailchimp.com/en-gb/){target="_blank"} software.
 
 
 # Cookies lab
@@ -179,7 +179,7 @@ See the [Mailchimp](https://mailchimp.com/en-gb/) software.
 
 ## the baseline
 
-inside folder `src` see files `rename-me.html`, `mystyle.css` and `script.js`
+inside folder `boilerplate` see files `rename-me.html`, `mystyle.css` and `script.js`
 
 open them all in VS Code, read the HTML and the CSS
 
@@ -189,23 +189,126 @@ next, load the page on Firefox etc and open the console (CTRL+SHIFT+k)
 
 check the cookie then refresh to check second-time behaviour
 
+---
+
+## Inside the browser's memory
+
+![](./imgs/cookie-grid.png)
 
 ---
 
-read the script.js file line by line, don't move on until you understood 
+## Handle JS
+
+Proper learning JS is beyond the scope of `github.com/ale66/learn-web`
+
+Learn how to run pre-packaged JS functions
+
+Let's learn
+
+- set a cookie value in the browser memory, assign name, value and expiration date (days)
+
+- read a cookie value from memory into a JS variable (then act on it)
+
+- check whether there are cookies already, in particular, `username`
+
+
+---
+
+- set a cookie value in the browser memory, assign name, value and expiration date (days)
+
+```js
+function setCookie(cookie_name, cookie_value, cookie_validity_in_days) {
+  /* sets the 'expires' value to the value of cookie_validity_in_days from now
+    it is done in milliseconds
+  */
+```
+
+In page:
+
+. . .
+
+```html
+<script>
+  setCookie("username", "Ale", 365)
+
+  setCookie("self_localisation", "Via Passione", 0.5)
+  ...
+</script>
+```
+
+---
+
+- read a cookie value from memory into a JS variable (then act on it)
+
+
+```js
+function getCookie(cname) {
+  /* if the cookie named cname exists then return its value, 
+    else return ""
+  */
+```
+
+In page:
+
+. . .
+
+```html
+<script>
+  visitor = getCookie("username")
+
+  if (visitor != "") {
+    possible_email = visitor + "@studenti.unimi.it"
+  }
+  ...
+</script>
+```
+
+---
+
+- check whether there are cookies already, in particular, `username`
+
+
+```js
+function checkCookie() {
+  /* if the 'username' cookie exists already  
+      then salute the returning user
+  */
+
+  console.log("Now, the available cookies are:", document.cookie);
+  ...
+}
+```
+
+In page:
+
+. . .
+
+```html
+  <!-- this JS function executes as soon as the browser reads line 17
+      i.e., when the page is still not rendered, which happens at the end
+      of reading the body (line 48)
+  -->
+  <body onload="checkCookie()">
+    ...
+```
+
+---
+
+## Lab
+
+read the `script.js` file line by line, don't move on until you understood 
 
 Look up on W3Schools parts that are new, e.g., `while`
 
-place a `console.log()` or an `window.alert()` at each step to visualise the content of the variables
-
-
-example:
+place a `console.log()` or an `window.alert()` at each step to visualise the content of the variables, e.g.
 
 ```js
 user = prompt("Thanks for visiting! Please enter your name:", "");
 
 if (user != "" && user != null) {
 ```
+
+. . .
 
 becomes
 
